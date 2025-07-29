@@ -1,0 +1,10 @@
+{
+  "example.com": {
+    "home": {
+      "meta": {
+        "title": "Título",
+        "description": "Descripción"
+      }
+    }
+  }
+}

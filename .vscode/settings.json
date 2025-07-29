@@ -1,0 +1,28 @@
+{
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
+  "cSpell.words": [
+    "analyzer",
+    "BETTERSTACK",
+    "cmdk",
+    "dialog",
+    "dogecoin",
+    "embla",
+    "esbuild",
+    "fumadocs",
+    "geist",
+    "logtail",
+    "popover",
+    "prettiercache",
+    "sherif",
+    "shiki",
+    "sonner",
+    "tanstack",
+    "trpc",
+    "turbopack",
+    "vaul"
+  ]
+}
