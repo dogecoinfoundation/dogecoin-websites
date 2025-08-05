@@ -1,0 +1,133 @@
+@import "tailwindcss";
+
+:root {
+  /* Base Colors */
+
+  /* Brand Colors */
+  /* Primary Colors */
+  --primary-100: #FCEED6;
+  --primary-200: #FADDAC;
+  --primary-300: #F7CC83;
+  --primary-400: #F5BB59;
+  --primary-500: #F2AA30;
+  --primary-600: #C28826;
+  --primary-700: #91661D;
+  --primary-800: #614413;
+  --primary-900: #30220A;
+
+  /* Secondary Colors */
+  --secondary-100: #E8E6FF;
+  --secondary-200: #D8CFFF;
+  --secondary-300: #B8A8FF;
+  --secondary-400: #9780FF;
+  --secondary-500: #6857B9;
+  --secondary-600: #493A90;
+  --secondary-700: #302564;
+  --secondary-800: #241C4E;
+  --secondary-900: #19152D;
+
+  /* Neutral Colors */
+  --white: #FFFFFF;
+  --neutral-100: #E6E6E5;
+  --neutral-200: #CDCDCC;
+  --neutral-300: #B5B5B4;
+  --neutral-400: #8C8883;
+  --neutral-500: #5B5A58;
+  --neutral-600: #464543;
+  --neutral-700: #333230;
+  --neutral-800: #201F1D;
+  --neutral-900: #151413;
+  --black: #100F0E;
+
+  /* Accent Colors */
+  --accent-pink: #FF46CE;
+  --accent-yellow: #FFFC36;
+  --accent-blue: #2BF9FF;
+  --accent-green: #62FF46;
+  --accent-orange: #FF7D47;
+  --accent-purple: #9780FF;
+
+  /* White Transparency Colors */
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white-20: rgba(255, 255, 255, 0.2);
+  --white-30: rgba(255, 255, 255, 0.3);
+  --white-40: rgba(255, 255, 255, 0.4);
+  --white-50: rgba(255, 255, 255, 0.5);
+  --white-60: rgba(255, 255, 255, 0.6);
+  --white-70: rgba(255, 255, 255, 0.7);
+  --white-80: rgba(255, 255, 255, 0.8);
+  --white-90: rgba(255, 255, 255, 0.9);
+
+  /* Black Transparency Colors */
+  --black-10: rgba(3, 3, 3, 0.1);
+  --black-20: rgba(3, 3, 3, 0.2);
+  --black-30: rgba(3, 3, 3, 0.3);
+  --black-40: rgba(3, 3, 3, 0.4);
+  --black-50: rgba(3, 3, 3, 0.5);
+  --black-60: rgba(3, 3, 3, 0.6);
+  --black-70: rgba(3, 3, 3, 0.7);
+  --black-80: rgba(3, 3, 3, 0.8);
+  --black-90: rgba(3, 3, 3, 0.9);
+
+  /* Utility Colors */
+
+  /* Success Colors */
+  --success-100: #E0FFDA;
+  --success-200: #C0FFB5;
+  --success-300: #A1FF90;
+  --success-400: #81FF6B;
+  --success-500: #62FF46;
+  --success-600: #4ECC38;
+  --success-700: #3B992A;
+  --success-800: #27661C;
+  --success-900: #14330E;
+
+  /* Warning Colors */
+  --warning-100: #FFD5DE;
+  --warning-200: #FFACBE;
+  --warning-300: #FF829D;
+  --warning-400: #FF597D;
+  --warning-500: #FF2F5C;
+  --warning-600: #CC264A;
+  --warning-700: #991C37;
+  --warning-800: #661325;
+  --warning-900: #330912;
+
+  /* Semantic Colors */
+
+  /* Background Colors */
+  --background-primary: var(--neutral-900);
+  --background-secondary: var(--neutral-800);
+  --background-tertiary: var(--primary-500);
+  --background-button-primary: var(--primary-500);
+  --background-button-primary-hover: var(--primary-600);
+  --background-button-secondary: var(--neutral-900);
+  --background-button-secondary-hover: var(--primary-900);
+
+  /* Border Colors */
+  --border-button-secondary: var(--primary-500);
+
+  /* Text Colors */
+  --color-primary: var(--white);
+  --color-secondary: var(--grey-400);
+  --color-link: var(--primary-500);
+  --color-button-primary: var(--neutral-900);
+  --color-button-secondary: var(--primary-500);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  font-family: 'Comic Neue', Helvetica, sans-serif;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

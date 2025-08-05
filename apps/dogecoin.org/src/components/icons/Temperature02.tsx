@@ -1,0 +1,20 @@
+import * as React from "react";
+import type { SVGProps } from "react";
+const SvgTemperature02 = (props: SVGProps<SVGSVGElement>) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    height="1em"
+    fill="none"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path
+      fill="currentColor"
+      fillRule="evenodd"
+      d="M5.6 4.798a3.4 3.4 0 0 1 6.8.002v8.73c.4.417.785.928 1.094 1.479.39.693.706 1.535.706 2.391a5.2 5.2 0 1 1-8.6-3.934zM9 3.4c-.774 0-1.4.626-1.4 1.398v9.155a1 1 0 0 1-.428.82A3.2 3.2 0 1 0 12.2 17.4c0-.388-.154-.885-.45-1.412a5.2 5.2 0 0 0-1.017-1.29 1 1 0 0 1-.333-.745V4.8A1.4 1.4 0 0 0 9 3.4m7.8 2.4a1.4 1.4 0 1 0 0 2.8 1.4 1.4 0 0 0 0-2.8m-3.4 1.4a3.4 3.4 0 1 1 6.8 0 3.4 3.4 0 0 1-6.8 0M8 17.4a1 1 0 0 1 1-1h.056a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1"
+      clipRule="evenodd"
+    />
+  </svg>
+);
+export default SvgTemperature02;

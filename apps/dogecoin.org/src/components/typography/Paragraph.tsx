@@ -1,0 +1,35 @@
+import React, { ReactNode } from 'react';
+
+interface ParagraphProps {
+  children: ReactNode;
+  className?: string;
+}
+
+const BaseParagraph: React.FC<ParagraphProps> = ({ children, className = '' }) => {
+  return (
+    <p className={`text-base ${className}`}>
+      {children}
+    </p>
+  );
+};
+
+const Leading: React.FC<ParagraphProps> = ({ children, className = '' }) => {
+  return (
+    <p className={`text-lg leading-relaxed ${className}`}>
+      {children}
+    </p>
+  );
+};
+
+const Caption: React.FC<ParagraphProps> = ({ children, className = '' }) => {
+  return (
+    <p className={`text-sm text-black/70 dark:text-white/70 ${className}`}>
+      {children}
+    </p>
+  );
+};
+
+export const P = Object.assign(BaseParagraph, {
+  Leading,
+  Caption
+});
