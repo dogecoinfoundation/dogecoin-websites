@@ -21,7 +21,7 @@ export const generateMetadata = async ({
 const Home = () => {
   return (
     <div className="flex h-screen flex-col items-center justify-center">
-      <h1>example.biz</h1>
+      <h1>example.com</h1>
     </div>
   );
 };

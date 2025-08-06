@@ -1,16 +1,21 @@
-import type { NextConfig } from "next";
-import type { Configuration } from "webpack";
+import { env } from '@/env';
+import { config, withAnalyzer } from '@repo/next-config';
+import { withLogging, withSentry } from '@repo/observability/next-config';
+import type { NextConfig } from 'next';
 
-const nextConfig = {
-  reactStrictMode: true,
-  webpack(config: Configuration) {
-    (config.module ??= {}).rules ??= [];
-    config.module.rules.push({
-      test: /\.svg$/,
-      use: ["@svgr/webpack"]
-    });
-    return config;
-  }
-};
+let nextConfig: NextConfig = withLogging(config);
+
+if (process.env.NODE_ENV === 'production') {
+  const redirects: NextConfig['redirects'] = async () => [];
+  nextConfig.redirects = redirects;
+}
+
+if (env.VERCEL) {
+  nextConfig = withSentry(nextConfig);
+}
+
+if (env.ANALYZE === 'true') {
+  nextConfig = withAnalyzer(nextConfig);
+}
 
 export default nextConfig;
