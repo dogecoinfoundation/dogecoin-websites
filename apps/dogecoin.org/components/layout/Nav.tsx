@@ -1,7 +1,7 @@
 'use client';
 
 import React, { ReactNode } from 'react';
-import { usePathname } from 'next/navigation';
+import { usePathname, useParams } from 'next/navigation';
 import Container from './Container';
 import { NavItem } from '../specific/NavItem';
 import { Logo } from '../common/Logo';
@@ -19,6 +19,10 @@ const navItems = [
 
 export function Nav({ children, className = '' }: NavProps) {
   const pathname = usePathname();
+  const { locale } = useParams();
+  
+  // Remove locale prefix for active state comparison
+  const pathnameWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
 
   return (
     <nav className="flex flex-col gap-8 items-center px-6 md:px-12 lg:px-12 xl:px-20 xl:py-6">
@@ -29,7 +33,7 @@ export function Nav({ children, className = '' }: NavProps) {
             <li key={item.href}>
               <NavItem 
                 href={item.href} 
-                isActive={pathname === item.href}
+                isActive={pathnameWithoutLocale === item.href}
               >
                 {item.label}
               </NavItem>
