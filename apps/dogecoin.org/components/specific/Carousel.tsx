@@ -1,155 +1,193 @@
 'use client';
 
-import React, { useState, useRef, useLayoutEffect } from 'react';
+import React from 'react';
+import {
+  Carousel as DesignSystemCarousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@repo/design-system/components/ui/carousel';
+import { Button } from '@repo/design-system/components/ui/button';
 import ChevronLeft from '@/components/icons/ChevronLeft';
 import ChevronRight from '@/components/icons/ChevronRight';
-import Button from '@/components/common/Button';
-import { Icon } from 'next/dist/lib/metadata/types/metadata-types';
 
 interface CarouselProps {
   className?: string;
+  setApi?: (api: any) => void;
 }
 
 const cards = [
-  { id: 1, content: 'Card 1' },
-  { id: 2, content: 'Card 2' },
-  { id: 3, content: 'Card 3' },
-  { id: 4, content: 'Card 4' },
-  { id: 5, content: 'Card 5' },
+  { 
+    id: 1, 
+    title: 'Card 1',
+    text: 'This is some sample text for the first card. It can contain multiple lines of content.',
+    image: '/assets/images/placeholder.jpg'
+  },
+  { 
+    id: 2, 
+    title: 'Card 2',
+    text: 'Another card with different content. The text can be longer and wrap to multiple lines.',
+    image: '/assets/images/placeholder.jpg'
+  },
+  { 
+    id: 3, 
+    title: 'Card 3',
+    text: 'Third card with its own unique content and description.',
+    image: '/assets/images/placeholder.jpg'
+  },
+  { 
+    id: 4, 
+    title: 'Card 4',
+    text: 'Fourth card showcasing different content and layout.',
+    image: '/assets/images/placeholder.jpg'
+  },
+  { 
+    id: 5, 
+    title: 'Card 5',
+    text: 'Fifth card with more sample content for demonstration.',
+    image: '/assets/images/placeholder.jpg'
+  },
+  { 
+    id: 6, 
+    title: 'Card 6',
+    text: 'Sixth card with additional content and information.',
+    image: '/assets/images/placeholder.jpg'
+  },
+  { 
+    id: 7, 
+    title: 'Card 7',
+    text: 'Seventh card with more sample text and content.',
+    image: '/assets/images/placeholder.jpg'
+  },
+  { 
+    id: 8, 
+    title: 'Card 8',
+    text: 'Eighth card with different content and layout.',
+    image: '/assets/images/placeholder.jpg'
+  },
+  { 
+    id: 9, 
+    title: 'Card 9',
+    text: 'Ninth card with final sample content and description.',
+    image: '/assets/images/placeholder.jpg'
+  },
 ];
 
-const CARD_WIDTH = 260;
-const CARD_GAP = 24;
-const VISIBLE_CARDS = 3;
-
-export function Carousel({ className = '' }: CarouselProps) {
-  const [index, setIndex] = useState(0);
-  const maxIndex = cards.length - VISIBLE_CARDS;
-  const containerRef = useRef<HTMLDivElement>(null);
-  const [minHeight, setMinHeight] = useState<number>(0);
-
-  useLayoutEffect(() => {
-    function updateHeight() {
-      if (containerRef.current) {
-        const width = containerRef.current.offsetWidth;
-        setMinHeight(width * (6 / 16));
-      }
-    }
-    updateHeight();
-    window.addEventListener('resize', updateHeight);
-    return () => window.removeEventListener('resize', updateHeight);
-  }, []);
+export function Carousel({ className = '', setApi: setApiProp }: CarouselProps) {
+  const setApi = setApiProp;
 
   return (
-    <div className={`flex flex-col items-center w-full ${className}`}>
-      <div
-        ref={containerRef}
-        className="relative w-full mb-8"
+    <div className={`w-full ${className}`}>
+      <DesignSystemCarousel
+        opts={{
+          align: "start",
+          loop: true,
+          containScroll: "trimSnaps",
+          dragFree: true,
+          skipSnaps: false,
+          inViewThreshold: 0.7,
+        }}
+        setApi={(newApi) => {
+          console.log('Carousel API set:', newApi);
+          if (setApi) {
+            setApi(newApi);
+          }
+        }}
+        className="w-full"
       >
-        {/* Rainbow SVG border */}
-        <svg
-          className="absolute inset-0 w-full h-full pointer-events-none select-none"
-          viewBox="0 0 1440 518"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          style={{ zIndex: 3 }}
-        >
-          <path
-            d="M1407.21 2.47363C1424.07 2.23018 1437.83 15.9345 1437.64 32.8008L1432.84 469.041C1432.66 485.334 1419.51 498.505 1403.22 498.709L54.3271 515.613C38.1885 515.816 24.7819 503.213 23.9873 487.093L2.62891 53.7988C1.79303 36.8416 15.1832 22.5705 32.1592 22.3252L1407.21 2.47363Z"
-            stroke="url(#paint0_linear_998_10128)"
-            strokeWidth="4"
-            vectorEffect="non-scaling-stroke"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            fill="none"
-          />
-          <defs>
-            <linearGradient id="paint0_linear_998_10128" x1="1426" y1="7.28111" x2="20.2652" y2="471.497" gradientUnits="userSpaceOnUse">
-              <stop stopColor="#FF0000" />
-              <stop offset="0.28" stopColor="#FFBF00" />
-              <stop offset="0.46" stopColor="#04FF00" />
-              <stop offset="0.675" stopColor="#00A2FF" />
-              <stop offset="0.835" stopColor="#FF00BB" />
-            </linearGradient>
-          </defs>
-        </svg>
-        {/* Carousel Background SVG */}
-        <svg
-          className="absolute inset-0 w-full h-full pointer-events-none select-none"
-          viewBox="0 0 1439 540"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          preserveAspectRatio="none"
-          style={{ zIndex: 2 }}
-        >
-          <path
-            d="m22.0318 509.109-21.472042-454.4131c-.853197-18.0562 13.408242-33.2346 31.482442-33.5068l1374.1278-20.69473c18-.270962 32.67 14.34073 32.48 32.33363l-4.82 457.487c-.18 17.378-14.2 31.433-31.58 31.66l-1347.8355 17.621c-17.2465.225-31.5686-13.258-32.3827-30.487z"
-            fill="var(--background-secondary)" />
-        </svg>
+        <CarouselContent className="-ml-2 md:-ml-4">
+          {cards.map((card) => (
+            <CarouselItem key={card.id} className="pl-2 md:pl-4 w-[250px] flex-shrink-0">
+              <div className="select-none max-h-[250px]">
+                {/* Image */}
+                <img 
+                  src={card.image} 
+                  alt={card.title}
+                  className="w-full h-32 object-cover mb-3 rounded-lg"
+                />
+                
+                {/* Title */}
+                <h3 className="text-lg font-bold text-white mb-2">
+                  {card.title}
+                </h3>
+                
+                {/* Text */}
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  {card.text}
+                </p>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </DesignSystemCarousel>
+    </div>
+  );
+}
 
-        {/* Carousel content, clipped to match SVG */}
-        <div
-          className="relative flex items-center justify-center w-full p-8 overflow-hidden"
-          style={{
-            minHeight,
-            zIndex: 2,
-            clipPath: 'polygon(2px 24px, 100% 0px, calc(100% - 10px) calc(100% - 20px), 24px calc(100% - 4px))',
-            WebkitClipPath: 'polygon(2px 24px, 100% 0px, calc(100% - 10px) calc(100% - 20px), 24px calc(100% - 4px))',
-          }}
-        >
-          <div
-            className="flex transition-transform duration-300"
-            style={{
-              transform: `translateX(-${index * (CARD_WIDTH + CARD_GAP)}px)`,
-              gap: CARD_GAP,
-              width: '100%',
-              justifyContent: 'flex-start',
+export function CarouselControls({ api, current, count }: { api: any; current: number; count: number }) {
+  console.log('CarouselControls render:', { api: !!api, current, count });
+  
+  return (
+    <div className="flex items-center gap-4 mt-4">
+      <button
+        type="button"
+        className="flex w-16 h-16 p-[9.143px] justify-center items-center aspect-square rounded-[100px] bg-[var(--Base-Brand-color-primary-500,#E3A849)] border-black cursor-pointer hover:opacity-80 transition-opacity"
+        onClick={() => {
+          console.log('Left button clicked, api:', api);
+          if (api && typeof api.scrollPrev === 'function') {
+            api.scrollPrev();
+          }
+        }}
+      >
+        <ChevronLeft className="text-black" />
+      </button>
+      
+      {/* Pagination dots */}
+      <div className="flex gap-2">
+        {Array.from({ length: count }).map((_, i) => (
+          <button
+            key={i}
+            type="button"
+            className={`w-5 h-[18px] aspect-[10/9] transition-all duration-200 cursor-pointer ${
+              i === current - 1 ? 'opacity-100' : 'opacity-30'
+            }`}
+            onClick={() => {
+              console.log('Pagination dot clicked:', i);
+              if (api && typeof api.scrollTo === 'function') {
+                api.scrollTo(i);
+              }
             }}
           >
-            {cards.map((card, i) => (
-              <div
-                key={card.id}
-                className="flex-shrink-0 bg-white/10 rounded-xl shadow-lg flex items-center justify-center text-xl font-bold"
-                style={{
-                  width: CARD_WIDTH,
-                  height: 180,
-                  marginRight: i === cards.length - 1 ? 0 : CARD_GAP,
-                  opacity: i < index || i > index + 3 ? 0.5 : 1,
-                  border: '2px solid rgba(255,255,255,0.1)',
-                }}
-              >
-                {card.content}
-              </div>
-            ))}
-          </div>
-        </div>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="20" 
+              height="19" 
+              viewBox="0 0 20 19" 
+              fill="none"
+              className="w-full h-full"
+            >
+              <path 
+                d="M6.55432 0.442041C6.59644 0.442543 6.63964 0.444472 6.68256 0.447615C8.39196 0.723385 9.33186 2.41278 9.46805 3.90254C9.66707 5.25436 9.02967 6.99185 7.44156 7.29475C7.21121 7.33574 6.97185 7.31701 6.74668 7.25991C4.83432 6.66059 3.97852 4.54378 4.25495 2.79039C4.3353 1.65795 5.24869 0.426479 6.55432 0.442041ZM13.8014 0.514512C14.8643 0.538897 15.6922 1.54643 15.8607 2.49353C16.2157 4.36995 15.3025 6.70141 13.2109 7.29475C13.015 7.33457 12.8123 7.33868 12.6144 7.31008C11.2007 7.08988 10.6018 5.60851 10.661 4.41263C10.7035 2.8351 11.5803 1.01102 13.3331 0.567471C13.4934 0.527761 13.6495 0.511028 13.8014 0.514512ZM1.92277 5.84393C3.76152 5.94675 5.02213 7.66146 5.20184 9.26263C5.44518 10.4174 4.78646 11.962 3.37665 12.0542C1.41086 12.0315 0.0698032 10.0683 0.0140839 8.37903C-0.110258 7.2618 0.593895 5.90562 1.92277 5.84393ZM18.0169 6.22441C18.7992 6.21812 19.5685 6.65606 19.8242 7.39928C20.5062 9.3874 19.1366 11.9053 16.8836 12.3231C15.9433 12.4735 15.1171 11.7986 14.884 10.9866C14.3899 9.24976 15.4047 7.23303 17.1222 6.44461C17.402 6.29784 17.7108 6.22687 18.0169 6.22441ZM9.77374 9.78944C11.3073 9.79249 12.865 10.5199 13.858 11.6026C14.9306 12.8646 15.8092 14.3332 16.1529 15.9258C16.5705 17.0722 15.6241 18.3916 14.3128 18.3996C12.7354 18.4405 11.3796 17.4281 9.81102 17.3529C8.48018 17.1633 7.28854 17.8103 6.09206 18.2337C5.07333 18.641 3.66563 18.4849 3.14552 17.4602C2.73642 16.4158 3.33858 15.3022 3.83742 14.3746C4.85486 12.8692 5.94486 11.2869 7.61305 10.3469C8.2817 9.95955 9.02477 9.78794 9.77374 9.78944Z" 
+                fill="var(--Base-Brand-color-primary-500, #E3A849)"
+              />
+            </svg>
+          </button>
+        ))}
       </div>
-      {/* Controls */}
-      <div className="flex items-center gap-4">
-        <Button
-          onClick={() => setIndex((i) => Math.max(i - 1, 0))}
-          disabled={index === 0}
-          icon={<ChevronLeft />}
-          size="lg" // Or any size you prefer
-        />
-        {/* Pagination dots */}D
-        <div className="flex gap-2">
-          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
-            <span
-              key={i}
-              className={`w-2 h-2 rounded-full transition-all duration-200 ${i === index ? 'bg-link scale-125' : 'bg-white/30'
-                }`}
-            />
-          ))}
-        </div>
-        <Button
-          onClick={() => setIndex((i) => Math.max(i - 1, 0))}
-          disabled={index === 0}
-          icon={<ChevronRight />}
-          size="lg" // Or any size you prefer
-        />
-      </div>
+      
+      <button
+        type="button"
+        className="flex w-16 h-16 p-[9.143px] justify-center items-center aspect-square rounded-[100px] bg-[var(--Base-Brand-color-primary-500,#E3A849)] border-black cursor-pointer hover:opacity-80 transition-opacity"
+        onClick={() => {
+          console.log('Right button clicked, api:', api);
+          if (api && typeof api.scrollNext === 'function') {
+            api.scrollNext();
+          }
+        }}
+      >
+        <ChevronRight className="text-black" />
+      </button>
     </div>
   );
 }

@@ -16,7 +16,7 @@ export function BlurEffect({
   color = 'currentColor'  // default
 }: BlurEffectProps) {
   return (
-    <div className="absolute" style={{ color }}>
+    <div className="absolute -z-10" style={{ color }}>
       <svg 
         fill="none" 
         height={height} 
