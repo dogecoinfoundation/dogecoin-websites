@@ -83,7 +83,19 @@ export default function Home() {
         <Section>
           <Container>
             <div className="relative flex flex-col items-center">
-              <H3 className="[font-family:var(--font-montserrat)] font-extralight inline-block mb-4 text-center">Much activity</H3>
+              <h3 
+                className="inline-block mb-4 text-center"
+                style={{
+                  color: 'var(--Dark-Text-Primary, #FFF)',
+                  fontFamily: 'var(--Typography-font-family-heading, "Comic Neue")',
+                  fontSize: 'var(--Typography-Heading-H1-font-size, 64px)',
+                  fontStyle: 'normal',
+                  fontWeight: 700,
+                  lineHeight: 'var(--Typography-Heading-H1-line-height, 72px)'
+                }}
+              >
+                Much activity
+              </h3>
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
                 width="146" 

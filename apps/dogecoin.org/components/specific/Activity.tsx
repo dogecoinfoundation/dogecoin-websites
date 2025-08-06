@@ -128,7 +128,6 @@ export function Activity({
           {primaryText && (
             <button
               onClick={onPrimary}
-              className="text-black font-medium"
               style={{
                 display: 'flex',
                 height: '64px',
@@ -137,7 +136,13 @@ export function Activity({
                 alignItems: 'center',
                 gap: '8px',
                 borderRadius: '1000px',
-                backgroundColor: color
+                backgroundColor: color,
+                color: 'var(--Colour-Text-text-primary-light, #201F1D)',
+                fontFamily: 'var(--Typography-font-family-button, "Comic Neue")',
+                fontSize: 'var(--Typography-Button-XLarge-font-size, 24px)',
+                fontStyle: 'normal',
+                fontWeight: 700,
+                lineHeight: 'var(--Typography-Button-XLarge-line-height, 32px)'
               }}
             >
               {primaryText}
@@ -146,7 +151,6 @@ export function Activity({
           {secondaryText && (
             <button
               onClick={onSecondary}
-              className="font-medium"
               style={{
                 display: 'flex',
                 height: '60px',
@@ -157,7 +161,12 @@ export function Activity({
                 borderRadius: '1000px',
                 border: `2px solid ${color}`,
                 color: color,
-                backgroundColor: 'transparent'
+                backgroundColor: 'transparent',
+                fontFamily: 'var(--Typography-font-family-button, "Comic Neue")',
+                fontSize: 'var(--Typography-Button-XLarge-font-size, 24px)',
+                fontStyle: 'normal',
+                fontWeight: 700,
+                lineHeight: 'var(--Typography-Button-XLarge-line-height, 32px)'
               }}
             >
               {secondaryText}
