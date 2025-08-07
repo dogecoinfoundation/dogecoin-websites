@@ -28,6 +28,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          type="module"
+          src="https://fetch.dogecoin.org/doge-qr.js">
+        </script>
+      </head>
       <body
         className={`bg-[var(--background-primary)] text-[var(--color-primary)] ${comicNeue.variable} ${montserrat.variable} antialiase`}
       >

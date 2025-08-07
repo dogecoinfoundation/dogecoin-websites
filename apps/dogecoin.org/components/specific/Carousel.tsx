@@ -5,16 +5,22 @@ import {
   Carousel as DesignSystemCarousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from '@repo/design-system/components/ui/carousel';
-import { Button } from '@repo/design-system/components/ui/button';
 import ChevronLeft from '@/components/icons/ChevronLeft';
 import ChevronRight from '@/components/icons/ChevronRight';
 
+export interface CarouselApi {
+  scrollSnapList: () => unknown[];
+  selectedScrollSnap: () => number;
+  on: (event: string, callback: () => void) => void;
+  scrollPrev: () => void;
+  scrollNext: () => void;
+  scrollTo: (index: number) => void;
+}
+
 interface CarouselProps {
   className?: string;
-  setApi?: (api: any) => void;
+  setApi?: (api: CarouselApi) => void;
 }
 
 const cards = [
@@ -90,32 +96,42 @@ export function Carousel({ className = '', setApi: setApiProp }: CarouselProps) 
         }}
         setApi={(newApi) => {
           console.log('Carousel API set:', newApi);
-          if (setApi) {
-            setApi(newApi);
+          if (setApi && newApi) {
+            setApi(newApi as CarouselApi);
           }
         }}
         className="w-full"
       >
         <CarouselContent className="-ml-2 md:-ml-4">
           {cards.map((card) => (
-            <CarouselItem key={card.id} className="pl-2 md:pl-4 w-[250px] flex-shrink-0">
-              <div className="select-none max-h-[250px]">
+            <CarouselItem key={card.id} className="carousel-item">
+              <div className="carousel-card">
                 {/* Image */}
                 <img 
                   src={card.image} 
                   alt={card.title}
-                  className="w-full h-32 object-cover mb-3 rounded-lg"
+                  className="carousel-card-image"
                 />
                 
-                {/* Title */}
-                <h3 className="text-lg font-bold text-white mb-2">
-                  {card.title}
-                </h3>
+                {/* Content area */}
+                <div className="carousel-card-content">
+                  {/* Title */}
+                  <h3 className="carousel-card-title">
+                    {card.title}
+                  </h3>
+                  
+                  {/* Text */}
+                  <p className="carousel-card-text">
+                    {card.text}
+                  </p>
+                </div>
                 
-                {/* Text */}
-                <p className="text-sm text-gray-300 leading-relaxed">
-                  {card.text}
-                </p>
+                {/* Button container - always at bottom */}
+                <div className="carousel-card-button-container">
+                  <button className="carousel-card-button">
+                    Check it out
+                  </button>
+                </div>
               </div>
             </CarouselItem>
           ))}
@@ -125,14 +141,14 @@ export function Carousel({ className = '', setApi: setApiProp }: CarouselProps) 
   );
 }
 
-export function CarouselControls({ api, current, count }: { api: any; current: number; count: number }) {
+export function CarouselControls({ api, current, count }: { api: CarouselApi | null; current: number; count: number }) {
   console.log('CarouselControls render:', { api: !!api, current, count });
   
   return (
-    <div className="flex items-center gap-4 mt-4">
+    <div className="carousel-controls-container">
       <button
         type="button"
-        className="flex w-16 h-16 p-[9.143px] justify-center items-center aspect-square rounded-[100px] bg-[var(--Base-Brand-color-primary-500,#E3A849)] border-black cursor-pointer hover:opacity-80 transition-opacity"
+        className="carousel-navigation-button"
         onClick={() => {
           console.log('Left button clicked, api:', api);
           if (api && typeof api.scrollPrev === 'function') {
@@ -140,17 +156,17 @@ export function CarouselControls({ api, current, count }: { api: any; current: n
           }
         }}
       >
-        <ChevronLeft className="text-black" />
+        <ChevronLeft className="carousel-navigation-icon" />
       </button>
       
       {/* Pagination dots */}
-      <div className="flex gap-2">
+      <div className="carousel-pagination-container">
         {Array.from({ length: count }).map((_, i) => (
           <button
             key={i}
             type="button"
-            className={`w-5 h-[18px] aspect-[10/9] transition-all duration-200 cursor-pointer ${
-              i === current - 1 ? 'opacity-100' : 'opacity-30'
+            className={`carousel-pagination-dot ${
+              i === current - 1 ? 'carousel-pagination-dot-active' : 'carousel-pagination-dot-inactive'
             }`}
             onClick={() => {
               console.log('Pagination dot clicked:', i);
@@ -178,7 +194,7 @@ export function CarouselControls({ api, current, count }: { api: any; current: n
       
       <button
         type="button"
-        className="flex w-16 h-16 p-[9.143px] justify-center items-center aspect-square rounded-[100px] bg-[var(--Base-Brand-color-primary-500,#E3A849)] border-black cursor-pointer hover:opacity-80 transition-opacity"
+        className="carousel-navigation-button"
         onClick={() => {
           console.log('Right button clicked, api:', api);
           if (api && typeof api.scrollNext === 'function') {
@@ -186,7 +202,7 @@ export function CarouselControls({ api, current, count }: { api: any; current: n
           }
         }}
       >
-        <ChevronRight className="text-black" />
+        <ChevronRight className="carousel-navigation-icon" />
       </button>
     </div>
   );

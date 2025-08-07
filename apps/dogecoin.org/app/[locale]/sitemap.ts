@@ -13,7 +13,7 @@ const protocol = env.VERCEL_PROJECT_PRODUCTION_URL?.startsWith('https')
   : 'http';
 const url = new URL(`${protocol}://${env.VERCEL_PROJECT_PRODUCTION_URL}`);
 
-const sitemap = async (): Promise<MetadataRoute.Sitemap> => [
+const sitemap = (): MetadataRoute.Sitemap => [
   {
     url: new URL('/', url).href,
     lastModified: new Date(),

@@ -9,15 +9,9 @@ catalogs:
     '@types/node':
       specifier: ^22.15.3
       version: 22.15.3
-    eslint:
-      specifier: ^9.25.1
-      version: 9.25.1
     next:
       specifier: ^15.1.7
       version: 15.3.1
-    prettier:
-      specifier: ^3.5.3
-      version: 3.5.3
     typescript:
       specifier: ^5.8.3
       version: 5.8.3
@@ -54,6 +48,97 @@ importers:
       turbo:
         specifier: ^2.5.5
         version: 2.5.5
+      typescript:
+        specifier: 'catalog:'
+        version: 5.8.3
+
+  apps/dogecoin.org:
+    dependencies:
+      '@radix-ui/react-icons':
+        specifier: ^1.3.2
+        version: 1.3.2(react@19.0.0)
+      '@repo/design-system':
+        specifier: workspace:*
+        version: link:../../packages/design-system
+      '@repo/email':
+        specifier: workspace:*
+        version: link:../../packages/email
+      '@repo/internationalization':
+        specifier: workspace:*
+        version: link:../../packages/internationalization
+      '@repo/next-config':
+        specifier: workspace:*
+        version: link:../../packages/next-config
+      '@repo/observability':
+        specifier: workspace:*
+        version: link:../../packages/observability
+      '@repo/seo':
+        specifier: workspace:*
+        version: link:../../packages/seo
+      '@sentry/nextjs':
+        specifier: ^9.4.0
+        version: 9.19.0(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@15.3.1(@babel/core@7.27.1)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(webpack@5.99.8(esbuild@0.25.3))
+      '@t3-oss/env-nextjs':
+        specifier: ^0.12.0
+        version: 0.12.0(typescript@5.8.3)(zod@3.24.3)
+      date-fns:
+        specifier: ^4.1.0
+        version: 4.1.0
+      fumadocs-core:
+        specifier: ^15.0.15
+        version: 15.3.1(@types/react@19.1.4)(next@15.3.1(@babel/core@7.27.1)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      import-in-the-middle:
+        specifier: ^1.13.1
+        version: 1.13.2
+      lucide-react:
+        specifier: ^0.477.0
+        version: 0.477.0(react@19.0.0)
+      mdx-bundler:
+        specifier: ^10.1.0
+        version: 10.1.1(acorn@8.15.0)(esbuild@0.25.3)
+      next:
+        specifier: 'catalog:'
+        version: 15.3.1(@babel/core@7.27.1)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react:
+        specifier: catalog:react19
+        version: 19.0.0
+      react-dom:
+        specifier: catalog:react19
+        version: 19.0.0(react@19.0.0)
+      react-wrap-balancer:
+        specifier: ^1.1.1
+        version: 1.1.1(react@19.0.0)
+      require-in-the-middle:
+        specifier: ^7.5.2
+        version: 7.5.2
+      sharp:
+        specifier: ^0.33.5
+        version: 0.33.5
+      shiki:
+        specifier: ^3.1.0
+        version: 3.4.1
+      zod:
+        specifier: 'catalog:'
+        version: 3.24.3
+    devDependencies:
+      '@repo/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@repo/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
+      '@types/node':
+        specifier: 'catalog:'
+        version: 22.15.3
+      '@types/react':
+        specifier: catalog:react19
+        version: 19.1.4
+      '@types/react-dom':
+        specifier: catalog:react19
+        version: 19.1.2(@types/react@19.1.4)
+      tailwindcss:
+        specifier: ^4.0.12
+        version: 4.1.6
       typescript:
         specifier: 'catalog:'
         version: 5.8.3
@@ -8437,7 +8522,7 @@ snapshots:
       '@babel/traverse': 7.27.1
       '@babel/types': 7.27.1
       convert-source-map: 2.0.0
-      debug: 4.4.0
+      debug: 4.4.1
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -8457,7 +8542,7 @@ snapshots:
       '@babel/traverse': 7.27.1
       '@babel/types': 7.27.1
       convert-source-map: 2.0.0
-      debug: 4.4.0
+      debug: 4.4.1
       gensync: 1.0.0-beta.2
       json5: 2.2.3
       semver: 6.3.1
@@ -9234,7 +9319,7 @@ snapshots:
       '@babel/parser': 7.27.1
       '@babel/template': 7.27.1
       '@babel/types': 7.27.1
-      debug: 4.4.0
+      debug: 4.4.1
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
@@ -9292,7 +9377,7 @@ snapshots:
   '@esbuild-plugins/node-resolve@0.2.2(esbuild@0.25.3)':
     dependencies:
       '@types/resolve': 1.20.2
-      debug: 4.4.0
+      debug: 4.4.1
       esbuild: 0.25.3
       escape-string-regexp: 4.0.0
       resolve: 1.22.10
@@ -11242,6 +11327,33 @@ snapshots:
 
   '@sentry/core@9.19.0': {}
 
+  '@sentry/nextjs@9.19.0(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@15.3.1(@babel/core@7.27.1)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(webpack@5.99.8(esbuild@0.25.3))':
+    dependencies:
+      '@opentelemetry/api': 1.9.0
+      '@opentelemetry/semantic-conventions': 1.33.0
+      '@rollup/plugin-commonjs': 28.0.1(rollup@4.35.0)
+      '@sentry-internal/browser-utils': 9.19.0
+      '@sentry/core': 9.19.0
+      '@sentry/node': 9.19.0
+      '@sentry/opentelemetry': 9.19.0(@opentelemetry/api@1.9.0)(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/semantic-conventions@1.33.0)
+      '@sentry/react': 9.19.0(react@19.0.0)
+      '@sentry/vercel-edge': 9.19.0
+      '@sentry/webpack-plugin': 3.3.1(webpack@5.99.8(esbuild@0.25.3))
+      chalk: 3.0.0
+      next: 15.3.1(@babel/core@7.27.1)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      resolve: 1.22.8
+      rollup: 4.35.0
+      stacktrace-parser: 0.1.10
+    transitivePeerDependencies:
+      - '@opentelemetry/context-async-hooks'
+      - '@opentelemetry/core'
+      - '@opentelemetry/instrumentation'
+      - '@opentelemetry/sdk-trace-base'
+      - encoding
+      - react
+      - supports-color
+      - webpack
+
   '@sentry/nextjs@9.19.0(@opentelemetry/context-async-hooks@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/core@1.30.1(@opentelemetry/api@1.9.0))(@opentelemetry/instrumentation@0.57.2(@opentelemetry/api@1.9.0))(@opentelemetry/sdk-trace-base@1.30.1(@opentelemetry/api@1.9.0))(next@15.3.1(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)(webpack@5.99.8(esbuild@0.25.3))':
     dependencies:
       '@opentelemetry/api': 1.9.0
@@ -11732,7 +11844,7 @@ snapshots:
 
   '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@5.8.3)(webpack@5.99.8(esbuild@0.25.3))':
     dependencies:
-      debug: 4.4.0
+      debug: 4.4.1
       endent: 2.1.0
       find-cache-dir: 3.3.2
       flat-cache: 3.2.0
@@ -11978,11 +12090,11 @@ snapshots:
 
   '@types/connect@3.4.38':
     dependencies:
-      '@types/node': 22.15.3
+      '@types/node': 24.1.0
 
   '@types/cors@2.8.18':
     dependencies:
-      '@types/node': 22.15.3
+      '@types/node': 24.1.0
 
   '@types/d3-array@3.2.1': {}
 
@@ -12072,7 +12184,7 @@ snapshots:
 
   '@types/mysql@2.15.26':
     dependencies:
-      '@types/node': 22.15.3
+      '@types/node': 24.1.0
 
   '@types/negotiator@0.6.3': {}
 
@@ -12092,13 +12204,13 @@ snapshots:
 
   '@types/pg@8.11.10':
     dependencies:
-      '@types/node': 22.15.3
+      '@types/node': 24.1.0
       pg-protocol: 1.9.5
       pg-types: 4.0.2
 
   '@types/pg@8.6.1':
     dependencies:
-      '@types/node': 22.15.3
+      '@types/node': 24.1.0
       pg-protocol: 1.9.5
       pg-types: 2.2.0
 
@@ -12118,7 +12230,7 @@ snapshots:
 
   '@types/tedious@4.0.14':
     dependencies:
-      '@types/node': 22.15.3
+      '@types/node': 24.1.0
 
   '@types/through@0.0.33':
     dependencies:
@@ -12155,7 +12267,7 @@ snapshots:
       '@typescript-eslint/types': 8.31.1
       '@typescript-eslint/typescript-estree': 8.31.1(typescript@5.8.3)
       '@typescript-eslint/visitor-keys': 8.31.1
-      debug: 4.4.0
+      debug: 4.4.1
       eslint: 9.25.1(jiti@2.4.2)
       typescript: 5.8.3
     transitivePeerDependencies:
@@ -12170,7 +12282,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/typescript-estree': 8.31.1(typescript@5.8.3)
       '@typescript-eslint/utils': 8.31.1(eslint@9.25.1(jiti@2.4.2))(typescript@5.8.3)
-      debug: 4.4.0
+      debug: 4.4.1
       eslint: 9.25.1(jiti@2.4.2)
       ts-api-utils: 2.1.0(typescript@5.8.3)
       typescript: 5.8.3
@@ -12183,7 +12295,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/types': 8.31.1
       '@typescript-eslint/visitor-keys': 8.31.1
-      debug: 4.4.0
+      debug: 4.4.1
       fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.5
@@ -12332,9 +12444,9 @@ snapshots:
       mime-types: 2.1.35
       negotiator: 0.6.3
 
-  acorn-import-attributes@1.9.5(acorn@8.14.1):
+  acorn-import-attributes@1.9.5(acorn@8.15.0):
     dependencies:
-      acorn: 8.14.1
+      acorn: 8.15.0
 
   acorn-jsx@5.3.2(acorn@8.14.1):
     dependencies:
@@ -12346,7 +12458,7 @@ snapshots:
 
   acorn-walk@8.3.4:
     dependencies:
-      acorn: 8.14.1
+      acorn: 8.15.0
 
   acorn@8.14.1: {}
 
@@ -13347,7 +13459,7 @@ snapshots:
   engine.io@6.6.4(bufferutil@4.0.8)(utf-8-validate@6.0.4):
     dependencies:
       '@types/cors': 2.8.18
-      '@types/node': 22.15.3
+      '@types/node': 24.1.0
       accepts: 1.3.8
       base64id: 2.0.0
       cookie: 0.7.2
@@ -13495,7 +13607,7 @@ snapshots:
 
   esbuild-register@3.6.0(esbuild@0.25.3):
     dependencies:
-      debug: 4.4.0
+      debug: 4.4.1
       esbuild: 0.25.3
     transitivePeerDependencies:
       - supports-color
@@ -13971,6 +14083,31 @@ snapshots:
   fsevents@2.3.3:
     optional: true
 
+  fumadocs-core@15.3.1(@types/react@19.1.4)(next@15.3.1(@babel/core@7.27.1)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
+    dependencies:
+      '@formatjs/intl-localematcher': 0.6.1
+      '@orama/orama': 3.1.6
+      '@shikijs/rehype': 3.4.1
+      '@shikijs/transformers': 3.4.1
+      github-slugger: 2.0.0
+      hast-util-to-estree: 3.1.3
+      hast-util-to-jsx-runtime: 2.3.6
+      image-size: 2.0.2
+      negotiator: 1.0.0
+      react-remove-scroll: 2.6.3(@types/react@19.1.4)(react@19.0.0)
+      remark: 15.0.1
+      remark-gfm: 4.0.1
+      scroll-into-view-if-needed: 3.1.0
+      shiki: 3.4.1
+      unist-util-visit: 5.0.0
+    optionalDependencies:
+      next: 15.3.1(@babel/core@7.27.1)(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      react: 19.0.0
+      react-dom: 19.0.0(react@19.0.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - supports-color
+
   fumadocs-core@15.3.1(@types/react@19.1.4)(next@15.3.1(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0):
     dependencies:
       '@formatjs/intl-localematcher': 0.6.1
@@ -14374,8 +14511,8 @@ snapshots:
 
   import-in-the-middle@1.13.2:
     dependencies:
-      acorn: 8.14.1
-      acorn-import-attributes: 1.9.5(acorn@8.14.1)
+      acorn: 8.15.0
+      acorn-import-attributes: 1.9.5(acorn@8.15.0)
       cjs-module-lexer: 1.4.3
       module-details-from-path: 1.0.4
 
@@ -14646,7 +14783,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.15.3
+      '@types/node': 24.1.0
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -16562,7 +16699,7 @@ snapshots:
 
   require-in-the-middle@7.5.2:
     dependencies:
-      debug: 4.4.0
+      debug: 4.4.1
       module-details-from-path: 1.0.4
       resolve: 1.22.10
     transitivePeerDependencies:
@@ -17184,7 +17321,7 @@ snapshots:
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
-      schema-utils: 4.3.0
+      schema-utils: 4.3.2
       serialize-javascript: 6.0.2
       terser: 5.39.0
       webpack: 5.99.8(esbuild@0.25.3)
@@ -17456,7 +17593,7 @@ snapshots:
 
   unplugin@1.0.1:
     dependencies:
-      acorn: 8.14.1
+      acorn: 8.15.0
       chokidar: 3.6.0
       webpack-sources: 3.2.3
       webpack-virtual-modules: 0.5.0
@@ -17588,7 +17725,7 @@ snapshots:
   webpack-bundle-analyzer@4.10.1(bufferutil@4.0.8):
     dependencies:
       '@discoveryjs/json-ext': 0.5.7
-      acorn: 8.14.1
+      acorn: 8.15.0
       acorn-walk: 8.3.4
       commander: 7.2.0
       debounce: 1.2.1
@@ -17634,7 +17771,7 @@ snapshots:
       '@webassemblyjs/ast': 1.14.1
       '@webassemblyjs/wasm-edit': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
-      acorn: 8.14.1
+      acorn: 8.15.0
       browserslist: 4.24.4
       chrome-trace-event: 1.0.4
       enhanced-resolve: 5.18.1
@@ -17665,7 +17802,7 @@ snapshots:
       '@webassemblyjs/ast': 1.14.1
       '@webassemblyjs/wasm-edit': 1.14.1
       '@webassemblyjs/wasm-parser': 1.14.1
-      acorn: 8.14.1
+      acorn: 8.15.0
       browserslist: 4.24.4
       chrome-trace-event: 1.0.4
       enhanced-resolve: 5.18.1

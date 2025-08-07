@@ -1,6 +1,7 @@
 'use client';
 
-import React, { ReactNode } from 'react';
+import React from 'react';
+import type { ReactNode } from 'react';
 import { usePathname, useParams } from 'next/navigation';
 import Container from './Container';
 import { NavItem } from '../specific/NavItem';
@@ -17,12 +18,12 @@ const navItems = [
   { href: '/contact', label: 'Contact' },
 ];
 
-export function Nav({ children, className = '' }: NavProps) {
+export function Nav({ children, className: _className = '' }: NavProps) {
   const pathname = usePathname();
   const { locale } = useParams();
   
   // Remove locale prefix for active state comparison
-  const pathnameWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
+  const pathnameWithoutLocale = pathname.replace(`/${String(locale)}`, '') || '/';
 
   return (
     <nav className="flex flex-col gap-8 items-center px-6 md:px-12 lg:px-12 xl:px-20 xl:py-6">

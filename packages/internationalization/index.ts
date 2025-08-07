@@ -17,7 +17,13 @@ const dictionaries = locales.reduce<Dictionaries>((acc, locale) => {
 }, {} as Dictionaries);
 
 export const getDictionary = async (locale: string) => {
-  const dictionary = await dictionaries[locale as keyof typeof locales]();
+  const dictionaryFunction = dictionaries[locale as keyof typeof locales];
+  
+  if (!dictionaryFunction) {
+    throw new Error(`Dictionary not found for locale: ${locale}`);
+  }
+  
+  const dictionary = await dictionaryFunction();
 
   return dictionary;
 };
