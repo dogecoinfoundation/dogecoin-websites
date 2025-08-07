@@ -210,7 +210,7 @@ export default function Home() {
                 className="donation-card-image"
               />
               <h4 className="donation-card-title">
-                Lambos
+                Development
               </h4>
               <p className="donation-card-text">
                 Help fund ongoing development and maintenance of the Dogecoin network infrastructure.
@@ -337,13 +337,13 @@ export default function Home() {
         </div>
         <div className="donation-qr-container">
           <h3 className="donation-section-heading">2. Scan to send</h3>
-          <div className="donation-qr-code">
+                    <div className="donation-qr-code">
             {(!customAmount || /^[0-9]*\.?[0-9]*$/.test(customAmount)) && (
               <div
                 dangerouslySetInnerHTML={{
                   __html: `<doge-qr
                     address="${DOGE_ADDRESS}"
-                    amount="${selectedDonation === 'custom' ? customAmount : selectedDonation || '69'}"
+                    amount="${selectedDonation === 'custom' ? (customAmount || '69') : (selectedDonation || '69')}"
                     size="md"
                     background="transparent"
                     fill="#FFFFFF">
