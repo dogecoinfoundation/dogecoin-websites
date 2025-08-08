@@ -193,7 +193,7 @@ const availableLanguages: string[] = ['en', 'es'];
 const getSupportedLanguages = (): LanguageMetadata[] => {
   return availableLanguages.map(code => ({
     code,
-    name: languageNames[code] || code.toUpperCase(),
+    name: languageNames[code] ?? code.toUpperCase(),
     flag: `/assets/images/flags/${code}.png`
   }));
 };
@@ -210,7 +210,11 @@ export function LanguageSelector() {
   
   const currentLanguage = String(params.locale) || 'en';
   const languages = getSupportedLanguages();
-  const currentLang = getLanguageMetadata(currentLanguage) ?? languages[0]!;
+  const currentLang = getLanguageMetadata(currentLanguage) ?? languages[0];
+  
+  if (!currentLang) {
+    return null;
+  }
   
   return (
     <div className="language-selector">
@@ -257,7 +261,7 @@ export function LanguageSelector() {
                 src={language.flag}
                 alt={`${language.name} flag`}
                 width={24}
-                height={16}
+                height={24}
                 className="language-flag"
               />
               <span className="language-name">{language.name}</span>

@@ -22,16 +22,15 @@ export function MissionCards({ cards }: MissionCardsProps) {
             const card = cards.find(c => c.id === id);
             if (!card) return null;
             
-            // Define rotation angles for each position (not card ID)
-            const rotationAngles: { [key: number]: string } = {
-              1: '1.624deg',    // Position 1 keeps its rotation
-              2: '-3.857deg',   // Position 2 gets card 2's rotation
-              3: '1.361deg',    // Position 3 gets card 3's rotation
-              4: '0.344deg',    // Position 4 gets card 4's rotation
-              5: '-0.616deg',   // Position 5 gets card 5's rotation
-              6: '-3.251deg',   // Position 6 gets card 6's rotation
-              7: '1.94deg',     // Position 7 gets card 7's rotation
-              8: '0deg'         // Position 8 gets card 8's rotation
+            const rotationAngles: Record<number, string> = {
+              1: '1.624deg', 
+              2: '-3.857deg',
+              3: '1.361deg', 
+              4: '0.344deg', 
+              5: '-0.616deg',
+              6: '-3.251deg',
+              7: '1.94deg',  
+              8: '0deg'      
             };
 
             return (
@@ -39,7 +38,7 @@ export function MissionCards({ cards }: MissionCardsProps) {
                 key={card.id} 
                 className="mission-card" 
                 data-card={card.id}
-                style={{ transform: `rotate(${rotationAngles[id] || '0deg'})` }}
+                style={{ transform: `rotate(${rotationAngles[id] ?? '0deg'})` }}
               >
                 <div className="mission-card-number">{card.id}</div>
                 <div className="mission-card-content">
@@ -57,16 +56,15 @@ export function MissionCards({ cards }: MissionCardsProps) {
             const card = cards.find(c => c.id === id);
             if (!card) return null;
             
-            // Define rotation angles for each position (not card ID)
-            const rotationAngles: { [key: number]: string } = {
-              1: '1.624deg',    // Position 1 keeps its rotation
-              2: '-3.857deg',   // Position 2 gets card 2's rotation
-              3: '1.361deg',    // Position 3 gets card 3's rotation
-              4: '0.344deg',    // Position 4 gets card 4's rotation
-              5: '-0.616deg',   // Position 5 gets card 5's rotation
-              6: '-3.251deg',   // Position 6 gets card 6's rotation
-              7: '1.94deg',     // Position 7 gets card 7's rotation
-              8: '0deg'         // Position 8 gets card 8's rotation
+            const rotationAngles: Record<number, string> = {
+              1: '1.624deg',
+              2: '-3.857deg',
+              3: '1.361deg',
+              4: '0.344deg',
+              5: '-0.616deg',
+              6: '-3.251deg',
+              7: '1.94deg',
+              8: '0deg'
             };
 
             return (
@@ -74,7 +72,7 @@ export function MissionCards({ cards }: MissionCardsProps) {
                 key={card.id} 
                 className="mission-card" 
                 data-card={card.id}
-                style={{ transform: `rotate(${rotationAngles[id] || '0deg'})` }}
+                style={{ transform: `rotate(${rotationAngles[id] ?? '0deg'})` }}
               >
                 <div className="mission-card-number">{card.id}</div>
                 <div className="mission-card-content">

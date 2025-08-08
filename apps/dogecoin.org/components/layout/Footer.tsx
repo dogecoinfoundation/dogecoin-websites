@@ -1,6 +1,7 @@
 import React from 'react';
 import { Logo } from '@/components/common/Logo';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export function Footer() {
   return (
@@ -20,11 +21,11 @@ export function Footer() {
             <div className="footer-links-section">
               <div className="footer-links-group">
                 <h4 className="footer-links-title">Main</h4>
-                <div className="footer-links">
-                  <a href="/" className="footer-link">Home</a>
-                  <a href="/about" className="footer-link">About</a>
-                  <a href="/news" className="footer-link">News & Events</a>
-                </div>
+                                       <div className="footer-links">
+                         <Link href="/" className="footer-link">Home</Link>
+                         <Link href="/about" className="footer-link">About</Link>
+                         <Link href="/news" className="footer-link">News & Events</Link>
+                       </div>
               </div>
 
               <div className="footer-links-group">
@@ -38,10 +39,10 @@ export function Footer() {
 
               <div className="footer-links-group">
                 <h4 className="footer-links-title">Legal</h4>
-                <div className="footer-links">
-                  <a href="/trademarks" className="footer-link">Trademarks</a>
-                  <a href="/privacy" className="footer-link">Privacy Policy</a>
-                </div>
+                                       <div className="footer-links">
+                         <Link href="/trademarks" className="footer-link">Trademarks</Link>
+                         <Link href="/privacy" className="footer-link">Privacy Policy</Link>
+                       </div>
               </div>
             </div>
           </div>

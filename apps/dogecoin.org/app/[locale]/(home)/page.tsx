@@ -7,8 +7,6 @@ import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import Container from '@/components/layout/Container';
 import { H1, H2 } from '@/components/typography';
-import { P } from '@/components/typography';
-import { Link } from '@/components/typography';
 import { BlurEffect } from '@/components/common/BlurEffect';
 import { Carousel, CarouselControls } from '@/components/specific/Carousel';
 import type { CarouselApi } from '@/components/specific/Carousel';
@@ -17,7 +15,6 @@ import Image from 'next/image';
 import DogePaw from '@/components/icons/DogePaw';
 import { Activity } from '@/components/specific/Activity';
 import { DonationButton } from '@/components/specific/DonationButton';
-import { MissionCards } from '@/components/specific/MissionCards';
 import { ProfileImage } from '@/components/specific/ProfileImage';
 import { PartnerBanner } from '@/components/specific/PartnerBanner';
 

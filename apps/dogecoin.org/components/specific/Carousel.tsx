@@ -8,6 +8,7 @@ import {
 } from '@repo/design-system/components/ui/carousel';
 import ChevronLeft from '@/components/icons/ChevronLeft';
 import ChevronRight from '@/components/icons/ChevronRight';
+import Image from 'next/image';
 
 export interface CarouselApi {
   scrollSnapList: () => unknown[];
@@ -107,9 +108,11 @@ export function Carousel({ className = '', setApi: setApiProp }: CarouselProps) 
             <CarouselItem key={card.id} className="carousel-item">
               <div className="carousel-card">
                 {/* Image */}
-                <img 
+                <Image 
                   src={card.image} 
                   alt={card.title}
+                  width={400}
+                  height={300}
                   className="carousel-card-image"
                 />
                 

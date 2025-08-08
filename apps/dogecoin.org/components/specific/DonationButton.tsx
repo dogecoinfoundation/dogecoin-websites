@@ -54,7 +54,7 @@ export function DonationButton({
             placeholder="Enter amount"
             value={customValue}
             className={`donation-button-input ${hasError ? 'error' : ''}`}
-            onChange={(e: any) => {
+            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               onAmountChange?.(e.target.value);
             }}
             onFocus={() => {

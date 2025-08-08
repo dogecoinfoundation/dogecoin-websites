@@ -37,7 +37,8 @@ export default function RootLayout({
       <head>
         <script
           type="module"
-          src="https://fetch.dogecoin.org/doge-qr.js">
+          src="https://fetch.dogecoin.org/doge-qr.js"
+          async>
         </script>
       </head>
       <body
