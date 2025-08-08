@@ -1,0 +1,188 @@
+{
+  "example.com": {
+    "home": {
+      "meta": {
+        "title": "一些标题",
+        "description": "一些描述"
+      }
+    }
+  },
+  "dogecoin.org": {
+    "home": {
+      "meta": {
+        "title": "狗狗币基金会 - 每天只做善事",
+        "description": "狗狗币基金会的官方网站。了解我们的项目、社区倡议以及如何支持狗狗币生态系统。"
+      },
+      "hero": {
+        "title": "ÐOGECOIN",
+        "subtitle": "基金会",
+        "tagline": "每天只做善事"
+      },
+      "sections": {
+        "activity": {
+          "title": "大量活动",
+          "gigawallet": {
+            "title": "#GigaWallet",
+            "subtitle": "开源项目",
+            "text": "狗狗币GigaWallet是一个后端服务，为在线商店、交易所、社交媒体平台等提供方便的集成API，以便代表用户接受和交易狗狗币。<br /><br />GigaWallet的目的是通过消除将狗狗币支付集成到业务中的复杂性和风险，促进狗狗币作为支付选项的快速采用。",
+            "primaryText": "下载",
+            "secondaryText": "了解更多"
+          },
+          "core": {
+            "title": "#狗狗币核心",
+            "subtitle": "开源项目",
+            "text": "狗狗币核心软件允许任何人在狗狗币区块链网络中运行节点，并使用Scrypt哈希方法进行工作量证明。它是从比特币核心和其他加密货币中改编而来的。<br /><br />我们通过开发、宣传和教育为狗狗币核心开源项目做出贡献，并鼓励您也参与其中。",
+            "primaryText": "下载",
+            "secondaryText": "了解更多"
+          },
+          "teamseas": {
+            "title": "#TeamSeas",
+            "subtitle": "慈善",
+            "text": "狗狗币基金会和社区在2021年与MrBeast合作开展了#TeamSeas活动（也称为CleanSeas）。该倡议旨在清除海洋、河流和海滩上的垃圾。",
+            "primaryText": "观看视频",
+            "secondaryText": "阅读新闻"
+          },
+          "kabosu": {
+            "title": "#Kabosu雕像",
+            "subtitle": "有趣！",
+            "text": "狗狗币基金会帮助资助了位于日本樱花市的Kabosu柴犬（原始“狗狗”表情包）的永久铜像。该倡议于2023年进行。",
+            "primaryText": "在地图上打开"
+          }
+        },
+        "donation": {
+          "title": "狗狗币激励慷慨",
+          "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.. Diam feugiat cras sollicitudin id. Nec viverra vel et morbi integer.. Neque commodo urna pharetra fames. Eu massa non bibendum egestas.",
+          "whyDonate": {
+            "title": "为什么捐款？",
+            "reasons": {
+              "development": {
+                "title": "开发",
+                "text": "帮助资助狗狗币网络基础设施的持续开发和维护。"
+              },
+              "community": {
+                "title": "社区项目",
+                "text": "为传播善意的慈善倡议和社区驱动项目做出贡献。"
+              },
+              "education": {
+                "title": "教育资源",
+                "text": "支持教育内容和资源，帮助人们了解加密货币。"
+              }
+            }
+          },
+          "steps": {
+            "select": "1. 选择捐款",
+            "scan": "2. 扫描发送",
+            "walletAddress": "钱包地址："
+          },
+          "buttons": {
+            "69": {
+              "quote": "呵呵"
+            },
+            "1337": {
+              "quote": "强势行动！"
+            },
+            "9999": {
+              "quote": "不要支付10k"
+            },
+            "custom": {
+              "validationError": "请输入有效的数字（例如，420或420.69）"
+            }
+          },
+          "copy": {
+            "button": "复制",
+            "success": "已复制！"
+          }
+        },
+        "members": {
+          "title": "基金会成员",
+          "description": "Lorem ipsum dolor sit amet consectetur.",
+          "profiles": {
+            "donna": {
+              "description": "前端高手"
+            },
+            "dereck": {
+              "description": "尝试设计"
+            },
+            "david": {
+              "description": "不确定他在做什么"
+            },
+            "debbie": {
+              "description": "后端忍者"
+            },
+            "dick": {
+              "description": "与前端有关的事情"
+            },
+            "erick": {
+              "description": "初级助理"
+            }
+          }
+        },
+        "partners": {
+          "title": "我们的合作伙伴",
+          "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.",
+          "houseOfDoge": {
+            "name": "狗狗之家",
+            "description": "狗狗币基金会的官方企业合作伙伴，致力于将狗狗币转变为一个完全整合和可访问的全球支付平台和货币。他们的使命是通过实际应用增强狗狗币的实用性，推动狗狗币的主流采用。",
+            "buttonText": "访问狗狗之家"
+          }
+        }
+      },
+      "footer": {
+        "description": "柴犬是一种日本犬种，因在线表情包而广受欢迎，代表着狗狗币。狗狗币由Jackson Palmer和Shibetoshi Nakamoto创建。",
+        "sections": {
+          "main": {
+            "title": "主页",
+            "links": {
+              "home": "首页",
+              "about": "关于",
+              "news": "新闻与活动"
+            }
+          },
+          "social": {
+            "title": "社交",
+            "links": {
+              "x": "X",
+              "github": "Github",
+              "discord": "Discord"
+            }
+          },
+          "legal": {
+            "title": "法律",
+            "links": {
+              "trademarks": "商标",
+              "privacy": "隐私政策"
+            }
+          }
+        },
+        "copyright": "©版权2025，狗狗币基金会。保留所有权利。",
+        "backToTop": "回到顶部"
+      }
+    }
+  },
+  "dogecoin": {
+    "org": {
+      "home": {
+        "sections": {
+          "activity": {
+            "teamseas": {
+              "keyPoints": [
+                "目标是筹集资金以帮助清除3000万磅的海洋垃圾",
+                "每捐赠1美元清除1磅垃圾",
+                "狗狗币社区通过捐赠DOGE参与其中",
+                "该活动与海洋保护协会和海洋清理组织合作"
+              ]
+            },
+            "kabosu": {
+              "keyPoints": [
+                "Kabosu是原始表情包中激发狗狗币灵感的真实柴犬",
+                "雕像位于日本樱花市（Kabosu的居住地）",
+                "该项目是地方政府、狗狗币社区和Kabosu的主人佐藤敦子之间的合作",
+                "通过社区捐款资助"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

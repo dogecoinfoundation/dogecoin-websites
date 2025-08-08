@@ -1,0 +1,188 @@
+{
+  "example.com": {
+    "home": {
+      "meta": {
+        "title": "Un titre",
+        "description": "Une description"
+      }
+    }
+  },
+  "dogecoin.org": {
+    "home": {
+      "meta": {
+        "title": "Fondation Dogecoin - Faites le bien tous les jours",
+        "description": "Le site officiel de la Fondation Dogecoin. Découvrez nos projets, initiatives communautaires et comment soutenir l'écosystème Dogecoin."
+      },
+      "hero": {
+        "title": "ÐOGECOIN",
+        "subtitle": "Fondation",
+        "tagline": "Faites le bien tous les jours"
+      },
+      "sections": {
+        "activity": {
+          "title": "Beaucoup d'activité",
+          "gigawallet": {
+            "title": "#GigaWallet",
+            "subtitle": "Projet open source",
+            "text": "Dogecoin GigaWallet est un service backend qui fournit une API d'intégration pratique pour des plateformes telles que des boutiques en ligne, des échanges, des réseaux sociaux, etc., pour accepter et effectuer des transactions en Dogecoin au nom de leurs utilisateurs.<br /><br />Le but du GigaWallet est de promouvoir l'adoption rapide du Dogecoin comme option de paiement, en éliminant la complexité et le risque d'intégrer les paiements en Dogecoin dans les entreprises.",
+            "primaryText": "Télécharger",
+            "secondaryText": "En savoir plus"
+          },
+          "core": {
+            "title": "#Dogecoin Core",
+            "subtitle": "Projet open source",
+            "text": "Le logiciel Dogecoin Core permet à quiconque d'exploiter un nœud dans les réseaux blockchain Dogecoin et utilise la méthode de hachage Scrypt pour la preuve de travail. Il est adapté de Bitcoin Core et d'autres cryptomonnaies.<br /><br />Nous contribuons au projet open source Dogecoin Core par le développement, l'évangélisation et l'éducation - et vous encourageons à le faire également.",
+            "primaryText": "Télécharger",
+            "secondaryText": "En savoir plus"
+          },
+          "teamseas": {
+            "title": "#TeamSeas",
+            "subtitle": "Caritatif",
+            "text": "La Fondation Dogecoin et la communauté ont collaboré avec MrBeast en 2021 sur la campagne #TeamSeas (également connue sous le nom de CleanSeas). L'initiative visait à éliminer les déchets des océans, des rivières et des plages.",
+            "primaryText": "Regarder la vidéo",
+            "secondaryText": "Lire la presse"
+          },
+          "kabosu": {
+            "title": "#Statue de Kabosu",
+            "subtitle": "Amusant !",
+            "text": "La Fondation Dogecoin a aidé à financer la statue en bronze permanente du Kabosu Shiba Inu (le « doge » original du mème) à Sakura, au Japon. Cette initiative a eu lieu en 2023.",
+            "primaryText": "Ouvrir dans les cartes"
+          }
+        },
+        "donation": {
+          "title": "Dogecoin Inspire la Générosité",
+          "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.. Diam feugiat cras sollicitudin id. Nec viverra vel et morbi integer.. Neque commodo urna pharetra fames. Eu massa non bibendum egestas.",
+          "whyDonate": {
+            "title": "Pourquoi faire un don ?",
+            "reasons": {
+              "development": {
+                "title": "Développement",
+                "text": "Aidez à financer le développement et la maintenance continus de l'infrastructure du réseau Dogecoin."
+              },
+              "community": {
+                "title": "Projets communautaires",
+                "text": "Contribuez à des initiatives caritatives et à des projets dirigés par la communauté qui répandent la gentillesse."
+              },
+              "education": {
+                "title": "Ressources éducatives",
+                "text": "Soutenez le contenu éducatif et les ressources pour aider les gens à en apprendre davantage sur les cryptomonnaies."
+              }
+            }
+          },
+          "steps": {
+            "select": "1. Sélectionner un don",
+            "scan": "2. Scanner pour envoyer",
+            "walletAddress": "Adresse du portefeuille :"
+          },
+          "buttons": {
+            "69": {
+              "quote": "hehe"
+            },
+            "1337": {
+              "quote": "MOUVEMENT PUISSANT !"
+            },
+            "9999": {
+              "quote": "Ne payez pas 10k"
+            },
+            "custom": {
+              "validationError": "Veuillez entrer un numéro valide (par exemple, 420 ou 420.69)"
+            }
+          },
+          "copy": {
+            "button": "Copier",
+            "success": "Copié !"
+          }
+        },
+        "members": {
+          "title": "Membres de la fondation",
+          "description": "Lorem ipsum dolor sit amet consectetur.",
+          "profiles": {
+            "donna": {
+              "description": "Extraordinaire front-end"
+            },
+            "dereck": {
+              "description": "Essaie de concevoir"
+            },
+            "david": {
+              "description": "Pas sûr de ce qu'il fait"
+            },
+            "debbie": {
+              "description": "Ninja back-end"
+            },
+            "dick": {
+              "description": "Quelque chose à voir avec le front-end"
+            },
+            "erick": {
+              "description": "Assistant junior"
+            }
+          }
+        },
+        "partners": {
+          "title": "Nos partenaires",
+          "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.",
+          "houseOfDoge": {
+            "name": "Maison de Doge",
+            "description": "Partenaires corporatifs officiels de la Fondation Dogecoin, engagés à transformer Dogecoin en une plateforme de paiement et une monnaie mondiale entièrement intégrées et accessibles. Leur mission est de faire avancer l'adoption généralisée de Dogecoin en améliorant son utilité par une application dans le monde réel.",
+            "buttonText": "Visitez la Maison de Doge"
+          }
+        }
+      },
+      "footer": {
+        "description": "Le Shiba Inu est une race de chien japonaise qui a été popularisée en tant que mème en ligne et représente Dogecoin. Dogecoin a été créé par Jackson Palmer et Shibetoshi Nakamoto.",
+        "sections": {
+          "main": {
+            "title": "Principal",
+            "links": {
+              "home": "Accueil",
+              "about": "À propos",
+              "news": "Actualités et événements"
+            }
+          },
+          "social": {
+            "title": "Social",
+            "links": {
+              "x": "X",
+              "github": "Github",
+              "discord": "Discord"
+            }
+          },
+          "legal": {
+            "title": "Légal",
+            "links": {
+              "trademarks": "Marques",
+              "privacy": "Politique de confidentialité"
+            }
+          }
+        },
+        "copyright": "©Copyright 2025, Fondation Dogecoin. Tous droits réservés.",
+        "backToTop": "Retour en haut"
+      }
+    }
+  },
+  "dogecoin": {
+    "org": {
+      "home": {
+        "sections": {
+          "activity": {
+            "teamseas": {
+              "keyPoints": [
+                "L'objectif était de collecter des fonds pour aider à enlever 30 millions de livres de déchets des océans",
+                "Chaque dollar donné a permis d'enlever 1 livre de déchets",
+                "La communauté Dogecoin a participé en faisant des dons en DOGE",
+                "La campagne a collaboré avec Ocean Conservancy et The Ocean Cleanup"
+              ]
+            },
+            "kabosu": {
+              "keyPoints": [
+                "Kabosu est le véritable chien Shiba Inu du mème original qui a inspiré Dogecoin",
+                "La statue a été placée dans la ville de Sakura, au Japon (où vit Kabosu)",
+                "Le projet était une collaboration entre le gouvernement local, la communauté Dogecoin et la propriétaire de Kabosu, Atsuko Sato",
+                "Il a été financé par des dons de la communauté"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

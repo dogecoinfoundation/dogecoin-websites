@@ -188,7 +188,7 @@ const languageNames: Record<string, string> = {
 };
 
 // Available languages based on what's in the dictionaries folder
-const availableLanguages: string[] = ['en', 'es'];
+const availableLanguages: string[] = ['en', 'es', 'fr', 'de', 'it', 'pt', 'ru', 'zh', 'ko'];
 
 const getSupportedLanguages = (): LanguageMetadata[] => {
   return availableLanguages.map(code => ({
@@ -242,7 +242,7 @@ export function LanguageSelector() {
       </button>
       
       {isOpen && (
-        <div className="language-dropdown">
+        <div className="language-dropdown" style={{ padding: '6px' }}>
           {languages.map((language: LanguageMetadata) => (
             <button
               key={language.code}
@@ -264,7 +264,9 @@ export function LanguageSelector() {
                 height={24}
                 className="language-flag"
               />
-              <span className="language-name">{language.name}</span>
+              <span className="language-name">
+                {language.name}
+              </span>
             </button>
           ))}
         </div>

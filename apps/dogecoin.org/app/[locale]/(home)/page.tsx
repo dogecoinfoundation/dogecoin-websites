@@ -1,46 +1,41 @@
-'use client';
-
 import React from 'react';
 import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
-
 import { Footer } from '@/components/layout/Footer';
 import Container from '@/components/layout/Container';
 import { H1, H2 } from '@/components/typography';
 import { BlurEffect } from '@/components/common/BlurEffect';
-import { Carousel, CarouselControls } from '@/components/specific/Carousel';
-import type { CarouselApi } from '@/components/specific/Carousel';
-import { RainbowContainer } from '@repo/design-system/components/ui/rainbow-container';
 import Image from 'next/image';
 import DogePaw from '@/components/icons/DogePaw';
 import { Activity } from '@/components/specific/Activity';
-import { DonationButton } from '@/components/specific/DonationButton';
 import { ProfileImage } from '@/components/specific/ProfileImage';
 import { PartnerBanner } from '@/components/specific/PartnerBanner';
+import { getDictionary } from '@repo/internationalization';
+import { createMetadata } from '@repo/seo/metadata';
+import type { Metadata } from 'next';
+import { InteractiveSection } from './InteractiveSection';
 
-export default function Home() {
+interface HomeProps {
+  params: Promise<{
+    locale: string;
+  }>;
+}
+
+export const generateMetadata = async ({
+  params,
+}: HomeProps): Promise<Metadata> => {
+  const { locale } = await params;
+  const dictionary = await getDictionary(locale);
+
+  return createMetadata(dictionary["dogecoin.org"].home.meta);
+};
+
+export default async function Home({ params }: HomeProps) {
+  const { locale } = await params;
+  const dictionary = await getDictionary(locale);
+  const t = dictionary["dogecoin.org"].home;
+  
   const DOGE_ADDRESS = 'D8r9gCj8YncjQmxBJmQzS6Ef7TCTonC1Nm';
-  
-  const [api, setApi] = React.useState<CarouselApi | null>(null);
-  const [current, setCurrent] = React.useState(0);
-  const [count, setCount] = React.useState(0);
-  
-  // Use state for selection to trigger re-renders
-  const [selectedDonation, setSelectedDonation] = React.useState<string>('69');
-  const [customAmount, setCustomAmount] = React.useState<string>('');
-  const [copied, setCopied] = React.useState(false);
-
-  React.useEffect(() => {
-    console.log('API changed:', api);
-    if (!api) return;
-
-    setCount(api.scrollSnapList().length);
-    setCurrent(api.selectedScrollSnap() + 1);
-
-    api.on("select", () => {
-      setCurrent(api.selectedScrollSnap() + 1);
-    });
-  }, [api]);
 
   return (
     <>
@@ -52,9 +47,9 @@ export default function Home() {
             <BlurEffect className="text-[var(--color-link)] -top-150 -left-150 absolute" />
             <div className="hero-container">
               <div className="hero-content">
-                <H1 className="hero-title">ÐOGECOIN</H1>
+                <H1 className="hero-title">{t.hero.title}</H1>
                 <div className="inline-block mt-1">
-                  <H2 className="hero-subtitle">Foundation</H2>
+                  <H2 className="hero-subtitle">{t.hero.subtitle}</H2>
                   <Image
                     src="/assets/images/underline-header-cta.svg"
                     alt="Underline"
@@ -62,7 +57,7 @@ export default function Home() {
                     height={400}
                     className="hero-underline"
                   />
-                  <div className="hero-tagline">Do Only Good Everyday <DogePaw className="hero-tagline-icon" /></div>
+                  <div className="hero-tagline">{t.hero.tagline} <DogePaw className="hero-tagline-icon" /></div>
                 </div>
               </div>
               <div>
@@ -75,12 +70,7 @@ export default function Home() {
                 />
               </div>
             </div>
-            <RainbowContainer className="carousel-wrapper">
-              <Carousel setApi={setApi} />
-            </RainbowContainer>
-            <div className="carousel-controls-wrapper">
-              <CarouselControls api={api} current={current} count={count} />
-            </div>
+            <InteractiveSection t={t} DOGE_ADDRESS={DOGE_ADDRESS} />
           </Container>
         </Section>
 
@@ -88,7 +78,7 @@ export default function Home() {
           <Container>
             <div className="section-heading-container">
               <h3 className="section-heading">
-                Much activity
+                {t.sections.activity.title}
               </h3>
               <svg 
                 xmlns="http://www.w3.org/2000/svg" 
@@ -110,71 +100,54 @@ export default function Home() {
 
             <div className="section-content">
               <Activity
-                title="#GigaWallet"
-                subtitle="Open source project"
-                text="Dogecoin GigaWallet is a backend service which provides a convenient integration API for platforms such as online shops, exchanges, social media platforms etc, to accept and transact Dogecoin on behalf of their users.<br /><br />The purpose of the GigaWallet is to promote the rapid uptake of Dogecoin as a payment option, by taking the complexity and risk out of integrating Dogecoin payments into business."
-                primaryText="Download"
-                secondaryText="Learn More"
+                title={t.sections.activity.gigawallet.title}
+                subtitle={t.sections.activity.gigawallet.subtitle}
+                text={t.sections.activity.gigawallet.text}
+                primaryText={t.sections.activity.gigawallet.primaryText}
+                secondaryText={t.sections.activity.gigawallet.secondaryText}
                 imageSrc="/assets/images/activity-gigawallet.gif"
                 imageAlt="GigaWallet animation"
                 imagePosition="right"
                 color="#FF46A5"
-                onPrimary={() => console.log(' Download clicked')}
-                onSecondary={() => console.log('Learn More clicked')}
               />
 
               <Activity
-                title="#Dogecoin Core"
-                subtitle="Open source project"
-                text="The Dogecoin Core software allows anyone to operate a node in the Dogecoin blockchain networks and uses the Scrypt hashing method for Proof of Work. It is adapted from Bitcoin Core and other cryptocurrencies.<br /><br />We contribute to the Dogecoin Core open source project via development, evangelism and education - and encourage you to as well."
-                primaryText="Download"
-                secondaryText="Learn More"
+                title={t.sections.activity.core.title}
+                subtitle={t.sections.activity.core.subtitle}
+                text={t.sections.activity.core.text}
+                primaryText={t.sections.activity.core.primaryText}
+                secondaryText={t.sections.activity.core.secondaryText}
                 imageSrc="/assets/images/activity-dogecoin.png"
                 imageAlt="Dogecoin Core logo"
                 imagePosition="left"
                 color="#FFFC36"
-                onPrimary={() => console.log('Download clicked')}
-                onSecondary={() => console.log('Learn More clicked')}
               />
 
               <Activity
-                title="#TeamSeas"
-                subtitle="Charitable"
-                text="The Dogecoin Foundation and community collaborated with MrBeast in 2021 on the #TeamSeas campaign (also known as CleanSeas). The initiative aimed to remove trash from oceans, rivers, and beaches."
-                primaryText="Watch video"
-                secondaryText="Read press"
+                title={t.sections.activity.teamseas.title}
+                subtitle={t.sections.activity.teamseas.subtitle}
+                text={t.sections.activity.teamseas.text}
+                primaryText={t.sections.activity.teamseas.primaryText}
+                secondaryText={t.sections.activity.teamseas.secondaryText}
                 imageSrc="/assets/images/activity-teamseas.png"
                 imageAlt="TeamSeas logo"
                 imagePosition="right"
                 color="#2BF9FF"
                 imageBorderRadius={32}
-                keyPoints={[
-                  "The goal was to raise funds to help remove 30 million pounds of trash from oceans",
-                  "Each $1 donated removed 1 pound of trash",
-                  "The Dogecoin community participated by donating DOGE",
-                  "The campaign partnered with Ocean Conservancy and The Ocean Cleanup",
-                ]}
-                onPrimary={() => console.log('Watch video clicked')}
-                onSecondary={() => console.log('Read press clicked')}
+                keyPoints={t.sections.activity.teamseas.keyPoints}
               />
 
               <Activity
-                title="#Kabosu Statue"
-                subtitle="Fun!"
-                text="The Dogecoin Foundation helped fund the permanent bronze statue of the Kabosu Shiba Inu (the original &quot;doge&quot; from the meme) in Sakura, Japan. This initiative took place in 2023."
-                primaryText="Open in maps"
+                title={t.sections.activity.kabosu.title}
+                subtitle={t.sections.activity.kabosu.subtitle}
+                text={t.sections.activity.kabosu.text}
+                primaryText={t.sections.activity.kabosu.primaryText}
                 imageSrc="/assets/images/activity-kabosu.png"
                 imageAlt="Kabosu statue"
                 imagePosition="left"
                 color="#62FF46"
                 imageBorderRadius={32}
-                keyPoints={[
-                  "Kabosu is the real Shiba Inu dog from the original meme that inspired Dogecoin",
-                  "The statue was placed in Sakura City, Japan (where Kabosu lives)",
-                  "The project was a collaboration between the local government, the Dogecoin community, and Kabosu's owner Atsuko Sato",
-                  "It was funded through community donations",
-                ]}
-                onPrimary={() => console.log('Open in maps clicked')}
+                keyPoints={t.sections.activity.kabosu.keyPoints}
               />
             </div>
           </Container>
@@ -184,16 +157,16 @@ export default function Home() {
   <Container>
     <div className="section-heading-container">
       <h3 className="section-heading">
-        Dogecoin Inspires Generosity
+        {t.sections.donation.title}
       </h3>
       <p className="section-description">
-        Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.. Diam feugiat cras sollicitudin id. Nec viverra vel et morbi integer.. Neque commodo urna pharetra fames. Eu massa non bibendum egestas.
+        {t.sections.donation.description}
       </p>
       
       <div className="donation-container">
         <div className="donation-content">
           <h3 className="donation-title">
-            Why donate?
+            {t.sections.donation.whyDonate.title}
           </h3>
           
           <div className="donation-grid">
@@ -206,10 +179,10 @@ export default function Home() {
                 className="donation-card-image"
               />
               <h4 className="donation-card-title">
-                Development
+                {t.sections.donation.whyDonate.reasons.development.title}
               </h4>
               <p className="donation-card-text">
-                Help fund ongoing development and maintenance of the Dogecoin network infrastructure.
+                {t.sections.donation.whyDonate.reasons.development.text}
               </p>
             </div>
             
@@ -222,10 +195,10 @@ export default function Home() {
                 className="donation-card-image"
               />
               <h4 className="donation-card-title">
-                Community Projects
+                {t.sections.donation.whyDonate.reasons.community.title}
               </h4>
               <p className="donation-card-text">
-                Contribute to charitable initiatives and community-driven projects that spread kindness.
+                {t.sections.donation.whyDonate.reasons.community.text}
               </p>
             </div>
             
@@ -238,10 +211,10 @@ export default function Home() {
                 className="donation-card-image"
               />
               <h4 className="donation-card-title">
-                Educational Resources
+                {t.sections.donation.whyDonate.reasons.education.title}
               </h4>
               <p className="donation-card-text">
-                Support educational content and resources to help people learn about cryptocurrency.
+                {t.sections.donation.whyDonate.reasons.education.text}
               </p>
             </div>
           </div>
@@ -261,128 +234,7 @@ export default function Home() {
       </svg>
     </div>
 
-    <div className="donation-section">
-      <div className="donation-section-grid">
-        <div>
-          <h3 className="donation-section-heading">1. Select donation</h3>
-          <div className="donation-buttons-container">
-            <DonationButton
-              amount="69"
-              quote="hehe"
-              quoteColor="#FF46CE"
-              isSelected={selectedDonation === '69'}
-              onSelect={() => {
-                setSelectedDonation('69');
-                setCustomAmount('');
-                console.log('Selected donation: 69');
-              }}
-            />
-            <DonationButton
-              amount="1337"
-              quote="POWER MOVE!"
-              quoteColor="#62FF46"
-              isSelected={selectedDonation === '1337'}
-              onSelect={() => {
-                setSelectedDonation('1337');
-                setCustomAmount('');
-                console.log('Selected donation: 1337');
-              }}
-            />
-            <DonationButton
-              amount="9999.99"
-              quote="Don't pay 10k"
-              quoteColor="#FF7D47"
-              isSelected={selectedDonation === '9999.99'}
-              onSelect={() => {
-                setSelectedDonation('9999.99');
-                setCustomAmount('');
-                console.log('Selected donation: 9999.99');
-              }}
-            />
-            <div>
-              <DonationButton
-                amount=""
-                quote=""
-                isCustom={true}
-                isSelected={selectedDonation === 'custom'}
-                hasError={customAmount ? !/^[0-9]*\.?[0-9]*$/.test(customAmount) : false}
-                customValue={customAmount}
-                onSelect={() => {
-                  setSelectedDonation('custom');
-                  console.log('Selected donation: custom');
-                }}
-                onAmountChange={(amount) => {
-                  setCustomAmount(amount);
-                  if (amount) {
-                    setSelectedDonation('custom');
-                    console.log('Custom amount changed:', amount);
-                  }
-                }}
-                onFocus={() => {
-                  setSelectedDonation('custom');
-                  console.log('Custom field focused');
-                }}
-              />
-              {customAmount && !/^[0-9]*\.?[0-9]*$/.test(customAmount) && (
-                <div className="validation-error">
-                  Please enter a valid number (e.g., 420 or 420.69)
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-        <div className="donation-qr-container">
-          <h3 className="donation-section-heading">2. Scan to send</h3>
-          <div className="donation-qr-code">
-            {(!customAmount || /^[0-9]*\.?[0-9]*$/.test(customAmount)) && (
-              <div
-                dangerouslySetInnerHTML={{
-                  __html: `<doge-qr
-                    address="${DOGE_ADDRESS}"
-                    amount="${selectedDonation === 'custom' ? (customAmount || '69') : (selectedDonation || '69')}"
-                    size="md"
-                    background="transparent"
-                    fill="#FFFFFF">
-                  </doge-qr>`
-                }}
-              />
-            )}
-          </div>
-          <h3 className="donation-section-heading">Wallet address:</h3>
-          <div className="wallet-address-container">
-            <p className="donation-section-text">
-              {DOGE_ADDRESS}
-            </p>
-            <button 
-              className="copy-button"
-              onClick={() => {
-                // Copy to clipboard using modern API
-                navigator.clipboard.writeText(DOGE_ADDRESS).then(() => {
-                  console.log('Address copied to clipboard:', DOGE_ADDRESS);
-                  setCopied(true);
-                  setTimeout(() => setCopied(false), 2000);
-                }).catch(err => {
-                  console.error('Failed to copy:', err);
-                });
-              }}
-            >
-              {copied ? (
-                <div className="copy-success">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="#62FF46"/>
-                  </svg>
-                  <span className="copy-text">Copied!</span>
-                </div>
-              ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M34 8.44189C36.2091 8.44187 38 10.2327 38 12.4419L38 26.6921C38 27.7966 38.8954 28.6921 40 28.6921C41.1046 28.6921 42 27.7966 42 26.6921L42 12.4419C42 8.02358 38.4182 4.44184 33.9999 4.44189L19.75 4.44206C18.6454 4.44207 17.75 5.33751 17.75 6.44208C17.75 7.54665 18.6455 8.44207 19.75 8.44206L34 8.44189ZM34.5 18.4421C34.5 14.8522 31.5899 11.9421 28 11.9421L14.5 11.9421C10.9101 11.9421 8 14.8522 8 18.4421V37.9421C8 41.5319 10.9102 44.4421 14.5 44.4421L28 44.4421C31.5899 44.4421 34.5 41.5319 34.5 37.9421L34.5 18.4421ZM28 15.9421C29.3807 15.9421 30.5 17.0613 30.5 18.4421L30.5 37.9421C30.5 39.3228 29.3807 40.4421 28 40.4421L14.5 40.4421C13.1193 40.4421 12 39.3228 12 37.9421L12 18.4421C12 17.0613 13.1193 15.9421 14.5 15.9421L28 15.9421Z" fill="white"/>
-                </svg>
-              )}
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
+
 
     <div className="section-content">
       
@@ -418,42 +270,42 @@ export default function Home() {
           imageSrc="/assets/images/dp-1.jpg"
           imageAlt="Donna"
           name="Donna"
-          description="Front-end extaordinaire"
+          description={t.sections.members.profiles.donna.description}
           color="#2BF9FF"
         />
         <ProfileImage
           imageSrc="/assets/images/dp-2.jpg"
           imageAlt="Dereck"
           name="Dereck"
-          description="Tries to design"
+          description={t.sections.members.profiles.dereck.description}
           color="#9780FF"
         />
         <ProfileImage
           imageSrc="/assets/images/dp-3.jpg"
           imageAlt="David"
           name="David"
-          description="Not sure what he does"
+          description={t.sections.members.profiles.david.description}
           color="#FF46CE"
         />
         <ProfileImage
           imageSrc="/assets/images/dp-4.jpg"
           imageAlt="Debbie"
           name="Debbie"
-          description="Back end ninja"
+          description={t.sections.members.profiles.debbie.description}
           color="#FFFC36"
         />
         <ProfileImage
           imageSrc="/assets/images/dp-5.jpg"
           imageAlt="Dick"
           name="Dick"
-          description="Something to do with front-end"
+          description={t.sections.members.profiles.dick.description}
           color="#FF7D47"
         />
         <ProfileImage
           imageSrc="/assets/images/dp-6.png"
           imageAlt="Erick"
           name="Erick"
-          description="Junior Assistant"
+          description={t.sections.members.profiles.erick.description}
           color="#62FF46"
         />
       </div>
@@ -465,18 +317,18 @@ export default function Home() {
   <Container>
     <div className="section-heading-container">
       <h3 className="section-heading">
-        Our partners
+        {t.sections.partners.title}
       </h3>
       <p className="section-description">
-        Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.
+        {t.sections.partners.description}
       </p>
       
       <div className="partners-list">
         <PartnerBanner
           icon="/assets/images/houseofdoge-logo.png"
-          name="House of Doge"
-          description="Official corporate partners of the Dogecoin Foundation, committed to transforming Dogecoin into a fully integrated and accessible global payment platform and currency. Their mission is to advance the mainstream adoption of Dogecoin by enhancing its utility through real-world application."
-          buttonText="Visit House of Doge"
+          name={t.sections.partners.houseOfDoge.name}
+          description={t.sections.partners.houseOfDoge.description}
+          buttonText={t.sections.partners.houseOfDoge.buttonText}
           buttonLink="https://www.houseofdoge.com/"
           backgroundImage="/assets/images/houseofdoge-stars.jpeg"
           lowerImage="/assets/images/houseofdoge-wave.png"
@@ -488,7 +340,7 @@ export default function Home() {
 
       </Main>
 
-      <Footer />
+      <Footer t={t} />
     </>
   );
 }

@@ -1167,15 +1167,27 @@ header {
   border-radius: 8px;
   padding: 8px 0;
   min-width: 120px;
+  width: max-content;
+  max-width: none;
   z-index: 1000;
   margin-top: 4px;
+  white-space: nowrap;
+  transform: translateX(0);
+}
+
+@media (max-width: 768px) {
+  .language-dropdown {
+    right: auto;
+    left: 0;
+  }
 }
 
 .language-option {
   display: flex;
   align-items: center;
   gap: 8px;
-  width: 100%;
+  width: auto;
+  min-width: 100%;
   padding: 8px 12px;
   background: transparent;
   border: none;

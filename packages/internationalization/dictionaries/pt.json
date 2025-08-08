@@ -1,0 +1,188 @@
+{
+  "example.com": {
+    "home": {
+      "meta": {
+        "title": "Algum título",
+        "description": "Alguma descrição"
+      }
+    }
+  },
+  "dogecoin.org": {
+    "home": {
+      "meta": {
+        "title": "Dogecoin Foundation - Faça Apenas o Bem Todos os Dias",
+        "description": "O site oficial da Dogecoin Foundation. Saiba mais sobre nossos projetos, iniciativas comunitárias e como apoiar o ecossistema Dogecoin."
+      },
+      "hero": {
+        "title": "ÐOGECOIN",
+        "subtitle": "Fundação",
+        "tagline": "Faça Apenas o Bem Todos os Dias"
+      },
+      "sections": {
+        "activity": {
+          "title": "Muita atividade",
+          "gigawallet": {
+            "title": "#GigaWallet",
+            "subtitle": "Projeto de código aberto",
+            "text": "Dogecoin GigaWallet é um serviço de backend que fornece uma API de integração conveniente para plataformas como lojas online, exchanges, redes sociais etc., para aceitar e transacionar Dogecoin em nome de seus usuários.<br /><br />O objetivo do GigaWallet é promover a rápida adoção do Dogecoin como uma opção de pagamento, eliminando a complexidade e o risco de integrar pagamentos em Dogecoin nos negócios.",
+            "primaryText": "Baixar",
+            "secondaryText": "Saiba Mais"
+          },
+          "core": {
+            "title": "#Dogecoin Core",
+            "subtitle": "Projeto de código aberto",
+            "text": "O software Dogecoin Core permite que qualquer pessoa opere um nó nas redes blockchain do Dogecoin e utiliza o método de hashing Scrypt para Prova de Trabalho. É adaptado do Bitcoin Core e outras criptomoedas.<br /><br />Contribuímos para o projeto de código aberto Dogecoin Core por meio de desenvolvimento, evangelismo e educação - e encorajamos você a fazer o mesmo.",
+            "primaryText": "Baixar",
+            "secondaryText": "Saiba Mais"
+          },
+          "teamseas": {
+            "title": "#TeamSeas",
+            "subtitle": "Caritativo",
+            "text": "A Dogecoin Foundation e a comunidade colaboraram com MrBeast em 2021 na campanha #TeamSeas (também conhecida como CleanSeas). A iniciativa visava remover lixo dos oceanos, rios e praias.",
+            "primaryText": "Assistir vídeo",
+            "secondaryText": "Ler imprensa"
+          },
+          "kabosu": {
+            "title": "#Estátua Kabosu",
+            "subtitle": "Divertido!",
+            "text": "A Dogecoin Foundation ajudou a financiar a estátua de bronze permanente do Kabosu Shiba Inu (o original \"doge\" do meme) em Sakura, Japão. Esta iniciativa ocorreu em 2023.",
+            "primaryText": "Abrir no mapa"
+          }
+        },
+        "donation": {
+          "title": "Dogecoin Inspira Generosidade",
+          "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.. Diam feugiat cras sollicitudin id. Nec viverra vel et morbi integer.. Neque commodo urna pharetra fames. Eu massa non bibendum egestas.",
+          "whyDonate": {
+            "title": "Por que doar?",
+            "reasons": {
+              "development": {
+                "title": "Desenvolvimento",
+                "text": "Ajude a financiar o desenvolvimento contínuo e a manutenção da infraestrutura da rede Dogecoin."
+              },
+              "community": {
+                "title": "Projetos Comunitários",
+                "text": "Contribua para iniciativas caritativas e projetos impulsionados pela comunidade que espalham bondade."
+              },
+              "education": {
+                "title": "Recursos Educacionais",
+                "text": "Apoie conteúdos e recursos educacionais para ajudar as pessoas a aprender sobre criptomoedas."
+              }
+            }
+          },
+          "steps": {
+            "select": "1. Selecionar doação",
+            "scan": "2. Escanear para enviar",
+            "walletAddress": "Endereço da carteira:"
+          },
+          "buttons": {
+            "69": {
+              "quote": "hehe"
+            },
+            "1337": {
+              "quote": "MOVIMENTO PODEROSO!"
+            },
+            "9999": {
+              "quote": "Não pague 10k"
+            },
+            "custom": {
+              "validationError": "Por favor, insira um número válido (por exemplo, 420 ou 420.69)"
+            }
+          },
+          "copy": {
+            "button": "Copiar",
+            "success": "Copiado!"
+          }
+        },
+        "members": {
+          "title": "Membros da fundação",
+          "description": "Lorem ipsum dolor sit amet consectetur.",
+          "profiles": {
+            "donna": {
+              "description": "Front-end extraordinário"
+            },
+            "dereck": {
+              "description": "Tenta projetar"
+            },
+            "david": {
+              "description": "Não tenho certeza do que ele faz"
+            },
+            "debbie": {
+              "description": "Ninja de back end"
+            },
+            "dick": {
+              "description": "Algo a ver com front-end"
+            },
+            "erick": {
+              "description": "Assistente Júnior"
+            }
+          }
+        },
+        "partners": {
+          "title": "Nossos parceiros",
+          "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.",
+          "houseOfDoge": {
+            "name": "Casa do Doge",
+            "description": "Parceiros corporativos oficiais da Dogecoin Foundation, comprometidos em transformar o Dogecoin em uma plataforma de pagamento e moeda global totalmente integrada e acessível. Sua missão é promover a adoção generalizada do Dogecoin, aprimorando sua utilidade por meio de aplicação no mundo real.",
+            "buttonText": "Visite a Casa do Doge"
+          }
+        }
+      },
+      "footer": {
+        "description": "O Shiba Inu é uma raça de cachorro japonesa que foi popularizada como um meme online e representa o Dogecoin. O Dogecoin foi criado por Jackson Palmer & Shibetoshi Nakamoto.",
+        "sections": {
+          "main": {
+            "title": "Principal",
+            "links": {
+              "home": "Início",
+              "about": "Sobre",
+              "news": "Notícias & Eventos"
+            }
+          },
+          "social": {
+            "title": "Social",
+            "links": {
+              "x": "X",
+              "github": "Github",
+              "discord": "Discord"
+            }
+          },
+          "legal": {
+            "title": "Legal",
+            "links": {
+              "trademarks": "Marcas Registradas",
+              "privacy": "Política de Privacidade"
+            }
+          }
+        },
+        "copyright": "©Copyright 2025, Dogecoin Foundation. Todos os direitos reservados.",
+        "backToTop": "Voltar ao topo"
+      }
+    }
+  },
+  "dogecoin": {
+    "org": {
+      "home": {
+        "sections": {
+          "activity": {
+            "teamseas": {
+              "keyPoints": [
+                "O objetivo era arrecadar fundos para ajudar a remover 30 milhões de libras de lixo dos oceanos",
+                "Cada $1 doado removeu 1 libra de lixo",
+                "A comunidade Dogecoin participou doando DOGE",
+                "A campanha fez parceria com Ocean Conservancy e The Ocean Cleanup"
+              ]
+            },
+            "kabosu": {
+              "keyPoints": [
+                "Kabosu é o verdadeiro cachorro Shiba Inu do meme original que inspirou o Dogecoin",
+                "A estátua foi colocada na cidade de Sakura, Japão (onde Kabosu vive)",
+                "O projeto foi uma colaboração entre o governo local, a comunidade Dogecoin e a proprietária de Kabosu, Atsuko Sato",
+                "Foi financiado por meio de doações da comunidade"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

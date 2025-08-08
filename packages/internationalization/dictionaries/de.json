@@ -1,0 +1,188 @@
+{
+  "example.com": {
+    "home": {
+      "meta": {
+        "title": "Ein Titel",
+        "description": "Eine Beschreibung"
+      }
+    }
+  },
+  "dogecoin.org": {
+    "home": {
+      "meta": {
+        "title": "Dogecoin Stiftung - Jeden Tag nur Gutes tun",
+        "description": "Die offizielle Website der Dogecoin Stiftung. Erfahren Sie mehr über unsere Projekte, Gemeinschaftsinitiativen und wie Sie das Dogecoin-Ökosystem unterstützen können."
+      },
+      "hero": {
+        "title": "ÐOGECOIN",
+        "subtitle": "Stiftung",
+        "tagline": "Jeden Tag nur Gutes tun"
+      },
+      "sections": {
+        "activity": {
+          "title": "Viel Aktivität",
+          "gigawallet": {
+            "title": "#GigaWallet",
+            "subtitle": "Open-Source-Projekt",
+            "text": "Dogecoin GigaWallet ist ein Backend-Dienst, der eine bequeme Integrations-API für Plattformen wie Online-Shops, Börsen, soziale Medien usw. bereitstellt, um Dogecoin im Namen ihrer Nutzer zu akzeptieren und zu transagieren.<br /><br />Zweck des GigaWallet ist es, die schnelle Akzeptanz von Dogecoin als Zahlungsmittel zu fördern, indem die Komplexität und das Risiko der Integration von Dogecoin-Zahlungen in Unternehmen beseitigt werden.",
+            "primaryText": "Herunterladen",
+            "secondaryText": "Mehr erfahren"
+          },
+          "core": {
+            "title": "#Dogecoin Core",
+            "subtitle": "Open-Source-Projekt",
+            "text": "Die Dogecoin Core-Software ermöglicht es jedem, einen Knoten im Dogecoin-Blockchain-Netzwerk zu betreiben und verwendet die Scrypt-Hashmethode für Proof of Work. Sie ist von Bitcoin Core und anderen Kryptowährungen adaptiert.<br /><br />Wir tragen zum Dogecoin Core Open-Source-Projekt durch Entwicklung, Evangelisation und Bildung bei - und ermutigen Sie, dies ebenfalls zu tun.",
+            "primaryText": "Herunterladen",
+            "secondaryText": "Mehr erfahren"
+          },
+          "teamseas": {
+            "title": "#TeamSeas",
+            "subtitle": "Wohltätig",
+            "text": "Die Dogecoin Stiftung und die Gemeinschaft arbeiteten 2021 mit MrBeast an der #TeamSeas-Kampagne (auch bekannt als CleanSeas) zusammen. Die Initiative hatte zum Ziel, Müll aus Ozeanen, Flüssen und Stränden zu entfernen.",
+            "primaryText": "Video ansehen",
+            "secondaryText": "Presse lesen"
+          },
+          "kabosu": {
+            "title": "#Kabosu Statue",
+            "subtitle": "Spaß!",
+            "text": "Die Dogecoin Stiftung half, die permanente Bronzestatue des Kabosu Shiba Inu (der ursprüngliche &quot;Doge&quot; aus dem Meme) in Sakura, Japan, zu finanzieren. Diese Initiative fand 2023 statt.",
+            "primaryText": "In Karten öffnen"
+          }
+        },
+        "donation": {
+          "title": "Dogecoin inspiriert Großzügigkeit",
+          "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.. Diam feugiat cras sollicitudin id. Nec viverra vel et morbi integer.. Neque commodo urna pharetra fames. Eu massa non bibendum egestas.",
+          "whyDonate": {
+            "title": "Warum spenden?",
+            "reasons": {
+              "development": {
+                "title": "Entwicklung",
+                "text": "Helfen Sie, die laufende Entwicklung und Wartung der Dogecoin-Netzwerkinfrastruktur zu finanzieren."
+              },
+              "community": {
+                "title": "Gemeinschaftsprojekte",
+                "text": "Tragen Sie zu wohltätigen Initiativen und gemeinschaftlich geführten Projekten bei, die Freundlichkeit verbreiten."
+              },
+              "education": {
+                "title": "Bildungsressourcen",
+                "text": "Unterstützen Sie Bildungsinhalte und -ressourcen, um Menschen zu helfen, mehr über Kryptowährungen zu lernen."
+              }
+            }
+          },
+          "steps": {
+            "select": "1. Spende auswählen",
+            "scan": "2. Scannen, um zu senden",
+            "walletAddress": "Wallet-Adresse:"
+          },
+          "buttons": {
+            "69": {
+              "quote": "hehe"
+            },
+            "1337": {
+              "quote": "POWER MOVE!"
+            },
+            "9999": {
+              "quote": "Zahlen Sie nicht 10k"
+            },
+            "custom": {
+              "validationError": "Bitte geben Sie eine gültige Zahl ein (z.B. 420 oder 420.69)"
+            }
+          },
+          "copy": {
+            "button": "Kopieren",
+            "success": "Kopiert!"
+          }
+        },
+        "members": {
+          "title": "Stiftungsmitglieder",
+          "description": "Lorem ipsum dolor sit amet consectetur.",
+          "profiles": {
+            "donna": {
+              "description": "Front-End-Extraordinaire"
+            },
+            "dereck": {
+              "description": "Versucht zu designen"
+            },
+            "david": {
+              "description": "Nicht sicher, was er tut"
+            },
+            "debbie": {
+              "description": "Back-End-Ninja"
+            },
+            "dick": {
+              "description": "Etwas mit Front-End zu tun"
+            },
+            "erick": {
+              "description": "Junior-Assistent"
+            }
+          }
+        },
+        "partners": {
+          "title": "Unsere Partner",
+          "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.",
+          "houseOfDoge": {
+            "name": "Haus des Doge",
+            "description": "Offizielle Unternehmenspartner der Dogecoin Stiftung, die sich verpflichtet haben, Dogecoin in eine vollständig integrierte und zugängliche globale Zahlungsplattform und Währung zu verwandeln. Ihre Mission ist es, die allgemeine Akzeptanz von Dogecoin zu fördern, indem sie dessen Nützlichkeit durch reale Anwendungen verbessern.",
+            "buttonText": "Besuchen Sie das Haus des Doge"
+          }
+        }
+      },
+      "footer": {
+        "description": "Der Shiba Inu ist eine japanische Hunderasse, die als Online-Meme populär wurde und Dogecoin repräsentiert. Dogecoin wurde von Jackson Palmer & Shibetoshi Nakamoto geschaffen.",
+        "sections": {
+          "main": {
+            "title": "Haupt",
+            "links": {
+              "home": "Startseite",
+              "about": "Über",
+              "news": "Nachrichten & Veranstaltungen"
+            }
+          },
+          "social": {
+            "title": "Sozial",
+            "links": {
+              "x": "X",
+              "github": "Github",
+              "discord": "Discord"
+            }
+          },
+          "legal": {
+            "title": "Rechtliches",
+            "links": {
+              "trademarks": "Marken",
+              "privacy": "Datenschutzrichtlinie"
+            }
+          }
+        },
+        "copyright": "©Copyright 2025, Dogecoin Stiftung. Alle Rechte vorbehalten.",
+        "backToTop": "Nach oben"
+      }
+    }
+  },
+  "dogecoin": {
+    "org": {
+      "home": {
+        "sections": {
+          "activity": {
+            "teamseas": {
+              "keyPoints": [
+                "Das Ziel war es, Mittel zu sammeln, um 30 Millionen Pfund Müll aus den Ozeanen zu entfernen",
+                "Jeder gespendete Dollar entfernte 1 Pfund Müll",
+                "Die Dogecoin-Gemeinschaft nahm teil, indem sie DOGE spendete",
+                "Die Kampagne arbeitete mit Ocean Conservancy und The Ocean Cleanup zusammen"
+              ]
+            },
+            "kabosu": {
+              "keyPoints": [
+                "Kabosu ist der echte Shiba Inu Hund aus dem ursprünglichen Meme, das Dogecoin inspiriert hat",
+                "Die Statue wurde in der Stadt Sakura, Japan (wo Kabosu lebt), aufgestellt",
+                "Das Projekt war eine Zusammenarbeit zwischen der lokalen Regierung, der Dogecoin-Gemeinschaft und Kabosus Besitzerin Atsuko Sato",
+                "Es wurde durch Spenden aus der Gemeinschaft finanziert"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
