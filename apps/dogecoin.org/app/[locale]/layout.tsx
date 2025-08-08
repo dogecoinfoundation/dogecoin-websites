@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "tailwindcss";
-import { Comic_Neue, Montserrat } from "next/font/google";
+import { Comic_Neue, Montserrat, Jura } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/layout/Nav";
 
@@ -14,6 +14,12 @@ const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ['300', '700'],
+});
+
+const jura = Jura({
+  variable: "--font-jura",
+  subsets: ["latin"],
+  weight: ['400', '600', '700'],
 });
 
 export const metadata: Metadata = {
@@ -35,7 +41,7 @@ export default function RootLayout({
         </script>
       </head>
       <body
-        className={`bg-[var(--background-primary)] text-[var(--color-primary)] ${comicNeue.variable} ${montserrat.variable} antialiase`}
+        className={`bg-[var(--background-primary)] text-[var(--color-primary)] ${comicNeue.variable} ${montserrat.variable} ${jura.variable} antialiase`}
       >
         <div id="root">
           <Nav />
