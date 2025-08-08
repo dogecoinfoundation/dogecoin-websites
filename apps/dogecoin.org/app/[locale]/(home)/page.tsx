@@ -3,7 +3,7 @@
 import React from 'react';
 import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
-import { Header } from '@/components/layout/Header';
+
 import { Footer } from '@/components/layout/Footer';
 import Container from '@/components/layout/Container';
 import { H1, H2 } from '@/components/typography';
@@ -31,6 +31,7 @@ export default function Home() {
   // Use state for selection to trigger re-renders
   const [selectedDonation, setSelectedDonation] = React.useState<string>('69');
   const [customAmount, setCustomAmount] = React.useState<string>('');
+  const [copied, setCopied] = React.useState(false);
 
   React.useEffect(() => {
     console.log('API changed:', api);
@@ -46,12 +47,7 @@ export default function Home() {
 
   return (
     <>
-      <Header>
-        <Container>
-          <div>
-          </div>
-        </Container>
-      </Header>
+
 
       <Main>
         <Section>
@@ -364,16 +360,27 @@ export default function Home() {
               className="copy-button"
               onClick={() => {
                 // Copy to clipboard using modern API
-                eval(`navigator.clipboard.writeText('${DOGE_ADDRESS}').then(() => {
-                  console.log('Address copied to clipboard: ${DOGE_ADDRESS}');
+                navigator.clipboard.writeText(DOGE_ADDRESS).then(() => {
+                  console.log('Address copied to clipboard:', DOGE_ADDRESS);
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 2000);
                 }).catch(err => {
                   console.error('Failed to copy:', err);
-                });`);
+                });
               }}
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
-                <path fillRule="evenodd" clipRule="evenodd" d="M34 8.44189C36.2091 8.44187 38 10.2327 38 12.4419L38 26.6921C38 27.7966 38.8954 28.6921 40 28.6921C41.1046 28.6921 42 27.7966 42 26.6921L42 12.4419C42 8.02358 38.4182 4.44184 33.9999 4.44189L19.75 4.44206C18.6454 4.44207 17.75 5.33751 17.75 6.44208C17.75 7.54665 18.6455 8.44207 19.75 8.44206L34 8.44189ZM34.5 18.4421C34.5 14.8522 31.5899 11.9421 28 11.9421L14.5 11.9421C10.9101 11.9421 8 14.8522 8 18.4421V37.9421C8 41.5319 10.9102 44.4421 14.5 44.4421L28 44.4421C31.5899 44.4421 34.5 41.5319 34.5 37.9421L34.5 18.4421ZM28 15.9421C29.3807 15.9421 30.5 17.0613 30.5 18.4421L30.5 37.9421C30.5 39.3228 29.3807 40.4421 28 40.4421L14.5 40.4421C13.1193 40.4421 12 39.3228 12 37.9421L12 18.4421C12 17.0613 13.1193 15.9421 14.5 15.9421L28 15.9421Z" fill="white"/>
-              </svg>
+              {copied ? (
+                <div className="copy-success">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z" fill="#62FF46"/>
+                  </svg>
+                  <span className="copy-text">Copied!</span>
+                </div>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="49" viewBox="0 0 48 49" fill="none">
+                  <path fillRule="evenodd" clipRule="evenodd" d="M34 8.44189C36.2091 8.44187 38 10.2327 38 12.4419L38 26.6921C38 27.7966 38.8954 28.6921 40 28.6921C41.1046 28.6921 42 27.7966 42 26.6921L42 12.4419C42 8.02358 38.4182 4.44184 33.9999 4.44189L19.75 4.44206C18.6454 4.44207 17.75 5.33751 17.75 6.44208C17.75 7.54665 18.6455 8.44207 19.75 8.44206L34 8.44189ZM34.5 18.4421C34.5 14.8522 31.5899 11.9421 28 11.9421L14.5 11.9421C10.9101 11.9421 8 14.8522 8 18.4421V37.9421C8 41.5319 10.9102 44.4421 14.5 44.4421L28 44.4421C31.5899 44.4421 34.5 41.5319 34.5 37.9421L34.5 18.4421ZM28 15.9421C29.3807 15.9421 30.5 17.0613 30.5 18.4421L30.5 37.9421C30.5 39.3228 29.3807 40.4421 28 40.4421L14.5 40.4421C13.1193 40.4421 12 39.3228 12 37.9421L12 18.4421C12 17.0613 13.1193 15.9421 14.5 15.9421L28 15.9421Z" fill="white"/>
+                </svg>
+              )}
             </button>
           </div>
         </div>
@@ -484,19 +491,7 @@ export default function Home() {
 
       </Main>
 
-      <Footer>
-        <Container>
-          <div className="footer-container">
-            <P.Caption>
-              © 2024 Your Company. All rights reserved.
-            </P.Caption>
-            <div className="footer-links">
-              <Link href="#" size="sm">Privacy</Link>
-              <Link href="#" size="sm">Terms</Link>
-            </div>
-          </div>
-        </Container>
-      </Footer>
+      <Footer />
     </>
   );
 }
