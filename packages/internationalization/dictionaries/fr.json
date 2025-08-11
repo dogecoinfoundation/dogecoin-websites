@@ -49,6 +49,52 @@
             "primaryText": "Ouvrir dans les cartes"
           }
         },
+        "mission": {
+          "title": "Telle Mission",
+          "description": "Notre mission est de promouvoir le développement et l'adoption de Dogecoin comme une cryptomonnaie amusante, accessible et inclusive.",
+          "cards": [
+            {
+              "id": 1,
+              "title": "Accessibilité",
+              "description": "Rendre la cryptomonnaie accessible à tous, indépendamment du bagage technique ou du statut financier."
+            },
+            {
+              "id": 2,
+              "title": "Communauté",
+              "description": "Construire et nourrir une communauté forte et inclusive qui se soutient mutuellement et répand la gentillesse."
+            },
+            {
+              "id": 3,
+              "title": "Innovation",
+              "description": "Promouvoir l'innovation dans la technologie blockchain tout en maintenant la simplicité et la facilité d'utilisation."
+            },
+            {
+              "id": 4,
+              "title": "Éducation",
+              "description": "Fournir des ressources éducatives pour aider les gens à comprendre et utiliser la cryptomonnaie en toute sécurité."
+            },
+            {
+              "id": 5,
+              "title": "Charité",
+              "description": "Soutenir des causes caritatives et des initiatives communautaires qui rendent le monde meilleur."
+            },
+            {
+              "id": 6,
+              "title": "Transparence",
+              "description": "Maintenir la transparence dans toutes nos opérations et processus de prise de décision."
+            },
+            {
+              "id": 7,
+              "title": "Durabilité",
+              "description": "Assurer la durabilité et la croissance à long terme de l'écosystème Dogecoin."
+            },
+            {
+              "id": 8,
+              "title": "Amusement",
+              "description": "Maintenir l'esprit amusant et décontracté qui rend Dogecoin unique et agréable."
+            }
+          ]
+        },
         "donation": {
           "title": "Dogecoin Inspire la Générosité",
           "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.. Diam feugiat cras sollicitudin id. Nec viverra vel et morbi integer.. Neque commodo urna pharetra fames. Eu massa non bibendum egestas.",

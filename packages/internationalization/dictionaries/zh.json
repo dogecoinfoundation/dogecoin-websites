@@ -49,6 +49,44 @@
             "primaryText": "在地图上打开"
           }
         },
+        "mission": {
+          "title": "这样的使命",
+          "description": "我们的使命是促进狗狗币作为一种有趣、可访问和包容的加密货币的发展和采用。",
+          "cards": [
+            {
+              "title": "可访问性",
+              "description": "让加密货币对所有人都可访问，无论技术背景或财务状况如何。"
+            },
+            {
+              "title": "社区",
+              "description": "建立和培养一个强大、包容的社区，相互支持并传播善意。"
+            },
+            {
+              "title": "创新",
+              "description": "推动区块链技术的创新，同时保持简单性和可用性。"
+            },
+            {
+              "title": "教育",
+              "description": "提供教育资源，帮助人们了解和安全使用加密货币。"
+            },
+            {
+              "title": "慈善",
+              "description": "支持让世界变得更美好的慈善事业和社区倡议。"
+            },
+            {
+              "title": "透明度",
+              "description": "在我们所有的运营和决策过程中保持透明度。"
+            },
+            {
+              "title": "可持续性",
+              "description": "确保狗狗币生态系统的长期可持续性和增长。"
+            },
+            {
+              "title": "乐趣",
+              "description": "保持使狗狗币独特和愉快的轻松有趣精神。"
+            }
+          ]
+        },
         "donation": {
           "title": "狗狗币激励慷慨",
           "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.. Diam feugiat cras sollicitudin id. Nec viverra vel et morbi integer.. Neque commodo urna pharetra fames. Eu massa non bibendum egestas.",

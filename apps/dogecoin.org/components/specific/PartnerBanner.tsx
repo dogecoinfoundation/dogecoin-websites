@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { BlurEffect } from '@/components/common/BlurEffect';
 
 interface PartnerBannerProps {
   icon: string;
@@ -22,6 +23,9 @@ export const PartnerBanner: React.FC<PartnerBannerProps> = ({
 }) => {
   return (
     <div className="partner-banner">
+      <div className={`partner-blur-effect`}>
+        <BlurEffect color="#A88F33" scale={{ x: 3, y: 1.5 }} transparency={1}/>
+      </div>
       <div 
         className="partner-banner-background"
         style={{

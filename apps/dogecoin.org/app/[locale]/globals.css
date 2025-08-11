@@ -169,6 +169,17 @@ body {
   position: relative;
 }
 
+/* Carousel Content Layout */
+.carousel-wrapper [data-radix-carousel-content] {
+  display: flex;
+  gap: 16px;
+  overflow: hidden;
+}
+
+.carousel-wrapper [data-radix-carousel-item] {
+  flex-shrink: 0;
+}
+
 /* Ensure carousel content doesn't cause overflow */
 .carousel-wrapper > div {
   overflow: visible;
@@ -254,11 +265,12 @@ body {
 
 /* Main Page Component Classes */
 .hero-container {
-  @apply flex flex-1;
+  @apply flex flex-1 relative;
 }
 
 .hero-content {
-  @apply flex flex-col flex-1 justify-center;
+  @apply flex flex-col justify-center relative;
+  width: fit-content;
 }
 
 .hero-title {
@@ -283,6 +295,22 @@ body {
 
 .hero-image {
   @apply w-auto h-auto;
+}
+
+.hero-image-section {
+  @apply flex-1 flex justify-end;
+}
+
+.hero-text-container {
+  @apply relative;
+}
+
+.hero-blur-effect {
+  @apply absolute -z-10;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .carousel-wrapper {
@@ -347,6 +375,14 @@ body {
   width: 100%;
   margin: 0;
   padding: 28px 28px;
+}
+
+.donation-blur-effect {
+  @apply absolute -z-10;
+  right: 0;
+  top: 0;
+  width: 33.333%;
+  height: 100%;
 }
 
 .donation-content {
@@ -569,14 +605,10 @@ body {
 
 .activity-blur-effect {
   @apply absolute -z-10;
-}
-
-.activity-blur-effect-left {
-  @apply left-20 -top-120;
-}
-
-.activity-blur-effect-right {
-  @apply -left-100 -top-120;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
 }
 
 /* Donation Section Classes */
@@ -710,7 +742,7 @@ body {
 .mission-cards-column {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 48px;
 }
 
 .mission-card {
@@ -779,6 +811,26 @@ body {
 .mission-card {
   position: relative;
   z-index: 2;
+}
+
+.mission-cards-blur-container {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.mission-cards-blur-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  height: 100%;
+  width: 100%;
+}
+
+.mission-cards-blur-column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Mobile responsive */
@@ -1259,11 +1311,11 @@ header {
 }
 
 .partner-blur-effect {
-  position: absolute;
-  z-index: 1;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  @apply absolute -z-10;
+  inset: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .partner-banner-background {
@@ -1397,4 +1449,5 @@ header {
   .partner-description {
     font-size: 20px;
   }
+
 }

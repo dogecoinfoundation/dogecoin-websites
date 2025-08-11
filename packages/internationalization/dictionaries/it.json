@@ -49,6 +49,44 @@
             "primaryText": "Apri su mappe"
           }
         },
+        "mission": {
+          "title": "Tale Missione",
+          "description": "La nostra missione è promuovere lo sviluppo e l'adozione di Dogecoin come criptovaluta divertente, accessibile e inclusiva.",
+          "cards": [
+            {
+              "title": "Accessibilità",
+              "description": "Rendere la criptovaluta accessibile a tutti, indipendentemente dal background tecnico o dallo status finanziario."
+            },
+            {
+              "title": "Comunità",
+              "description": "Costruire e nutrire una comunità forte e inclusiva che si supporta a vicenda e diffonde gentilezza."
+            },
+            {
+              "title": "Innovazione",
+              "description": "Guidare l'innovazione nella tecnologia blockchain mantenendo semplicità e usabilità."
+            },
+            {
+              "title": "Educazione",
+              "description": "Fornire risorse educative per aiutare le persone a comprendere e utilizzare in sicurezza la criptovaluta."
+            },
+            {
+              "title": "Carità",
+              "description": "Supportare cause benefiche e iniziative comunitarie che rendono il mondo un posto migliore."
+            },
+            {
+              "title": "Trasparenza",
+              "description": "Mantenere la trasparenza in tutte le nostre operazioni e processi decisionali."
+            },
+            {
+              "title": "Sostenibilità",
+              "description": "Assicurare la sostenibilità e la crescita a lungo termine dell'ecosistema Dogecoin."
+            },
+            {
+              "title": "Divertimento",
+              "description": "Mantenere lo spirito divertente e leggero che rende Dogecoin unico e piacevole."
+            }
+          ]
+        },
         "donation": {
           "title": "Dogecoin Ispira Generosità",
           "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.. Diam feugiat cras sollicitudin id. Nec viverra vel et morbi integer.. Neque commodo urna pharetra fames. Eu massa non bibendum egestas.",

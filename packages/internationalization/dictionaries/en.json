@@ -61,6 +61,44 @@
             ]
           }
         },
+        "mission": {
+          "title": "Such Mission",
+          "description": "Our mission is to promote the development and adoption of Dogecoin as a fun, accessible, and inclusive cryptocurrency.",
+          "cards": [
+            {
+              "title": "Accessibility",
+              "description": "Make cryptocurrency accessible to everyone, regardless of technical background or financial status."
+            },
+            {
+              "title": "Community",
+              "description": "Build and nurture a strong, inclusive community that supports each other and spreads kindness."
+            },
+            {
+              "title": "Innovation",
+              "description": "Drive innovation in blockchain technology while maintaining simplicity and usability."
+            },
+            {
+              "title": "Education",
+              "description": "Provide educational resources to help people understand and safely use cryptocurrency."
+            },
+            {
+              "title": "Charity",
+              "description": "Support charitable causes and community initiatives that make the world a better place."
+            },
+            {
+              "title": "Transparency",
+              "description": "Maintain transparency in all our operations and decision-making processes."
+            },
+            {
+              "title": "Sustainability",
+              "description": "Ensure the long-term sustainability and growth of the Dogecoin ecosystem."
+            },
+            {
+              "title": "Fun",
+              "description": "Keep the fun and lighthearted spirit that makes Dogecoin unique and enjoyable."
+            }
+          ]
+        },
         "donation": {
           "title": "Dogecoin Inspires Generosity",
           "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.. Diam feugiat cras sollicitudin id. Nec viverra vel et morbi integer.. Neque commodo urna pharetra fames. Eu massa non bibendum egestas.",

@@ -36,6 +36,9 @@ export function Activity({
   const content = (
     <div className="activity-content">
       <div className="activity-content-inner">
+        <div className="activity-blur-effect">
+          <BlurEffect color={color} scale={{ x: 3, y: 3 }} transparency={0.5}/>
+        </div>
         <h2 className="activity-title">
           {title}
         </h2>
@@ -115,11 +118,6 @@ export function Activity({
 
   return (
     <div className="activity-container">
-      <div className={`activity-blur-effect ${
-        imagePosition === 'right' ? 'activity-blur-effect-right' : 'activity-blur-effect-left'
-      }`}>
-        <BlurEffect color={color} />
-      </div>
       {imagePosition === 'left' ? (
         <>
           {image}
