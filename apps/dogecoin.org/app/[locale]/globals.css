@@ -169,17 +169,6 @@ body {
   position: relative;
 }
 
-/* Carousel Content Layout */
-.carousel-wrapper [data-radix-carousel-content] {
-  display: flex;
-  gap: 16px;
-  overflow: hidden;
-}
-
-.carousel-wrapper [data-radix-carousel-item] {
-  flex-shrink: 0;
-}
-
 /* Ensure carousel content doesn't cause overflow */
 .carousel-wrapper > div {
   overflow: visible;
@@ -316,6 +305,16 @@ body {
 .carousel-wrapper {
   @apply -mt-2;
   overflow: hidden;
+}
+
+/* Ensure RainbowContainer's internal SVG layers overlay instead of stacking */
+.carousel-wrapper > div > svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
 }
 
 .carousel-controls-wrapper {

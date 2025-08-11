@@ -25,13 +25,13 @@ export function CarouselSection({ t, DOGE_ADDRESS }: CarouselSectionProps) {
   }, [api]);
 
   return (
-    <>
+    <div>
       <RainbowContainer className="carousel-wrapper">
         <Carousel setApi={setApi} />
       </RainbowContainer>
       <div className="carousel-controls-wrapper">
         <CarouselControls api={api} current={current} count={count} />
       </div>
-    </>
+    </div>
   );
 }
