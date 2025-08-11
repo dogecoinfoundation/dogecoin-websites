@@ -14,7 +14,6 @@ export function Footer({ t }: FooterProps) {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-columns">
-          {/* First Column - Logo and Description */}
           <div className="footer-column">
             <Logo width={180} height={45} />
             <p className="footer-description">
@@ -22,7 +21,6 @@ export function Footer({ t }: FooterProps) {
             </p>
           </div>
 
-          {/* Second Column - Navigation Links */}
           <div className="footer-column">
             <div className="footer-links-section">
               <div className="footer-links-group">
@@ -55,7 +53,6 @@ export function Footer({ t }: FooterProps) {
 
         </div>
 
-        {/* Copyright and Back to Top */}
         <div className="footer-bottom">
           <div className="footer-divider"></div>
           <div className="footer-copyright">

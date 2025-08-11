@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useRef, useLayoutEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import { cn } from '../../lib/utils';
 
 interface RainbowContainerProps {
@@ -10,7 +10,6 @@ interface RainbowContainerProps {
 
 export function RainbowContainer({ className = '', children }: RainbowContainerProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  // Use a fixed height for now to avoid TypeScript DOM issues
   const minHeight = 200;
 
   return (

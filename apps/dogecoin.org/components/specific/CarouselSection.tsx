@@ -5,12 +5,7 @@ import { Carousel, CarouselControls } from '@/components/specific/Carousel';
 import type { CarouselApi } from '@/components/specific/Carousel';
 import { RainbowContainer } from '@repo/design-system/components/ui/rainbow-container';
 
-interface CarouselSectionProps {
-  t: any;
-  DOGE_ADDRESS: string;
-}
-
-export function CarouselSection({ t, DOGE_ADDRESS }: CarouselSectionProps) {
+export function CarouselSection() {
   const [api, setApi] = React.useState<CarouselApi | null>(null);
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);

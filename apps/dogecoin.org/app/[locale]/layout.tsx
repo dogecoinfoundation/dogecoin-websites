@@ -27,13 +27,16 @@ export const metadata: Metadata = {
   description: "Do Only Good Everyday",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
   return (
-    <html lang="en">
+    <html lang={locale ?? 'en'}>
       <head>
         <script
           type="module"
@@ -42,7 +45,7 @@ export default function RootLayout({
         </script>
       </head>
       <body
-        className={`bg-[var(--background-primary)] text-[var(--color-primary)] ${comicNeue.variable} ${montserrat.variable} ${jura.variable} antialiase`}
+        className={`bg-[var(--background-primary)] text-[var(--color-primary)] ${comicNeue.variable} ${montserrat.variable} ${jura.variable} antialiased`}
       >
         <div id="root">
           <Nav />
