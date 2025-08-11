@@ -900,6 +900,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .profile-image {
@@ -910,6 +912,8 @@ body {
   background: var(--Base-Grey-color-grey-800, #201F1D);
   overflow: hidden;
   position: relative;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .profile-image-img {
@@ -953,24 +957,41 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
   margin-top: 48px;
+  justify-items: center;
 }
 
-/* Responsive grid breakpoints */
-@media (max-width: 1200px) {
+/* Responsive grid breakpoints for better overflow prevention */
+/* 4 columns: 4 * 336px + 3 * 32px = 1440px minimum width needed */
+@media (max-width: 1440px) {
   .profile-grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
 }
 
-@media (max-width: 900px) {
+/* 3 columns: 3 * 336px + 2 * 24px = 1056px minimum width needed */
+@media (max-width: 1056px) {
   .profile-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
-@media (max-width: 600px) {
+/* 2 columns: 2 * 336px + 1 * 20px = 692px minimum width needed */
+@media (max-width: 692px) {
   .profile-grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .profile-image {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .profile-image-img {
+    width: 300px;
+    height: 300px;
   }
 }
 
