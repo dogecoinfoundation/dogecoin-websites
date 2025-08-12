@@ -93,6 +93,9 @@ importers:
       fumadocs-core:
         specifier: ^15.0.15
         version: 15.3.1(@types/react@19.1.4)(next@15.3.1(@opentelemetry/api@1.9.0)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
+      gray-matter:
+        specifier: ^4.0.3
+        version: 4.0.3
       import-in-the-middle:
         specifier: ^1.13.1
         version: 1.13.2
@@ -102,6 +105,9 @@ importers:
       lucide-react:
         specifier: ^0.477.0
         version: 0.477.0(react@19.0.0)
+      marked:
+        specifier: ^16.1.2
+        version: 16.1.2
       mdx-bundler:
         specifier: ^10.1.0
         version: 10.1.1(acorn@8.15.0)(esbuild@0.25.3)
@@ -6350,6 +6356,11 @@ packages:
 
   markdown-table@3.0.4:
     resolution: {integrity: sha512-wiYz4+JrLyb/DqW2hkFJxP7Vd7JuTDm77fvbM8VfEQdmSMqcImWeeRbHwZjBjIFki/VaMK2BhFi7oUUZeM5bqw==}
+
+  marked@16.1.2:
+    resolution: {integrity: sha512-rNQt5EvRinalby7zJZu/mB+BvaAY2oz3wCuCjt1RDrWNpS1Pdf9xqMOeC9Hm5adBdcV/3XZPJpG58eT+WBc0XQ==}
+    engines: {node: '>= 20'}
+    hasBin: true
 
   marked@7.0.4:
     resolution: {integrity: sha512-t8eP0dXRJMtMvBojtkcsA7n48BkauktUKzfkPSCq85ZMTJ0v76Rke4DYz01omYpPTUh4p/f7HePgRo3ebG8+QQ==}
@@ -14948,6 +14959,8 @@ snapshots:
   markdown-extensions@2.0.0: {}
 
   markdown-table@3.0.4: {}
+
+  marked@16.1.2: {}
 
   marked@7.0.4: {}
 
