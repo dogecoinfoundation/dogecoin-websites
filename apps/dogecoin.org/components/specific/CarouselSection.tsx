@@ -20,10 +20,12 @@ export function CarouselSection() {
   }, [api]);
 
   return (
-    <div>
-      <RainbowContainer className="carousel-wrapper">
-        <Carousel setApi={setApi} />
-      </RainbowContainer>
+    <div className="carousel-container">
+      <div className="carousel-rainbow-container">
+        <RainbowContainer className="carousel-wrapper">
+          <Carousel setApi={setApi} />
+        </RainbowContainer>
+      </div>
       <div className="carousel-controls-wrapper">
         <CarouselControls api={api} current={current} count={count} />
       </div>
