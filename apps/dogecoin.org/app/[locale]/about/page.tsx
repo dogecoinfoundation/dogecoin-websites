@@ -448,7 +448,7 @@ export default async function AboutPage({ params }: PageProps) {
               </h2>
               <div style={{ marginTop: 8 }} aria-hidden="true">
               <Image
-                            src="/assets/svg/about/history-underline.svg"
+                            src="/assets/svg/underline.svg"
                             alt="Section heading underline"
                             width={230}
                             height={11}

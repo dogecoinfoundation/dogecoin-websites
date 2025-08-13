@@ -57,7 +57,7 @@ export default async function Home({ params }: HomeProps) {
                 </div>
                 <div className="inline-block mt-1">
                   <Image
-                    src="/assets/images/underline-header-cta.svg"
+                    src="/assets/svg/underline.svg"
                     alt="Underline"
                     width={400}
                     height={400}

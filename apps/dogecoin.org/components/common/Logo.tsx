@@ -12,7 +12,7 @@ interface LogoProps {
 export function Logo({ className = '', width = 200, height = 50, href = '/' }: LogoProps) {
   const logo = (
     <Image
-      src="/assets/images/logo-doge-foundation.svg"
+      src="/assets/svg/logos/logo-doge-foundation.svg"
       alt="Doge Foundation Logo"
       width={width}
       height={height}
