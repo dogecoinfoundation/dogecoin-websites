@@ -9,6 +9,40 @@
   },
   "dogecoin.org": {
     "home": {
+      "about": {
+        "hero": {
+          "title": "Über die Stiftung",
+          "intro": "Die Dogecoin Stiftung ist eine gemeinnützige Organisation, die gegründet wurde, um Folgendes bereitzustellen:",
+          "bulletPoints": [
+            "Unterstützung der Dogecoin-Kryptowährung durch Entwicklung und Interessenvertretung.",
+            "Verteidigung der Marke Dogecoin, um Missbrauch und Betrug zu verhindern.",
+            "Eine Roadmap für die Zukunft von Dogecoin."
+          ],
+          "subtitleBefore": "Wir sind",
+          "subtitleHighlight": "Dogecoin",
+          "subtitleAfter": "- die zufällige Krypto-Bewegung, die Menschen zum Lächeln bringt."
+        },
+        "manifesto": {
+          "title": "Das Dogecoin-Manifest",
+          "intro": "Wir entwickeln eine Währung für die Menschen und bemühen uns, jeden Tag nur Gutes zu tun. Durch diese Arbeit sind wir zu folgenden Werten gelangt:",
+          "cards": [
+            { "title": "Nützlich sein", "text": "Wir schätzen Nützlichkeit mehr als technischen Glanz." },
+            { "title": "Persönlich sein", "text": "Wir schätzen Individuen und Interaktionen mehr als gewinngetriebene Ökonomie." },
+            { "title": "Einladend sein", "text": "Wir schätzen Zusammenarbeit und Vertrauen mehr als Wettbewerb und Exklusivität." },
+            { "title": "Zuverlässig sein", "text": "Wir schätzen funktionierende Lösungen mehr als Liefergeschwindigkeit." }
+          ],
+          "signatoriesTitle": "Unterzeichner",
+          "sign": {
+            "title": "Manifest unterzeichnen",
+            "text": "Sie können das Dogecoin-Manifest auf X unterzeichnen",
+            "button": "Posten"
+          }
+        },
+        "history": {
+          "title": "Unsere Geschichte",
+          "description": "Die Stiftung wurde 2014 von Mitgliedern des Dogecoin-Teams gegründet, um das Projekt zu unterstützen und zu fördern. Im Dezember 2013 von Billy Markus und Jackson Palmer als spaßige Alternative zu Bitcoin geschaffen, wurde Dogecoin vom \"Doge\"-Meme inspiriert und gewann schnell eine starke Community, die für karitative Bemühungen bekannt ist, wie die Finanzierung des jamaikanischen Bobteams und Doge4Water. Als das Interesse schwankte, wurde die Stiftung weniger aktiv, aber 2021 von ursprünglichen Teammitgliedern, neuen Gesichtern und Beratern wie Vitalik Buterin (Ethereum) und Jared Birchall (Neuralink) wiederbelebt. Ziel war es, Finanzierung zu sichern, strategische Richtung zu geben und das langfristige Wachstum von Dogecoin sicherzustellen."
+        }
+      },
       "meta": {
         "title": "Dogecoin Stiftung - Jeden Tag nur Gutes tun",
         "description": "Die offizielle Website der Dogecoin Stiftung. Erfahren Sie mehr über unsere Projekte, Gemeinschaftsinitiativen und wie Sie das Dogecoin-Ökosystem unterstützen können."
@@ -172,6 +206,9 @@
             "buttonText": "Besuchen Sie das Haus des Doge"
           }
         }
+      },
+      "blog": {
+        "by": "Von"
       },
       "footer": {
         "description": "Der Shiba Inu ist eine japanische Hunderasse, die als Online-Meme populär wurde und Dogecoin repräsentiert. Dogecoin wurde von Jackson Palmer & Shibetoshi Nakamoto geschaffen.",

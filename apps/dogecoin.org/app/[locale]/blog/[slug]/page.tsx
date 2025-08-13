@@ -18,8 +18,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const { slug } = await params;
-  const post = await getBlogPostBySlug(slug);
+  const { slug, locale } = await params;
+  const post = await getBlogPostBySlug(slug, locale);
   return {
     title: post ? `${post.title} | Dogecoin Foundation` : 'Blog | Dogecoin Foundation',
   };
@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function BlogPostPage({ params }: PageProps) {
   const { slug, locale } = await params;
-  const post = await getBlogPostBySlug(slug);
+  const post = await getBlogPostBySlug(slug, locale);
   if (!post) {
     return null;
   }
@@ -43,7 +43,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <div className="blog-post-hero-text">
                 <h1 className="blog-post-title">{post.title}</h1>
                 <div className="blog-post-meta">
-                  {post.author && <span className="blog-post-author">By {post.author}</span>}
+                  {post.author && <span className="blog-post-author">{t.blog?.by ?? 'By'} {post.author}</span>}
                   {post.author && <span className="blog-post-sep">-</span>}
                   <time className="blog-post-date">{format(new Date(post.date), 'EEEE, MMM dd yyyy')}</time>
                 </div>

@@ -9,6 +9,40 @@
   },
   "dogecoin.org": {
     "home": {
+      "about": {
+        "hero": {
+          "title": "Acerca de la fundación",
+          "intro": "La Fundación Dogecoin es una organización sin fines de lucro establecida para proporcionar:",
+          "bulletPoints": [
+            "Apoyo a la criptomoneda Dogecoin mediante desarrollo y promoción.",
+            "Defensa de la marca Dogecoin para prevenir abusos y fraudes.",
+            "Una hoja de ruta para el futuro de Dogecoin."
+          ],
+          "subtitleBefore": "Somos",
+          "subtitleHighlight": "Dogecoin",
+          "subtitleAfter": "- el movimiento cripto accidental que hace sonreír a la gente."
+        },
+        "manifesto": {
+          "title": "El Manifiesto Dogecoin",
+          "intro": "Estamos desarrollando una moneda para la gente, y nos esforzamos por hacer solo el bien cada día. A través de este trabajo hemos llegado a valorar:",
+          "cards": [
+            { "title": "Ser útil", "text": "Valoramos la utilidad por encima del brillo técnico." },
+            { "title": "Ser personal", "text": "Valoramos a los individuos y las interacciones por encima de la economía impulsada por el lucro." },
+            { "title": "Ser acogedor", "text": "Valoramos la colaboración y la confianza por encima de la competencia y la exclusividad." },
+            { "title": "Ser confiable", "text": "Valoramos soluciones que funcionan por encima de la velocidad de entrega." }
+          ],
+          "signatoriesTitle": "Firmantes",
+          "sign": {
+            "title": "Firma el manifiesto",
+            "text": "Puedes firmar el Manifiesto Dogecoin en X",
+            "button": "Publicar"
+          }
+        },
+        "history": {
+          "title": "Nuestra historia",
+          "description": "La Fundación fue establecida por miembros del equipo de Dogecoin en 2014 para apoyar y defender el proyecto. Creado en diciembre de 2013 por Billy Markus y Jackson Palmer como una alternativa divertida a Bitcoin, Dogecoin se inspiró en el meme \"Doge\" y rápidamente ganó una comunidad fuerte conocida por esfuerzos caritativos, como financiar al equipo jamaicano de bobsleigh y Doge4Water. A medida que el interés fluctuó, la Fundación se volvió menos activa pero fue revivida en 2021 por miembros originales, nuevas caras y asesores como Vitalik Buterin de Ethereum y Jared Birchall de Neuralink. El renacimiento tuvo como objetivo asegurar financiación, proporcionar dirección estratégica y garantizar el crecimiento a largo plazo de Dogecoin."
+        }
+      },
       "meta": {
         "title": "Fundación Dogecoin - Haz solo el bien todos los días",
         "description": "El sitio web oficial de la Fundación Dogecoin. Aprende sobre nuestros proyectos, iniciativas comunitarias y cómo apoyar el ecosistema Dogecoin."
@@ -172,6 +206,9 @@
             "buttonText": "Visitar Casa de Doge"
           }
         }
+      },
+      "blog": {
+        "by": "Por"
       },
       "footer": {
         "description": "El Shiba Inu es una raza de perro japonesa que se popularizó como un meme en línea y representa a Dogecoin. Dogecoin fue creado por Jackson Palmer y Shibetoshi Nakamoto.",

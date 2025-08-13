@@ -20,7 +20,7 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
   const { locale } = await params;
   const dictionary = await getDictionary(locale);
   const t = dictionary["dogecoin.org"].home;
-  const posts = await getAllBlogPosts();
+  const posts = await getAllBlogPosts(locale);
 
   const postsByYear = posts.reduce<Record<number, typeof posts>>((acc, post) => {
     const list = acc[post.year] ?? (acc[post.year] = []);

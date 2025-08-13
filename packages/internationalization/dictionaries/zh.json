@@ -9,6 +9,40 @@
   },
   "dogecoin.org": {
     "home": {
+      "about": {
+        "hero": {
+          "title": "关于基金会",
+          "intro": "狗狗币基金会是一家非营利组织，成立目的是提供：",
+          "bulletPoints": [
+            "通过开发与倡导支持狗狗币加密货币。",
+            "维护狗狗币商标，防止滥用与欺诈。",
+            "制定狗狗币的未来路线图。"
+          ],
+          "subtitleBefore": "我们是",
+          "subtitleHighlight": "Dogecoin",
+          "subtitleAfter": "——让人们会心一笑的意外加密运动。"
+        },
+        "manifesto": {
+          "title": "狗狗币宣言",
+          "intro": "我们正在为人们打造一种货币，并努力每天只做善事。通过这项工作，我们逐渐重视：",
+          "cards": [
+            { "title": "务实有用", "text": "我们更重视实用性而非技术上的炫目。" },
+            { "title": "真诚亲切", "text": "我们更重视个人与互动，而非以利润驱动的经济。" },
+            { "title": "开放包容", "text": "我们更重视协作与信任，而非竞争与排他。" },
+            { "title": "可靠可信", "text": "我们更重视可用的解决方案，而非交付的速度。" }
+          ],
+          "signatoriesTitle": "签署者",
+          "sign": {
+            "title": "签署宣言",
+            "text": "你可以在 X 上签署狗狗币宣言",
+            "button": "发布"
+          }
+        },
+        "history": {
+          "title": "我们的历史",
+          "description": "基金会由狗狗币团队成员于 2014 年成立，旨在支持并倡导该项目。狗狗币由 Billy Markus 与 Jackson Palmer 于 2013 年 12 月创建，作为比特币的有趣替代方案，灵感来源于“Doge”表情包，并迅速收获了以慈善闻名的强大社区，如资助牙买加雪车队与 Doge4Water。随着兴趣起伏，基金会一度不太活跃，但在 2021 年由早期成员、新面孔及顾问（如以太坊的 Vitalik Buterin 与 Neuralink 的 Jared Birchall）共同复兴，旨在确保资金、提供战略方向，并确保狗狗币的长期发展。"
+        }
+      },
       "meta": {
         "title": "狗狗币基金会 - 每天只做善事",
         "description": "狗狗币基金会的官方网站。了解我们的项目、社区倡议以及如何支持狗狗币生态系统。"
@@ -164,6 +198,9 @@
             "buttonText": "访问狗狗之家"
           }
         }
+      },
+      "blog": {
+        "by": "作者"
       },
       "footer": {
         "description": "柴犬是一种日本犬种，因在线表情包而广受欢迎，代表着狗狗币。狗狗币由Jackson Palmer和Shibetoshi Nakamoto创建。",

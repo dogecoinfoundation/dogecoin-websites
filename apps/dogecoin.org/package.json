@@ -2,12 +2,13 @@
   "name": "dogecoin.org",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3001 --turbopack",
-    "build": "next build",
+    "dev": "pnpm blog:assets && next dev -p 3001 --turbopack",
+    "build": "pnpm blog:assets && next build",
     "start": "next start",
     "analyze": "ANALYZE=true pnpm build",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
-    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "blog:assets": "node scripts/copy-blog-assets.cjs"
   },
   "dependencies": {
     "@radix-ui/react-icons": "^1.3.2",

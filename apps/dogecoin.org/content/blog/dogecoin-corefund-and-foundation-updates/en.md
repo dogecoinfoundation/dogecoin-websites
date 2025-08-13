@@ -2,7 +2,7 @@
 title: "Dogecoin CoreFund and Foundation updates"
 date: 2025-12-31
 type: Article
-image: /assets/blog/blog-1.png
+image: blog-1.png
 excerpt: Such Core, Much Development, Wow.
 author: Dogecoin Foundation
 ---
@@ -16,7 +16,7 @@ This is a new, segregated multi-signature wallet, designed to transparently mana
 - Marshall (Dogecoin Foundation Board)
 - Michi (Dogecoin Core developer, Dogecoin Foundation Board)
 - Patrick (Dogecoin Core developer)
-- Ross Nicoll (Former Dogecoin Core developer)
+- Ross (Former Dogecoin Core developer)
 
 ## The address can be found here:
 
@@ -38,3 +38,5 @@ This Holiday Season the Dogecoin Foundation wants to send our warmest greetings 
 {{centered-gold-heading}}
 Sincerely, The Dogecoin Foundation
 {{/centered-gold-heading}}
+
+
