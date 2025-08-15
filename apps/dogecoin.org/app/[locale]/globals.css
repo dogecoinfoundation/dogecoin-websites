@@ -956,6 +956,14 @@ body {
   align-items: flex-start;
 }
 
+@media (--small-tablet-down) {
+  .donation-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+
 .donation-card {
   display: flex;
   flex-direction: column;
@@ -965,12 +973,36 @@ body {
 }
 
 .donation-card-image {
-  height: 192px;
-  width: 100%;
-  align-self: stretch;
-  aspect-ratio: 19/9;
   object-fit: cover;
   border-radius: 8px;
+}
+
+@media (--small-tablet-down) {
+  .donation-card-image {
+    width: 188px;
+    height: 106px;
+  }
+}
+
+@media (--small-tablet) {
+  .donation-card-image {
+    width: 171px;
+    height: 96px;
+  }
+}
+
+@media (--tablet) {
+  .donation-card-image {
+    width: 224px;
+    height: 126px;
+  }
+}
+
+@media (--desktop) {
+  .donation-card-image {
+    width: 260px;
+    height: 148px;
+  }
 }
 
 .donation-card-title {
@@ -978,15 +1010,37 @@ body {
   color: var(--Dark-Background-Secondary, #201F1D);
   text-align: center;
   font-family: "Comic Neue";
-  font-size: var(--Typography-Heading-H4-Font-size, 24px);
   font-style: normal;
   font-weight: 700;
   line-height: var(--Typography-Heading-H4-Line-height, 32px);
   margin: 0;
 }
 
+@media (--small-tablet-down) {
+  .donation-card-title {
+    font-size: 24px
+  }
+}
+
+@media (--small-tablet) {
+  .donation-card-title {
+    font-size: 32px
+  }
+}
+
+@media (--tablet) {
+  .donation-card-title {
+    font-size: 40px
+  }
+}
+
+@media (--desktop) {
+  .donation-card-title {
+    font-size: 48px
+  }
+}
+
 .donation-card-text {
-  @apply text-justify;
   color: var(--Dark-Background-Secondary, #201F1D);
   font-family: var(--Typography-font-family-paragraph, "Comic Neue");
   font-size: var(--Typography-Paragraph-Body-font-size, 20px);
@@ -995,6 +1049,18 @@ body {
   line-height: var(--Typography-Paragraph-Body-line-height, 30px);
   margin: 0;
   max-width: 300px;
+}
+
+@media (--tablet-down) {
+  .donation-card-text {
+    font-size: 18px
+  }
+}
+
+@media (--tablet) {
+  .donation-card-text {
+    font-size: 20px
+  }
 }
 
 .donation-decoration {
@@ -1056,7 +1122,7 @@ body {
   /* line-height: var(--Typography-Heading-H2-line-height, 56px); */
 }
 
-@media (--mobile) {
+@media (--small-tablet-down) {
   .activity-title {
     font-size: 24px;
   }
@@ -1087,7 +1153,7 @@ body {
   line-height: var(--Typography-Heading-H4-Line-height, 32px);
 }
 
-@media (--mobile) {
+@media (--small-tablet-down) {
   .activity-subtitle {
     font-size: 18px;
   }
@@ -1106,7 +1172,7 @@ body {
   line-height: var(--Typography-Paragraph-Body-line-height, 30px);
 }
 
-@media (--mobile) {
+@media (--small-tablet-down) {
   .activity-description {
     font-size: 18px;
   }
@@ -1164,7 +1230,7 @@ body {
   @apply flex gap-4;
 }
 
-@media (--mobile) {
+@media (--small-tablet-down) {
   .activity-buttons {
     font-size: 16px;
   }
@@ -1188,7 +1254,7 @@ body {
   text-overflow: ellipsis;
 }
 
-@media (--mobile) {
+@media (--small-tablet-down) {
   .activity-button-primary {
     height: 48px;
   }
@@ -1211,7 +1277,7 @@ body {
   text-overflow: ellipsis;
 }
 
-@media (--mobile) {
+@media (--small-tablet-down) {
   .activity-button-secondary {
     height: 48px;
   }
@@ -1272,6 +1338,13 @@ body {
   justify-items: start;
 }
 
+@media (--small-tablet-down) {
+  .donation-section-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
 .donation-section-grid > div {
   width: 100%;
 }
@@ -1310,13 +1383,17 @@ body {
 
 .wallet-address-container {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 16px;
   width: 100%;
 }
 
 .wallet-address-container .donation-section-text {
   margin: 0;
+  word-break: break-all;
+  white-space: normal;
+  flex: 1;
+  min-width: 0;
 }
 
 .copy-button {
@@ -1395,7 +1472,6 @@ body {
   border: 4px solid var(--Dark-Border-Primary, #333230);
   background: var(--Dark-Background-Secondary, #201F1D);
   min-height: 130px;
-  min-width: 550px;
 }
 
 .mission-card-number {
@@ -1419,11 +1495,34 @@ body {
 .mission-card-heading {
   color: var(--Colour-Text-text-primary-dark, #FFF);
   font-family: var(--Typography-font-family-heading, "Comic Neue");
-  font-size: var(--Typography-Heading-H4-font-size, 32px);
   font-style: normal;
   font-weight: 700;
   line-height: var(--Typography-Heading-H4-line-height, 40px);
   margin-bottom: 12px;
+}
+
+@media (--small-tablet-down) {
+  .mission-card-heading {
+    font-size: 18px;
+  }
+}
+
+@media (--small-tablet) {
+  .mission-card-heading {
+    font-size: 20px;
+  }
+}
+
+@media (--tablet) {
+  .mission-card-heading {
+    font-size: 24px;
+  }
+}
+
+@media (--desktop) {
+  .mission-card-heading {
+    font-size: 32px;
+  }
 }
 
 .mission-card-content {
@@ -1436,10 +1535,21 @@ body {
 .mission-card-text {
   color: var(--Colour-Text-text-primary-dark, #FFF);
   font-family: var(--Typography-font-family-paragraph, "Comic Neue");
-  font-size: var(--Typography-Paragraph-Caption-font-size, 16px);
   font-style: normal;
   font-weight: 400;
   line-height: var(--Typography-Paragraph-Caption-line-height, 26px);
+}
+
+@media (--tablet-down) {
+  .mission-card-text {
+    font-size: 14px;
+  }
+}
+
+@media (--tablet) {
+  .mission-card-text {
+    font-size: 16px;
+  }
 }
 
 /* Mission cards positioning */
@@ -1592,6 +1702,8 @@ body {
   align-items: center;
   max-width: 100%;
   box-sizing: border-box;
+  width: 288px;
+  height: 288px;
 }
 
 .profile-image {
@@ -1607,8 +1719,6 @@ body {
 }
 
 .profile-image-img {
-  width: 336px;
-  height: 336px;
   object-fit: cover;
 }
 
@@ -1625,63 +1735,99 @@ body {
 .profile-name {
   color: var(--Base-Grey-color-grey-800, #201F1D);
   font-family: var(--Typography-font-family-heading, "Comic Neue");
-  font-size: var(--Typography-Heading-H4-font-size, 32px);
   font-style: normal;
   font-weight: 700;
-  line-height: var(--Typography-Heading-H4-line-height, 40px);
   margin: 0 0 8px 0;
 }
+
+@media (--tablet) {
+  .profile-name {
+    font-size: 24px;
+  }
+}
+
+@media (--desktop) {
+  .profile-name {
+    font-size: 32px;
+  }
+}
+
+
 
 .profile-description {
   color: var(--Base-Grey-color-grey-800, #201F1D);
   font-family: "Comic Neue";
-  font-size: var(--Typography-Paragraph-P4-Font-size, 18px);
   font-style: normal;
   font-weight: 400;
   line-height: var(--Typography-Paragraph-P4-Line-height, 24px);
   margin: 0;
 }
 
+@media (--small-tablet-down) {
+  .profile-description {
+    font-size: 16px;
+  }
+}
+
+@media (--small-tablet) {
+  .profile-description {
+    font-size: 18px;
+  }
+}
+
 .profile-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
   margin-top: 48px;
   justify-items: center;
+  width: 100%;
+  min-width: 0;
 }
 
-/* Responsive grid breakpoints for better overflow prevention */
-/* 4 columns: 4 * 336px + 3 * 32px = 1440px minimum width needed */
-@media (max-width: 1440px) {
+@media (--small-tablet-down) {
   .profile-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-}
-
-/* 3 columns: 3 * 336px + 2 * 24px = 1056px minimum width needed */
-@media (max-width: 1056px) {
-  .profile-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-}
-
-/* 2 columns: 2 * 336px + 1 * 20px = 692px minimum width needed */
-@media (max-width: 692px) {
-  .profile-grid {
-    grid-template-columns: 1fr;
-    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   
   .profile-image {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
+}
+
+/* Polaroid layout for small tablet and below */
+@media (--small-tablet-down) {
+  .profile-image-container {
+    flex-direction: column;
+    align-items: center;
   }
   
-  .profile-image-img {
-    width: 300px;
-    height: 300px;
+  .profile-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+    border-radius: 16px 16px 0 0;
+    border-bottom: none;
+  }
+  
+  .profile-info-box {
+    position: static;
+    width: 100%;
+    border-radius: 0 0 16px 16px;
+    margin: 0;
+    box-shadow: none;
+    background: var(--Base-Grey-color-grey-800, #201F1D);
+    border: var(--Colour-Base-Accent-color-accent-blue, #2BF9FF);
+    border-top: none;
+  }
+  
+  .profile-info-box .profile-name,
+  .profile-info-box .profile-description {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 }
 
@@ -1701,7 +1847,8 @@ body {
   display: grid;
   grid-template-columns: 0.5fr 1fr;
   gap: 48px;
-  margin-bottom: 48px;
+  position: relative;
+  z-index: 2;
 }
 
 .footer-column {
@@ -1720,18 +1867,37 @@ body {
   width: 100%;
 }
 
-.footer-links-section {
+.footer-links-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 48px;
   width: fit-content;
 }
 
-.footer-links-group {
+.footer-links-item {
   display: flex;
   flex-direction: column;
   gap: 16px;
   width: fit-content;
+}
+
+/* Responsive grid layout for small tablets and below */
+@media (--small-tablet-down) {
+  .footer-columns {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .footer-links-row {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 32px;
+  }
+  
+  .footer-bottom {
+    margin-top: 32px;
+    padding-top: 16px;
+  }
 }
 
 .footer-links-title {
@@ -1773,7 +1939,7 @@ body {
   height: 1px;
   background: var(--Colour-Text-text-secondary-dark, #878685);
   margin: 0;
-  width: calc(100% - 00px); /* Full viewport width minus container padding (24px each side) minus button width (242px) minus gap (24px) */
+  width: 100%;
 }
 
 .footer-bottom {
@@ -1781,11 +1947,23 @@ body {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  margin-top: 0;
+}
+
+.footer-bottom-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 24px;
+  align-items: stretch;
+  min-height: 190px;
 }
 
 .footer-copyright {
   text-align: left;
+  word-wrap: break-word;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 16px;
 }
 
 .footer-copyright-text {
@@ -1797,12 +1975,12 @@ body {
   line-height: var(--Typography-Paragraph-Caption-line-height, 26px);
   margin: 0;
   padding-bottom: 16px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .back-to-top-button {
-  position: absolute;
-  right: 24px;
-  bottom: 0;
   background: transparent;
   border: none;
   cursor: pointer;
@@ -1811,7 +1989,6 @@ body {
   align-items: center;
   justify-content: center;
   transition: opacity 0.2s ease;
-  z-index: 10;
 }
 
 .back-to-top-button:hover {
@@ -1922,11 +2099,7 @@ header {
     grid-template-columns: 1fr;
     gap: 32px;
   }
-  
-  .footer-links-section {
-    grid-template-columns: 1fr;
-    gap: 24px;
-  }
+
   
   .footer-description {
     max-width: none;
@@ -1991,6 +2164,8 @@ header {
 .partner-logo {
   max-width: 320px;
   max-height: 320px;
+  width: 100%;
+  height: auto;
   object-fit: contain;
 }
 
@@ -2080,12 +2255,27 @@ header {
     padding: 24px;
   }
   
+  .partner-info {
+    align-items: center;
+    text-align: center;
+  }
+  
   .partner-name {
     font-size: 32px;
+    text-align: center;
   }
   
   .partner-description {
     font-size: 20px;
+    text-align: center;
   }
-
+  
+  .partner-button {
+    align-self: center;
+  }
+  
+  .partner-logo {
+    max-width: 200px;
+    max-height: 200px;
+  }
 }

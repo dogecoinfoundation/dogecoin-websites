@@ -22,8 +22,8 @@ export function Footer({ t }: FooterProps) {
           </div>
 
           <div className="footer-column">
-            <div className="footer-links-section">
-              <div className="footer-links-group">
+            <div className="footer-links-row">
+              <div className="footer-links-item">
                 <h4 className="footer-links-title">{t.footer.sections.main.title}</h4>
                 <div className="footer-links">
                   <Link href="/" className="footer-link">{t.footer.sections.main.links.home}</Link>
@@ -32,7 +32,7 @@ export function Footer({ t }: FooterProps) {
                 </div>
               </div>
 
-              <div className="footer-links-group">
+              <div className="footer-links-item">
                 <h4 className="footer-links-title">{t.footer.sections.social.title}</h4>
                 <div className="footer-links">
                   <a href="https://x.com/DogecoinFdn" target="_blank" rel="noopener noreferrer" className="footer-link">{t.footer.sections.social.links.x}</a>
@@ -41,7 +41,7 @@ export function Footer({ t }: FooterProps) {
                 </div>
               </div>
 
-              <div className="footer-links-group">
+              <div className="footer-links-item">
                 <h4 className="footer-links-title">{t.footer.sections.legal.title}</h4>
                 <div className="footer-links">
                   <Link href="/trademarks" className="footer-link">{t.footer.sections.legal.links.trademarks}</Link>
@@ -54,25 +54,29 @@ export function Footer({ t }: FooterProps) {
         </div>
 
         <div className="footer-bottom">
-          <div className="footer-divider"></div>
-          <div className="footer-copyright">
-            <p className="footer-copyright-text">
-              {t.footer.copyright}
-            </p>
+          <div className="footer-bottom-content">
+            <div className="footer-copyright">
+              <div className="footer-divider"></div>
+              <p className="footer-copyright-text">
+                {t.footer.copyright}
+              </p>
+            </div>
+            <div className="footer-back-to-top">
+              <button 
+                className="back-to-top-button"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+              >
+                <Image
+                  src="/assets/images/back-to-top.png"
+                  alt={t.footer.backToTop}
+                  width={242}
+                  height={190}
+                />
+              </button>
+            </div>
           </div>
-          <button 
-            className="back-to-top-button"
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' });
-            }}
-          >
-            <Image
-              src="/assets/images/back-to-top.png"
-              alt={t.footer.backToTop}
-              width={242}
-              height={190}
-            />
-          </button>
         </div>
       </div>
     </footer>
