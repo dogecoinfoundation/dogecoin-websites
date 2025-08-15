@@ -66,6 +66,7 @@
     "@types/node": "catalog:",
     "@types/react": "catalog:react19",
     "postcss": "^8",
+    "postcss-custom-media": "^10.0.0",
     "tailwindcss": "^4.0.12",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "catalog:"

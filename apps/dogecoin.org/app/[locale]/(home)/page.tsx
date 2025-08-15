@@ -50,20 +50,13 @@ export default async function Home({ params }: HomeProps) {
               <div className="hero-content">
                 <div className="hero-text-container relative">
                   <H1 className="hero-title">{t.hero.title}</H1>
-                  <H2 className="hero-subtitle">{t.hero.subtitle}</H2>
+                  <div className="hero-subtitle-wrap">
+                    <H2 className="hero-subtitle">{t.hero.subtitle}</H2>
+                  </div>
+                  <div className="hero-tagline">{t.hero.tagline} <DogePaw className="hero-tagline-icon" /></div>
                   <div className="hero-blur-effect">
                     <BlurEffect color="#A88F33" scale={{ x: 3, y: 5 }} />
                   </div>
-                </div>
-                <div className="inline-block mt-1">
-                  <Image
-                    src="/assets/svg/underline.svg"
-                    alt="Underline"
-                    width={400}
-                    height={400}
-                    className="hero-underline"
-                  />
-                  <div className="hero-tagline">{t.hero.tagline} <DogePaw className="hero-tagline-icon" /></div>
                 </div>
               </div>
               <div className="hero-image-section">

@@ -8,7 +8,7 @@ interface ParagraphProps {
 
 const BaseParagraph: React.FC<ParagraphProps> = ({ children, className = '' }) => {
   return (
-    <p className={`text-base ${className}`}>
+    <p className={`paragraph ${className}`}>
       {children}
     </p>
   );
@@ -16,7 +16,7 @@ const BaseParagraph: React.FC<ParagraphProps> = ({ children, className = '' }) =
 
 const Leading: React.FC<ParagraphProps> = ({ children, className = '' }) => {
   return (
-    <p className={`text-lg leading-relaxed ${className}`}>
+    <p className={`paragraph-lead leading-relaxed ${className}`}>
       {children}
     </p>
   );

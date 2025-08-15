@@ -7,8 +7,9 @@ interface HeadingProps {
 }
 
 const sizeClasses = {
-  H1: 'text-4xl sm:text-6xl lg:text-8xl',
-  H2: 'text-3xl sm:text-4xl lg:text-5xl',
+  H1: 'typography-h1',
+  H2: 'typography-h2',
+  // Keep existing Tailwind sizes for headings not yet standardized
   H3: 'text-2xl sm:text-3xl lg:text-4xl',
   H4: 'text-xl sm:text-2xl lg:text-3xl',
   H5: 'text-lg sm:text-xl lg:text-2xl'

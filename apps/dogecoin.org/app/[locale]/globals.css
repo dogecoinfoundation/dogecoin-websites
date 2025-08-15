@@ -115,11 +115,24 @@
   --color-button-secondary: var(--primary-500);
 }
 
+/* Named media queries (centralized) */
+@custom-media --mobile (min-width: 390px);
+@custom-media --small-tablet (min-width: 768px);
+@custom-media --tablet (min-width: 1024px);
+@custom-media --desktop (min-width: 1366px);
+@custom-media --small-tablet-down (max-width: 768px);
+@custom-media --tablet-down (max-width: 1024px);
+@custom-media --desktop-down (max-width: 1366px);
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+}
+
+html, body {
+  overflow-x: hidden;
 }
 
 body {
@@ -157,8 +170,6 @@ body {
   @apply pl-2 md:pl-4 flex-shrink-0;
   cursor: grab;
   user-select: none;
-  /* Ensure Embla slides have the correct width regardless of basis-full in the component */
-  flex-basis: 362px;
 }
 
 .carousel-item:active {
@@ -196,10 +207,7 @@ body {
   width: 362px;
 }
 
-@media (max-width: 1024px) {
-  .carousel-item {
-    flex-basis: 240px;
-  }
+@media (--tablet-down) {
   .carousel-card {
     width: 240px;
   }
@@ -221,8 +229,7 @@ body {
   height: 203px;
 }
 
-/* Responsive breakpoints for carousel card images */
-@media (max-width: 1366px) {
+@media (--tablet-down) {
   .carousel-card-image {
     height: 135px;
   }
@@ -279,6 +286,31 @@ body {
   width: fit-content;
 }
 
+/* H1 – mobile first */
+.typography-h1, .hero-title { font-size: 45px; }
+
+@media (--small-tablet) {
+  .typography-h1, .hero-title { font-size: 64px; }
+}
+
+@media (--tablet) {
+  .typography-h1, .hero-title { font-size: 85px; }
+}
+
+@media (--desktop) {
+  .typography-h1, .hero-title { font-size: 110px; }
+}
+
+
+/* H1 – mobile first */
+.typography-h2, .hero-subtitle { font-size: 24px; }
+
+@media (--small-tablet) {
+  .typography-h2, .hero-subtitle { font-size: 48px; }
+}
+
+
+
 .hero-title {
   @apply [font-family:var(--font-montserrat)];
 }
@@ -287,12 +319,25 @@ body {
   @apply [font-family:var(--font-montserrat)] font-extralight inline-block mb-4;
 }
 
-.hero-underline {
-  @apply w-auto h-auto mt-4;
+.hero-subtitle-wrap {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-subtitle-wrap::after {
+  content: "";
+  display: block;
+  width: 100%;
+  aspect-ratio: 278 / 10;
+  margin-top: 4px;
+  background-image: url('/assets/svg/underline.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 .hero-tagline {
-  @apply text-[var(--color-link)] flex items-center gap-2 text-2xl mt-2;
+  @apply text-[var(--color-link)] flex items-center gap-2 mt-2;
 }
 
 .hero-tagline-icon {
@@ -300,11 +345,24 @@ body {
 }
 
 .hero-image {
-  @apply w-auto h-auto;
+  width: 400px;
+  height: 400px;
+  min-width: 200px;
+  object-fit: contain;
+  object-position: bottom;
+  @apply block self-end;
 }
 
 .hero-image-section {
-  @apply flex-1 flex justify-end;
+  @apply flex-1 flex justify-end items-end relative;
+}
+
+/* Ensure Next/Image wrapper anchors to the bottom-right of the section */
+.hero-image-section > span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: block;
 }
 
 .hero-text-container {
@@ -324,6 +382,14 @@ body {
   overflow: hidden;
 }
 
+@media (--small-tablet-down) {
+  .carousel-wrapper {
+    width: 710px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 /* Ensure RainbowContainer's internal SVG layers overlay instead of stacking */
 .carousel-wrapper > div > svg {
   position: absolute;
@@ -340,14 +406,43 @@ body {
   z-index: 50;
 }
 
+@media (--small-tablet-down) {
+  .carousel-controls-wrapper {
+    display: none;
+  }
+}
+
 .section-heading {
   @apply inline-block mb-4 text-center;
   color: var(--Dark-Text-Primary, #FFF);
   font-family: var(--Typography-font-family-heading, "Comic Neue");
-  font-size: var(--Typography-Heading-H1-font-size, 64px);
   font-style: normal;
   font-weight: 700;
   line-height: var(--Typography-Heading-H1-line-height, 72px);
+}
+
+@media (--small-tablet-down) {
+  .section-heading {
+    font-size: 32px;
+  }
+}
+
+@media (--small-tablet) {
+  .section-heading {
+    font-size: 40px;
+  }
+}
+
+@media (--tablet) {
+  .section-heading {
+    font-size: 48px;
+  }
+}
+
+@media (--desktop) {
+  .section-heading {
+    font-size: 64px;
+  }
 }
 
 .section-heading-underline {
@@ -413,14 +508,14 @@ body {
   margin-top: 32px;
 }
 
-@media (max-width: 1200px) {
+@media (--tablet-down) {
   .blog-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 }
 
-@media (max-width: 700px) {
+@media (--small-tablet-down) {
   .blog-grid {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -710,14 +805,14 @@ body {
   padding: 80px 0;
 }
 
-@media (max-width: 1200px) {
+@media (--desktop-down) {
   .card-list {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
   }
 }
 
-@media (max-width: 700px) {
+@media (--small-tablet-down) {
   .card-list {
     grid-template-columns: 1fr;
     gap: 16px;
@@ -827,7 +922,7 @@ body {
   margin: 0;
 }
 
-@media (max-width: 768px) {
+@media (--small-tablet-down) {
   .donation-content {
     padding: 30px;
     margin: 14px;
@@ -920,11 +1015,33 @@ body {
 
 /* Activity Component Classes */
 .activity-container {
-  @apply flex items-center gap-8 py-12 relative;
+  @apply flex items-start gap-8 py-12 relative;
+}
+
+@media (--small-tablet-down) {
+  .activity-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .activity-image-container {
+    order: -1;
+  }
 }
 
 .activity-content {
   @apply flex flex-col justify-center flex-1;
+}
+
+@media (--small-tablet-down) {
+  .activity-content {
+    align-items: center;
+  }
+  
+  .activity-buttons {
+    justify-content: center;
+  }
 }
 
 .activity-content-inner {
@@ -934,26 +1051,73 @@ body {
 .activity-title {
   @apply text-white text-5xl font-bold leading-[56px] mb-4;
   font-family: var(--Typography-font-family-heading, "Comic Neue");
-  font-size: var(--Typography-Heading-H2-font-size, 48px);
   font-weight: 700;
-  line-height: var(--Typography-Heading-H2-line-height, 56px);
+  margin-bottom: 0px;
+  /* line-height: var(--Typography-Heading-H2-line-height, 56px); */
+}
+
+@media (--mobile) {
+  .activity-title {
+    font-size: 24px;
+  }
+}
+
+@media (--small-tablet) {
+  .activity-title {
+    font-size: 32px;
+  }
+}
+
+@media (--tablet) {
+  .activity-title {
+    font-size: 40px;
+  }
+}
+
+@media (--desktop) {
+  .activity-title {
+    font-size: 48px;
+  }
 }
 
 .activity-subtitle {
   @apply text-2xl font-bold leading-8 mb-4;
   font-family: "Comic Neue";
-  font-size: var(--Typography-Heading-H4-Font-size, 24px);
   font-weight: 700;
   line-height: var(--Typography-Heading-H4-Line-height, 32px);
+}
+
+@media (--mobile) {
+  .activity-subtitle {
+    font-size: 18px;
+  }
+}
+
+@media (--small-tablet) {
+  .activity-subtitle {
+    font-size: 24px;
+  }
 }
 
 .activity-description {
   @apply text-white text-xl leading-[30px] mb-6;
   font-family: var(--Typography-font-family-paragraph, "Comic Neue");
-  font-size: var(--Typography-Paragraph-Body-font-size, 20px);
   font-weight: 400;
   line-height: var(--Typography-Paragraph-Body-line-height, 30px);
 }
+
+@media (--mobile) {
+  .activity-description {
+    font-size: 18px;
+  }
+}
+
+@media (--tablet) {
+  .activity-description {
+    font-size: 20px;
+  }
+}
+
 
 .activity-key-points {
   @apply mb-6;
@@ -1000,23 +1164,63 @@ body {
   @apply flex gap-4;
 }
 
+@media (--mobile) {
+  .activity-buttons {
+    font-size: 16px;
+  }
+}
+
+@media (--small-tablet) {
+  .activity-buttons {
+    font-size: 24px;
+  }
+}
+
 .activity-button-primary {
-  @apply flex h-16 px-8 justify-center items-center gap-2 rounded-[1000px];
+  @apply flex justify-center items-center gap-2 rounded-[1000px];
+  padding: 0 24px;
   font-family: var(--Typography-font-family-button, "Comic Neue");
-  font-size: var(--Typography-Button-XLarge-font-size, 24px);
   font-style: normal;
   font-weight: 700;
   line-height: var(--Typography-Button-XLarge-line-height, 32px);
   color: var(--Colour-Text-text-primary-light, #201F1D);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (--mobile) {
+  .activity-button-primary {
+    height: 48px;
+  }
+}
+
+@media (--small-tablet) {
+  .activity-button-primary {
+    height: 64px;
+  }
 }
 
 .activity-button-secondary {
-  @apply flex h-[60px] px-8 justify-center items-center gap-2 rounded-[1000px] border-2 bg-transparent;
+  @apply flex justify-center items-center gap-2 rounded-[1000px] border-2 bg-transparent;
+  padding: 0 24px;
   font-family: var(--Typography-font-family-button, "Comic Neue");
-  font-size: var(--Typography-Button-XLarge-font-size, 24px);
   font-style: normal;
   font-weight: 700;
   line-height: var(--Typography-Button-XLarge-line-height, 32px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+@media (--mobile) {
+  .activity-button-secondary {
+    height: 48px;
+  }
+}
+
+@media (--small-tablet) {
+  .activity-button-secondary {
+    height: 64px;
+  }
 }
 
 .activity-image-container {
@@ -1025,9 +1229,29 @@ body {
 
 .activity-image {
   @apply w-[400px] h-[400px] object-cover;
-  width: 400px;
-  height: 400px;
   aspect-ratio: 1/1;
+}
+
+
+@media (--small-tablet-down) {
+  .activity-image {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+@media (--small-tablet) {
+  .activity-image {
+    width: 240px;
+    height: 240px;
+  }
+}
+
+@media (--tablet) {
+  .activity-image {
+    width: 400px;
+    height: 400px;
+  }
 }
 
 .activity-blur-effect {
@@ -1248,8 +1472,7 @@ body {
   align-items: center;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
+@media (--small-tablet-down) {
   .mission-cards-grid {
     grid-template-columns: 1fr;
     gap: 24px;
@@ -1663,7 +1886,7 @@ header {
   transform: translateX(0);
 }
 
-@media (max-width: 768px) {
+@media (--small-tablet-down) {
   .language-dropdown {
     right: auto;
     left: 0;
@@ -1694,7 +1917,7 @@ header {
 }
 
 /* Responsive footer */
-@media (max-width: 768px) {
+@media (--small-tablet-down) {
   .footer-columns {
     grid-template-columns: 1fr;
     gap: 32px;
@@ -1842,7 +2065,7 @@ header {
 }
 
 /* Responsive styles for partner banner */
-@media (max-width: 768px) {
+@media (--small-tablet-down) {
   .partner-banner-content {
     flex-direction: column;
   }
