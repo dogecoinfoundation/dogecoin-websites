@@ -40,7 +40,8 @@
         },
         "history": {
           "title": "La nostra storia",
-          "description": "La Fondazione è stata istituita nel 2014 dai membri del team Dogecoin per supportare e promuovere il progetto. Creato nel dicembre 2013 da Billy Markus e Jackson Palmer come alternativa divertente a Bitcoin, Dogecoin è stato ispirato dal meme \"Doge\" e ha rapidamente guadagnato una forte comunità nota per gli sforzi caritatevoli, come il finanziamento della squadra giamaicana di bob e Doge4Water. Con l'altalena dell'interesse, la Fondazione è diventata meno attiva ma è stata rilanciata nel 2021 da membri originali, nuovi volti e consulenti come Vitalik Buterin (Ethereum) e Jared Birchall (Neuralink). Il rilancio mirava a garantire finanziamenti, fornire direzione strategica e assicurare la crescita a lungo termine di Dogecoin."
+          "description": "La Fondazione è stata istituita nel 2014 dai membri del team Dogecoin per supportare e promuovere il progetto. Creato nel dicembre 2013 da Billy Markus e Jackson Palmer come alternativa divertente a Bitcoin, Dogecoin è stato ispirato dal meme \"Doge\" e ha rapidamente guadagnato una forte comunità nota per gli sforzi caritatevoli, come il finanziamento della squadra giamaicana di bob e Doge4Water.",
+          "description2": "Con l'altalena dell'interesse, la Fondazione è diventata meno attiva ma è stata rilanciata nel 2021 da membri originali, nuovi volti e consulenti come Vitalik Buterin (Ethereum) e Jared Birchall (Neuralink). Il rilancio mirava a garantire finanziamenti, fornire direzione strategica e assicurare la crescita a lungo termine di Dogecoin."
         }
       },
       "meta": {

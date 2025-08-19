@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* Default font for entire site */
+:root {
+  --font-family-default: 'Comic Neue', Helvetica, Arial, sans-serif;
+}
+
+* {
+  font-family: var(--font-family-default);
+}
+
 :root {
   /* Base Colors */
 
@@ -136,7 +145,7 @@ html, body {
 }
 
 body {
-  font-family: 'Comic Neue', Helvetica, sans-serif;
+  font-family: var(--font-family-default);
 }
 
 #root {
@@ -253,7 +262,7 @@ body {
   border-radius: var(--border-radius-border-radius-full, 1000px);
   background: var(--Text-text-link-dark, #E3A849);
   color: var(--Colour-Text-text-primary-light, #201F1D);
-  font-family: var(--Typography-font-family-button, "Comic Neue");
+  font-family: var(--Typography-font-family-button);
   font-size: var(--Typography-Button-Medium-font-size, 16px);
   font-style: normal;
   font-weight: 700;
@@ -301,6 +310,760 @@ body {
   .typography-h1, .hero-title { font-size: 110px; }
 }
 
+/* About Foundation Heading */
+.about-foundation-heading {
+  margin-bottom: 0;
+}
+
+@media (--small-tablet) {
+  .about-foundation-heading {
+    margin-bottom: 32px;
+  }
+}
+
+/* About Page Styles */
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1.8fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Below tablet - stack logo above title and center both */
+@media (--tablet-down) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  
+  .about-hero-logo-container {
+    order: -1;
+    justify-self: center;
+    max-width: 280px;
+    height: 280px;
+  }
+  
+  .about-hero-blur-square {
+    width: 280px;
+    height: 280px;
+  }
+}
+
+.about-hero-title {
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  font-size: var(--Typography-Heading-H1-font-size, 64px);
+  font-style: normal;
+  font-weight: 700;
+  margin: 0;
+}
+
+
+@media (--small-tablet-down) {
+  .about-hero-title {
+    font-size: 32px;
+  }
+}
+
+@media (--small-tablet) {
+  .about-hero-title {
+    font-size: 40px;
+  }
+}
+
+@media (--tablet) {
+  .about-hero-title {
+    font-size: 48px;
+  }
+}
+
+@media (--desktop) {
+  .about-hero-title {
+    font-size: 64px;
+  }
+}
+
+.about-hero-content {
+  margin-top: 16px;
+}
+
+.about-hero-intro {
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  font-size: var(--Typography-Paragraph-Body-Lead-font-size, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--Typography-Paragraph-Body-Lead-line-height, 34px);
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+.about-hero-bullet-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  text-align: left;
+}
+
+/* Ensure bullet points maintain consistent size and alignment */
+.about-hero-bullet-list .activity-key-points-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.about-hero-bullet-list .activity-key-points-bullet {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-top: 12px;
+}
+
+.about-hero-bullet-text {
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  font-family: var(--Typography-font-family-paragraph);
+  font-size: var(--Typography-Paragraph-Body-Lead-font-size, 24px);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--Typography-Paragraph-Body-Lead-line-height, 34px);
+}
+
+
+@media (--tablet-down) {
+  .about-hero-bullet-text {
+    font-size: 18px;
+  }
+}
+
+@media (--tablet) {
+  .about-hero-bullet-text {
+    font-size: 20px;
+  }
+}
+
+.about-hero-subtitle {
+  margin-top: 16px;
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  font-family: var(--Typography-font-family-heading);
+  font-size: var(--Typography-Heading-H3-font-size, 40px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--Typography-Heading-H3-line-height, 48px);
+}
+
+
+@media (--small-tablet-down) {
+  .about-hero-subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (--small-tablet) {
+  .about-hero-subtitle {
+    font-size: 24px;
+  }
+}
+
+@media (--tablet) {
+  .about-hero-subtitle {
+    font-size: 32px;
+  }
+}
+
+@media (--desktop) {
+  .about-hero-subtitle {
+    font-size: 40px;
+  }
+}
+
+.about-hero-subtitle-highlight {
+  color: var(--Base-Brand-color-primary-500, #E3A849);
+}
+
+.about-hero-logo-container {
+  position: relative;
+  width: 100%;
+  height: 340px;
+  border-radius: 16px;
+  overflow: visible;
+}
+
+.about-hero-blur-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-hero-blur-square {
+  width: 340px;
+  height: 340px;
+}
+
+.about-manifesto-title {
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--Typography-Heading-H2-line-height, 56px);
+  margin: 0;
+}
+
+@media (--small-tablet-down) {
+  .about-manifesto-title {
+    font-size: 24px;
+  }
+}
+
+@media (--small-tablet) {
+  .about-manifesto-title {
+    font-size: 32px;
+  }
+}
+
+@media (--tablet) {
+  .about-manifesto-title {
+    font-size: 40px;
+  }
+}
+
+@media (--desktop) {
+  .about-manifesto-title {
+    font-size: 48px;
+  }
+}
+
+.about-manifesto-intro {
+  margin-top: 12px;
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  font-family: var(--Typography-font-family-paragraph);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--Typography-Paragraph-Body-line-height, 30px);
+}
+
+
+@media (--tablet-down) {
+  .about-manifesto-intro {
+    font-size: 18px;
+  }
+}
+
+@media (--tablet) {
+  .about-manifesto-intro {
+    font-size: 20px;
+  }
+}
+
+.about-manifesto-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 80px;
+}
+
+/* Responsive card sizing */
+@media (--small-tablet-down) {
+  .about-manifesto-cards {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    justify-items: center;
+  }
+  
+  .about-manifesto-card {
+    max-width: 340px;
+  }
+}
+
+.about-manifesto-card {
+  border-radius: 16px;
+  border: 4px solid var(--Dark-Border-Primary, #333230);
+  background: var(--Dark-Background-Secondary, #201F1D);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Responsive card content sizing */
+@media (--small-tablet-down) {
+  .about-manifesto-card {
+    padding: 16px;
+    gap: 12px;
+  }
+}
+
+@media (--small-tablet-down) {
+  .about-manifesto-card {
+    max-width: 300px;
+  }
+}
+
+@media (--small-tablet) {
+  .about-manifesto-cards {
+    grid-template-columns: repeat(2, auto);
+    gap: 24px;
+    justify-content: center;
+  }
+  
+  .about-manifesto-card {
+    max-width: 308px;
+  }
+}
+
+@media (--tablet) {
+  .about-manifesto-cards {
+    grid-template-columns: repeat(4, auto);
+    gap: 24px;
+    justify-content: center;
+  }
+  
+  .about-manifesto-card {
+    max-width: 220px;
+  }
+}
+
+@media (--desktop) {
+  .about-manifesto-cards {
+    grid-template-columns: repeat(4, auto);
+    gap: 24px;
+    justify-content: center;
+  }
+  
+  .about-manifesto-card {
+    max-width: 278px;
+  }
+}
+
+
+
+.about-manifesto-card-icon {
+  width: 146px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Responsive sizing for manifesto card icons */
+@media (--small-tablet-down) {
+  .about-manifesto-card-icon {
+    width: 112px;
+  }
+}
+
+@media (--small-tablet) {
+  .about-manifesto-card-icon {
+    width: 146px;
+  }
+}
+
+.about-manifesto-card-title {
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--Typography-Heading-H5-line-height, 32px);
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Responsive title sizing */
+@media (--small-tablet-down) {
+  .about-manifesto-card-title {
+    min-width: 120px;
+    max-width: 100%;
+  }
+}
+
+@media (--small-tablet-down) {
+  .about-manifesto-card-title {
+    font-size: 18px;
+  }
+}
+
+@media (--small-tablet) {
+  .about-manifesto-card-title {
+    font-size: 20px;
+  }
+}
+
+@media (--tablet) {
+  .about-manifesto-card-title {
+    font-size: 24px;
+  }
+}
+
+.about-manifesto-card-title-useful {
+  color: var(--Colour-Base-Accent-color-accent-purple, #9780FF);
+}
+
+.about-manifesto-card-title-personable {
+  color: var(--Colour-Base-Accent-color-accent-purple, #FFFC36);
+}
+
+.about-manifesto-card-title-welcoming {
+  color: var(--Colour-Base-Accent-color-accent-purple, #2BF9FF);
+}
+
+.about-manifesto-card-title-reliable {
+  color: var(--Colour-Base-Accent-color-accent-purple, #62FF46);
+}
+
+.about-manifesto-card-text {
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--Typography-Paragraph-Caption-line-height, 26px);
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+
+@media (--small-tablet-down) {
+  .about-manifesto-card-text {
+    font-size: 14px;
+  }
+}
+
+@media (--small-tablet) {
+  .about-manifesto-card-text {
+    font-size: 16px;
+  }
+}
+
+.about-signatories-section {
+  margin-top: 80px;
+}
+
+.about-signatories-title {
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  text-align: center;
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--Typography-Heading-H3-line-height, 48px);
+  margin: 0;
+}
+
+
+@media (--small-tablet-down) {  
+  .about-signatories-title {
+    font-size: 20px;
+  }
+}
+
+@media (--small-tablet) {
+  .about-signatories-title {
+    font-size: 24px;
+  }
+}
+
+@media (--tablet) {
+  .about-signatories-title {
+    font-size: 32px;
+  }
+}
+
+@media (--desktop) {
+  .about-signatories-title {
+    font-size: 48px;
+  }
+}
+
+.about-signatories-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  align-items: start;
+  justify-items: start;
+  margin-top: 16px;
+  max-width: 1440px;
+}
+
+/* Responsive signatories grid */
+@media (--small-tablet-down) {
+  .about-signatories-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 40px;
+    justify-items: start;
+  }
+}
+
+.about-sign-section {
+  margin-top: 80px;
+  text-align: left;
+}
+
+.about-sign-container {
+  position: relative;
+  display: inline-block;
+}
+
+.about-sign-blur-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.about-sign-content {
+  position: relative;
+  z-index: 1;
+}
+
+.about-sign-title {
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  text-align: left;
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--Typography-Heading-H3-line-height, 48px);
+  margin: 0;
+}
+
+@media (--small-tablet-down) {
+  .about-sign-title {
+    font-size: 20px;
+  }
+}
+
+@media (--small-tablet) {
+  .about-sign-title {
+    font-size: 24px;
+  }
+}
+
+
+@media (--tablet) {
+  .about-sign-title {
+    font-size: 32px;
+  }
+}
+
+
+@media (--desktop) {
+  .about-sign-title {
+    font-size: 40px;
+  }
+}
+
+
+.about-sign-text {
+  margin-top: 8px;
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--Typography-Paragraph-Body-line-height, 30px);
+}
+
+@media (--tablet-down) {
+  .about-sign-text {
+    font-size: 18px;
+  }
+}
+
+
+@media (--tablet) {
+  .about-sign-text {
+    font-size: 20px;
+  }
+}
+
+.about-sign-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: flex-start;
+  margin-top: 12px;
+}
+
+.about-post-button {
+  display: inline-flex;
+  height: 48px;
+  padding: 0 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 1000px;
+  background: transparent;
+  color: #FFF;
+  font-size: var(--Typography-Button-Medium-font-size, 16px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--Typography-Button-Medium-line-height, 24px);
+  border: 2px solid #FFF;
+  text-decoration: none;
+}
+
+.about-post-button-icon {
+  display: inline-flex;
+}
+
+.about-sign-arrow {
+  display: inline-flex;
+}
+
+.about-history-container {
+  display: flex;
+  max-width: var(--Container-max-width, 1440px);
+  padding: 64px;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: var(--Container-gap, 0px);
+  align-self: stretch;
+  border-radius: 24px;
+  border: 4px solid var(--Base-Grey-color-grey-700, #333230);
+  background: var(--Base-Grey-color-grey-800, #201F1D);
+}
+
+@media (--tablet-down) {
+  .about-history-container {
+    flex-direction: column;
+    padding: 32px;
+    gap: 0px;
+  }
+  
+  .about-history-image-container {
+    order: -1;
+    justify-content: center;
+  }
+  
+  .about-history-content {
+    text-align: center;
+  }
+  
+  .about-history-description {
+    text-align: left;
+  }
+}
+
+.about-history-content {
+  flex: 0 1 60%;
+}
+
+.about-history-title {
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  font-style: normal;
+  font-weight: 700;
+  line-height: var(--Typography-Heading-H2-line-height, 56px);
+  margin: 0;
+}
+
+@media (--small-tablet-down) {
+  .about-history-title {
+    font-size: 24px;
+  }
+}
+
+@media (--small-tablet) {
+  .about-history-title {
+    font-size: 32px;
+  }
+}
+
+@media (--tablet) {
+  .about-history-title {
+    font-size: 40px;
+  }
+}
+
+
+@media (--desktop) {
+  .about-history-title {
+    font-size: 48px;
+  }
+}
+
+.about-history-underline {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (--tablet) {
+  .about-history-underline {
+    justify-content: flex-start;
+  }
+}
+
+@media (--desktop) {
+  .about-history-underline {
+    justify-content: flex-start;
+  }
+}
+
+.about-history-description {
+  margin-top: 12px;
+  color: var(--Colour-Text-text-primary-dark, #FFF);
+  font-style: normal;
+  font-weight: 400;
+  line-height: var(--Typography-Paragraph-Caption-line-height, 26px);
+}
+
+@media (--tablet-down) {
+  .about-history-description {
+    font-size: 14px;
+  }
+}
+
+@media (--tablet) {
+  .about-history-description {
+    font-size: 16px;
+  }
+}
+
+.about-history-image-container {
+  flex: 0 1 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about-history-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 360px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (--tablet-down) {
+  .about-history-image-container {
+    justify-content: center;
+  }
+}
+
+@media (--small-tablet-down) {
+  .about-history-image-wrapper {
+    max-width: 200px ;
+    height: 200px ;
+  }
+}
+
+@media (--small-tablet) {
+  .about-history-image-wrapper {
+    max-width: 240px ;
+    height: 240px ;
+  }
+}
+
+@media (--tablet) {
+  .about-history-image-wrapper {
+    max-width: 300px ;
+    height: 300px ;
+  }
+}
+
+@media (--desktop) {
+  .about-history-image-wrapper {
+    max-width: 400px ;
+    height: 400px ;
+  }
+}
 
 /* H1 – mobile first */
 .typography-h2, .hero-subtitle { font-size: 24px; }
@@ -415,7 +1178,6 @@ body {
 .section-heading {
   @apply inline-block mb-4 text-center;
   color: var(--Dark-Text-Primary, #FFF);
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
   font-style: normal;
   font-weight: 700;
   line-height: var(--Typography-Heading-H1-line-height, 72px);
@@ -476,7 +1238,7 @@ body {
   @apply text-center mb-8;
   color: var(--Dark-Text-Primary, #FFF);
   text-align: center;
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-Lead-font-size, 24px);
   font-style: normal;
   font-weight: 400;
@@ -548,7 +1310,7 @@ body {
   top: 10px;
   border-radius: 8px;
   color: var(--Base-Black-color-black, #030303);
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-size: var(--Typography-Heading-H5-font-size, 24px);
   font-style: normal;
   font-weight: 700;
@@ -573,7 +1335,7 @@ body {
 
 .blog-card-title {
   color: var(--Dark-Text-Primary, #FFF);
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-size: var(--Typography-Heading-H4-font-size, 32px);
   font-weight: 700;
   line-height: var(--Typography-Heading-H4-line-height, 40px);
@@ -582,7 +1344,7 @@ body {
 
 .blog-card-excerpt {
   color: var(--Dark-Text-Primary, #FFF);
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-font-size, 20px);
   line-height: var(--Typography-Paragraph-Body-line-height, 30px);
 }
@@ -602,7 +1364,7 @@ body {
   background: transparent;
   border: 2px solid currentColor;
   color: var(--Colour-Base-Accent-color-accent-yellow, #FFFC36);
-  font-family: var(--Typography-font-family-button, "Comic Neue");
+  font-family: var(--Typography-font-family-button);
   font-size: var(--Typography-Button-Small-font-size, 16px);
   font-style: normal;
   font-weight: 700;
@@ -640,7 +1402,7 @@ body {
   border-radius: 100px;
   border: 4px solid var(--Base-Brand-color-primary-500, #E3A849);
   color: var(--Base-Brand-color-primary-500, #E3A849);
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-size: var(--Typography-Heading-H3-font-size, 40px);
   font-style: normal;
   font-weight: 700;
@@ -685,7 +1447,7 @@ body {
 
 .blog-post-title {
   color: var(--Base-White-color-white, #FFF);
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-size: var(--Typography-Heading-H1-font-size, 64px);
   font-style: normal;
   font-weight: 700;
@@ -696,7 +1458,7 @@ body {
 .blog-post-meta { color: var(--Base-White-color-white, #FFF); }
 .blog-post-author, .blog-post-date, .blog-post-sep {
   color: var(--Base-White-color-white, #FFF);
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-font-size, 20px);
   font-style: normal;
   font-weight: 400;
@@ -705,7 +1467,7 @@ body {
 
 .blog-post-content {
   color: var(--Base-White-color-white, #FFF);
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-font-size, 20px);
   font-style: normal;
   font-weight: 400;
@@ -714,7 +1476,7 @@ body {
 
 .blog-post-content h1 {
   color: var(--Base-White-color-white, #FFF);
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-size: var(--Typography-Heading-H2-font-size, 48px);
   font-style: normal;
   font-weight: 700;
@@ -726,7 +1488,7 @@ body {
 .blog-post-content h2 {
   color: var(--Colour-Text-text-primary-dark, #FFF);
   text-align: left;
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-size: var(--Typography-Heading-H4-font-size, 32px);
   font-style: normal;
   font-weight: 700;
@@ -741,7 +1503,7 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-font-size, 20px);
   font-style: normal;
   font-weight: 400;
@@ -844,7 +1606,7 @@ body {
   align-self: start;
   color: var(--Base-Brand-color-primary-500, #E3A849);
   text-align: center;
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-size: var(--Typography-Heading-H3-font-size, 40px);
   font-style: normal;
   font-weight: 700;
@@ -854,7 +1616,7 @@ body {
 .card-list li p {
   margin: 0;
   color: var(--Base-White-color-white, #FFF);
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-font-size, 20px);
   font-style: normal;
   font-weight: 400;
@@ -866,7 +1628,7 @@ body {
 .centered-gold-heading {
   color: var(--Base-Brand-color-primary-500, #E3A849);
   text-align: center;
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-size: var(--Typography-Heading-H4-font-size, 32px);
   font-style: normal;
   font-weight: 700;
@@ -879,7 +1641,7 @@ body {
 .centered-heading {
   color: var(--Base-White-color-white, #FFF);
   text-align: center;
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-Lead-font-size, 24px);
   font-style: normal;
   font-weight: 400;
@@ -941,7 +1703,7 @@ body {
 .donation-title {
   @apply text-center;
   color: var(--Dark-Background-Secondary, #201F1D);
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-size: var(--Typography-Heading-H2-font-size, 48px);
   font-style: normal;
   font-weight: 700;
@@ -1009,7 +1771,6 @@ body {
   @apply text-center;
   color: var(--Dark-Background-Secondary, #201F1D);
   text-align: center;
-  font-family: "Comic Neue";
   font-style: normal;
   font-weight: 700;
   line-height: var(--Typography-Heading-H4-Line-height, 32px);
@@ -1042,7 +1803,7 @@ body {
 
 .donation-card-text {
   color: var(--Dark-Background-Secondary, #201F1D);
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-font-size, 20px);
   font-style: normal;
   font-weight: 400;
@@ -1116,7 +1877,7 @@ body {
 
 .activity-title {
   @apply text-white text-5xl font-bold leading-[56px] mb-4;
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-weight: 700;
   margin-bottom: 0px;
   /* line-height: var(--Typography-Heading-H2-line-height, 56px); */
@@ -1148,7 +1909,6 @@ body {
 
 .activity-subtitle {
   @apply text-2xl font-bold leading-8 mb-4;
-  font-family: "Comic Neue";
   font-weight: 700;
   line-height: var(--Typography-Heading-H4-Line-height, 32px);
 }
@@ -1167,7 +1927,7 @@ body {
 
 .activity-description {
   @apply text-white text-xl leading-[30px] mb-6;
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-weight: 400;
   line-height: var(--Typography-Paragraph-Body-line-height, 30px);
 }
@@ -1191,7 +1951,6 @@ body {
 
 .activity-key-points-title {
   @apply text-xl font-bold;
-  font-family: "Comic Neue";
   font-size: 20px;
   font-weight: 700;
   color: white;
@@ -1202,28 +1961,48 @@ body {
 }
 
 .activity-key-points-item {
-  @apply flex items-center gap-3;
+  @apply flex items-start gap-3;
   display: flex;
   padding-top: 9px;
-  align-items: center;
+  align-items: flex-start;
   gap: 12px;
 }
 
 .activity-key-points-bullet {
   @apply w-2 h-2 rounded-full border-2;
-  width: 12px;
-  height: 12px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background-color: transparent;
+  flex-shrink: 0;
+  margin-top: 8px;
 }
 
 .activity-key-points-text {
   @apply text-white text-lg;
-  font-family: "Comic Neue";
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
   color: white;
+  white-space: nowrap;
+}
+
+@media (--small-tablet-down) {
+  .activity-buttons {
+    font-size: 18px;
+  }
+}
+
+@media (--small-tablet) {
+  .activity-buttons {
+    font-size: 20px;
+  }
+}
+
+@media (--tablet) {
+  .activity-buttons {
+    font-size: 24px;
+  }
 }
 
 .activity-buttons {
@@ -1245,7 +2024,6 @@ body {
 .activity-button-primary {
   @apply flex justify-center items-center gap-2 rounded-[1000px];
   padding: 0 24px;
-  font-family: var(--Typography-font-family-button, "Comic Neue");
   font-style: normal;
   font-weight: 700;
   line-height: var(--Typography-Button-XLarge-line-height, 32px);
@@ -1269,7 +2047,7 @@ body {
 .activity-button-secondary {
   @apply flex justify-center items-center gap-2 rounded-[1000px] border-2 bg-transparent;
   padding: 0 24px;
-  font-family: var(--Typography-font-family-button, "Comic Neue");
+  font-family: var(--Typography-font-family-button);
   font-style: normal;
   font-weight: 700;
   line-height: var(--Typography-Button-XLarge-line-height, 32px);
@@ -1351,7 +2129,7 @@ body {
 
 .donation-section-heading {
   color: var(--Dark-Text-Primary, #FFF);
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-size: var(--Typography-Heading-H3-font-size, 40px);
   font-style: normal;
   font-weight: 700;
@@ -1361,7 +2139,7 @@ body {
 
 .donation-section-text {
   @apply text-white;
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-font-size, 20px);
   font-style: normal;
   font-weight: 400;
@@ -1421,14 +2199,14 @@ body {
   align-items: center;
   gap: 4px;
   color: #62FF46;
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: 12px;
   font-weight: 600;
 }
 
 .copy-text {
   color: #62FF46;
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: 12px;
   font-weight: 600;
 }
@@ -1486,7 +2264,7 @@ body {
   border-radius: 100px;
   background: var(--background-tertiary, #E3A849);
   color: var(--Colour-Text-text-primary-dark, #201F1D);
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-size: 24px;
   font-weight: 700;
   flex-shrink: 0;
@@ -1494,7 +2272,7 @@ body {
 
 .mission-card-heading {
   color: var(--Colour-Text-text-primary-dark, #FFF);
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-style: normal;
   font-weight: 700;
   line-height: var(--Typography-Heading-H4-line-height, 40px);
@@ -1534,7 +2312,7 @@ body {
 
 .mission-card-text {
   color: var(--Colour-Text-text-primary-dark, #FFF);
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-style: normal;
   font-weight: 400;
   line-height: var(--Typography-Paragraph-Caption-line-height, 26px);
@@ -1646,7 +2424,7 @@ body {
 
 .donation-button-amount {
   color: var(--Dark-Text-Primary, #FFF);
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-font-size, 20px);
   font-style: normal;
   font-weight: 700;
@@ -1658,7 +2436,7 @@ body {
   background: transparent;
   border: none;
   color: var(--Dark-Text-Primary, #FFF);
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-font-size, 20px);
   font-style: normal;
   font-weight: 700;
@@ -1675,7 +2453,7 @@ body {
 .donation-button-quote {
   color: var(--Colour-Base-Accent-color-accent-green, #62FF46);
   text-align: right;
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Body-font-size, 20px);
   font-style: normal;
   font-weight: 700;
@@ -1734,7 +2512,7 @@ body {
 
 .profile-name {
   color: var(--Base-Grey-color-grey-800, #201F1D);
-  font-family: var(--Typography-font-family-heading, "Comic Neue");
+  font-family: var(--Typography-font-family-heading);
   font-style: normal;
   font-weight: 700;
   margin: 0 0 8px 0;
@@ -1756,7 +2534,6 @@ body {
 
 .profile-description {
   color: var(--Base-Grey-color-grey-800, #201F1D);
-  font-family: "Comic Neue";
   font-style: normal;
   font-weight: 400;
   line-height: var(--Typography-Paragraph-P4-Line-height, 24px);
@@ -1858,7 +2635,7 @@ body {
 
 .footer-description {
   color: var(--Colour-Text-text-secondary-dark, #878685);
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Caption-font-size, 16px);
   font-style: normal;
   font-weight: 400;
@@ -1902,7 +2679,6 @@ body {
 
 .footer-links-title {
   color: var(--Dark-Text-Primary, #FFF);
-  font-family: "Comic Neue";
   font-size: var(--Typography-Heading-H4-Font-size, 24px);
   font-style: normal;
   font-weight: 700;
@@ -1925,7 +2701,7 @@ body {
   gap: 2px;
   color: #E3A849;
   text-decoration: none;
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Caption-font-size, 16px);
   font-weight: 400;
   transition: opacity 0.2s ease;
@@ -1968,7 +2744,7 @@ body {
 
 .footer-copyright-text {
   color: var(--Colour-Text-text-secondary-dark, #878685);
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: var(--Typography-Paragraph-Caption-font-size, 16px);
   font-style: normal;
   font-weight: 400;
@@ -2033,7 +2809,7 @@ header {
 }
 
 .language-code {
-  font-family: var(--Typography-font-family-paragraph, "Comic Neue");
+  font-family: var(--Typography-font-family-paragraph);
   font-size: 14px;
   font-weight: 600;
 }
