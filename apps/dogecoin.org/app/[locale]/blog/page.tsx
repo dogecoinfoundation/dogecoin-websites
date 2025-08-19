@@ -39,6 +39,7 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
           <div className="section-heading-container">
             <div className="blog-title-row">
               <Image
+                  className="blog-title-left"
                   src="/assets/svg/blog/title-left.svg"
                   alt="Section heading underline"
                   width={91}
@@ -46,9 +47,10 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
               />
               <div className="blog-title-center">
                 <h3 className="section-heading">Blog</h3>
-                <p className="section-description">Updates, events, and important news from the Dogecoin Foundation.</p>
+                <p className="blog-section-description">Updates, events, and important news from the Dogecoin Foundation.</p>
               </div>
                 <Image
+                    className="blog-title-right"
                     src="/assets/svg/blog/title-right.svg"
                     alt="Section heading underline"
                     width={91}
@@ -67,7 +69,9 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
                   width={618}
                   height={7}
               />
-                <div className="blog-year-pill">{year}</div>
+                <div className="blog-year-pill">
+                  <span>{year}</span>
+                </div>
                 <Image
                   src="/assets/svg/blog/year-line.svg"
                   alt="Section heading underline"
@@ -87,11 +91,10 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
                       </div>
                     </Link>
                     <div className="blog-card-content">
-                      <time className="blog-card-date">{new Date(post.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</time>
+                      <time className={`blog-card-date ${post.type === 'Article' ? 'blog-card-date-article' : post.type === 'Important' ? 'blog-card-date-important' : 'blog-card-date-event'}`}>{new Date(post.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</time>
                       <h4 className="blog-card-title">
                         <Link href={`/${locale}/blog/${post.slug}`}>{post.title}</Link>
                       </h4>
-                      {post.excerpt && <p className="blog-card-excerpt">{post.excerpt}</p>}
                       <div className="blog-card-actions">
                         <Link className={`blog-card-readmore ${post.type === 'Article' ? 'blog-card-readmore-article' : post.type === 'Important' ? 'blog-card-readmore-important' : 'blog-card-readmore-event'}`} href={`/${locale}/blog/${post.slug}`}>Read more</Link>
                       </div>
