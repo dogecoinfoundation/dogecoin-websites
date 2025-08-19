@@ -36,7 +36,7 @@ export function Nav({ children, className: _className = '' }: NavProps) {
               <li key={item.href}>
                 <NavItem 
                   href={item.href} 
-                  isActive={pathnameWithoutLocale === item.href}
+                  isActive={pathnameWithoutLocale === item.href || (item.href !== '/' && pathnameWithoutLocale.startsWith(item.href))}
                 >
                   {item.label}
                 </NavItem>

@@ -43,9 +43,7 @@ export default async function BlogPostPage({ params }: PageProps) {
               <div className="blog-post-hero-text">
                 <h1 className="blog-post-title">{post.title}</h1>
                 <div className="blog-post-meta">
-                  {post.author && <span className="blog-post-author">{t.blog?.by ?? 'By'} {post.author}</span>}
-                  {post.author && <span className="blog-post-sep">-</span>}
-                  <time className="blog-post-date">{format(new Date(post.date), 'EEEE, MMM dd yyyy')}</time>
+                  {post.author && <span className="blog-post-meta-text">{t.blog?.by ?? 'By'} {post.author} - {format(new Date(post.date), 'EEEE, MMM dd yyyy')}</span>}
                 </div>
               </div>
               <div className="blog-post-hero-image">
