@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter, useParams } from 'next/navigation';
-import { getAssetPath } from '@/lib/assets';
+import { getAssetPath, getClientBasePath, getClientNavPath, getClientAssetPath } from '@/lib/assets';
 
 interface LanguageMetadata {
   code: string;
@@ -249,17 +249,26 @@ export function LanguageSelector() {
               key={language.code}
               className={`language-option ${language.code === currentLanguage ? 'active' : ''}`}
               onClick={() => {
-                // Get current pathname without locale
+                // Get current pathname without locale and base path
                 const pathname = window.location.pathname;
-                const pathWithoutLocale = pathname.replace(`/${currentLanguage}`, '') || '/';
                 
-                // Navigate to new locale
-                router.push(`/${language.code}${pathWithoutLocale}`);
+                // Remove base path first
+                const basePath = getClientBasePath();
+                let pathWithoutBase = pathname;
+                if (basePath && pathname.startsWith(basePath)) {
+                  pathWithoutBase = pathname.slice(basePath.length);
+                }
+                
+                // Remove current locale
+                const pathWithoutLocale = pathWithoutBase.replace(`/${currentLanguage}`, '') || '/';
+                
+                // Navigate to new locale using the client nav path utility
+                router.push(getClientNavPath(pathWithoutLocale, language.code));
                 setIsOpen(false);
               }}
             >
               <Image
-                src={getAssetPath(language.flag)}
+                src={getClientAssetPath(language.flag)}
                 alt={`${language.name} flag`}
                 width={24}
                 height={24}

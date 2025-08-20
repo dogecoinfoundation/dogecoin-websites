@@ -7,7 +7,7 @@ import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary } from '@repo/internationalization';
 import { getAllBlogPosts } from '@/lib/blog';
-import { getAssetPath } from '@/lib/assets';
+import { getAssetPath, getNavPath } from '@/lib/assets';
 
 interface BlogIndexProps {
   params: Promise<{ locale: string }>;
@@ -92,19 +92,19 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
               <div className="blog-grid">
                 {(postsByYear[year] ?? []).map((post) => (
                   <article key={post.slug} className="blog-card">
-                    <Link href={`/${locale}/blog/${post.slug}`} className="blog-card-image-link">
+                    <Link href={getNavPath(`/blog/${post.slug}`, locale)} className="blog-card-image-link">
                       <div className="blog-card-image">
-                        <Image src={post.image} alt={post.title} fill className="object-cover" />
+                        <Image src={getAssetPath(post.image)} alt={post.title} fill className="object-cover" />
                         <div className={`blog-card-badge ${post.type === 'Article' ? 'blog-card-badge-article' : post.type === 'Important' ? 'blog-card-badge-important' : 'blog-card-badge-event'}`}>{post.type}</div>
                       </div>
                     </Link>
                     <div className="blog-card-content">
                       <time className={`blog-card-date ${post.type === 'Article' ? 'blog-card-date-article' : post.type === 'Important' ? 'blog-card-date-important' : 'blog-card-date-event'}`}>{new Date(post.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}</time>
                       <h4 className="blog-card-title">
-                        <Link href={`/${locale}/blog/${post.slug}`}>{post.title}</Link>
+                        <Link href={getNavPath(`/blog/${post.slug}`, locale)}>{post.title}</Link>
                       </h4>
                       <div className="blog-card-actions">
-                        <Link className={`blog-card-readmore ${post.type === 'Article' ? 'blog-card-readmore-article' : post.type === 'Important' ? 'blog-card-readmore-important' : 'blog-card-readmore-event'}`} href={`/${locale}/blog/${post.slug}`}>Read more</Link>
+                        <Link className={`blog-card-readmore ${post.type === 'Article' ? 'blog-card-readmore-article' : post.type === 'Important' ? 'blog-card-readmore-important' : 'blog-card-readmore-event'}`} href={getNavPath(`/blog/${post.slug}`, locale)}>Read more</Link>
                       </div>
                     </div>
                   </article>

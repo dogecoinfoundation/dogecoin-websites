@@ -9,7 +9,7 @@ import { Logo } from '../common/Logo';
 import { LanguageSelector } from '../specific/LanguageSelector';
 import Image from 'next/image';
 import DogePaw from '../icons/DogePaw';
-import { getAssetPath } from '@/lib/assets';
+import { getAssetPath, getNavPath } from '@/lib/assets';
 
 interface NavProps {
   children?: ReactNode;
@@ -57,7 +57,7 @@ export function Nav({ children, className: _className = '' }: NavProps) {
 
         {/* Logo - centered on mobile */}
         <div className="nav-logo">
-          <Logo width={180} height={45} />
+          <Logo width={180} height={45} href={getNavPath('/', String(locale))} />
         </div>
 
         {/* Desktop navigation and language selector */}
@@ -66,7 +66,7 @@ export function Nav({ children, className: _className = '' }: NavProps) {
             {navItems.map((item) => (
               <li key={item.href}>
                 <NavItem 
-                  href={item.href} 
+                  href={getNavPath(item.href, String(locale))} 
                   isActive={pathnameWithoutLocale === item.href || (item.href !== '/' && pathnameWithoutLocale.startsWith(item.href))}
                 >
                   {item.label}
@@ -100,7 +100,7 @@ export function Nav({ children, className: _className = '' }: NavProps) {
           {navItems.map((item) => (
             <li key={item.href} className="nav-item">
               <NavItem 
-                href={item.href} 
+                href={getNavPath(item.href, String(locale))} 
                 isActive={pathnameWithoutLocale === item.href || (item.href !== '/' && pathnameWithoutLocale.startsWith(item.href))}
                 onClick={closeMobileMenu}
               >

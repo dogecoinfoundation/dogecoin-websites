@@ -7,6 +7,7 @@ import { getDictionary } from '@repo/internationalization';
 import Image from 'next/image';
 import { format } from 'date-fns';
 import { getAllBlogSlugs, getBlogPostBySlug } from '@/lib/blog';
+import { getAssetPath } from '@/lib/assets';
 
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -55,7 +56,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </div>
               </div>
               <div className="blog-post-hero-image">
-                <Image src={post.image} alt={post.title} fill className="object-cover" />
+                <Image src={getAssetPath(post.image)} alt={post.title} fill className="object-cover" />
               </div>
             </div>
 
