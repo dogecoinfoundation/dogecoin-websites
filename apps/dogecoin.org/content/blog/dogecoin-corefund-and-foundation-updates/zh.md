@@ -1,3 +1,4 @@
+---
 title: "Dogecoin CoreFund 和基金会更新"
 date: 2025-12-31
 type: Article

@@ -1,3 +1,4 @@
+---
 title: "Mises à jour de Dogecoin CoreFund et de la Fondation"
 date: 2025-12-31
 type: Article

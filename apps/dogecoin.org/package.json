@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "pnpm blog:assets && next dev -p 3001 --turbopack",
     "build": "pnpm blog:assets && next build",
+    "static": "STATIC_EXPORT=true pnpm blog:assets && STATIC_EXPORT=true next build",
     "start": "next start",
     "analyze": "ANALYZE=true pnpm build",
     "clean": "git clean -xdf .cache .turbo dist node_modules",

@@ -5,11 +5,14 @@ import type { NextConfig } from 'next';
 
 let nextConfig: NextConfig = {
   ...config,
-  output: 'export',
-  trailingSlash: true,
-  images: {
-    unoptimized: true
-  }
+  // Only enable static export when STATIC_EXPORT is true
+  ...(process.env.STATIC_EXPORT === 'true' && {
+    output: 'export',
+    trailingSlash: true,
+    images: {
+      unoptimized: true
+    }
+  }),
 };
 
 nextConfig = withLogging(nextConfig);
