@@ -1,0 +1,87 @@
+name: Deploy Dogecoin.org Static Preview to GitHub Pages
+
+on:
+  push:
+    branches: [ dev ]
+    paths:
+      - 'apps/dogecoin.org/**'
+      - '.github/workflows/deploy-dogecoin.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "dogecoin-pages-deployment"
+  cancel-in-progress: false
+
+jobs:
+  build-dogecoin-site:
+    name: Build Dogecoin.org Static Site
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js for Dogecoin.org build
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: 9.6.0
+
+      - name: Get pnpm store directory
+        shell: bash
+        run: |
+          echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ env.STORE_PATH }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v4
+        with:
+          static_site_generator: next
+
+      - name: Install monorepo dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Create Dogecoin.org environment file
+        working-directory: ./apps/dogecoin.org
+        run: |
+          if [ ! -f .env ]; then
+            echo "Creating .env from .env.example for Dogecoin.org"
+            cp .env.example .env
+          else
+            echo "Dogecoin.org .env file already exists"
+          fi
+
+      - name: Build Dogecoin.org static export
+        working-directory: ./apps/dogecoin.org
+        run: pnpm run static
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./apps/dogecoin.org/out
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build-dogecoin-site
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
