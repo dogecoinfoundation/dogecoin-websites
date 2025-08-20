@@ -9,6 +9,8 @@ let nextConfig: NextConfig = {
   ...(process.env.STATIC_EXPORT === 'true' && {
     output: 'export',
     trailingSlash: true,
+    basePath: process.env.NODE_ENV === 'production' ? '/dogecoin-websites' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/dogecoin-websites/' : '',
     images: {
       unoptimized: true
     }
