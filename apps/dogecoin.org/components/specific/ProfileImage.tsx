@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/assets';
 
 interface ProfileImageProps {
   imageSrc: string;
@@ -23,7 +24,7 @@ export const ProfileImage: React.FC<ProfileImageProps> = ({
         style={{ borderColor: color }}
       >
         <Image
-          src={imageSrc}
+          src={getAssetPath(imageSrc)}
           alt={imageAlt}
           fill
           sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, (max-width: 1200px) 33vw, 25vw"

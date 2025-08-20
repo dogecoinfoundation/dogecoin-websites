@@ -195,7 +195,7 @@ const getSupportedLanguages = (): LanguageMetadata[] => {
   return availableLanguages.map(code => ({
     code,
     name: languageNames[code] ?? code.toUpperCase(),
-    flag: getAssetPath(`/assets/images/flags/${code}.png`)
+    flag: `/assets/images/flags/${code}.png`
   }));
 };
 
@@ -224,7 +224,7 @@ export function LanguageSelector() {
         onClick={() => setIsOpen(!isOpen)}
       >
         <Image
-          src={currentLang.flag}
+          src={getAssetPath(currentLang.flag)}
           alt={`${currentLang.name} flag`}
           width={24}
           height={24}
@@ -259,7 +259,7 @@ export function LanguageSelector() {
               }}
             >
               <Image
-                src={language.flag}
+                src={getAssetPath(language.flag)}
                 alt={`${language.name} flag`}
                 width={24}
                 height={24}

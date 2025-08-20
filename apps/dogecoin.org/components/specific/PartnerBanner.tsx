@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { BlurEffect } from '@/components/common/BlurEffect';
+import { getAssetPath } from '@/lib/assets';
 
 interface PartnerBannerProps {
   icon: string;
@@ -29,7 +30,7 @@ export const PartnerBanner: React.FC<PartnerBannerProps> = ({
       <div 
         className="partner-banner-background"
         style={{
-          backgroundImage: `url(${backgroundImage})`,
+          backgroundImage: `url(${getAssetPath(backgroundImage)})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
@@ -40,7 +41,7 @@ export const PartnerBanner: React.FC<PartnerBannerProps> = ({
           <div className="partner-banner-left">
             <div className="partner-logo-container">
               <Image
-                src={icon}
+                src={getAssetPath(icon)}
                 alt={`${name} logo`}
                 width={320}
                 height={320}
@@ -67,7 +68,7 @@ export const PartnerBanner: React.FC<PartnerBannerProps> = ({
         
         <div className="partner-lower-image">
           <Image
-            src={lowerImage}
+            src={getAssetPath(lowerImage)}
             alt="Partner decoration"
             width={1200}
             height={200}

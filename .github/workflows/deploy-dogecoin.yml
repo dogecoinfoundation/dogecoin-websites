@@ -70,6 +70,27 @@ jobs:
         working-directory: ./apps/dogecoin.org
         run: pnpm run static
 
+      - name: Create root redirect for GitHub Pages
+        working-directory: ./apps/dogecoin.org
+        run: |
+          cat > out/index.html << 'EOF'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+              <meta charset="utf-8">
+              <title>Dogecoin Foundation - Redirecting...</title>
+              <meta http-equiv="refresh" content="0; url=./en/">
+              <link rel="canonical" href="./en/">
+              <script>
+                  window.location.replace('./en/');
+              </script>
+          </head>
+          <body>
+              <p>Redirecting to <a href="./en/">English version</a>...</p>
+          </body>
+          </html>
+          EOF
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

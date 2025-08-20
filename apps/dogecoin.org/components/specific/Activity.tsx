@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { BlurEffect } from '@/components/common/BlurEffect';
+import { getAssetPath } from '@/lib/assets';
 
 interface ActivityProps {
   title: string;
@@ -104,7 +105,7 @@ export function Activity({
   const image = (
     <div className="activity-image-container">
       <Image
-        src={imageSrc}
+        src={getAssetPath(imageSrc)}
         alt={imageAlt}
         width={400}
         height={400}
