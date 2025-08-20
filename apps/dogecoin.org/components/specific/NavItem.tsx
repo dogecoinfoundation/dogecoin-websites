@@ -18,7 +18,7 @@ export function NavItem({ href, isActive = false, children, onClick }: NavItemPr
         isActive ? 'text-[var(--color-link)]' : 'text-white hover:text-[var(--color-link)]'
       }`}
     >
-      {isActive && <DogePaw className="w-4 h-4 text-[var(--color-link)]" />}
+      {isActive && <DogePaw className="w-4 h-4 text-[var(--color-link)] flex-shrink-0" />}
       {children}
     </Link>
   );
