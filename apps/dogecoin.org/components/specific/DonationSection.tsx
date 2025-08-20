@@ -6,6 +6,7 @@ import Container from '@/components/layout/Container';
 import { BlurEffect } from '@/components/common/BlurEffect';
 import Image from 'next/image';
 import { DonationButton } from '@/components/specific/DonationButton';
+import { getAssetPath } from '@/lib/assets';
 
 interface DonationSectionProps {
   t: any;
@@ -40,7 +41,7 @@ export function DonationSection({ t, DOGE_ADDRESS }: DonationSectionProps) {
               <div className="donation-grid">
                 <div className="donation-card">
                   <Image
-                    src="/assets/images/placeholder.jpg"
+                    src={getAssetPath("/assets/images/placeholder.jpg")}
                     alt="Donation reason 1"
                     width={400}
                     height={200}
@@ -56,7 +57,7 @@ export function DonationSection({ t, DOGE_ADDRESS }: DonationSectionProps) {
                 
                 <div className="donation-card">
                   <Image
-                    src="/assets/images/placeholder.jpg"
+                    src={getAssetPath("/assets/images/placeholder.jpg")}
                     alt="Donation reason 2"
                     width={400}
                     height={200}
@@ -72,7 +73,7 @@ export function DonationSection({ t, DOGE_ADDRESS }: DonationSectionProps) {
                 
                 <div className="donation-card">
                   <Image
-                    src="/assets/images/placeholder.jpg"
+                    src={getAssetPath("/assets/images/placeholder.jpg")}
                     alt="Donation reason 3"
                     width={400}
                     height={200}

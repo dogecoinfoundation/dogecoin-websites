@@ -4,10 +4,9 @@
  * @returns The asset path with base path if in static export mode
  */
 export function getAssetPath(path: string): string {
-  // For static export (GitHub Pages), we need to prepend the base path
-  const basePath = process.env.NODE_ENV === 'production' && typeof window !== 'undefined' && window.location.pathname.includes('/dogecoin-websites') 
-    ? '/dogecoin-websites' 
-    : '';
+  // Use the same logic as next.config.ts
+  const isStaticExport = process.env.STATIC_EXPORT === 'true';
+  const basePath = isStaticExport ? '/dogecoin-websites' : '';
   
   return `${basePath}${path}`;
 }

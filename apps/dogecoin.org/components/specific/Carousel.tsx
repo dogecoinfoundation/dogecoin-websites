@@ -9,6 +9,7 @@ import {
 import ChevronLeft from '@/components/icons/ChevronLeft';
 import ChevronRight from '@/components/icons/ChevronRight';
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/assets';
 
 export interface CarouselApi {
   scrollSnapList: () => unknown[];
@@ -29,55 +30,55 @@ const cards = [
     id: 1, 
     title: 'Card 1',
     text: 'This is some sample text for the first card. It can contain multiple lines of content.',
-    image: '/assets/images/placeholder.jpg'
+    image: getAssetPath('/assets/images/placeholder.jpg')
   },
   { 
     id: 2, 
     title: 'Card 2',
     text: 'Another card with different content. The text can be longer and wrap to multiple lines.',
-    image: '/assets/images/placeholder.jpg'
+    image: getAssetPath('/assets/images/placeholder.jpg')
   },
   { 
     id: 3, 
     title: 'Card 3',
     text: 'Third card with its own unique content and description.',
-    image: '/assets/images/placeholder.jpg'
+    image: getAssetPath('/assets/images/placeholder.jpg')
   },
   { 
     id: 4, 
     title: 'Card 4',
     text: 'Fourth card showcasing different content and layout.',
-    image: '/assets/images/placeholder.jpg'
+    image: getAssetPath('/assets/images/placeholder.jpg')
   },
   { 
     id: 5, 
     title: 'Card 5',
     text: 'Fifth card with more sample content for demonstration.',
-    image: '/assets/images/placeholder.jpg'
+    image: getAssetPath('/assets/images/placeholder.jpg')
   },
   { 
     id: 6, 
     title: 'Card 6',
     text: 'Sixth card with additional content and information.',
-    image: '/assets/images/placeholder.jpg'
+    image: getAssetPath('/assets/images/placeholder.jpg')
   },
   { 
     id: 7, 
     title: 'Card 7',
     text: 'Seventh card with more sample text and content.',
-    image: '/assets/images/placeholder.jpg'
+    image: getAssetPath('/assets/images/placeholder.jpg')
   },
   { 
     id: 8, 
     title: 'Card 8',
     text: 'Eighth card with different content and layout.',
-    image: '/assets/images/placeholder.jpg'
+    image: getAssetPath('/assets/images/placeholder.jpg')
   },
   { 
     id: 9, 
     title: 'Card 9',
     text: 'Ninth card with final sample content and description.',
-    image: '/assets/images/placeholder.jpg'
+    image: getAssetPath('/assets/images/placeholder.jpg')
   },
 ];
 

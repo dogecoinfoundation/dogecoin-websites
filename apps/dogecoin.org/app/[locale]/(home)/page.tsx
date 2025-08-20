@@ -17,6 +17,7 @@ import { DogeImage } from '@/components/specific/DogeImage';
 import { getDictionary } from '@repo/internationalization';
 import { createMetadata } from '@repo/seo/metadata';
 import type { Metadata } from 'next';
+import { getAssetPath } from '@/lib/assets';
 
 interface HomeProps {
   params: Promise<{
@@ -81,7 +82,7 @@ export default async function Home({ params }: HomeProps) {
                 {t.sections.activity.title}
               </h3>
               <Image
-                src="/assets/svg/home/activity-heading.svg"
+                src={getAssetPath("/assets/svg/home/activity-heading.svg")}
                 alt="Section heading underline"
                 width={146}
                 height={26}
@@ -151,7 +152,7 @@ export default async function Home({ params }: HomeProps) {
             <div className="section-heading-container">
               <div className="mission-heading-with-svg">
                 <Image
-                  src="/assets/svg/home/mission-heading.svg"
+                  src={getAssetPath("/assets/svg/home/mission-heading.svg")}
                   alt="Mission heading"
                   width={131}
                   height={88}

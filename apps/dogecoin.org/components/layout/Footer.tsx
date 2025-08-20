@@ -4,6 +4,7 @@ import React from 'react';
 import { Logo } from '@/components/common/Logo';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getAssetPath } from '@/lib/assets';
 
 interface FooterProps {
   t: any; // Dictionary object for translations
@@ -69,7 +70,7 @@ export function Footer({ t }: FooterProps) {
                 }}
               >
                 <Image
-                  src="/assets/images/back-to-top.png"
+                  src={getAssetPath("/assets/images/back-to-top.png")}
                   alt={t.footer.backToTop}
                   width={242}
                   height={190}

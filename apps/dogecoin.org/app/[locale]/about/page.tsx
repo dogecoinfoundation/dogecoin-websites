@@ -7,6 +7,7 @@ import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary } from '@repo/internationalization';
 import { BlurEffect } from '@/components/common/BlurEffect';
+import { getAssetPath } from '@/lib/assets';
 
 interface PageProps {
   params: Promise<{ locale: string }>
@@ -71,7 +72,7 @@ export default async function AboutPage({ params }: PageProps) {
                   <BlurEffect color="var(--Base-Brand-color-primary-500, #E3A849)" opacity={0.15} scale={{ x: 4, y: 4 }} />
                 </div>
               </div>
-              <Image src="/assets/images/foundation-logo.png" alt="Dogecoin Foundation Logo" fill style={{ objectFit: 'contain' }} />
+              <Image src={getAssetPath("/assets/images/foundation-logo.png")} alt="Dogecoin Foundation Logo" fill style={{ objectFit: 'contain' }} />
             </div>
           </div>
         </Container>
@@ -94,7 +95,7 @@ export default async function AboutPage({ params }: PageProps) {
               <div className="about-manifesto-card">
                                 <div aria-hidden="true" className="about-manifesto-card-icon">
               <Image
-              src="/assets/svg/about/manifesto-useful.svg"
+              src={getAssetPath("/assets/svg/about/manifesto-useful.svg")}
               alt="Section heading underline"
               width={146}
               height={26}
@@ -108,7 +109,7 @@ export default async function AboutPage({ params }: PageProps) {
               <div className="about-manifesto-card">
                 <div aria-hidden="true" className="about-manifesto-card-icon">
                 <Image
-              src="/assets/svg/about/manifesto-personable.svg"
+              src={getAssetPath("/assets/svg/about/manifesto-personable.svg")}
               alt="Section heading underline"
               width={146}
               height={26}
@@ -122,7 +123,7 @@ export default async function AboutPage({ params }: PageProps) {
               <div className="about-manifesto-card">
                 <div aria-hidden="true" className="about-manifesto-card-icon">
                 <Image
-              src="/assets/svg/about/manifesto-welcoming.svg"
+              src={getAssetPath("/assets/svg/about/manifesto-welcoming.svg")}
               alt="Section heading underline"
               width={146}
               height={26}
@@ -136,7 +137,7 @@ export default async function AboutPage({ params }: PageProps) {
               <div className="about-manifesto-card">
                 <div aria-hidden="true" className="about-manifesto-card-icon">
                 <Image
-              src="/assets/svg/about/manifesto-reliable.svg"
+              src={getAssetPath("/assets/svg/about/manifesto-reliable.svg")}
               alt="Section heading underline"
               width={146}
               height={26}
@@ -208,7 +209,7 @@ export default async function AboutPage({ params }: PageProps) {
                       <Link href="https://x.com" className="about-post-button">
                         <span aria-hidden="true" className="about-post-button-icon">
                         <Image
-                            src="/assets/svg/icons/x.svg"
+                            src={getAssetPath("/assets/svg/icons/x.svg")}
                             alt="Section heading underline"
                             width={20}
                             height={21}
@@ -218,7 +219,7 @@ export default async function AboutPage({ params }: PageProps) {
                       </Link>
                       <span aria-hidden="true" className="about-sign-arrow">
                       <Image
-                            src="/assets/svg/about/sign-arrow.svg"
+                            src={getAssetPath("/assets/svg/about/sign-arrow.svg")}
                             alt="Section heading underline"
                             width={234}
                             height={140}
@@ -242,7 +243,7 @@ export default async function AboutPage({ params }: PageProps) {
               </h2>
               <div className="about-history-underline" aria-hidden="true">
               <Image
-                            src="/assets/svg/underline.svg"
+                            src={getAssetPath("/assets/svg/underline.svg")}
                             alt="Section heading underline"
                             width={230}
                             height={11}
@@ -258,7 +259,7 @@ export default async function AboutPage({ params }: PageProps) {
             </div>
             <div className="about-history-image-container">
               <div className="about-history-image-wrapper">
-                <Image src="/assets/images/history-doge.png" alt="Dogecoin history" fill style={{ objectFit: 'contain' }} />
+                <Image src={getAssetPath("/assets/images/history-doge.png")} alt="Dogecoin history" fill style={{ objectFit: 'contain' }} />
               </div>
             </div>
           </div>

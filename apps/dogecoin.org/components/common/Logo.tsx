@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { getAssetPath } from '@/lib/assets';
 
 interface LogoProps {
   className?: string;
@@ -12,7 +13,7 @@ interface LogoProps {
 export function Logo({ className = '', width = 200, height = 50, href = '/' }: LogoProps) {
   const logo = (
     <Image
-      src="/assets/svg/logos/logo-doge-foundation.svg"
+      src={getAssetPath("/assets/svg/logos/logo-doge-foundation.svg")}
       alt="Doge Foundation Logo"
       width={width}
       height={height}

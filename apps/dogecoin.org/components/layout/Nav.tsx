@@ -9,6 +9,7 @@ import { Logo } from '../common/Logo';
 import { LanguageSelector } from '../specific/LanguageSelector';
 import Image from 'next/image';
 import DogePaw from '../icons/DogePaw';
+import { getAssetPath } from '@/lib/assets';
 
 interface NavProps {
   children?: ReactNode;
@@ -47,7 +48,7 @@ export function Nav({ children, className: _className = '' }: NavProps) {
           aria-label="Toggle mobile menu"
         >
           <Image 
-            src="/assets/svg/icons/menu.svg" 
+            src={getAssetPath("/assets/svg/icons/menu.svg")} 
             alt="Menu" 
             width={24} 
             height={24}
@@ -88,7 +89,7 @@ export function Nav({ children, className: _className = '' }: NavProps) {
         <div className="nav-mobile-close">
           <button onClick={closeMobileMenu} aria-label="Close mobile menu">
             <Image 
-              src="/assets/svg/icons/close.svg" 
+              src={getAssetPath("/assets/svg/icons/close.svg")} 
               alt="Close" 
               width={32} 
               height={32}

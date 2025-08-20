@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useRouter, useParams } from 'next/navigation';
+import { getAssetPath } from '@/lib/assets';
 
 interface LanguageMetadata {
   code: string;
@@ -194,7 +195,7 @@ const getSupportedLanguages = (): LanguageMetadata[] => {
   return availableLanguages.map(code => ({
     code,
     name: languageNames[code] ?? code.toUpperCase(),
-    flag: `/assets/images/flags/${code}.png`
+    flag: getAssetPath(`/assets/images/flags/${code}.png`)
   }));
 };
 

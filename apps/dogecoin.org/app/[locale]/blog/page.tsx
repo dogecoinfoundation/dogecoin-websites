@@ -7,6 +7,7 @@ import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary } from '@repo/internationalization';
 import { getAllBlogPosts } from '@/lib/blog';
+import { getAssetPath } from '@/lib/assets';
 
 interface BlogIndexProps {
   params: Promise<{ locale: string }>;
@@ -47,7 +48,7 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
             <div className="blog-title-row">
               <Image
                   className="blog-title-left"
-                  src="/assets/svg/blog/title-left.svg"
+                  src={getAssetPath("/assets/svg/blog/title-left.svg")}
                   alt="Section heading underline"
                   width={91}
                   height={145}
@@ -58,7 +59,7 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
               </div>
                 <Image
                     className="blog-title-right"
-                    src="/assets/svg/blog/title-right.svg"
+                    src={getAssetPath("/assets/svg/blog/title-right.svg")}
                     alt="Section heading underline"
                     width={91}
                     height={145}
@@ -70,7 +71,7 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
             <div key={year} className="blog-year-section">
               <div className="blog-year-row">
               <Image
-                  src="/assets/svg/blog/year-line.svg"
+                  src={getAssetPath("/assets/svg/blog/year-line.svg")}
                   alt="Section heading underline"
                   className="blog-year-line"
                   width={618}
@@ -80,7 +81,7 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
                   <span>{year}</span>
                 </div>
                 <Image
-                  src="/assets/svg/blog/year-line.svg"
+                  src={getAssetPath("/assets/svg/blog/year-line.svg")}
                   alt="Section heading underline"
                   className="blog-year-line"
                   width={618}

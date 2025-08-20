@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { getAssetPath } from '@/lib/assets';
 
 interface DogeImageProps {
   className?: string;
@@ -16,7 +17,7 @@ export function DogeImage({
 }: DogeImageProps) {
   return (
     <Image
-      src="/assets/images/Doge.png"
+      src={getAssetPath("/assets/images/Doge.png")}
       alt="Doge"
       width={width}
       height={height}
