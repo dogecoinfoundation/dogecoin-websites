@@ -55,16 +55,15 @@ export function getClientAssetPath(path: string): string {
  * Client-side navigation path builder
  * @param path - The navigation path starting with /
  * @param locale - The current locale (e.g., 'en', 'es', etc.)
- * @returns The navigation path with locale and base path if needed
+ * @returns The navigation path with locale prefix (Next.js router handles base path automatically)
  */
 export function getClientNavPath(path: string, locale: string = 'en'): string {
-  const basePath = getClientBasePath();
-  
-  // For home path, just return basePath + locale
+  // For client-side navigation, don't add base path - Next.js router handles it automatically
+  // For home path, just return locale
   if (path === '/') {
-    return `${basePath}/${locale}`;
+    return `/${locale}`;
   }
   
   // For other paths, add locale prefix
-  return `${basePath}/${locale}${path}`;
+  return `/${locale}${path}`;
 }
