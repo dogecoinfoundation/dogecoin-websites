@@ -23,6 +23,7 @@ export interface CarouselApi {
 interface CarouselProps {
   className?: string;
   setApi?: (api: CarouselApi) => void;
+  onUserInteraction?: () => void;
 }
 
 const cards = [
@@ -82,7 +83,7 @@ const cards = [
   },
 ];
 
-export function Carousel({ className = '', setApi: setApiProp }: CarouselProps) {
+export function Carousel({ className = '', setApi: setApiProp, onUserInteraction }: CarouselProps) {
   const setApi = setApiProp;
 
   return (
@@ -103,6 +104,8 @@ export function Carousel({ className = '', setApi: setApiProp }: CarouselProps) 
           }
         }}
         className="w-full"
+        onMouseDown={onUserInteraction}
+        onTouchStart={onUserInteraction}
       >
         <CarouselContent className="-ml-2 md:-ml-4">
           {cards.map((card) => (
@@ -145,7 +148,7 @@ export function Carousel({ className = '', setApi: setApiProp }: CarouselProps) 
   );
 }
 
-export function CarouselControls({ api, current, count }: { api: CarouselApi | null; current: number; count: number }) {
+export function CarouselControls({ api, current, count, onUserInteraction }: { api: CarouselApi | null; current: number; count: number; onUserInteraction?: () => void }) {
   console.log('CarouselControls render:', { api: !!api, current, count });
   
   return (
@@ -155,6 +158,7 @@ export function CarouselControls({ api, current, count }: { api: CarouselApi | n
         className="carousel-navigation-button"
         onClick={() => {
           console.log('Left button clicked, api:', api);
+          onUserInteraction?.();
           if (api && typeof api.scrollPrev === 'function') {
             api.scrollPrev();
           }
@@ -174,6 +178,7 @@ export function CarouselControls({ api, current, count }: { api: CarouselApi | n
             }`}
             onClick={() => {
               console.log('Pagination dot clicked:', i);
+              onUserInteraction?.();
               if (api && typeof api.scrollTo === 'function') {
                 api.scrollTo(i);
               }
@@ -201,6 +206,7 @@ export function CarouselControls({ api, current, count }: { api: CarouselApi | n
         className="carousel-navigation-button"
         onClick={() => {
           console.log('Right button clicked, api:', api);
+          onUserInteraction?.();
           if (api && typeof api.scrollNext === 'function') {
             api.scrollNext();
           }
