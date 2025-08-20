@@ -24,6 +24,13 @@ interface HomeProps {
   }>;
 }
 
+export function generateStaticParams() {
+  const locales = ["en", "es", "fr", "de", "it", "pt", "ru", "zh", "ko"];
+  return locales.map((locale) => ({
+    locale,
+  }));
+}
+
 export const generateMetadata = async ({
   params,
 }: HomeProps): Promise<Metadata> => {

@@ -13,8 +13,16 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
+  const locales = ["en", "es", "fr", "de", "it", "pt", "ru", "zh", "ko"];
   const slugs = await getAllBlogSlugs();
-  return slugs.map((slug) => ({ slug }));
+  
+  const params = [];
+  for (const locale of locales) {
+    for (const slug of slugs) {
+      params.push({ locale, slug });
+    }
+  }
+  return params;
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {

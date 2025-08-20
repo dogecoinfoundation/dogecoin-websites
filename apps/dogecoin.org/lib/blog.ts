@@ -47,6 +47,10 @@ export async function getAllBlogPosts(locale: string): Promise<BlogPostMeta[]> {
     const { data } = matter(raw);
 
     const date = new Date(String(data.date));
+    if (isNaN(date.getTime())) {
+      console.warn(`Invalid date in blog post ${slug}: ${data.date}`);
+      continue;
+    }
     const year = date.getFullYear();
 
     posts.push({
@@ -76,6 +80,10 @@ export async function getBlogPostBySlug(slug: string, locale: string): Promise<B
 
     const html = await marked.parse(preprocessMarkdown(content, slug));
     const date = new Date(String(data.date));
+    if (isNaN(date.getTime())) {
+      console.warn(`Invalid date in blog post ${slug}: ${data.date}`);
+      return null;
+    }
     const year = date.getFullYear();
 
     return {
