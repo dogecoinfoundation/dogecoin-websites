@@ -3,7 +3,16 @@ import { config, withAnalyzer } from '@repo/next-config';
 import { withLogging, withSentry } from '@repo/observability/next-config';
 import type { NextConfig } from 'next';
 
-let nextConfig: NextConfig = withLogging(config);
+let nextConfig: NextConfig = {
+  ...config,
+  output: 'export',
+  trailingSlash: true,
+  images: {
+    unoptimized: true
+  }
+};
+
+nextConfig = withLogging(nextConfig);
 nextConfig.eslint = { ignoreDuringBuilds: true };
 
 if (process.env.NODE_ENV === 'production') {
