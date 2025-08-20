@@ -3,17 +3,21 @@ import { config, withAnalyzer } from '@repo/next-config';
 import { withLogging, withSentry } from '@repo/observability/next-config';
 import type { NextConfig } from 'next';
 
+const isStaticExport = process.env.STATIC_EXPORT === 'true';
+const basePath = isStaticExport ? '/dogecoin-websites' : '';
+
 let nextConfig: NextConfig = {
   ...config,
   // Only enable static export when STATIC_EXPORT is true
-  ...(process.env.STATIC_EXPORT === 'true' && {
+  ...(isStaticExport && {
+    basePath,
+    assetPrefix: basePath,
     output: 'export',
     trailingSlash: true,
-    basePath: process.env.NODE_ENV === 'production' ? '/dogecoin-websites' : '',
-    assetPrefix: process.env.NODE_ENV === 'production' ? '/dogecoin-websites/' : '',
+    distDir: 'out',
     images: {
       unoptimized: true
-    }
+    },
   }),
 };
 
