@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Party Mode Custom Fonts */
+@font-face {
+  font-family: 'Flow Rounded';
+  src: url('/assets/fonts/FlowRounded-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Redacted Script';
+  src: url('/assets/fonts/RedactedScript-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Default font for entire site */
 :root {
   --font-family-default: 'Comic Neue', Helvetica, Arial, sans-serif;
@@ -1077,15 +1094,16 @@ body {
 
 @media (--small-tablet-down) {
   .hero-image {
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
   } 
 }
 
 @media (--small-tablet) {
   .hero-image {
-    width: 275px;
-    height: 275px;
+    width: 375px;
+    height: 375px;
+    margin-top: -100px;
   } 
 }
 
@@ -1093,13 +1111,15 @@ body {
   .hero-image {
     width: 400px;
     height: 400px;
+    margin-top: -100px;
   } 
 }
 
 @media (--desktop) {
   .hero-image {
-    width: 450px;
-    height: 450px;
+    width: 550px;
+    height: 550px;
+    margin-top: -100px;
   } 
 }
 
@@ -3118,6 +3138,123 @@ header {
     gap: 16px;
   }
 }
+
+/* Party Mode Styles */
+.party-mode {
+  /* Change background to party-background.jpg with fixed positioning */
+  background-image: url('/assets/images/party-background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  /* Extend behind navigation */
+  position: relative;
+}
+
+/* Ensure party background extends to full viewport */
+.party-mode::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('/assets/images/party-background.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+.party-mode * {
+  /* Apply Redacted Script font to all text */
+  font-family: 'Redacted Script', monospace !important;
+}
+
+/* Exclude entire hero section from font change */
+.party-mode .hero-title,
+.party-mode .hero-subtitle,
+.party-mode .hero-tagline {
+  font-family: var(--font-montserrat) !important;
+}
+
+/* Keep hero tagline original color and font */
+.party-mode .hero-tagline {
+  font-family: var(--font-family-default) !important;
+  color: var(--color-link) !important;
+}
+
+/* Use Flow Rounded for section titles, card names and specific headings */
+.party-mode .section-heading,
+.party-mode h3,
+.party-mode .activity-title,
+.party-mode .activity-subtitle,
+.party-mode .carousel-card-title,
+.party-mode .profile-name,
+.party-mode .mission-card-heading,
+.party-mode .blog-card-title,
+.party-mode .partner-name,
+.party-mode .donation-card-title {
+  font-family: 'Flow Rounded', cursive !important;
+}
+
+/* No custom positioning for party mode hero image */
+
+/* Rainbow gradients for party mode */
+
+/* Replace all gradients and backgrounds with rainbow colors */
+.party-mode .hero-blur-effect,
+.party-mode .activity-blur-effect,
+.party-mode .donation-blur-effect,
+.party-mode .partner-blur-effect {
+  background: linear-gradient(45deg, #FF46CE, #FFFC36, #62FF46, #2BF9FF, #9780FF, #FF7D47);
+  animation: rainbow-shift 2s ease-in-out infinite alternate;
+}
+
+@keyframes rainbow-shift {
+  0% { 
+    background: linear-gradient(45deg, #FF46CE, #FFFC36, #62FF46, #2BF9FF, #9780FF, #FF7D47);
+  }
+  50% { 
+    background: linear-gradient(135deg, #FFFC36, #62FF46, #2BF9FF, #9780FF, #FF7D47, #FF46CE);
+  }
+  100% { 
+    background: linear-gradient(225deg, #62FF46, #2BF9FF, #9780FF, #FF7D47, #FF46CE, #FFFC36);
+  }
+}
+
+/* Header text becomes white in party mode */
+.party-mode header,
+.party-mode .nav-container,
+.party-mode .nav-items-desktop,
+.party-mode .nav-item,
+.party-mode .language-selector-button,
+.party-mode .language-code {
+  color: white !important;
+}
+
+/* Ensure text remains readable with rainbow backgrounds */
+.party-mode .hero-title,
+.party-mode .hero-subtitle,
+.party-mode .hero-tagline,
+.party-mode .section-heading,
+.party-mode .activity-title,
+.party-mode .activity-subtitle,
+.party-mode .activity-description {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  color: white !important;
+}
+
+/* Carousel rainbow background skipped - keeping original styling intact */
+
+/* Party mode button styling */
+.party-test-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(255, 70, 206, 0.4);
+}
+
 
 /* Partner Banner Component Styles */
 .partners-list {
