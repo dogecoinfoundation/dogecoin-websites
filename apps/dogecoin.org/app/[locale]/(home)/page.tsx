@@ -17,6 +17,8 @@ import { DogeImage } from '@/components/specific/DogeImage';
 import { getDictionary } from '@repo/internationalization';
 import { createMetadata } from '@repo/seo/metadata';
 import type { Metadata } from 'next';
+import { ProjectCard } from '@/components/specific/ProjectCard';
+// Removed server-only imports for client component
 import { getAssetPath } from '@/lib/assets';
 
 interface HomeProps {
@@ -223,6 +225,62 @@ export default async function Home({ params }: HomeProps) {
                   name="Erick"
                   description={t.sections.members.profiles.erick.description}
                   color="#62FF46"
+                />
+              </div>
+            </div>
+          </Container>
+        </Section>
+
+        <Section>
+          <Container>
+            <div className="section-heading-container">
+              <h3 className="section-heading">
+                So Projects
+              </h3>
+              <p className="section-description">
+                Discover the amazing projects built by our community that showcase the power and versatility of Dogecoin.
+              </p>
+              
+              <div className="projects-list">
+                <ProjectCard
+                  title="DogeSwap"
+                  description="A decentralized exchange built for the Dogecoin ecosystem, enabling seamless token swaps with community-driven governance."
+                  imageSrc="/assets/images/placeholder.jpg"
+                  imageAlt="DogeSwap project"
+                  color="#FF46CE"
+                  className="project-1"
+                />
+                <ProjectCard
+                  title="Moon Wallet"
+                  description="Next-generation mobile wallet featuring advanced security, multi-chain support, and beautiful user experience design."
+                  imageSrc="/assets/images/placeholder.jpg"
+                  imageAlt="Moon Wallet project"
+                  color="#2BF9FF"
+                  className="project-2"
+                />
+                <ProjectCard
+                  title="Doge Dashboard"
+                  description="Real-time analytics platform providing comprehensive insights into network statistics, price movements, and market trends."
+                  imageSrc="/assets/images/placeholder.jpg"
+                  imageAlt="Doge Dashboard project"
+                  color="#62FF46"
+                  className="project-3"
+                />
+                <ProjectCard
+                  title="Community Hub"
+                  description="Social platform connecting Dogecoin enthusiasts worldwide with forums, events, and collaborative project spaces."
+                  imageSrc="/assets/images/placeholder.jpg"
+                  imageAlt="Community Hub project"
+                  color="#FFFC36"
+                  className="project-4"
+                />
+                <ProjectCard
+                  title="Doge Pay"
+                  description="Merchant payment gateway enabling businesses to accept Dogecoin payments with instant settlements and low fees."
+                  imageSrc="/assets/images/placeholder.jpg"
+                  imageAlt="Doge Pay project"
+                  color="#FF7D47"
+                  className="project-5"
                 />
               </div>
             </div>
