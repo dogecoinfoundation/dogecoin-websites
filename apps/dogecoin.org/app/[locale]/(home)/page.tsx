@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useState, useEffect, useRef } from 'react';
 import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
@@ -13,11 +15,7 @@ import { PartnerBanner } from '@/components/specific/PartnerBanner';
 import { MissionCards } from '@/components/specific/MissionCards';
 import { DonationSection } from '@/components/specific/DonationSection';
 import { CarouselSection } from '@/components/specific/CarouselSection';
-import { getDictionary } from '@repo/internationalization';
-import { createMetadata } from '@repo/seo/metadata';
-import type { Metadata } from 'next';
 import { ProjectCard } from '@/components/specific/ProjectCard';
-// Removed server-only imports for client component
 import { getAssetPath } from '@/lib/assets';
 
 interface HomeProps {
@@ -26,32 +24,225 @@ interface HomeProps {
   }>;
 }
 
-export function generateStaticParams() {
-  const locales = ["en", "es", "fr", "de", "it", "pt", "ru", "zh", "ko"];
-  return locales.map((locale) => ({
-    locale,
-  }));
+function usePartyMode() {
+  const [isPartyMode, setIsPartyMode] = useState(false);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const originalSrcsRef = useRef<Map<HTMLImageElement, string>>(new Map());
+
+  const switchToPartyImages = () => {
+    const allImages = document.querySelectorAll('img') as NodeListOf<HTMLImageElement>;
+    let convertedCount = 0;
+    
+    allImages.forEach((img) => {
+      // Skip invalid images, SVGs, foundation logo, and flags
+      if (!img.src || 
+          img.src.includes('.svg') || 
+          img.src.includes('logo-doge-foundation') ||
+          img.src.includes('%2Fflags%2F') || // URL encoded /flags/
+          img.src.includes('/flags/') ||
+          img.className.includes('language-flag') ||
+          originalSrcsRef.current.has(img)) {
+        return;
+      }
+      
+      // Store originals
+      originalSrcsRef.current.set(img, img.src);
+      if (img.srcset) {
+        img.setAttribute('data-original-srcset', img.srcset);
+      }
+      
+      // Convert both src and srcset to party versions
+      const originalSrc = img.src;
+      const originalSrcset = img.srcset;
+      
+      img.src = convertToPartySrc(img.src);
+      if (img.srcset) {
+        img.srcset = img.srcset.replace(/url=([^&]+)/g, (match, url) => {
+          const decodedUrl = decodeURIComponent(url);
+          const partyUrl = addPartyToFilename(decodedUrl);
+          return `url=${encodeURIComponent(partyUrl)}`;
+        });
+      }
+      
+      // If party image doesn't exist, revert to original
+      img.onerror = () => {
+        img.src = originalSrc;
+        if (originalSrcset) {
+          img.srcset = originalSrcset;
+        }
+        img.removeAttribute('data-original-srcset');
+        originalSrcsRef.current.delete(img);
+      };
+      
+      convertedCount++;
+    });
+    
+    console.log(`Party mode: Converted ${convertedCount} images to party versions`);
+  };
+
+  const revertToOriginalImages = () => {
+    originalSrcsRef.current.forEach((originalSrc, img) => {
+      // Revert src
+      img.src = originalSrc;
+      
+      // Revert srcset if it exists
+      const originalSrcset = img.getAttribute('data-original-srcset');
+      if (originalSrcset) {
+        img.srcset = originalSrcset;
+        img.removeAttribute('data-original-srcset');
+      }
+      
+      // Clear event handlers
+      img.onload = null;
+      img.onerror = null;
+    });
+    
+    console.log(`Reverted ${originalSrcsRef.current.size} images to original versions`);
+  };
+
+  const convertToPartySrc = (src: string) => {
+    if (src.includes('/_next/image')) {
+      const url = new URL(src);
+      const originalPath = decodeURIComponent(url.searchParams.get('url') || '');
+      url.searchParams.set('url', addPartyToFilename(originalPath));
+      url.searchParams.set('v', Date.now().toString());
+      return url.toString();
+    }
+    return addPartyToFilename(src);
+  };
+
+  const addPartyToFilename = (path: string) => {
+    const lastDotIndex = path.lastIndexOf('.');
+    return lastDotIndex !== -1 
+      ? `${path.substring(0, lastDotIndex)}-party${path.substring(lastDotIndex)}`
+      : `${path}-party`;
+  };
+
+  const activatePartyMode = () => {
+    setIsPartyMode(true);
+    
+    // Clear existing timer if any
+    if (timerRef.current) {
+      clearTimeout(timerRef.current);
+    }
+    
+    // Fix any flags that were previously converted
+    const flagImages = document.querySelectorAll('img[class*="flag"], img[src*="flags"]') as NodeListOf<HTMLImageElement>;
+    flagImages.forEach(img => {
+      const originalSrcset = img.getAttribute('data-original-srcset');
+      if (originalSrcset) {
+        img.srcset = originalSrcset;
+        img.src = img.src.replace('-party', '');
+        img.removeAttribute('data-original-srcset');
+      }
+    });
+    
+    // Clear previous image references for fresh start
+    originalSrcsRef.current.clear();
+    
+    // Switch images to party versions  
+    setTimeout(switchToPartyImages, 100);
+    
+    // Set 10-second timer to deactivate party mode
+    timerRef.current = setTimeout(() => {
+      setIsPartyMode(false);
+      revertToOriginalImages();
+      timerRef.current = null;
+    }, 10000);
+  };
+
+  // Cleanup timer on unmount
+  useEffect(() => {
+    return () => {
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+    };
+  }, []);
+
+  // Handle image switching when party mode changes
+  useEffect(() => {
+    if (!isPartyMode) {
+      // Only revert when party mode ends
+      revertToOriginalImages();
+    }
+  }, [isPartyMode]);
+
+  return { isPartyMode, activatePartyMode };
 }
 
-export const generateMetadata = async ({
-  params,
-}: HomeProps): Promise<Metadata> => {
-  const { locale } = await params;
-  const dictionary = await getDictionary(locale);
-
-  return createMetadata(dictionary["dogecoin.org"].home.meta);
-};
-
-export default async function Home({ params }: HomeProps) {
-  const { locale } = await params;
-  const dictionary = await getDictionary(locale);
-  const t = dictionary["dogecoin.org"].home;
+export default function Home({ params }: HomeProps) {
+  const [dictionary, setDictionary] = useState<any>(null);
+  const [locale, setLocale] = useState<string>('');
+  const { isPartyMode, activatePartyMode } = usePartyMode();
   
   const DOGE_ADDRESS = 'D8r9gCj8YncjQmxBJmQzS6Ef7TCTonC1Nm';
 
+  useEffect(() => {
+    const loadData = async () => {
+      const resolvedParams = await params;
+      const { locale: paramLocale } = resolvedParams;
+      
+      // Dynamic import for client-side dictionary loading
+      console.log('Attempting to load dictionary for locale:', paramLocale);
+      try {
+        const dictionaryModule = await import(`@repo/internationalization/dictionaries/${paramLocale}.json`);
+        const dict = dictionaryModule.default || dictionaryModule;
+        
+        console.log('Loaded dictionary for', paramLocale, ':', dict);
+        if (dict && Object.keys(dict).length > 0) {
+          setLocale(paramLocale);
+          setDictionary(dict);
+        } else {
+          throw new Error('Dictionary is empty or invalid');
+        }
+      } catch (error) {
+        console.error('Failed to load dictionary for', paramLocale, ':', error);
+        // Fallback to English
+        try {
+          const enModule = await import(`@repo/internationalization/dictionaries/en.json`);
+          const enDict = enModule.default || enModule;
+          
+          console.log('Fallback to English dictionary:', enDict);
+          if (enDict && Object.keys(enDict).length > 0) {
+            setLocale('en');
+            setDictionary(enDict);
+          } else {
+            throw new Error('English fallback dictionary is also empty');
+          }
+        } catch (enError) {
+          console.error('Failed to load English fallback:', enError);
+          // Final fallback with minimal structure
+          setDictionary({ 
+            'dogecoin.org': { 
+              home: { 
+                hero: { title: 'Loading Error', subtitle: 'Please refresh', tagline: '' }, 
+                sections: {} 
+              } 
+            } 
+          });
+        }
+      }
+    };
+    loadData();
+  }, [params]);
+
+  if (!dictionary) {
+    return <div>Loading...</div>;
+  }
+
+  // Add safety check for dictionary structure
+  if (!dictionary["dogecoin.org"] || !dictionary["dogecoin.org"].home) {
+    console.error('Dictionary structure error:', dictionary);
+    return <div>Error loading content. Please refresh the page.</div>;
+  }
+
+  const t = dictionary["dogecoin.org"].home;
+
   return (
     <>
-      <Main>
+      <div className={isPartyMode ? 'party-mode' : ''}>
+        <Main>
         <Section>
           <Container className="flex flex-col relative">
             
@@ -77,7 +268,10 @@ export default async function Home({ params }: HomeProps) {
                     height={400}
                     className="hero-image"
                   />
-                  <button className="party-mode-button"></button>
+                  <button 
+                    onClick={activatePartyMode}
+                    className="party-mode-button"
+                  ></button>
                 </div>
               </div>
             </div>
@@ -323,6 +517,7 @@ export default async function Home({ params }: HomeProps) {
       </Main>
 
       <Footer t={t} />
+      </div>
     </>
   );
 }
