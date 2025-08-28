@@ -13,7 +13,6 @@ import { PartnerBanner } from '@/components/specific/PartnerBanner';
 import { MissionCards } from '@/components/specific/MissionCards';
 import { DonationSection } from '@/components/specific/DonationSection';
 import { CarouselSection } from '@/components/specific/CarouselSection';
-import { DogeImage } from '@/components/specific/DogeImage';
 import { getDictionary } from '@repo/internationalization';
 import { createMetadata } from '@repo/seo/metadata';
 import type { Metadata } from 'next';
@@ -70,7 +69,16 @@ export default async function Home({ params }: HomeProps) {
                 </div>
               </div>
               <div className="hero-image-section">
-                <DogeImage className="hero-image" width={400} height={400} />
+                <div className="hero-image-container">
+                  <Image
+                    src={getAssetPath("/assets/images/Doge.png")}
+                    alt="Doge"
+                    width={400}
+                    height={400}
+                    className="hero-image"
+                  />
+                  <button className="party-mode-button"></button>
+                </div>
               </div>
             </div>
             <CarouselSection />

@@ -1127,6 +1127,49 @@ body {
   display: block;
 }
 
+.hero-image-container {
+  display: inline-block;
+  position: relative;
+}
+
+.party-mode-button {
+  position: absolute;
+  left: 27.5%;
+  bottom: 49.5%;
+  transform: translate(-50%, 50%);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+@media (--small-tablet-down) {
+  .party-mode-button {
+    width: 25px;
+    height: 20px;
+  }
+}
+
+@media (--small-tablet) {
+  .party-mode-button {
+    width: 34px;
+    height: 27px;
+  }
+}
+
+@media (--tablet) {
+  .party-mode-button {
+    width: 49px;
+    height: 38px;
+  }
+}
+
+@media (--desktop) {
+  .party-mode-button {
+    width: 57px;
+    height: 44px;
+  }
+}
+
 /* Mobile responsive hero image - move underneath with slight overlap */
 @media (max-width: 510px) {
   .hero-container {
