@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import type { ReactNode } from 'react';
 import { usePathname, useParams } from 'next/navigation';
 import Container from './Container';
@@ -26,9 +26,24 @@ export function Nav({ children, className: _className = '' }: NavProps) {
   const pathname = usePathname();
   const { locale } = useParams();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
   
   // Remove locale prefix for active state comparison
   const pathnameWithoutLocale = pathname.replace(`/${String(locale)}`, '') || '/';
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY > 20;
+      setHasScrolled(scrolled);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Check initial scroll position
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -39,7 +54,7 @@ export function Nav({ children, className: _className = '' }: NavProps) {
   };
 
   return (
-    <nav className="flex flex-col gap-8 items-center px-6 md:px-12 lg:px-12 xl:px-20 py-6">
+    <nav className={`nav-main ${hasScrolled ? 'nav-scrolled' : ''}`}>
       <Container className="nav-container flex justify-between items-center">
         {/* Mobile menu toggle button */}
         <button 

@@ -2888,6 +2888,51 @@ header {
   padding: 24px 0;
 }
 
+/* Main Navigation */
+.nav-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 1.5rem 1.5rem;
+  background: transparent;
+  transition: all 300ms ease-in-out;
+}
+
+@media (--small-tablet) {
+  .nav-main {
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media (--tablet) {
+  .nav-main {
+    padding: 1.5rem 3rem;
+  }
+}
+
+@media (--desktop) {
+  .nav-main {
+    padding: 1.5rem 5rem;
+  }
+}
+
+.nav-main.nav-scrolled {
+  background: var(--background-primary);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+/* Main Content - accounts for fixed nav */
+.main-content {
+  padding-top: 100px;
+}
+
 /* Navigation Language Selector */
 .nav-right {
   display: flex;
