@@ -136,20 +136,19 @@ function usePartyMode() {
     // Main confetti burst
     confetti({
       particleCount: 100,
-      spread: 70,
+      spread: 180,
       origin: { x, y },
+      scalar: 1.5,
       colors: colors
     });
     
-    // Add some doge emojis as confetti
+    // Add some doge colours
     confetti({
-      particleCount: 20,
+      particleCount: 30,
       spread: 60,
       origin: { x, y },
-      shapes: ['text'],
-      scalar: 2,
-      colors: ['#000000'],
-      ticks: 300
+      scalar: 1.2,
+      colors: ['#C9AD49, #DBC977, #D1C579, #F2EFB9 '],
     });
   };
 
