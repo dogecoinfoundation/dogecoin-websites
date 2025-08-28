@@ -21,6 +21,7 @@
     "@repo/seo": "workspace:*",
     "@sentry/nextjs": "^9.4.0",
     "@t3-oss/env-nextjs": "^0.12.0",
+    "canvas-confetti": "^1.9.3",
     "date-fns": "^4.1.0",
     "fumadocs-core": "^15.0.15",
     "gray-matter": "^4.0.3",

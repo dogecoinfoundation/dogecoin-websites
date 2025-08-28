@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
+import confetti from 'canvas-confetti';
 import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
@@ -64,14 +65,16 @@ function usePartyMode() {
         });
       }
       
-      // If party image doesn't exist, revert to original
+      // If party image doesn't exist, revert to original immediately
       img.onerror = () => {
+        console.log(`Party image not found for ${img.src}, reverting to original: ${originalSrc}`);
+        img.onerror = null; // Prevent infinite loops
         img.src = originalSrc;
         if (originalSrcset) {
           img.srcset = originalSrcset;
         }
         img.removeAttribute('data-original-srcset');
-        originalSrcsRef.current.delete(img);
+        // Keep the image in originalSrcsRef so it can be properly cleaned up later
       };
       
       convertedCount++;
@@ -112,14 +115,65 @@ function usePartyMode() {
   };
 
   const addPartyToFilename = (path: string) => {
+    // Don't add -party if it already exists
+    if (path.includes('-party')) {
+      return path;
+    }
     const lastDotIndex = path.lastIndexOf('.');
     return lastDotIndex !== -1 
       ? `${path.substring(0, lastDotIndex)}-party${path.substring(lastDotIndex)}`
       : `${path}-party`;
   };
 
-  const activatePartyMode = () => {
+  const createConfetti = (buttonElement: HTMLButtonElement) => {
+    const colors = ['#FF46CE', '#FFFC36', '#2BF9FF', '#62FF46', '#FF7D47', '#9780FF'];
+    
+    // Get button position relative to viewport
+    const rect = buttonElement.getBoundingClientRect();
+    const x = (rect.left + rect.width / 2) / window.innerWidth;
+    const y = (rect.top + rect.height / 2) / window.innerHeight;
+    
+    // Main confetti burst
+    confetti({
+      particleCount: 100,
+      spread: 70,
+      origin: { x, y },
+      colors: colors
+    });
+    
+    // Add some doge emojis as confetti
+    confetti({
+      particleCount: 20,
+      spread: 60,
+      origin: { x, y },
+      shapes: ['text'],
+      scalar: 2,
+      colors: ['#000000'],
+      ticks: 300
+    });
+  };
+
+  const activatePartyMode = (event: React.MouseEvent<HTMLButtonElement>) => {
+    // If already in party mode, just reset the timer and add confetti
+    if (isPartyMode) {
+      createConfetti(event.currentTarget);
+      if (timerRef.current) {
+        clearTimeout(timerRef.current);
+      }
+      // Reset 10-second timer
+      timerRef.current = setTimeout(() => {
+        setIsPartyMode(false);
+        revertToOriginalImages();
+        originalSrcsRef.current.clear();
+        timerRef.current = null;
+      }, 10000);
+      return;
+    }
+    
     setIsPartyMode(true);
+    
+    // Trigger confetti from button position
+    createConfetti(event.currentTarget);
     
     // Clear existing timer if any
     if (timerRef.current) {
@@ -147,6 +201,7 @@ function usePartyMode() {
     timerRef.current = setTimeout(() => {
       setIsPartyMode(false);
       revertToOriginalImages();
+      originalSrcsRef.current.clear();
       timerRef.current = null;
     }, 10000);
   };

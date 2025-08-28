@@ -87,6 +87,9 @@ importers:
       '@t3-oss/env-nextjs':
         specifier: ^0.12.0
         version: 0.12.0(typescript@5.8.3)(zod@3.24.3)
+      canvas-confetti:
+        specifier: ^1.9.3
+        version: 1.9.3
       date-fns:
         specifier: ^4.1.0
         version: 4.1.0
@@ -4573,6 +4576,9 @@ packages:
 
   caniuse-lite@1.0.30001716:
     resolution: {integrity: sha512-49/c1+x3Kwz7ZIWt+4DvK3aMJy9oYXXG6/97JKsnjdCk/6n9vVyWL8NAwVt95Lwt9eigI10Hl782kDfZUUlRXw==}
+
+  canvas-confetti@1.9.3:
+    resolution: {integrity: sha512-rFfTURMvmVEX1gyXFgn5QMn81bYk70qa0HLzcIOSVEyl57n6o9ItHeBtUSWdvKAPY0xlvBHno4/v3QPrT83q9g==}
 
   case-sensitive-paths-webpack-plugin@2.4.0:
     resolution: {integrity: sha512-roIFONhcxog0JSSWbvVAh3OocukmSgpqOH6YpMkCvav/ySIV3JKg4Dc8vYtQjYi/UxpNE36r/9v+VqTQqgkYmw==}
@@ -12886,6 +12892,8 @@ snapshots:
       tslib: 2.8.1
 
   caniuse-lite@1.0.30001716: {}
+
+  canvas-confetti@1.9.3: {}
 
   case-sensitive-paths-webpack-plugin@2.4.0: {}
 
