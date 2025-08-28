@@ -555,7 +555,7 @@ body {
 
 .about-manifesto-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 24px;
   margin-top: 80px;
 }
@@ -565,11 +565,10 @@ body {
   .about-manifesto-cards {
     grid-template-columns: 1fr;
     gap: 24px;
-    justify-items: center;
   }
   
   .about-manifesto-card {
-    max-width: 340px;
+    width: 100%;
   }
 }
 
@@ -583,7 +582,7 @@ body {
   align-items: center;
   gap: 16px;
   width: 100%;
-  max-width: 100%;
+  min-height: 280px;
 }
 
 /* Responsive card content sizing */
@@ -591,68 +590,81 @@ body {
   .about-manifesto-card {
     padding: 16px;
     gap: 12px;
-  }
-}
-
-@media (--small-tablet-down) {
-  .about-manifesto-card {
-    max-width: 300px;
+    min-height: 240px;
   }
 }
 
 @media (--small-tablet) {
   .about-manifesto-cards {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(2, 1fr);
     gap: 24px;
-    justify-content: center;
   }
   
   .about-manifesto-card {
-    max-width: 308px;
+    width: 100%;
   }
 }
 
 @media (--tablet) {
   .about-manifesto-cards {
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
-    justify-content: center;
   }
   
   .about-manifesto-card {
-    max-width: 220px;
+    width: 100%;
   }
 }
 
 @media (--desktop) {
   .about-manifesto-cards {
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
-    justify-content: center;
   }
   
   .about-manifesto-card {
-    max-width: 278px;
+    width: 100%;
   }
 }
 
 .about-manifesto-card-icon {
-  width: 146px;
+  width: 100%;
+  height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.about-manifesto-card-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 /* Responsive sizing for manifesto card icons */
 @media (--small-tablet-down) {
   .about-manifesto-card-icon {
-    width: 112px;
+    height: 100px;
   }
 }
 
 @media (--small-tablet) {
   .about-manifesto-card-icon {
-    width: 146px;
+    height: 100px;
+  }
+}
+
+@media (--tablet) {
+  .about-manifesto-card-icon {
+    height: 150px;
+  }
+}
+
+@media (--desktop) {
+  .about-manifesto-card-icon {
+    height: 160px;
   }
 }
 
