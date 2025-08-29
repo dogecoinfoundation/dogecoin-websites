@@ -8,6 +8,7 @@ import { Footer } from '@/components/layout/Footer';
 import { getDictionary } from '@repo/internationalization';
 import { getAllBlogPosts } from '@/lib/content';
 import { getAssetPath, getNavPath } from '@/lib/assets';
+import { shouldShowDraftBadge } from '@/lib/content/utils';
 
 interface BlogIndexProps {
   params: Promise<{ locale: string }>;
@@ -90,12 +91,19 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
               </div>
 
               <div className="blog-grid">
-                {(postsByYear[year] ?? []).map((post) => (
+                {(postsByYear[year] ?? []).map((post) => {
+                  const showDraftBadge = shouldShowDraftBadge(post.draft ?? false);
+                  const badgeText = showDraftBadge ? 'Draft' : post.type;
+                  const badgeClass = showDraftBadge 
+                    ? 'blog-card-badge-draft' 
+                    : post.type === 'Article' ? 'blog-card-badge-article' : post.type === 'Important' ? 'blog-card-badge-important' : 'blog-card-badge-event';
+                  
+                  return (
                   <article key={post.slug} className="blog-card card-hover-effect">
                     <Link href={getNavPath(`/blog/${post.slug}`, locale)} className="blog-card-image-link">
                       <div className="blog-card-image card-image">
                         <Image src={getAssetPath(post.image)} alt={post.title} fill className="object-cover" />
-                        <div className={`blog-card-badge ${post.type === 'Article' ? 'blog-card-badge-article' : post.type === 'Important' ? 'blog-card-badge-important' : 'blog-card-badge-event'}`}>{post.type}</div>
+                        <div className={`blog-card-badge ${badgeClass}`}>{badgeText}</div>
                       </div>
                     </Link>
                     <div className="blog-card-content">
@@ -108,7 +116,8 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
                       </div>
                     </div>
                   </article>
-                ))}
+                  );
+                })}
               </div>
             </div>
           ))}

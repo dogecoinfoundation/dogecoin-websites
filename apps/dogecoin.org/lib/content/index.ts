@@ -50,3 +50,5 @@ export type {
   ActivityMeta, 
   Activity 
 } from './types';
+
+export { shouldShowDraftBadge } from './utils';

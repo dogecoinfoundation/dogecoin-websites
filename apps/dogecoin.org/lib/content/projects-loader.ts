@@ -17,7 +17,6 @@ export class ProjectsLoader extends ContentLoader {
     return items.map(item => ({
       ...item,
       technologies: item.technologies ?? [],
-      status: item.status ?? 'planned',
       github: item.github,
       demo: item.demo,
       website: item.website,
@@ -32,7 +31,6 @@ export class ProjectsLoader extends ContentLoader {
     return {
       ...item,
       technologies: item.technologies ?? [],
-      status: item.status ?? 'planned',
       github: item.github,
       demo: item.demo,
       website: item.website,

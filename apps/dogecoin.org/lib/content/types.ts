@@ -6,6 +6,7 @@ export interface ContentMeta {
   date: string;
   image: string;
   excerpt?: string;
+  draft?: boolean;
   [key: string]: any;
 }
 
@@ -33,7 +34,6 @@ export interface BlogPost extends BlogPostMeta {
 
 export interface ProjectMeta extends ContentMeta {
   technologies?: string[];
-  status: 'active' | 'completed' | 'planned';
   github?: string;
   demo?: string;
   website?: string;

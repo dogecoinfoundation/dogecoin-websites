@@ -11,6 +11,20 @@ export class ContentLoader {
     this.config = config;
   }
 
+  private async loadLocalMetadata(itemFolder: string): Promise<Record<string, any>> {
+    try {
+      const metadataPath = path.join(itemFolder, 'metadata.json');
+      const raw = await fs.readFile(metadataPath, 'utf8');
+      return JSON.parse(raw);
+    } catch {
+      return {};
+    }
+  }
+
+  private isDevelopment(): boolean {
+    return process.env.NODE_ENV !== 'production' && process.env.STATIC_EXPORT !== 'true';
+  }
+
   private getContentDir(): string {
     return path.join(process.cwd(), 'content', this.config.contentDir);
   }
@@ -29,6 +43,8 @@ export class ContentLoader {
 
   async getAllContent(locale: string): Promise<ContentMeta[]> {
     const dir = this.getContentDir();
+    const isDev = this.isDevelopment();
+    
     try {
       const entries = await fs.readdir(dir, { withFileTypes: true });
       const items: ContentMeta[] = [];
@@ -36,22 +52,23 @@ export class ContentLoader {
       for (const entry of entries) {
         if (!entry.isDirectory()) continue;
         const slug = entry.name;
-        const filePath = await this.resolveLocaleMarkdownFile(path.join(dir, slug), locale);
+        const itemFolder = path.join(dir, slug);
+        const filePath = await this.resolveLocaleMarkdownFile(itemFolder, locale);
         if (!filePath) continue;
 
         const raw = await fs.readFile(filePath, 'utf8');
         const { data } = matter(raw);
 
-        const date = new Date(String(data.date));
-        if (isNaN(date.getTime())) {
-          console.warn(`Invalid date in ${this.config.contentType} item ${slug}: ${data.date}`);
-          continue;
-        }
+        // Load local metadata
+        const localMetadata = await this.loadLocalMetadata(itemFolder);
 
-        const meta = this.processMeta(slug, data);
-        if (meta) {
-          items.push(meta);
-        }
+        const meta = this.processMeta(slug, data, localMetadata);
+        if (!meta) continue;
+
+        // Filter out draft content in production/static export
+        if (meta.draft && !isDev) continue;
+
+        items.push(meta);
       }
 
       return this.sortContent(items);
@@ -64,6 +81,7 @@ export class ContentLoader {
     const dir = this.getContentDir();
     const folder = path.join(dir, slug);
     const filePath = await this.resolveLocaleMarkdownFile(folder, locale);
+    const isDev = this.isDevelopment();
     
     if (!filePath) return null;
     
@@ -74,8 +92,14 @@ export class ContentLoader {
       const processedContent = this.preprocessMarkdown(content, slug);
       const html = await marked.parse(processedContent);
 
-      const meta = this.processMeta(slug, data);
+      // Load local metadata
+      const localMetadata = await this.loadLocalMetadata(folder);
+
+      const meta = this.processMeta(slug, data, localMetadata);
       if (!meta) return null;
+
+      // Filter out draft content in production/static export
+      if (meta.draft && !isDev) return null;
 
       return {
         ...meta,
@@ -86,23 +110,38 @@ export class ContentLoader {
     }
   }
 
-  private processMeta(slug: string, data: any): ContentMeta | null {
-    const date = new Date(String(data.date));
-    if (isNaN(date.getTime())) {
+  private processMeta(slug: string, data: any, localMetadata: Record<string, any>): ContentMeta | null {
+    // Merge local metadata with file metadata, prioritizing local for core fields
+    const mergedData = {
+      ...localMetadata,  // Local metadata first
+      ...data,           // File metadata second (can override title and content-specific fields)
+    };
+
+    // Use date from local metadata if available, otherwise from file
+    const dateValue = localMetadata.date || data.date;
+    if (!dateValue) {
+      console.warn(`No date found for ${this.config.contentType} item ${slug}`);
       return null;
     }
 
-    const imageValue = data.image ?? this.config.defaultImage;
+    const date = new Date(String(dateValue));
+    if (isNaN(date.getTime())) {
+      console.warn(`Invalid date in ${this.config.contentType} item ${slug}: ${dateValue}`);
+      return null;
+    }
+
+    const imageValue = localMetadata.image || data.image || this.config.defaultImage;
     const baseM = {
       slug,
-      title: String(data.title ?? slug),
+      title: String(data.title || localMetadata.title || slug),  // Allow file to override title
       date: date.toISOString(),
       image: this.normalizeImagePath(String(imageValue), slug),
-      excerpt: data.excerpt != null ? String(data.excerpt) : undefined,
+      excerpt: localMetadata.excerpt || data.excerpt || undefined,
+      draft: Boolean(localMetadata.draft),  // Draft flag from local metadata only
     };
 
     return {
-      ...data,
+      ...mergedData,
       ...baseM,
     };
   }

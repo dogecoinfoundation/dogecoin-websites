@@ -1,15 +1,3 @@
----
-title: "Dogecoin Core"
-date: 2025-01-15
-status: active
-technologies: ["C++", "Bitcoin Core", "P2P Networking"]
-github: https://github.com/dogecoin/dogecoin
-website: https://dogecoin.com
-excerpt: The reference implementation of the Dogecoin protocol, powering the entire network
-featured: true
-image: dogecoin-core.png
----
-
 # Dogecoin Core
 
 Dogecoin Core is the backbone of the Dogecoin network. It's the reference implementation that defines the protocol and ensures the security and reliability of the entire ecosystem.

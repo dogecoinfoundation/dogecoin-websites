@@ -1,10 +1,7 @@
+
 ---
-title: "Dogecoin CoreFund 및 재단 업데이트"
-date: 2025-12-31
-type: Article
-image: blog-1.png
-excerpt: 많은 코어, 많은 개발, 와우.
-author: Dogecoin Foundation
+title: "도지코인 코어 펀드 및 재단 업데이트"
+description: "도지코인 재단과 코어 개발 펀드의 최신 업데이트입니다."
 ---
 
 # 많은 코어, 많은 개발, 와우.

@@ -1,0 +1,10 @@
+{
+  "date": "2025-03-10",
+  "category": "development",
+  "location": "Online",
+  "participants": 100,
+  "featured": false,
+  "image": "dev-workshop.png",
+  "excerpt": "Learn to build applications with libdogecoin",
+  "draft": false
+}

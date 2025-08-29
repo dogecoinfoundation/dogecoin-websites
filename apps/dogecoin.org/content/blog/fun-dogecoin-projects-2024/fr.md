@@ -1,10 +1,7 @@
+
 ---
-title: "Projets Dogecoin amusants à essayer"
-date: 2024-12-02
-type: Article
-image: blog-2.jpg
-excerpt: Explore playful, community-built Dogecoin projects you can try today.
-author: Dogecoin Community
+title: "Projets Dogecoin amusants 2024"
+description: "Un récap des projets Dogecoin les plus intéressants de 2024."
 ---
 
 # Projets Dogecoin amusants à essayer

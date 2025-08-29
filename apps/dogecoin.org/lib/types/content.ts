@@ -22,7 +22,6 @@ export interface ProjectMeta extends BaseContentMeta {
   category: ProjectCategory;
   github?: string;
   website?: string;
-  status: 'Active' | 'Completed' | 'In Progress';
 }
 
 export interface ActivityMeta extends BaseContentMeta {

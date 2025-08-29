@@ -1,46 +1,124 @@
 import React from 'react';
 import Image from 'next/image';
-import { getAssetPath } from '@/lib/assets';
+import Link from 'next/link';
+import { getAssetPath, getNavPath } from '@/lib/assets';
+import { shouldShowDraftBadge } from '@/lib/content/utils';
+import { TagsWithOverflow } from '@/components/common/TagsWithOverflow';
 
 interface ProjectCardProps {
+  slug: string;
   title: string;
-  description: string;
-  imageSrc: string;
-  imageAlt: string;
-  color: string;
-  className?: string;
+  image: string;
+  date: string;
+  excerpt?: string;
+  draft?: boolean;
+  tags?: string[];
+  links?: Array<{
+    label: string;
+    url: string;
+    icon?: 'github' | 'web' | 'demo';
+  }>;
+  locale: string;
+  accentColor?: string;
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({
+export function ProjectCard({
+  slug,
   title,
-  description,
-  imageSrc,
-  imageAlt,
-  color,
-  className = ''
-}) => {
+  image,
+  excerpt,
+  draft = false,
+  tags,
+  links,
+  locale,
+  accentColor
+}: ProjectCardProps) {
+
+  // In draft mode, we don't show any badges and grey out the card instead
+  const showDraftBadge = shouldShowDraftBadge(draft);
+
   return (
-    <div className={`project-card ${className}`}>
-      <div className="project-card-image-container">
-        <div className="project-card-image-placeholder">
-          <Image
-            src={getAssetPath(imageSrc)}
-            alt={imageAlt}
-            fill
-            sizes="(max-width: 600px) 100vw, (max-width: 900px) 50vw, 33vw"
-            quality={100}
-            className="project-card-image"
+    <article className={`content-card card-hover-effect${showDraftBadge ? ' content-card-draft' : ''}`}>
+      <Link 
+        href={getNavPath(`/projects/${slug}`, locale)} 
+        className="content-card-image-link"
+      >
+        <div className="content-card-image card-image">
+          <Image 
+            src={getAssetPath(image)} 
+            alt={title} 
+            fill 
+            className="object-cover" 
           />
+          {showDraftBadge && (
+            <div className="content-card-draft-overlay">Draft</div>
+          )}
         </div>
-      </div>
-      <div className="project-card-content">
+      </Link>
+      
+      {accentColor && (
         <div 
-          className="project-card-accent"
-          style={{ backgroundColor: color }}
-        ></div>
-        <h4 className="project-card-title">{title}</h4>
-        <p className="project-card-description">{description}</p>
+          className="content-card-accent"
+          style={{ backgroundColor: accentColor }}
+        />
+      )}
+      
+      <div className="content-card-body">
+        <h3 className="content-card-title">
+          <Link href={getNavPath(`/projects/${slug}`, locale)}>
+            {title}
+          </Link>
+        </h3>
+        
+        {excerpt && (
+          <p className="content-card-excerpt">{excerpt}</p>
+        )}
+        
+        {tags && tags.length > 0 && (
+          <TagsWithOverflow tags={tags} />
+        )}
+        
+        {links && links.length > 0 && (
+          <div className="content-card-links-with-action">
+            <div className="content-card-links">
+              {links.map((link) => (
+                <a
+                  key={link.url}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="content-card-link"
+                >
+                  {link.icon && (
+                    <Image
+                      src={getAssetPath(`/assets/svg/icons/${link.icon}.svg`)}
+                      alt={link.label}
+                      width={32}
+                      height={32}
+                    />
+                  )}
+                </a>
+              ))}
+            </div>
+            <Link 
+              href={getNavPath(`/projects/${slug}`, locale)}
+              className="content-card-action-pill"
+            >
+              View project
+            </Link>
+          </div>
+        )}
+        
+        {(!links || links.length === 0) && (
+          <Link 
+            href={getNavPath(`/projects/${slug}`, locale)}
+            className="content-card-action-pill"
+            style={{ alignSelf: 'flex-end' }}
+          >
+            View project
+          </Link>
+        )}
       </div>
-    </div>
+    </article>
   );
-};
+}

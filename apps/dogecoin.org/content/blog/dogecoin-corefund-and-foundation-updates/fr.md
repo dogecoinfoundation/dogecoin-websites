@@ -1,10 +1,7 @@
+
 ---
-title: "Mises à jour de Dogecoin CoreFund et de la Fondation"
-date: 2025-12-31
-type: Article
-image: blog-1.png
-excerpt: Beaucoup de Core, Beaucoup de développement, Waouh.
-author: Dogecoin Foundation
+title: "Mises à jour du Fonds Core et de la Foundation Dogecoin"
+description: "Dernières mises à jour de la Dogecoin Foundation et du fonds de développement Core."
 ---
 
 # Beaucoup de Core, Beaucoup de développement, Waouh.

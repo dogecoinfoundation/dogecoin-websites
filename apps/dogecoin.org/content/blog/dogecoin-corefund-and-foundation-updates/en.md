@@ -1,11 +1,3 @@
----
-title: "Dogecoin CoreFund and Foundation updates"
-date: 2025-12-31
-type: Article
-image: blog-1.png
-excerpt: Such Core, Much Development, Wow.
-author: Dogecoin Foundation
----
 
 # Such Core, Much Development, Wow.
 

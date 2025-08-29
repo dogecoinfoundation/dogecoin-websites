@@ -1,10 +1,7 @@
+
 ---
-title: "Dogecoin CoreFund 和基金会更新"
-date: 2025-12-31
-type: Article
-image: blog-1.png
-excerpt: 满满核心，满满开发，哇哦。
-author: Dogecoin Foundation
+title: "Dogecoin 核心基金和基金会更新"
+description: "来自 Dogecoin 基金会和核心开发基金的最新更新。"
 ---
 
 # 满满核心，满满开发，哇哦。

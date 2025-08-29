@@ -1,10 +1,7 @@
+
 ---
-title: "Dogecoin Community Events in 2025"
-date: 2025-01-22
-type: Event
-image: blog-3.jpg
-excerpt: A look at upcoming Dogecoin meetups and community happenings around the world.
-author: Dogecoin Community
+title: "2025년 도지코인 커뮤니티 이벤트"
+description: "전 세계에서 열리는 도지코인 모임과 커뮤니티 행사들을 살펴보세요."
 ---
 
 가벼운 커피 모임부터 해크 나이트까지, 도지코인 커뮤니티는 함께 모이는 것을 사랑합니다.

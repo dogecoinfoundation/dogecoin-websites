@@ -1,10 +1,7 @@
+
 ---
-title: "Dogecoin Community Events in 2025"
-date: 2025-01-22
-type: Event
-image: blog-3.jpg
-excerpt: A look at upcoming Dogecoin meetups and community happenings around the world.
-author: Dogecoin Community
+title: "Événements de la Communauté Dogecoin en 2025"
+description: "Un aperçu des prochains meetups Dogecoin et événements communautaires dans le monde."
 ---
 
 Des rencontres café informelles aux soirées hack, la communauté Dogecoin adore se retrouver.

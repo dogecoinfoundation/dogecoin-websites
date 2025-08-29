@@ -1,0 +1,10 @@
+{
+  "date": "2025-01-15",
+  "technologies": ["C++", "Bitcoin Core", "P2P Networking"],
+  "github": "https://github.com/dogecoin/dogecoin",
+  "website": "https://dogecoin.com",
+  "excerpt": "The reference implementation of the Dogecoin protocol, powering the entire network",
+  "featured": true,
+  "image": "dogecoin-core.png",
+  "draft": false
+}

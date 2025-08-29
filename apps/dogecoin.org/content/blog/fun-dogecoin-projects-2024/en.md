@@ -1,11 +1,3 @@
----
-title: "Fun Dogecoin Projects to Try"
-date: 2024-12-02
-type: Article
-image: blog-2.jpg
-excerpt: Explore playful, community-built Dogecoin projects you can try today.
-author: Dogecoin Community
----
 
 # Fun Dogecoin Projects to Try
 

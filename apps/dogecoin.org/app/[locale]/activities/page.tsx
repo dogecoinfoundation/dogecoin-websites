@@ -1,15 +1,13 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Container from '@/components/layout/Container';
 import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary } from '@repo/internationalization';
 import { getAllActivities } from '@/lib/content';
-import { getAssetPath } from '@/lib/assets';
 import { SearchBar } from '@/components/content/SearchBar';
 import { ContentGrid } from '@/components/content/ContentGrid';
-import { ContentCard } from '@/components/content/ContentCard';
+import { ActivityCard } from '@/components/specific/ActivityCard';
 
 interface ActivitiesPageProps {
   params: Promise<{ locale: string }>;
@@ -55,62 +53,35 @@ export default async function ActivitiesPage({ params }: ActivitiesPageProps) {
     <Main>
       <Section>
         <Container>
-          <div className="content-header">
-            <div className="content-title-row">
-              <Image
-                className="content-title-decoration-left"
-                src={getAssetPath("/assets/svg/blog/title-left.svg")}
-                alt="Decoration"
-                width={91}
-                height={145}
-              />
-              <div className="content-title-center">
-                <h1 className="section-heading">Activities</h1>
-                <p className="content-section-description">
-                  Community events, workshops, and initiatives in the Dogecoin ecosystem
-                </p>
-              </div>
-              <Image
-                className="content-title-decoration-right"
-                src={getAssetPath("/assets/svg/blog/title-right.svg")}
-                alt="Decoration"
-                width={91}
-                height={145}
-              />
-            </div>
-          </div>
-
-          <div className="content-search-section">
+          <div className="flex justify-between items-center mb-8">
+            <h1 className="section-heading">Dogecoin Activities</h1>
             <SearchBar 
               placeholder="Search activities..." 
-              className="content-search-bar"
+              className="content-search-bar max-w-sm"
             />
           </div>
 
           <ContentGrid>
             {activities.map((activity) => {
-              const tags = [];
+              const tags = [...(activity.tags || [])];
               if (activity.location) {
                 tags.push(activity.location);
               }
-              if (activity.participants) {
-                tags.push(`${activity.participants} participants`);
-              }
 
               return (
-                <ContentCard
+                <ActivityCard
                   key={activity.slug}
                   slug={activity.slug}
                   title={activity.title}
                   image={activity.image}
                   date={activity.date}
-                  excerpt={activity.excerpt}
+                  excerpt={activity.description}
+                  draft={activity.draft}
                   badge={{
                     text: formatCategory(activity.category),
                     variant: getBadgeVariant(activity.category) as any
                   }}
                   tags={tags}
-                  contentType="activities"
                   locale={locale}
                 />
               );

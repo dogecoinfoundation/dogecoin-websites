@@ -1,14 +1,3 @@
----
-title: "Dogecoin Developer Workshop: Building the Future"
-date: 2025-02-20
-category: development
-location: Online (Global)
-participants: 500
-excerpt: A hands-on virtual workshop for developers wanting to build on Dogecoin
-featured: false
-image: dev-workshop.png
----
-
 # Dogecoin Developer Workshop: Building the Future
 
 Join us for an intensive online workshop designed for developers who want to contribute to the Dogecoin ecosystem. Whether you're new to blockchain development or an experienced developer, this workshop has something for you.

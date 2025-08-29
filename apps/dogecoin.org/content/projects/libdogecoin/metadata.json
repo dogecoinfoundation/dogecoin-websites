@@ -1,0 +1,10 @@
+{
+  "title": "Libdogecoin",
+  "date": "2024-11-20",
+  "tags": ["C", "Library"],
+  "github": "https://github.com/dogecoinfoundation/libdogecoin",
+  "description": "A lightweight C library for building Dogecoin applications",
+  "featured": true,
+  "image": "libdogecoin.png",
+  "draft": true
+}

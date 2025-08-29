@@ -1,14 +1,3 @@
----
-title: "Dogecoin Community Meetup Miami 2025"
-date: 2025-03-15
-category: community
-location: Miami, Florida
-participants: 250
-excerpt: Join fellow Shibes for our biggest community gathering of the year in sunny Miami!
-featured: true
-image: meetup-miami.jpg
----
-
 # Dogecoin Community Meetup Miami 2025
 
 Get ready for the most exciting Dogecoin community event of the year! We're bringing together Shibes from around the world for three days of fun, learning, and networking in beautiful Miami.

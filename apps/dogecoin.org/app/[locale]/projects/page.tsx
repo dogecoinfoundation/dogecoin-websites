@@ -1,15 +1,13 @@
 import type { Metadata } from 'next';
-import Image from 'next/image';
 import Container from '@/components/layout/Container';
 import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary } from '@repo/internationalization';
 import { getAllProjects } from '@/lib/content';
-import { getAssetPath } from '@/lib/assets';
 import { SearchBar } from '@/components/content/SearchBar';
 import { ContentGrid } from '@/components/content/ContentGrid';
-import { ContentCard } from '@/components/content/ContentCard';
+import { ProjectCard } from '@/components/specific/ProjectCard';
 
 interface ProjectsPageProps {
   params: Promise<{ locale: string }>;
@@ -32,61 +30,32 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
   const t = dictionary["dogecoin.org"].home;
   const projects = await getAllProjects(locale);
 
-  const getBadgeVariant = (status: string) => {
-    switch (status) {
-      case 'active':
-        return 'success';
-      case 'completed':
-        return 'primary';
-      case 'planned':
-        return 'secondary';
-      default:
-        return 'primary';
-    }
-  };
-
-  const formatStatus = (status: string) => {
-    return status.charAt(0).toUpperCase() + status.slice(1);
-  };
+  // Define a set of vibrant colors for project accent lines
+  const accentColors = [
+    '#FF46CE', // Pink
+    '#2BF9FF', // Cyan
+    '#62FF46', // Green
+    '#FFFC36', // Yellow
+    '#FF7D47', // Orange
+    '#9B59FF', // Purple
+    '#FF5959', // Red
+    '#46C8FF', // Blue
+  ];
 
   return (
     <Main>
       <Section>
         <Container>
-          <div className="content-header">
-            <div className="content-title-row">
-              <Image
-                className="content-title-decoration-left"
-                src={getAssetPath("/assets/svg/blog/title-left.svg")}
-                alt="Decoration"
-                width={91}
-                height={145}
-              />
-              <div className="content-title-center">
-                <h1 className="section-heading">Projects</h1>
-                <p className="content-section-description">
-                  Innovative developments and tools built for the Dogecoin ecosystem
-                </p>
-              </div>
-              <Image
-                className="content-title-decoration-right"
-                src={getAssetPath("/assets/svg/blog/title-right.svg")}
-                alt="Decoration"
-                width={91}
-                height={145}
-              />
-            </div>
-          </div>
-
-          <div className="content-search-section">
+          <div className="flex justify-between items-center mb-8">
+            <h1 className="section-heading">Dogecoin projects</h1>
             <SearchBar 
               placeholder="Search projects..." 
-              className="content-search-bar"
+              className="content-search-bar max-w-sm"
             />
           </div>
 
           <ContentGrid>
-            {projects.map((project) => {
+            {projects.map((project, index) => {
               const links = [];
               if (project.github) {
                 links.push({ label: 'GitHub', url: project.github, icon: 'github' as const });
@@ -98,22 +67,21 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
                 links.push({ label: 'Demo', url: project.demo, icon: 'demo' as const });
               }
 
+              // Cycle through accent colors
+              const accentColor = accentColors[index % accentColors.length];
+
               return (
-                <ContentCard
+                <ProjectCard
                   key={project.slug}
                   slug={project.slug}
                   title={project.title}
                   image={project.image}
-                  date={project.date}
-                  excerpt={project.excerpt}
-                  badge={{
-                    text: formatStatus(project.status),
-                    variant: getBadgeVariant(project.status) as any
-                  }}
-                  tags={project.technologies}
+                  excerpt={project.description}
+                  tags={project.tags}
+                  draft={project.draft}
                   links={links}
-                  contentType="projects"
                   locale={locale}
+                  accentColor={accentColor}
                 />
               );
             })}

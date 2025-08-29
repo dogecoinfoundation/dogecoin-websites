@@ -1,15 +1,3 @@
----
-title: "Libdogecoin"
-date: 2025-01-10
-status: active
-technologies: ["C", "Library", "Cross-platform", "Embedded Systems"]
-github: https://github.com/dogecoinfoundation/libdogecoin
-website: https://foundation.dogecoin.com/projects/libdogecoin
-excerpt: A lightweight C library implementation of Dogecoin protocols for embedded and IoT devices
-featured: true
-image: libdogecoin.png
----
-
 # Libdogecoin
 
 Libdogecoin is a lightweight, portable C library that implements Dogecoin protocols. It's designed for developers who want to integrate Dogecoin functionality into their applications without running a full node.

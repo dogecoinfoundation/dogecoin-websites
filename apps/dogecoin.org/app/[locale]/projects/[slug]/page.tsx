@@ -62,22 +62,6 @@ export default async function ProjectPage({ params }: PageProps) {
     );
   }
 
-  const formatStatus = (status: string) => {
-    return status.charAt(0).toUpperCase() + status.slice(1);
-  };
-
-  const getBadgeClass = (status: string) => {
-    switch (status) {
-      case 'active':
-        return 'project-status-active';
-      case 'completed':
-        return 'project-status-completed';
-      case 'planned':
-        return 'project-status-planned';
-      default:
-        return 'project-status-default';
-    }
-  };
 
   return (
     <Main>
@@ -86,12 +70,6 @@ export default async function ProjectPage({ params }: PageProps) {
           <article className="content-article">
             <header className="content-article-header">
               <div className="content-article-meta">
-                <time className="content-article-date">
-                  {format(new Date(project.date), 'MMMM d, yyyy')}
-                </time>
-                <span className={`project-status ${getBadgeClass(project.status)}`}>
-                  {formatStatus(project.status)}
-                </span>
               </div>
               
               <h1 className="content-article-title">{project.title}</h1>
@@ -121,8 +99,8 @@ export default async function ProjectPage({ params }: PageProps) {
                     <Image
                       src={getAssetPath('/assets/svg/icons/github.svg')}
                       alt="GitHub"
-                      width={20}
-                      height={20}
+                      width={32}
+                      height={32}
                     />
                     View on GitHub
                   </a>
@@ -137,8 +115,8 @@ export default async function ProjectPage({ params }: PageProps) {
                     <Image
                       src={getAssetPath('/assets/svg/icons/web.svg')}
                       alt="Website"
-                      width={20}
-                      height={20}
+                      width={32}
+                      height={32}
                     />
                     Visit Website
                   </a>
@@ -153,8 +131,8 @@ export default async function ProjectPage({ params }: PageProps) {
                     <Image
                       src={getAssetPath('/assets/svg/icons/demo.svg')}
                       alt="Demo"
-                      width={20}
-                      height={20}
+                      width={32}
+                      height={32}
                     />
                     Try Demo
                   </a>

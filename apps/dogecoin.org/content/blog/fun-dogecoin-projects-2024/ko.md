@@ -1,10 +1,7 @@
+
 ---
-title: "한번 해볼 만한 재미있는 도지코인 프로젝트"
-date: 2024-12-02
-type: Article
-image: blog-2.jpg
-excerpt: Explore playful, community-built Dogecoin projects you can try today.
-author: Dogecoin Community
+title: "재미있는 도지코인 프로젝트 2024"
+description: "2024년 가장 흥미로운 도지코인 프로젝트들을 정리했습니다."
 ---
 
 # 한번 해볼 만한 재미있는 도지코인 프로젝트

@@ -1,10 +1,7 @@
+
 ---
-title: "Обновления Dogecoin CoreFund и Фонда"
-date: 2025-12-31
-type: Article
-image: blog-1.png
-excerpt: Много Core, много разработки, вау.
-author: Dogecoin Foundation
+title: "Обновления фонда Core и Foundation Dogecoin"
+description: "Последние обновления от Dogecoin Foundation и фонда разработки Core."
 ---
 
 # Много Core, много разработки, вау.
