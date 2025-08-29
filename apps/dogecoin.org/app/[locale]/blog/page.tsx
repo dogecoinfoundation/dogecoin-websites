@@ -6,7 +6,7 @@ import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary } from '@repo/internationalization';
-import { getAllBlogPosts } from '@/lib/blog';
+import { getAllBlogPosts } from '@/lib/content';
 import { getAssetPath, getNavPath } from '@/lib/assets';
 
 interface BlogIndexProps {
@@ -91,9 +91,9 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
 
               <div className="blog-grid">
                 {(postsByYear[year] ?? []).map((post) => (
-                  <article key={post.slug} className="blog-card">
+                  <article key={post.slug} className="blog-card card-hover-effect">
                     <Link href={getNavPath(`/blog/${post.slug}`, locale)} className="blog-card-image-link">
-                      <div className="blog-card-image">
+                      <div className="blog-card-image card-image">
                         <Image src={getAssetPath(post.image)} alt={post.title} fill className="object-cover" />
                         <div className={`blog-card-badge ${post.type === 'Article' ? 'blog-card-badge-article' : post.type === 'Important' ? 'blog-card-badge-important' : 'blog-card-badge-event'}`}>{post.type}</div>
                       </div>

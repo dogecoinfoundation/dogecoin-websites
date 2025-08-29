@@ -6,7 +6,7 @@ import { Footer } from '@/components/layout/Footer';
 import { getDictionary } from '@repo/internationalization';
 import Image from 'next/image';
 import { format } from 'date-fns';
-import { getAllBlogSlugs, getBlogPostBySlug } from '@/lib/blog';
+import { getAllBlogSlugs, getBlogPostBySlug } from '@/lib/content';
 import { getAssetPath } from '@/lib/assets';
 
 interface PageProps {
