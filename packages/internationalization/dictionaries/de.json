@@ -157,10 +157,10 @@
           },
           "buttons": {
             "69": {
-              "quote": "hehe"
+              "quote": "hihi"
             },
             "1337": {
-              "quote": "POWER MOVE!"
+              "quote": "POWER ZUG"
             },
             "9999": {
               "quote": "Zahlen Sie nicht 10k"
@@ -171,7 +171,8 @@
           },
           "copy": {
             "button": "Kopieren",
-            "success": "Kopiert!"
+            "success": "Kopiert!",
+            "checkItOut": "Schau es dir an"
           }
         },
         "members": {
@@ -207,6 +208,22 @@
             "buttonText": "Besuchen Sie das Haus des Doge"
           }
         }
+      },
+      "projects": {
+        "title": "Ausgezeichnete Projekte",
+        "viewProject": "Projekt ansehen",
+        "viewAllProjects": "Alle Projekte ansehen"
+      },
+      "activities": {
+        "viewActivity": "Aktivität ansehen",
+        "viewAllActivities": "Alle Aktivitäten ansehen"
+      },
+      "navigation": {
+        "home": "Startseite",
+        "about": "Über uns",
+        "projects": "Projekte",
+        "activities": "Aktivitäten",
+        "blog": "Blog"
       },
       "blog": {
         "by": "Von"

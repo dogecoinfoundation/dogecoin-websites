@@ -23,6 +23,9 @@ interface ActivityCardProps {
     icon?: 'github' | 'web' | 'demo' | 'discord';
   }[];
   locale: string;
+  t?: {
+    viewActivity: string;
+  };
 }
 
 export function ActivityCard({
@@ -35,7 +38,8 @@ export function ActivityCard({
   badge,
   tags,
   links,
-  locale
+  locale,
+  t
 }: ActivityCardProps) {
   const formattedDate = new Date(date).toLocaleDateString(undefined, {
     year: 'numeric',
@@ -118,7 +122,7 @@ export function ActivityCard({
                 href={getNavPath(`/activities/${slug}`, locale)}
                 className="content-card-action-pill"
               >
-                View activity
+                {t?.viewActivity ?? 'View activity'}
               </Link>
             </div>
           ) : (
@@ -127,7 +131,7 @@ export function ActivityCard({
                 href={getNavPath(`/activities/${slug}`, locale)}
                 className="content-card-action-pill"
               >
-                View activity
+                {t?.viewActivity ?? 'View activity'}
               </Link>
             </div>
           )}

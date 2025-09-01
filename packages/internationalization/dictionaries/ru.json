@@ -149,10 +149,10 @@
           },
           "buttons": {
             "69": {
-              "quote": "hehe"
+              "quote": "хихи"
             },
             "1337": {
-              "quote": "МОЩНЫЙ ХОД!"
+              "quote": "МОЩНЫЙ ХОД"
             },
             "9999": {
               "quote": "Не платите 10k"
@@ -163,7 +163,8 @@
           },
           "copy": {
             "button": "Копировать",
-            "success": "Скопировано!"
+            "success": "Скопировано!",
+            "checkItOut": "Посмотрите"
           }
         },
         "members": {
@@ -199,6 +200,22 @@
             "buttonText": "Посетите Дом Доге"
           }
         }
+      },
+      "projects": {
+        "title": "Рекомендуемые проекты",
+        "viewProject": "Посмотреть проект",
+        "viewAllProjects": "Посмотреть все проекты"
+      },
+      "activities": {
+        "viewActivity": "Посмотреть активность",
+        "viewAllActivities": "Посмотреть все активности"
+      },
+      "navigation": {
+        "home": "Главная",
+        "about": "О нас",
+        "projects": "Проекты",
+        "activities": "Активности",
+        "blog": "Блог"
       },
       "blog": {
         "by": "Автор"

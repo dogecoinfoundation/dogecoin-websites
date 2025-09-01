@@ -81,7 +81,7 @@ export default async function Home({ params }: HomeProps) {
                 </div>
               </div>
             </div>
-            <CarouselSection />
+            <CarouselSection t={{ checkItOut: t.sections.donation.copy.checkItOut }} />
           </Container>
         </Section>
 
@@ -89,7 +89,7 @@ export default async function Home({ params }: HomeProps) {
           <Container>
             <div className="section-heading-container">
               <h3 className="section-heading">
-                Featured Projects
+                {t.projects.title}
               </h3>
               <Image
                 src={getAssetPath("/assets/svg/home/activity-heading.svg")}
@@ -142,6 +142,7 @@ export default async function Home({ params }: HomeProps) {
                     links={links}
                     locale={locale}
                     accentColor={accentColor}
+                    t={t.projects}
                   />
                 );
               })}
@@ -149,7 +150,7 @@ export default async function Home({ params }: HomeProps) {
 
             <div className="section-view-all-container">
               <Link href="/projects" className="view-all-button">
-                View all projects
+                {t.projects.viewAllProjects}
               </Link>
             </div>
           </Container>
@@ -185,13 +186,14 @@ export default async function Home({ params }: HomeProps) {
                   color={activity.color || '#FF46CE'}
                   imageBorderRadius={activity.imageBorderRadius}
                   keyPoints={activity.summary?.keyPoints}
+                  t={t.activities}
                 />
               ))}
             </div>
 
             <div className="section-view-all-container">
               <Link href="/activities" className="view-all-button">
-                View all activities
+                {t.activities.viewAllActivities}
               </Link>
             </div>
           </Container>

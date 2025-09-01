@@ -171,7 +171,8 @@
           },
           "copy": {
             "button": "Copiar",
-            "success": "¡Copiado!"
+            "success": "¡Copiado!",
+            "checkItOut": "Échale un vistazo"
           }
         },
         "members": {
@@ -207,6 +208,22 @@
             "buttonText": "Visitar Casa de Doge"
           }
         }
+      },
+      "projects": {
+        "title": "Proyectos Destacados",
+        "viewProject": "Ver proyecto",
+        "viewAllProjects": "Ver todos los proyectos"
+      },
+      "activities": {
+        "viewActivity": "Ver actividad",
+        "viewAllActivities": "Ver todas las actividades"
+      },
+      "navigation": {
+        "home": "Inicio",
+        "about": "Acerca de",
+        "projects": "Proyectos",
+        "activities": "Actividades",
+        "blog": "Blog"
       },
       "blog": {
         "by": "Por"

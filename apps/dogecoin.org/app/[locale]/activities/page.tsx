@@ -83,6 +83,7 @@ export default async function ActivitiesPage({ params }: ActivitiesPageProps) {
                   }}
                   tags={tags}
                   locale={locale}
+                  t={t.activities}
                 />
               );
             })}

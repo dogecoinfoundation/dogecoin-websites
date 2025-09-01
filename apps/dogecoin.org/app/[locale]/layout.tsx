@@ -3,6 +3,7 @@ import "tailwindcss";
 import { Comic_Neue, Montserrat, Jura } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/layout/Nav";
+import { getDictionary } from '@repo/internationalization';
 
 const comicNeue = Comic_Neue({
   variable: "--font-comic-neue",
@@ -35,6 +36,8 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
+  const dictionary = await getDictionary(locale);
+  const navTranslations = dictionary["dogecoin.org"].home.navigation;
   return (
     <html lang={locale ?? 'en'}>
       <head>
@@ -48,7 +51,7 @@ export default async function RootLayout({
         className={`bg-[var(--background-primary)] text-[var(--color-primary)] ${comicNeue.variable} ${montserrat.variable} ${jura.variable} antialiased`}
       >
         <div id="root">
-          <Nav />
+          <Nav t={navTranslations} />
           <div className="main-content">
             {children}
           </div>

@@ -157,10 +157,10 @@
           },
           "buttons": {
             "69": {
-              "quote": "hehe"
+              "quote": "héhé"
             },
             "1337": {
-              "quote": "MOUVEMENT PUISSANT !"
+              "quote": "MOUVEMENT PUISSANT"
             },
             "9999": {
               "quote": "Ne payez pas 10k"
@@ -171,7 +171,8 @@
           },
           "copy": {
             "button": "Copier",
-            "success": "Copié !"
+            "success": "Copié !",
+            "checkItOut": "Jetez-y un œil"
           }
         },
         "members": {
@@ -207,6 +208,22 @@
             "buttonText": "Visitez la Maison de Doge"
           }
         }
+      },
+      "projects": {
+        "title": "Projets Phares",
+        "viewProject": "Voir le projet",
+        "viewAllProjects": "Voir tous les projets"
+      },
+      "activities": {
+        "viewActivity": "Voir l'activité",
+        "viewAllActivities": "Voir toutes les activités"
+      },
+      "navigation": {
+        "home": "Accueil",
+        "about": "À propos",
+        "projects": "Projets",
+        "activities": "Activités",
+        "blog": "Blog"
       },
       "blog": {
         "by": "Par"

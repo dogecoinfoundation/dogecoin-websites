@@ -19,6 +19,9 @@ interface ProjectCardProps {
   }[];
   locale: string;
   accentColor?: string;
+  t?: {
+    viewProject: string;
+  };
 }
 
 export function ProjectCard({
@@ -30,7 +33,8 @@ export function ProjectCard({
   tags,
   links,
   locale,
-  accentColor
+  accentColor,
+  t
 }: ProjectCardProps) {
 
   // In draft mode, we don't show any badges and grey out the card instead
@@ -104,7 +108,7 @@ export function ProjectCard({
                 href={getNavPath(`/projects/${slug}`, locale)}
                 className="content-card-action-pill"
               >
-                View project
+                {t?.viewProject ?? 'View project'}
               </Link>
             </div>
           ) : (
@@ -113,7 +117,7 @@ export function ProjectCard({
                 href={getNavPath(`/projects/${slug}`, locale)}
                 className="content-card-action-pill"
               >
-                View project
+                {t?.viewProject ?? 'View project'}
               </Link>
             </div>
           )}

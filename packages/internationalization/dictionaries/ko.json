@@ -163,7 +163,8 @@
           },
           "copy": {
             "button": "복사",
-            "success": "복사됨!"
+            "success": "복사됨!",
+            "checkItOut": "확인해 보세요"
           }
         },
         "members": {
@@ -199,6 +200,22 @@
             "buttonText": "도지의 집 방문하기"
           }
         }
+      },
+      "projects": {
+        "title": "추천 프로젝트",
+        "viewProject": "프로젝트 보기",
+        "viewAllProjects": "모든 프로젝트 보기"
+      },
+      "activities": {
+        "viewActivity": "활동 보기",
+        "viewAllActivities": "모든 활동 보기"
+      },
+      "navigation": {
+        "home": "홈",
+        "about": "소개",
+        "projects": "프로젝트",
+        "activities": "활동",
+        "blog": "블로그"
       },
       "blog": {
         "by": "작성자"

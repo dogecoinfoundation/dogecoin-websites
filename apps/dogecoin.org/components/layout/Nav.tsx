@@ -14,21 +14,30 @@ import { getAssetPath, getNavPath } from '@/lib/assets';
 interface NavProps {
   children?: ReactNode;
   className?: string;
+  t?: {
+    home: string;
+    about: string;
+    projects: string;
+    activities: string;
+    blog: string;
+  };
 }
 
-const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/about', label: 'About' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/activities', label: 'Activities' },
-  { href: '/blog', label: 'Blog' },
+const getNavItems = (t?: NavProps['t']) => [
+  { href: '/', label: t?.home ?? 'Home' },
+  { href: '/about', label: t?.about ?? 'About' },
+  { href: '/projects', label: t?.projects ?? 'Projects' },
+  { href: '/activities', label: t?.activities ?? 'Activities' },
+  { href: '/blog', label: t?.blog ?? 'Blog' },
 ];
 
-export function Nav({ children, className: _className = '' }: NavProps) {
+export function Nav({ children, className: _className = '', t }: NavProps) {
   const pathname = usePathname();
   const { locale } = useParams();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
+  
+  const navItems = getNavItems(t);
   
   // Remove locale prefix for active state comparison
   const pathnameWithoutLocale = pathname.replace(`/${String(locale)}`, '') || '/';

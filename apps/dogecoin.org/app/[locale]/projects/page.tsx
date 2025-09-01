@@ -84,6 +84,7 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
                   links={links}
                   locale={locale}
                   accentColor={accentColor}
+                  t={t.projects}
                 />
               );
             })}

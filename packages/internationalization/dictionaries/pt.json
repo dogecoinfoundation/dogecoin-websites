@@ -152,7 +152,7 @@
               "quote": "hehe"
             },
             "1337": {
-              "quote": "MOVIMENTO PODEROSO!"
+              "quote": "MOVIMENTO PODEROSO"
             },
             "9999": {
               "quote": "Não pague 10k"
@@ -163,7 +163,8 @@
           },
           "copy": {
             "button": "Copiar",
-            "success": "Copiado!"
+            "success": "Copiado!",
+            "checkItOut": "Confira"
           }
         },
         "members": {
@@ -199,6 +200,22 @@
             "buttonText": "Visite a Casa do Doge"
           }
         }
+      },
+      "projects": {
+        "title": "Projetos Destacados",
+        "viewProject": "Ver projeto",
+        "viewAllProjects": "Ver todos os projetos"
+      },
+      "activities": {
+        "viewActivity": "Ver atividade",
+        "viewAllActivities": "Ver todas as atividades"
+      },
+      "navigation": {
+        "home": "Início",
+        "about": "Sobre",
+        "projects": "Projetos",
+        "activities": "Atividades",
+        "blog": "Blog"
       },
       "blog": {
         "by": "Por"

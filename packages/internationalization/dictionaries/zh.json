@@ -163,7 +163,8 @@
           },
           "copy": {
             "button": "复制",
-            "success": "已复制！"
+            "success": "已复制！",
+            "checkItOut": "查看一下"
           }
         },
         "members": {
@@ -199,6 +200,22 @@
             "buttonText": "访问狗狗之家"
           }
         }
+      },
+      "projects": {
+        "title": "精选项目",
+        "viewProject": "查看项目",
+        "viewAllProjects": "查看所有项目"
+      },
+      "activities": {
+        "viewActivity": "查看活动",
+        "viewAllActivities": "查看所有活动"
+      },
+      "navigation": {
+        "home": "首页",
+        "about": "关于我们",
+        "projects": "项目",
+        "activities": "活动",
+        "blog": "博客"
       },
       "blog": {
         "by": "作者"

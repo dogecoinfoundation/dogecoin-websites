@@ -24,6 +24,9 @@ interface CarouselProps {
   className?: string;
   setApi?: (api: CarouselApi) => void;
   onUserInteraction?: () => void;
+  t?: {
+    checkItOut: string;
+  };
 }
 
 const cards = [
@@ -83,7 +86,7 @@ const cards = [
   },
 ];
 
-export function Carousel({ className = '', setApi: setApiProp, onUserInteraction }: CarouselProps) {
+export function Carousel({ className = '', setApi: setApiProp, onUserInteraction, t }: CarouselProps) {
   const setApi = setApiProp;
 
   return (
@@ -136,7 +139,7 @@ export function Carousel({ className = '', setApi: setApiProp, onUserInteraction
                 {/* Button container - always at bottom */}
                 <div className="carousel-card-button-container">
                   <button className="carousel-card-button">
-                    Check it out
+                    {t?.checkItOut ?? 'Check it out'}
                   </button>
                 </div>
               </div>

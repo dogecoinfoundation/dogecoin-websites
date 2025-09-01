@@ -164,7 +164,7 @@
               "quote": "hehe"
             },
             "1337": {
-              "quote": "POWER MOVE!"
+              "quote": "POWER MOVE"
             },
             "9999": {
               "quote": "Don't pay 10k"
@@ -175,7 +175,8 @@
           },
           "copy": {
             "button": "Copy",
-            "success": "Copied!"
+            "success": "Copied!",
+            "checkItOut": "Check it out"
           }
         },
         "members": {
@@ -211,6 +212,22 @@
             "buttonText": "Visit House of Doge"
           }
         }
+      },
+      "projects": {
+        "title": "Featured Projects",
+        "viewProject": "View project",
+        "viewAllProjects": "View all projects"
+      },
+      "activities": {
+        "viewActivity": "View activity",
+        "viewAllActivities": "View all activities"
+      },
+      "navigation": {
+        "home": "Home",
+        "about": "About",
+        "projects": "Projects",
+        "activities": "Activities",
+        "blog": "Blog"
       },
       "blog": {
         "by": "By"

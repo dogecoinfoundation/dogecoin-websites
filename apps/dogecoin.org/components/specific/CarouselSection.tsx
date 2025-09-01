@@ -5,7 +5,13 @@ import { Carousel, CarouselControls } from '@/components/specific/Carousel';
 import type { CarouselApi } from '@/components/specific/Carousel';
 import { RainbowContainer } from '@repo/design-system/components/ui/rainbow-container';
 
-export function CarouselSection() {
+interface CarouselSectionProps {
+  t?: {
+    checkItOut: string;
+  };
+}
+
+export function CarouselSection({ t }: CarouselSectionProps) {
   const [api, setApi] = React.useState<CarouselApi | null>(null);
   const [current, setCurrent] = React.useState(0);
   const [count, setCount] = React.useState(0);
@@ -71,7 +77,7 @@ export function CarouselSection() {
     <div className="carousel-container">
       <div className="carousel-rainbow-container">
         <RainbowContainer className="carousel-wrapper">
-          <Carousel setApi={setApi} onUserInteraction={handleUserInteraction} />
+          <Carousel setApi={setApi} onUserInteraction={handleUserInteraction} t={t} />
         </RainbowContainer>
       </div>
       <div className="carousel-controls-wrapper">

@@ -16,6 +16,9 @@ interface ActivityProps {
   color?: string;
   keyPoints?: string[];
   imageBorderRadius?: number;
+  t?: {
+    viewActivity: string;
+  };
 }
 
 export function Activity({
@@ -29,7 +32,8 @@ export function Activity({
   imagePosition = 'right',
   color = '#FF46CE',
   keyPoints,
-  imageBorderRadius
+  imageBorderRadius,
+  t
 }: ActivityProps) {
   const content = (
     <div className="activity-content">
@@ -78,7 +82,7 @@ export function Activity({
             className="activity-button-primary"
             style={{ backgroundColor: color }}
           >
-            View activity
+            {t?.viewActivity ?? 'View activity'}
           </Link>
         </div>
       </div>

@@ -149,10 +149,10 @@
           },
           "buttons": {
             "69": {
-              "quote": "hehe"
+              "quote": "eheh"
             },
             "1337": {
-              "quote": "Mossa POTENTE!"
+              "quote": "MOSSA POTENTE"
             },
             "9999": {
               "quote": "Non pagare 10k"
@@ -163,7 +163,8 @@
           },
           "copy": {
             "button": "Copia",
-            "success": "Copiato!"
+            "success": "Copiato!",
+            "checkItOut": "Dai un'occhiata"
           }
         },
         "members": {
@@ -199,6 +200,22 @@
             "buttonText": "Visita Casa di Doge"
           }
         }
+      },
+      "projects": {
+        "title": "Progetti In Evidenza",
+        "viewProject": "Visualizza progetto",
+        "viewAllProjects": "Visualizza tutti i progetti"
+      },
+      "activities": {
+        "viewActivity": "Visualizza attività",
+        "viewAllActivities": "Visualizza tutte le attività"
+      },
+      "navigation": {
+        "home": "Home",
+        "about": "Chi siamo",
+        "projects": "Progetti",
+        "activities": "Attività",
+        "blog": "Blog"
       },
       "blog": {
         "by": "Di"
