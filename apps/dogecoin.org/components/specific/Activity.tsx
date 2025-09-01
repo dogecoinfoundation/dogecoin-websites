@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import { BlurEffect } from '@/components/common/BlurEffect';
 import { getAssetPath } from '@/lib/assets';
 
@@ -7,10 +8,8 @@ interface ActivityProps {
   title: string;
   subtitle: string;
   text: string;
-  primaryText?: string;
-  secondaryText?: string;
-  onPrimary?: () => void;
-  onSecondary?: () => void;
+  slug: string;
+  locale: string;
   imageSrc: string;
   imageAlt: string;
   imagePosition?: 'left' | 'right';
@@ -23,10 +22,8 @@ export function Activity({
   title,
   subtitle,
   text,
-  primaryText,
-  secondaryText,
-  onPrimary,
-  onSecondary,
+  slug,
+  locale,
   imageSrc,
   imageAlt,
   imagePosition = 'right',
@@ -76,27 +73,13 @@ export function Activity({
         )}
         
         <div className="activity-buttons">
-          {primaryText && (
-            <button
-              onClick={onPrimary}
-              className="activity-button-primary"
-              style={{ backgroundColor: color }}
-            >
-              {primaryText}
-            </button>
-          )}
-          {secondaryText && (
-            <button
-              onClick={onSecondary}
-              className="activity-button-secondary"
-              style={{ 
-                borderColor: color,
-                color: color
-              }}
-            >
-              {secondaryText}
-            </button>
-          )}
+          <Link
+            href={`/${locale}/activities/${slug}`}
+            className="activity-button-primary"
+            style={{ backgroundColor: color }}
+          >
+            View activity
+          </Link>
         </div>
       </div>
     </div>

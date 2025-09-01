@@ -1210,7 +1210,7 @@ body {
 .carousel-controls-wrapper {
   @apply flex justify-center mt-2;
   position: relative;
-  z-index: 50;
+  z-index: 10;
 }
 
 @media (--small-tablet-down) {
@@ -4243,5 +4243,45 @@ header {
     width: 49px;
     height: 39px;
   }
+}
+
+/* Featured Projects and Activities Layout */
+.featured-projects-grid {
+  margin-top: 4rem;
+}
+
+.section-view-all-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  position: relative;
+  z-index: 999;
+}
+
+.view-all-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: var(--primary-500);
+  color: var(--black);
+  text-decoration: none;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  border: 2px solid var(--primary-500);
+  position: relative;
+  z-index: 999;
+  pointer-events: auto;
+}
+
+.view-all-button:hover {
+  background-color: var(--primary-600);
+  border-color: var(--primary-600);
+  transform: translateY(-2px);
+}
+
+.view-all-button:active {
+  transform: translateY(0);
 }
 

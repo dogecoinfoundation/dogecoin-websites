@@ -1,10 +1,8 @@
 {
-  "title": "Dogecoin Core",
   "date": "2025-01-15",
   "tags": ["C++", "Bitcoin Core", "P2P Networking", "Blockchain", "Dogecoin"],
   "github": "https://github.com/dogecoin/dogecoin",
   "website": "https://dogecoin.com",
-  "description": "The reference implementation of the Dogecoin protocol, powering the entire network",
   "featured": true,
   "image": "dogecoin-core.png",
   "draft": false

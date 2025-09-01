@@ -1,0 +1,11 @@
+{
+  "date": "2023-05-15",
+  "category": "community",
+  "tags": ["statue", "kabosu", "japan", "community", "tribute"],
+  "featured": true,
+  "image": "activity-kabosu.png",
+  "draft": false,
+  "color": "#62FF46",
+  "imagePosition": "left",
+  "imageBorderRadius": 32
+}

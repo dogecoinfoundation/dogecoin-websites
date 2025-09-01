@@ -1,3 +1,8 @@
+<!-- METADATA
+title: Dogecoin Core
+description: The reference implementation of the Dogecoin protocol, powering the entire network
+-->
+
 # Dogecoin Core
 
 Dogecoin Core is the backbone of the Dogecoin network. It's the reference implementation that defines the protocol and ensures the security and reliability of the entire ecosystem.

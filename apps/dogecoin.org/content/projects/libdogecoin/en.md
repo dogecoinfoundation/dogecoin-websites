@@ -1,3 +1,8 @@
+<!-- METADATA
+title: Libdogecoin
+description: A lightweight C library for building Dogecoin applications
+-->
+
 # Libdogecoin
 
 Libdogecoin is a lightweight, portable C library that implements Dogecoin protocols. It's designed for developers who want to integrate Dogecoin functionality into their applications without running a full node.

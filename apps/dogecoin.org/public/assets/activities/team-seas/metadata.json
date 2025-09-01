@@ -1,0 +1,11 @@
+{
+  "date": "2021-10-29",
+  "category": "community",
+  "tags": ["charity", "environment", "ocean", "cleanup"],
+  "featured": true,
+  "image": "activity-teamseas.png",
+  "draft": false,
+  "color": "#2BF9FF",
+  "imagePosition": "right",
+  "imageBorderRadius": 32
+}

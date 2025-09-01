@@ -1,6 +1,10 @@
-# Dogecoin Community Meetup Miami 2025
+<!-- METADATA
+title: Dogecoin Community Meetup Miami 2025
+description: Join fellow shibes for a fun meetup in Miami!
+summary: Get ready for the most exciting Dogecoin community event of the year! We're bringing together Shibes from around the world for three days of fun, learning, and networking in beautiful Miami.
+-->
 
-Get ready for the most exciting Dogecoin community event of the year! We're bringing together Shibes from around the world for three days of fun, learning, and networking in beautiful Miami.
+# Dogecoin Community Meetup Miami 2025
 
 ## Event Overview
 

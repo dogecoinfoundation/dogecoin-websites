@@ -52,6 +52,14 @@ export interface ActivityMeta extends ContentMeta {
   featured?: boolean;
   tags?: string[];
   description?: string;
+  summary?: {
+    text: string;
+    keyPoints?: string[];
+  };
+  color?: string;
+  subtitle?: string;
+  imagePosition?: 'left' | 'right';
+  imageBorderRadius?: number;
 }
 
 export interface Activity extends ActivityMeta {

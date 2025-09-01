@@ -1,6 +1,10 @@
-# Dogecoin Developer Workshop: Building the Future
+<!-- METADATA
+title: Dogecoin Developer Workshop: Building the Future
+description: Learn to build applications with libdogecoin
+summary: Join us for an intensive online workshop designed for developers who want to contribute to the Dogecoin ecosystem. Whether you're new to blockchain development or an experienced developer, this workshop has something for you.
+-->
 
-Join us for an intensive online workshop designed for developers who want to contribute to the Dogecoin ecosystem. Whether you're new to blockchain development or an experienced developer, this workshop has something for you.
+# Dogecoin Developer Workshop: Building the Future
 
 ## Workshop Details
 

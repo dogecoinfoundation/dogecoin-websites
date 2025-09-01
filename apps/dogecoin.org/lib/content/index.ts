@@ -26,6 +26,10 @@ export async function getAllProjects(locale: string) {
   return projectsLoader.getAllProjects(locale);
 }
 
+export async function getFeaturedProjects(locale: string) {
+  return projectsLoader.getFeaturedProjects(locale);
+}
+
 export async function getProjectBySlug(slug: string, locale: string) {
   return projectsLoader.getProjectBySlug(slug, locale);
 }
@@ -36,6 +40,10 @@ export async function getAllActivitySlugs(): Promise<string[]> {
 
 export async function getAllActivities(locale: string) {
   return activitiesLoader.getAllActivities(locale);
+}
+
+export async function getFeaturedActivities(locale: string) {
+  return activitiesLoader.getFeaturedActivities(locale);
 }
 
 export async function getActivityBySlug(slug: string, locale: string) {

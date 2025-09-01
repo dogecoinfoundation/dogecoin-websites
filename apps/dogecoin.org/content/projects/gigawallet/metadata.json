@@ -1,0 +1,9 @@
+{
+  "date": "2025-01-15",
+  "tags": ["backend", "API", "integration", "payment", "dogecoin"],
+  "github": "https://github.com/dogecoin/gigawallet",
+  "website": "https://gigawallet.dogecoin.org",
+  "featured": true,
+  "image": "activity-gigawallet.gif",
+  "draft": false
+}
