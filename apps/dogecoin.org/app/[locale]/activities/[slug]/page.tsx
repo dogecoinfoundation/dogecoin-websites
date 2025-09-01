@@ -38,7 +38,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${activity.title} | Dogecoin Foundation`,
-    description: activity.excerpt || `Learn about ${activity.title}`,
+    description: activity.excerpt ?? `Learn about ${activity.title}`,
   };
 }
 
@@ -140,7 +140,7 @@ export default async function ActivityPage({ params }: PageProps) {
             </header>
 
             <div 
-              className="content-article-body prose"
+              className="post-content"
               dangerouslySetInnerHTML={{ __html: activity.html }}
             />
           </article>

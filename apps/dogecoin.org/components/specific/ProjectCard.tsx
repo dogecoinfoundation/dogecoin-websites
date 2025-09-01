@@ -9,15 +9,14 @@ interface ProjectCardProps {
   slug: string;
   title: string;
   image: string;
-  date: string;
-  excerpt?: string;
+  description?: string;
   draft?: boolean;
   tags?: string[];
-  links?: Array<{
+  links?: {
     label: string;
     url: string;
-    icon?: 'github' | 'web' | 'demo';
-  }>;
+    icon?: 'github' | 'web' | 'demo' | 'discord';
+  }[];
   locale: string;
   accentColor?: string;
 }
@@ -26,7 +25,7 @@ export function ProjectCard({
   slug,
   title,
   image,
-  excerpt,
+  description,
   draft = false,
   tags,
   links,
@@ -64,60 +63,61 @@ export function ProjectCard({
       )}
       
       <div className="content-card-body">
-        <h3 className="content-card-title">
-          <Link href={getNavPath(`/projects/${slug}`, locale)}>
-            {title}
-          </Link>
-        </h3>
+        <div className="content-card-top">
+          <h3 className="content-card-title">
+              {title}
+          </h3>
+          
+          {description && (
+            <p className="content-card-excerpt">{description}</p>
+          )}
+        </div>
         
-        {excerpt && (
-          <p className="content-card-excerpt">{excerpt}</p>
-        )}
-        
-        {tags && tags.length > 0 && (
-          <TagsWithOverflow tags={tags} />
-        )}
-        
-        {links && links.length > 0 && (
-          <div className="content-card-links-with-action">
-            <div className="content-card-links">
-              {links.map((link) => (
-                <a
-                  key={link.url}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="content-card-link"
-                >
-                  {link.icon && (
-                    <Image
-                      src={getAssetPath(`/assets/svg/icons/${link.icon}.svg`)}
-                      alt={link.label}
-                      width={32}
-                      height={32}
-                    />
-                  )}
-                </a>
-              ))}
+        <div className="content-card-bottom">
+          {tags && tags.length > 0 && (
+            <TagsWithOverflow tags={tags} />
+          )}
+          
+          {links && links.length > 0 ? (
+            <div className="content-card-links-with-action">
+              <div className="content-card-links">
+                {links.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="content-card-link"
+                  >
+                    {link.icon && (
+                      <Image
+                        src={getAssetPath(`/assets/svg/icons/${link.icon}.svg`)}
+                        alt={link.label}
+                        width={32}
+                        height={32}
+                      />
+                    )}
+                  </a>
+                ))}
+              </div>
+              <Link 
+                href={getNavPath(`/projects/${slug}`, locale)}
+                className="content-card-action-pill"
+              >
+                View project
+              </Link>
             </div>
-            <Link 
-              href={getNavPath(`/projects/${slug}`, locale)}
-              className="content-card-action-pill"
-            >
-              View project
-            </Link>
-          </div>
-        )}
-        
-        {(!links || links.length === 0) && (
-          <Link 
-            href={getNavPath(`/projects/${slug}`, locale)}
-            className="content-card-action-pill"
-            style={{ alignSelf: 'flex-end' }}
-          >
-            View project
-          </Link>
-        )}
+          ) : (
+            <div className="content-card-action-wrapper">
+              <Link 
+                href={getNavPath(`/projects/${slug}`, locale)}
+                className="content-card-action-pill"
+              >
+                View project
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
     </article>
   );

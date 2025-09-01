@@ -47,20 +47,20 @@ export default async function BlogPostPage({ params }: PageProps) {
     <Main>
       <Section>
         <Container>
-          <article className="blog-post">
-            <div className="blog-post-hero">
-              <div className="blog-post-hero-text">
-                <h1 className="blog-post-title">{post.title}</h1>
-                <div className="blog-post-meta">
-                  {post.author && <span className="blog-post-meta-text">{t.blog?.by ?? 'By'} {post.author} - {format(new Date(post.date), 'EEEE, MMM dd yyyy')}</span>}
+          <article className="post">
+            <div className="post-hero">
+              <div className="post-hero-text">
+                <h1 className="post-title">{post.title}</h1>
+                <div className="post-meta">
+                  {post.author && <span className="post-meta-text">{t.blog?.by ?? 'By'} {post.author} - {format(new Date(post.date), 'EEEE, MMM dd yyyy')}</span>}
                 </div>
               </div>
-              <div className="blog-post-hero-image">
+              <div className="post-hero-image">
                 <Image src={getAssetPath(post.image)} alt={post.title} fill className="object-cover" />
               </div>
             </div>
 
-            <div className="blog-post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
+            <div className="post-content" dangerouslySetInnerHTML={{ __html: post.html }} />
           </article>
         </Container>
       </Section>

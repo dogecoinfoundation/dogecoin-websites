@@ -10,13 +10,18 @@ interface ActivityCardProps {
   title: string;
   image: string;
   date: string;
-  excerpt?: string;
+  description?: string;
   draft?: boolean;
   badge?: {
     text: string;
     variant: 'primary' | 'secondary' | 'success' | 'warning';
   };
   tags?: string[];
+  links?: {
+    label: string;
+    url: string;
+    icon?: 'github' | 'web' | 'demo' | 'discord';
+  }[];
   locale: string;
 }
 
@@ -25,10 +30,11 @@ export function ActivityCard({
   title,
   image,
   date,
-  excerpt,
+  description,
   draft = false,
   badge,
   tags,
+  links,
   locale
 }: ActivityCardProps) {
   const formattedDate = new Date(date).toLocaleDateString(undefined, {
@@ -69,29 +75,63 @@ export function ActivityCard({
       </Link>
       
       <div className="content-card-body">
-        <time className="content-card-date">{formattedDate}</time>
+        <div className="content-card-top">
+          <time className="content-card-date">{formattedDate}</time>
+          
+          <h3 className="content-card-title">
+              {title}
+          </h3>
+          
+          {description && (
+            <p className="content-card-excerpt">{description}</p>
+          )}
+        </div>
         
-        <h3 className="content-card-title">
-          <Link href={getNavPath(`/activities/${slug}`, locale)}>
-            {title}
-          </Link>
-        </h3>
-        
-        {excerpt && (
-          <p className="content-card-excerpt">{excerpt}</p>
-        )}
-        
-        {tags && tags.length > 0 && (
-          <TagsWithOverflow tags={tags} />
-        )}
-        
-        <Link 
-          href={getNavPath(`/activities/${slug}`, locale)}
-          className="content-card-action-pill"
-          style={{ alignSelf: 'flex-end' }}
-        >
-          View activity
-        </Link>
+        <div className="content-card-bottom">
+          {tags && tags.length > 0 && (
+            <TagsWithOverflow tags={tags} />
+          )}
+          
+          {links && links.length > 0 ? (
+            <div className="content-card-links-with-action">
+              <div className="content-card-links">
+                {links.map((link) => (
+                  <a
+                    key={link.url}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="content-card-link"
+                  >
+                    {link.icon && (
+                      <Image
+                        src={getAssetPath(`/assets/svg/icons/${link.icon}.svg`)}
+                        alt={link.label}
+                        width={32}
+                        height={32}
+                      />
+                    )}
+                  </a>
+                ))}
+              </div>
+              <Link 
+                href={getNavPath(`/activities/${slug}`, locale)}
+                className="content-card-action-pill"
+              >
+                View activity
+              </Link>
+            </div>
+          ) : (
+            <div className="content-card-action-wrapper">
+              <Link 
+                href={getNavPath(`/activities/${slug}`, locale)}
+                className="content-card-action-pill"
+              >
+                View activity
+              </Link>
+            </div>
+          )}
+        </div>
       </div>
     </article>
   );

@@ -67,6 +67,8 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
                 links.push({ label: 'Demo', url: project.demo, icon: 'demo' as const });
               }
 
+              const tags = [...(project.tags ?? [])];
+
               // Cycle through accent colors
               const accentColor = accentColors[index % accentColors.length];
 
@@ -76,8 +78,8 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
                   slug={project.slug}
                   title={project.title}
                   image={project.image}
-                  excerpt={project.description}
-                  tags={project.tags}
+                  description={project.description}
+                  tags={tags}
                   draft={project.draft}
                   links={links}
                   locale={locale}

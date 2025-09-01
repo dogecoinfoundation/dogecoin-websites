@@ -63,7 +63,7 @@ export default async function ActivitiesPage({ params }: ActivitiesPageProps) {
 
           <ContentGrid>
             {activities.map((activity) => {
-              const tags = [...(activity.tags || [])];
+              const tags = [...(activity.tags ?? [])];
               if (activity.location) {
                 tags.push(activity.location);
               }
@@ -75,11 +75,11 @@ export default async function ActivitiesPage({ params }: ActivitiesPageProps) {
                   title={activity.title}
                   image={activity.image}
                   date={activity.date}
-                  excerpt={activity.description}
+                  description={activity.description}
                   draft={activity.draft}
                   badge={{
                     text: formatCategory(activity.category),
-                    variant: getBadgeVariant(activity.category) as any
+                    variant: getBadgeVariant(activity.category)
                   }}
                   tags={tags}
                   locale={locale}

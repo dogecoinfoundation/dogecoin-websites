@@ -5,7 +5,6 @@ import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary } from '@repo/internationalization';
 import Image from 'next/image';
-import { format } from 'date-fns';
 import { getAllProjectSlugs, getProjectBySlug } from '@/lib/content';
 import { getAssetPath } from '@/lib/assets';
 
@@ -38,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${project.title} | Dogecoin Foundation`,
-    description: project.excerpt || `Learn about ${project.title}`,
+    description: project.excerpt ?? `Learn about ${project.title}`,
   };
 }
 
@@ -78,9 +77,9 @@ export default async function ProjectPage({ params }: PageProps) {
                 <p className="content-article-excerpt">{project.excerpt}</p>
               )}
 
-              {project.technologies && project.technologies.length > 0 && (
+              {project.tags && project.tags.length > 0 && (
                 <div className="project-technologies">
-                  {project.technologies.map((tech) => (
+                  {project.tags.map((tech) => (
                     <span key={tech} className="project-tech-tag">
                       {tech}
                     </span>
@@ -152,7 +151,7 @@ export default async function ProjectPage({ params }: PageProps) {
             </header>
 
             <div 
-              className="content-article-body prose"
+              className="post-content"
               dangerouslySetInnerHTML={{ __html: project.html }}
             />
           </article>

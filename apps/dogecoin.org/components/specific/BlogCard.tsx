@@ -23,7 +23,7 @@ export function BlogCard({
   draft = false,
   locale
 }: BlogCardProps) {
-  const showDraftBadge = shouldShowDraftBadge(draft ?? false);
+  const showDraftBadge = shouldShowDraftBadge(draft);
   const badgeText = showDraftBadge ? type : type;
   const badgeClass = type === 'Article' ? 'blog-card-badge-article' : type === 'Important' ? 'blog-card-badge-important' : 'blog-card-badge-event';
   

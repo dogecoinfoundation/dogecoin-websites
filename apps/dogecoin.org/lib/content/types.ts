@@ -33,7 +33,8 @@ export interface BlogPost extends BlogPostMeta {
 }
 
 export interface ProjectMeta extends ContentMeta {
-  technologies?: string[];
+  tags?: string[];
+  description?: string;
   github?: string;
   demo?: string;
   website?: string;
@@ -49,6 +50,8 @@ export interface ActivityMeta extends ContentMeta {
   location?: string;
   participants?: number;
   featured?: boolean;
+  tags?: string[];
+  description?: string;
 }
 
 export interface Activity extends ActivityMeta {
