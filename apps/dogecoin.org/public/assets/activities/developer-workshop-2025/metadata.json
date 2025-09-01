@@ -1,10 +1,11 @@
 {
+  "title": "Developer Workshop 2025",
   "date": "2025-03-10",
   "category": "development",
   "location": "Online",
-  "participants": 100,
+  "tags": ["development", "workshop", "libdogecoin"],
   "featured": false,
   "image": "dev-workshop.png",
-  "excerpt": "Learn to build applications with libdogecoin",
+  "description": "Learn to build applications with libdogecoin",
   "draft": false
 }
