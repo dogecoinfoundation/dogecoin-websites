@@ -14,8 +14,8 @@ const protocol = env.VERCEL_PROJECT_PRODUCTION_URL?.startsWith('https')
 const url = new URL(`${protocol}://${env.VERCEL_PROJECT_PRODUCTION_URL}`);
 
 export function generateStaticParams() {
-  const locales = ["en", "es", "fr", "de", "it", "pt", "ru", "zh", "ko"];
-  return locales.map((locale) => ({
+  // Using centralized language config
+  return allLanguages.map((locale) => ({
     locale,
   }));
 }

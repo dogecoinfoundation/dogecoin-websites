@@ -1,3 +1,8 @@
+---
+humanReviewed: false
+translatedBy: AI
+translatedAt: '2025-09-01'
+---
 
 ---
 title: "재미있는 도지코인 프로젝트 2024"

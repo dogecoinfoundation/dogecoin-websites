@@ -3,7 +3,7 @@ import Container from '@/components/layout/Container';
 import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
-import { getDictionary } from '@repo/internationalization';
+import { getDictionary, allLanguages } from '@repo/internationalization';
 import Image from 'next/image';
 import { format } from 'date-fns';
 import { getAllBlogSlugs, getBlogPostBySlug } from '@/lib/content';
@@ -14,7 +14,7 @@ interface PageProps {
 }
 
 export async function generateStaticParams() {
-  const locales = ["en", "es", "fr", "de", "it", "pt", "ru", "zh", "ko"];
+  // Using centralized language config
   const slugs = await getAllBlogSlugs();
   
   const params = [];

@@ -1,3 +1,8 @@
+---
+humanReviewed: false
+translatedBy: AI
+translatedAt: '2025-09-01'
+---
 
 ---
 title: "Spaßige Dogecoin-Projekte 2024"

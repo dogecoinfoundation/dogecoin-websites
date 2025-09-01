@@ -1,3 +1,8 @@
+---
+humanReviewed: false
+translatedBy: AI
+translatedAt: '2025-09-01'
+---
 
 ---
 title: "Mises à jour du Fonds Core et de la Foundation Dogecoin"

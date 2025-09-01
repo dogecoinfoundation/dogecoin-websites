@@ -1,19 +1,18 @@
 import { match } from '@formatjs/intl-localematcher';
 import Negotiator from 'negotiator';
 import { type NextRequest, NextResponse } from 'next/server';
-import { locales } from '.';
-import languine from './languine.json';
+import { allLanguages, targetLanguages, defaultLanguage } from './languages';
 
 const getLocale = (request: NextRequest) => {
   const headers = Object.fromEntries(request.headers.entries());
   const languages = new Negotiator({ headers }).languages();
 
-  return match(languages, languine.locale.targets, languine.locale.source);
+  return match(languages, targetLanguages, defaultLanguage);
 };
 
 export const internationalizationMiddleware = (request: NextRequest) => {
   const { pathname } = request.nextUrl;
-  const pathnameHasLocale = locales.some(
+  const pathnameHasLocale = allLanguages.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
 

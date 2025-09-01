@@ -19,7 +19,7 @@ import { PartyModeButton } from '@/components/specific/PartyModeButton';
 import { ContentGrid } from '@/components/content/ContentGrid';
 import { getAssetPath } from '@/lib/assets';
 import { getFeaturedProjects, getFeaturedActivities } from '@/lib/content';
-import { getDictionary } from '@repo/internationalization';
+import { getDictionary, allLanguages } from '@repo/internationalization';
 import type { ProjectMeta, ActivityMeta } from '@/lib/content';
 
 interface HomeProps {
@@ -29,8 +29,8 @@ interface HomeProps {
 }
 
 export function generateStaticParams() {
-  const locales = ["en", "es", "fr", "de", "it", "pt", "ru", "zh", "ko"];
-  return locales.map((locale) => ({
+  // Using centralized language config
+  return allLanguages.map((locale) => ({
     locale,
   }));
 }

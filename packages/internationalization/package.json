@@ -4,11 +4,13 @@
   "private": true,
   "scripts": {
     "translate": "npx -y languine@latest translate",
+    "translation-review": "tsx translation-review-tool.ts",
     "clean": "git clean -xdf .cache .turbo dist node_modules",
     "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.6.0",
+    "gray-matter": "^4.0.3",
     "negotiator": "^1.0.0",
     "server-only": "^0.0.1"
   },

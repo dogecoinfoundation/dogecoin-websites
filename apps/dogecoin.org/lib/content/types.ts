@@ -1,6 +1,12 @@
 export type ContentType = 'blog' | 'projects' | 'activities';
 
-export interface ContentMeta {
+export interface TranslationReviewMeta {
+  humanReviewed?: boolean;
+  translatedBy?: string;
+  translatedAt?: string;
+}
+
+export interface ContentMeta extends TranslationReviewMeta {
   slug: string;
   title: string;
   date: string;

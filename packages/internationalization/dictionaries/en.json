@@ -1,12 +1,4 @@
 {
-  "example.com": {
-    "home": {
-      "meta": {
-        "title": "Some title",
-        "description": "Some description"
-      }
-    }
-  },
   "dogecoin.org": {
     "home": {
       "about": {
@@ -55,46 +47,7 @@
       },
       "sections": {
         "activity": {
-          "title": "Much activity",
-          "gigawallet": {
-            "title": "#GigaWallet",
-            "subtitle": "Open source project",
-            "text": "Dogecoin GigaWallet is a backend service which provides a convenient integration API for platforms such as online shops, exchanges, social media platforms etc, to accept and transact Dogecoin on behalf of their users.<br /><br />The purpose of the GigaWallet is to promote the rapid uptake of Dogecoin as a payment option, by taking the complexity and risk out of integrating Dogecoin payments into business.",
-            "primaryText": "Download",
-            "secondaryText": "Learn More"
-          },
-          "core": {
-            "title": "#Dogecoin Core",
-            "subtitle": "Open source project",
-            "text": "The Dogecoin Core software allows anyone to operate a node in the Dogecoin blockchain networks and uses the Scrypt hashing method for Proof of Work. It is adapted from Bitcoin Core and other cryptocurrencies.<br /><br />We contribute to the Dogecoin Core open source project via development, evangelism and education - and encourage you to as well.",
-            "primaryText": "Download",
-            "secondaryText": "Learn More"
-          },
-          "teamseas": {
-            "title": "#TeamSeas",
-            "subtitle": "Charitable",
-            "text": "The Dogecoin Foundation and community collaborated with MrBeast in 2021 on the #TeamSeas campaign (also known as CleanSeas). The initiative aimed to remove trash from oceans, rivers, and beaches.",
-            "primaryText": "Watch video",
-            "secondaryText": "Read press",
-            "keyPoints": [
-              "The goal was to raise funds to help remove 30 million pounds of trash from oceans",
-              "Each $1 donated removed 1 pound of trash",
-              "The Dogecoin community participated by donating DOGE",
-              "The campaign partnered with Ocean Conservancy and The Ocean Cleanup"
-            ]
-          },
-          "kabosu": {
-            "title": "#Kabosu Statue",
-            "subtitle": "Fun!",
-            "text": "The Dogecoin Foundation helped fund the permanent bronze statue of the Kabosu Shiba Inu (the original &quot;doge&quot; from the meme) in Sakura, Japan. This initiative took place in 2023.",
-            "primaryText": "Open in maps",
-            "keyPoints": [
-              "Kabosu is the real Shiba Inu dog from the original meme that inspired Dogecoin",
-              "The statue was placed in Sakura City, Japan (where Kabosu lives)",
-              "The project was a collaboration between the local government, the Dogecoin community, and Kabosu's owner Atsuko Sato",
-              "It was funded through community donations"
-            ]
-          }
+          "title": "Much activity"
         },
         "mission": {
           "title": "Such Mission",

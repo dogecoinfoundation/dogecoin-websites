@@ -5,7 +5,7 @@ import Container from '@/components/layout/Container';
 import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
-import { getDictionary } from '@repo/internationalization';
+import { getDictionary, allLanguages } from '@repo/internationalization';
 import { BlurEffect } from '@/components/common/BlurEffect';
 import { getAssetPath } from '@/lib/assets';
 
@@ -14,8 +14,8 @@ interface PageProps {
 }
 
 export function generateStaticParams() {
-  const locales = ["en", "es", "fr", "de", "it", "pt", "ru", "zh", "ko"];
-  return locales.map((locale) => ({
+  // Using centralized language config
+  return allLanguages.map((locale) => ({
     locale,
   }));
 }

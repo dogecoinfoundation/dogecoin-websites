@@ -1,9 +1,521 @@
 {
-  "example.com": {
-    "home": {
-      "meta": {
-        "title": "Un titre",
-        "description": "Une description"
+  "_meta": {
+    "language": "fr",
+    "reviewStatus": {
+      "dogecoin.org.home.about.hero.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.hero.intro": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.hero.bulletPoints": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.hero.subtitleBefore": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.hero.subtitleHighlight": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.hero.subtitleAfter": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.manifesto.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.manifesto.intro": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.manifesto.cards": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.manifesto.signatoriesTitle": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.manifesto.sign.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.manifesto.sign.text": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.manifesto.sign.button": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.history.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.history.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.about.history.description2": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.meta.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.meta.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.hero.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.hero.subtitle": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.hero.tagline": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.gigawallet.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.gigawallet.subtitle": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.gigawallet.text": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.gigawallet.primaryText": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.gigawallet.secondaryText": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.core.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.core.subtitle": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.core.text": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.core.primaryText": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.core.secondaryText": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.teamseas.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.teamseas.subtitle": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.teamseas.text": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.teamseas.primaryText": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.teamseas.secondaryText": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.teamseas.keyPoints": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.kabosu.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.kabosu.subtitle": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.kabosu.text": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.kabosu.primaryText": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.activity.kabosu.keyPoints": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.mission.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.mission.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.mission.cards": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.whyDonate.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.whyDonate.reasons.development.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.whyDonate.reasons.development.text": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.whyDonate.reasons.community.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.whyDonate.reasons.community.text": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.whyDonate.reasons.education.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.whyDonate.reasons.education.text": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.steps.select": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.steps.scan": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.steps.walletAddress": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.buttons.69.quote": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.buttons.1337.quote": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.buttons.9999.quote": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.buttons.custom.validationError": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.copy.button": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.copy.success": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.donation.copy.checkItOut": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.members.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.members.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.members.profiles.donna.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.members.profiles.dereck.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.members.profiles.david.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.members.profiles.debbie.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.members.profiles.dick.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.members.profiles.erick.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.partners.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.partners.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.partners.houseOfDoge.name": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.partners.houseOfDoge.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.sections.partners.houseOfDoge.buttonText": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.projects.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.projects.viewProject": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.projects.viewAllProjects": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.activities.viewActivity": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.activities.viewAllActivities": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.navigation.home": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.navigation.about": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.navigation.projects": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.navigation.activities": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.navigation.blog": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.blog.by": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.description": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.sections.main.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.sections.main.links.home": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.sections.main.links.about": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.sections.main.links.news": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.sections.social.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.sections.social.links.x": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.sections.social.links.github": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.sections.social.links.discord": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.sections.legal.title": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.sections.legal.links.trademarks": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.sections.legal.links.privacy": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.copyright": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
+      },
+      "dogecoin.org.home.footer.backToTop": {
+        "humanReviewed": false,
+        "translatedBy": "AI",
+        "translatedAt": "2025-09-01"
       }
     }
   },
@@ -26,10 +538,22 @@
           "title": "Le Manifeste Dogecoin",
           "intro": "Nous développons une monnaie pour le peuple, et nous nous efforçons de ne faire que le bien chaque jour. À travers ce travail, nous en sommes venus à valoriser :",
           "cards": [
-            { "title": "Être utile", "text": "Nous valorisons l'utilité plutôt que le génie technique." },
-            { "title": "Être convivial", "text": "Nous valorisons les individus et les interactions plutôt qu'une économie axée sur le profit." },
-            { "title": "Être accueillant", "text": "Nous valorisons la collaboration et la confiance plutôt que la compétition et l'exclusivité." },
-            { "title": "Être fiable", "text": "Nous valorisons les solutions fonctionnelles plutôt que la vitesse de livraison." }
+            {
+              "title": "Être utile",
+              "text": "Nous valorisons l'utilité plutôt que le génie technique."
+            },
+            {
+              "title": "Être convivial",
+              "text": "Nous valorisons les individus et les interactions plutôt qu'une économie axée sur le profit."
+            },
+            {
+              "title": "Être accueillant",
+              "text": "Nous valorisons la collaboration et la confiance plutôt que la compétition et l'exclusivité."
+            },
+            {
+              "title": "Être fiable",
+              "text": "Nous valorisons les solutions fonctionnelles plutôt que la vitesse de livraison."
+            }
           ],
           "signatoriesTitle": "Signataires",
           "sign": {
@@ -55,78 +579,43 @@
       },
       "sections": {
         "activity": {
-          "title": "Beaucoup d'activité",
-          "gigawallet": {
-            "title": "#GigaWallet",
-            "subtitle": "Projet open source",
-            "text": "Dogecoin GigaWallet est un service backend qui fournit une API d'intégration pratique pour des plateformes telles que des boutiques en ligne, des échanges, des réseaux sociaux, etc., pour accepter et effectuer des transactions en Dogecoin au nom de leurs utilisateurs.<br /><br />Le but du GigaWallet est de promouvoir l'adoption rapide du Dogecoin comme option de paiement, en éliminant la complexité et le risque d'intégrer les paiements en Dogecoin dans les entreprises.",
-            "primaryText": "Télécharger",
-            "secondaryText": "En savoir plus"
-          },
-          "core": {
-            "title": "#Dogecoin Core",
-            "subtitle": "Projet open source",
-            "text": "Le logiciel Dogecoin Core permet à quiconque d'exploiter un nœud dans les réseaux blockchain Dogecoin et utilise la méthode de hachage Scrypt pour la preuve de travail. Il est adapté de Bitcoin Core et d'autres cryptomonnaies.<br /><br />Nous contribuons au projet open source Dogecoin Core par le développement, l'évangélisation et l'éducation - et vous encourageons à le faire également.",
-            "primaryText": "Télécharger",
-            "secondaryText": "En savoir plus"
-          },
-          "teamseas": {
-            "title": "#TeamSeas",
-            "subtitle": "Caritatif",
-            "text": "La Fondation Dogecoin et la communauté ont collaboré avec MrBeast en 2021 sur la campagne #TeamSeas (également connue sous le nom de CleanSeas). L'initiative visait à éliminer les déchets des océans, des rivières et des plages.",
-            "primaryText": "Regarder la vidéo",
-            "secondaryText": "Lire la presse"
-          },
-          "kabosu": {
-            "title": "#Statue de Kabosu",
-            "subtitle": "Amusant !",
-            "text": "La Fondation Dogecoin a aidé à financer la statue en bronze permanente du Kabosu Shiba Inu (le « doge » original du mème) à Sakura, au Japon. Cette initiative a eu lieu en 2023.",
-            "primaryText": "Ouvrir dans les cartes"
-          }
+          "title": "Beaucoup d'activité"
         },
         "mission": {
           "title": "Telle Mission",
           "description": "Notre mission est de promouvoir le développement et l'adoption de Dogecoin comme une cryptomonnaie amusante, accessible et inclusive.",
           "cards": [
             {
-              "id": 1,
               "title": "Accessibilité",
-              "description": "Rendre la cryptomonnaie accessible à tous, indépendamment du bagage technique ou du statut financier."
+              "description": "Rendre la cryptomonnaie accessible à tous, quel que soit leur background technique ou leur statut financier."
             },
             {
-              "id": 2,
               "title": "Communauté",
-              "description": "Construire et nourrir une communauté forte et inclusive qui se soutient mutuellement et répand la gentillesse."
+              "description": "Construire et nourrir une communauté forte et inclusive qui se soutient mutuellement et répand la bienveillance."
             },
             {
-              "id": 3,
               "title": "Innovation",
-              "description": "Promouvoir l'innovation dans la technologie blockchain tout en maintenant la simplicité et la facilité d'utilisation."
+              "description": "Stimuler l'innovation dans la technologie blockchain tout en maintenant simplicité et facilité d'utilisation."
             },
             {
-              "id": 4,
               "title": "Éducation",
-              "description": "Fournir des ressources éducatives pour aider les gens à comprendre et utiliser la cryptomonnaie en toute sécurité."
+              "description": "Fournir des ressources éducatives pour aider les gens à comprendre et utiliser les cryptomonnaies en toute sécurité."
             },
             {
-              "id": 5,
               "title": "Charité",
               "description": "Soutenir des causes caritatives et des initiatives communautaires qui rendent le monde meilleur."
             },
             {
-              "id": 6,
               "title": "Transparence",
               "description": "Maintenir la transparence dans toutes nos opérations et processus de prise de décision."
             },
             {
-              "id": 7,
               "title": "Durabilité",
               "description": "Assurer la durabilité et la croissance à long terme de l'écosystème Dogecoin."
             },
             {
-              "id": 8,
-              "title": "Amusement",
-              "description": "Maintenir l'esprit amusant et décontracté qui rend Dogecoin unique et agréable."
+              "title": "Plaisir",
+              "description": "Garder l'esprit amusant et léger qui rend Dogecoin unique et agréable."
             }
           ]
         },
@@ -134,24 +623,24 @@
           "title": "Dogecoin Inspire la Générosité",
           "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.. Diam feugiat cras sollicitudin id. Nec viverra vel et morbi integer.. Neque commodo urna pharetra fames. Eu massa non bibendum egestas.",
           "whyDonate": {
-            "title": "Pourquoi faire un don ?",
+            "title": "Pourquoi donner ?",
             "reasons": {
               "development": {
                 "title": "Développement",
-                "text": "Aidez à financer le développement et la maintenance continus de l'infrastructure du réseau Dogecoin."
+                "text": "Aidez à financer le développement continu et la maintenance de l'infrastructure du réseau Dogecoin."
               },
               "community": {
-                "title": "Projets communautaires",
-                "text": "Contribuez à des initiatives caritatives et à des projets dirigés par la communauté qui répandent la gentillesse."
+                "title": "Projets Communautaires",
+                "text": "Contribuer aux initiatives caritatives et projets communautaires qui répandent la bienveillance."
               },
               "education": {
-                "title": "Ressources éducatives",
-                "text": "Soutenez le contenu éducatif et les ressources pour aider les gens à en apprendre davantage sur les cryptomonnaies."
+                "title": "Ressources Éducatives",
+                "text": "Soutenir le contenu éducatif et les ressources pour aider les gens à apprendre sur les cryptomonnaies."
               }
             }
           },
           "steps": {
-            "select": "1. Sélectionner un don",
+            "select": "1. Sélectionner la donation",
             "scan": "2. Scanner pour envoyer",
             "walletAddress": "Adresse du portefeuille :"
           },
@@ -166,13 +655,13 @@
               "quote": "Ne payez pas 10k"
             },
             "custom": {
-              "validationError": "Veuillez entrer un numéro valide (par exemple, 420 ou 420.69)"
+              "validationError": "Veuillez entrer un nombre valide (ex., 420 ou 420.69)"
             }
           },
           "copy": {
             "button": "Copier",
             "success": "Copié !",
-            "checkItOut": "Jetez-y un œil"
+            "checkItOut": "Jetez-y un coup d'œil"
           }
         },
         "members": {
@@ -180,7 +669,7 @@
           "description": "Lorem ipsum dolor sit amet consectetur.",
           "profiles": {
             "donna": {
-              "description": "Extraordinaire front-end"
+              "description": "Extraordinaire du front-end"
             },
             "dereck": {
               "description": "Essaie de concevoir"
@@ -189,13 +678,13 @@
               "description": "Pas sûr de ce qu'il fait"
             },
             "debbie": {
-              "description": "Ninja back-end"
+              "description": "Ninja du back-end"
             },
             "dick": {
-              "description": "Quelque chose à voir avec le front-end"
+              "description": "Quelque chose en rapport avec le front-end"
             },
             "erick": {
-              "description": "Assistant junior"
+              "description": "Assistant Junior"
             }
           }
         },
@@ -203,9 +692,9 @@
           "title": "Nos partenaires",
           "description": "Lorem ipsum dolor sit amet consectetur. Suspendisse quam odio neque nulla sed.",
           "houseOfDoge": {
-            "name": "Maison de Doge",
-            "description": "Partenaires corporatifs officiels de la Fondation Dogecoin, engagés à transformer Dogecoin en une plateforme de paiement et une monnaie mondiale entièrement intégrées et accessibles. Leur mission est de faire avancer l'adoption généralisée de Dogecoin en améliorant son utilité par une application dans le monde réel.",
-            "buttonText": "Visitez la Maison de Doge"
+            "name": "House of Doge",
+            "description": "Partenaires corporatifs officiels de la Fondation Dogecoin, engagés à transformer Dogecoin en une plateforme de paiement et monnaie globale entièrement intégrée et accessible. Leur mission est de faire avancer l'adoption mainstream de Dogecoin en améliorant son utilité grâce aux applications du monde réel.",
+            "buttonText": "Visiter House of Doge"
           }
         }
       },
@@ -257,32 +746,6 @@
         },
         "copyright": "©Copyright 2025, Fondation Dogecoin. Tous droits réservés.",
         "backToTop": "Retour en haut"
-      }
-    }
-  },
-  "dogecoin": {
-    "org": {
-      "home": {
-        "sections": {
-          "activity": {
-            "teamseas": {
-              "keyPoints": [
-                "L'objectif était de collecter des fonds pour aider à enlever 30 millions de livres de déchets des océans",
-                "Chaque dollar donné a permis d'enlever 1 livre de déchets",
-                "La communauté Dogecoin a participé en faisant des dons en DOGE",
-                "La campagne a collaboré avec Ocean Conservancy et The Ocean Cleanup"
-              ]
-            },
-            "kabosu": {
-              "keyPoints": [
-                "Kabosu est le véritable chien Shiba Inu du mème original qui a inspiré Dogecoin",
-                "La statue a été placée dans la ville de Sakura, au Japon (où vit Kabosu)",
-                "Le projet était une collaboration entre le gouvernement local, la communauté Dogecoin et la propriétaire de Kabosu, Atsuko Sato",
-                "Il a été financé par des dons de la communauté"
-              ]
-            }
-          }
-        }
       }
     }
   }

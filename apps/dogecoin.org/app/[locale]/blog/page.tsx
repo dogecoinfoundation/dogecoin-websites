@@ -5,7 +5,7 @@ import Container from '@/components/layout/Container';
 import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
-import { getDictionary } from '@repo/internationalization';
+import { getDictionary, allLanguages } from '@repo/internationalization';
 import { getAllBlogPosts } from '@/lib/content';
 import { getAssetPath, getNavPath } from '@/lib/assets';
 import { shouldShowDraftBadge } from '@/lib/content/utils';
@@ -15,8 +15,7 @@ interface BlogIndexProps {
 }
 
 export function generateStaticParams() {
-  const locales = ["en", "es", "fr", "de", "it", "pt", "ru", "zh", "ko"];
-  return locales.map((locale) => ({
+  return allLanguages.map((locale) => ({
     locale,
   }));
 }
