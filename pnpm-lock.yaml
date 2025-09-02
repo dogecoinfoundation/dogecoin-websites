@@ -527,6 +527,9 @@ importers:
       '@formatjs/intl-localematcher':
         specifier: ^0.6.0
         version: 0.6.1
+      gray-matter:
+        specifier: ^4.0.3
+        version: 4.0.3
       negotiator:
         specifier: ^1.0.0
         version: 1.0.0
