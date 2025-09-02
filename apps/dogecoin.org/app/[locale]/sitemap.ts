@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import { env } from '@/env';
 import type { MetadataRoute } from 'next';
+import { allLanguages } from '@repo/internationalization';
 
 const appFolders = fs.readdirSync('app', { withFileTypes: true });
 const pages = appFolders

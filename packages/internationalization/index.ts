@@ -62,7 +62,11 @@ export const getDictionary = async (locale: string) => {
   }
   
   // For other languages, merge with English as fallback
-  const englishDictionary = await dictionaries[defaultLanguage]();
+  const englishDict = dictionaries[defaultLanguage as keyof typeof locales];
+  if (!englishDict) {
+    return dictionary;
+  }
+  const englishDictionary = await englishDict();
   const mergedDictionary = deepMerge(dictionary, englishDictionary);
 
   return mergedDictionary;

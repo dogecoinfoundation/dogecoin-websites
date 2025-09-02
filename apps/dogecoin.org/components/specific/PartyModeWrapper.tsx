@@ -213,10 +213,13 @@ export function PartyModeWrapper({ children }: PartyModeWrapperProps) {
   return (
     <div className={isPartyMode ? 'party-mode' : ''}>
       {React.Children.map(children, (child) => {
-        if (React.isValidElement(child) && child.type === 'button' && child.props.className?.includes('party-mode-button')) {
-          return React.cloneElement(child as React.ReactElement<any>, {
-            onClick: activatePartyMode
-          });
+        if (React.isValidElement(child) && child.type === 'button') {
+          const props = child.props as any;
+          if (props.className?.includes('party-mode-button')) {
+            return React.cloneElement(child as React.ReactElement<any>, {
+              onClick: activatePartyMode
+            });
+          }
         }
         return child;
       })}

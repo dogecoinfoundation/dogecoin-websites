@@ -54,7 +54,9 @@ export function TagsWithOverflow({
     const overflowButtonWidth = 50; // Approximate width for "..." button
 
     for (let i = 0; i < Math.min(tags.length, measureTags.length); i++) {
-      const tagWidth = measureTags[i].getBoundingClientRect().width;
+      const tagElement = measureTags[i];
+      if (!tagElement) continue;
+      const tagWidth = tagElement.getBoundingClientRect().width;
       const widthWithGap = totalWidth + (i > 0 ? gap : 0) + tagWidth;
       
       // Check if we need overflow button space
