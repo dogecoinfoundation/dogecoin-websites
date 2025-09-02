@@ -17,7 +17,7 @@ export async function generateStaticParams() {
   const slugs = await getAllProjectSlugs();
   
   const params = [];
-  for (const locale of locales) {
+  for (const locale of allLanguages) {
     for (const slug of slugs) {
       params.push({ locale, slug });
     }
