@@ -10,6 +10,7 @@ import type { DogecoinDictionary } from '@/types/dictionary';
 import { getAllBlogPosts } from '@/lib/content';
 import { getAssetPath, getNavPath } from '@/lib/assets';
 import { shouldShowDraftBadge } from '@/lib/content/utils';
+import { ContentPageHeader } from '@/components/content/ContentPageHeader';
 
 interface BlogIndexProps {
   params: Promise<{ locale: string }>;
@@ -45,28 +46,7 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
     <Main>
       <Section>
         <Container>
-          <div className="section-heading-container">
-            <div className="blog-title-row">
-              <Image
-                  className="blog-title-left"
-                  src={getAssetPath("/assets/svg/blog/title-left.svg")}
-                  alt="Section heading underline"
-                  width={91}
-                  height={145}
-              />
-              <div className="blog-title-center">
-                <h3 className="section-heading">Blog</h3>
-                <p className="blog-section-description">Updates, events, and important news from the Dogecoin Foundation.</p>
-              </div>
-                <Image
-                    className="blog-title-right"
-                    src={getAssetPath("/assets/svg/blog/title-right.svg")}
-                    alt="Section heading underline"
-                    width={91}
-                    height={145}
-                />
-            </div>
-          </div>
+          <ContentPageHeader title="Blog" />
 
           {years.map((year) => (
             <div key={year} className="blog-year-section">

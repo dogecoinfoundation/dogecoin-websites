@@ -6,9 +6,9 @@ import { Footer } from '@/components/layout/Footer';
 import { getDictionary, allLanguages } from '@repo/internationalization';
 import type { DogecoinDictionary } from '@/types/dictionary';
 import { getAllActivities } from '@/lib/content';
-import { SearchBar } from '@/components/content/SearchBar';
 import { ContentGrid } from '@/components/content/ContentGrid';
 import { ActivityCard } from '@/components/specific/ActivityCard';
+import { ContentPageHeader } from '@/components/content/ContentPageHeader';
 
 interface ActivitiesPageProps {
   params: Promise<{ locale: string }>;
@@ -53,13 +53,7 @@ export default async function ActivitiesPage({ params }: ActivitiesPageProps) {
     <Main>
       <Section>
         <Container>
-          <div className="flex justify-between items-center mb-8">
-            <h1 className="section-heading">Dogecoin Activities</h1>
-            <SearchBar 
-              placeholder="Search activities..." 
-              className="content-search-bar max-w-sm"
-            />
-          </div>
+          <ContentPageHeader title="Dogecoin Activities" />
 
           <ContentGrid>
             {activities.map((activity) => {

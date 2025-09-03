@@ -6,9 +6,9 @@ import { Footer } from '@/components/layout/Footer';
 import { getDictionary, allLanguages } from '@repo/internationalization';
 import type { DogecoinDictionary } from '@/types/dictionary';
 import { getAllProjects } from '@/lib/content';
-import { SearchBar } from '@/components/content/SearchBar';
 import { ContentGrid } from '@/components/content/ContentGrid';
 import { ProjectCard } from '@/components/specific/ProjectCard';
+import { ContentPageHeader } from '@/components/content/ContentPageHeader';
 
 interface ProjectsPageProps {
   params: Promise<{ locale: string }>;
@@ -46,13 +46,7 @@ export default async function ProjectsPage({ params }: ProjectsPageProps) {
     <Main>
       <Section>
         <Container>
-          <div className="flex justify-between items-center mb-8">
-            <h1 className="section-heading">Dogecoin projects</h1>
-            <SearchBar 
-              placeholder="Search projects..." 
-              className="content-search-bar max-w-sm"
-            />
-          </div>
+          <ContentPageHeader title="Dogecoin projects" />
 
           <ContentGrid>
             {projects.map((project, index) => {
