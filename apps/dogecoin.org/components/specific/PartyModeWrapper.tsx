@@ -9,7 +9,7 @@ function usePartyMode() {
   const originalSrcsRef = useRef<Map<HTMLImageElement, string>>(new Map());
 
   const switchToPartyImages = () => {
-    const allImages = document.querySelectorAll('img') as NodeListOf<HTMLImageElement>;
+    const allImages = document.querySelectorAll('img');
     let convertedCount = 0;
     
     allImages.forEach((img) => {
@@ -37,7 +37,7 @@ function usePartyMode() {
       img.src = convertToPartySrc(img.src);
       if (img.srcset) {
         img.srcset = img.srcset.replace(/url=([^&]+)/g, (match, url) => {
-          const decodedUrl = decodeURIComponent(url);
+          const decodedUrl = decodeURIComponent(url as string);
           const partyUrl = addPartyToFilename(decodedUrl);
           return `url=${encodeURIComponent(partyUrl)}`;
         });
@@ -84,7 +84,7 @@ function usePartyMode() {
   const convertToPartySrc = (src: string) => {
     if (src.includes('/_next/image')) {
       const url = new URL(src);
-      const originalPath = decodeURIComponent(url.searchParams.get('url') || '');
+      const originalPath = decodeURIComponent(url.searchParams.get('url') ?? '');
       url.searchParams.set('url', addPartyToFilename(originalPath));
       url.searchParams.set('v', Date.now().toString());
       return url.toString();
@@ -112,7 +112,7 @@ function usePartyMode() {
     const y = (rect.top + rect.height / 2) / window.innerHeight;
     
     // Main confetti burst
-    confetti({
+    void confetti({
       particleCount: 100,
       spread: 180,
       origin: { x, y },
@@ -121,7 +121,7 @@ function usePartyMode() {
     });
     
     // Add some doge colours
-    confetti({
+    void confetti({
       particleCount: 30,
       spread: 60,
       origin: { x, y },
@@ -158,13 +158,14 @@ function usePartyMode() {
     }
     
     // Fix any flags that were previously converted
-    const flagImages = document.querySelectorAll('img[class*="flag"], img[src*="flags"]') as NodeListOf<HTMLImageElement>;
+    const flagImages = document.querySelectorAll('img[class*="flag"], img[src*="flags"]');
     flagImages.forEach(img => {
-      const originalSrcset = img.getAttribute('data-original-srcset');
+      const imgElement = img as HTMLImageElement;
+      const originalSrcset = imgElement.getAttribute('data-original-srcset');
       if (originalSrcset) {
-        img.srcset = originalSrcset;
-        img.src = img.src.replace('-party', '');
-        img.removeAttribute('data-original-srcset');
+        imgElement.srcset = originalSrcset;
+        imgElement.src = imgElement.src.replace('-party', '');
+        imgElement.removeAttribute('data-original-srcset');
       }
     });
     
@@ -214,9 +215,9 @@ export function PartyModeWrapper({ children }: PartyModeWrapperProps) {
     <div className={isPartyMode ? 'party-mode' : ''}>
       {React.Children.map(children, (child) => {
         if (React.isValidElement(child) && child.type === 'button') {
-          const props = child.props as any;
+          const props = child.props as { className?: string; onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void };
           if (props.className?.includes('party-mode-button')) {
-            return React.cloneElement(child as React.ReactElement<any>, {
+            return React.cloneElement(child as React.ReactElement<{ className?: string; onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void }>, {
               onClick: activatePartyMode
             });
           }
