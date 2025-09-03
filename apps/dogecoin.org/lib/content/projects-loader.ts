@@ -16,12 +16,12 @@ export class ProjectsLoader extends ContentLoader {
     const items = await this.getAllContentWithExtractedData(locale);
     return items.map(item => ({
       ...item,
-      technologies: item.technologies ?? [],
-      description: item.description,
-      github: item.github,
-      demo: item.demo,
-      website: item.website,
-      featured: item.featured ?? false
+      tags: item.tags as string[] | undefined,
+      description: item.description as string | undefined,
+      github: item.github as string | undefined,
+      demo: item.demo as string | undefined,
+      website: item.website as string | undefined,
+      featured: (item.featured as boolean | undefined) ?? false
     } as ProjectMeta));
   }
 
@@ -36,12 +36,12 @@ export class ProjectsLoader extends ContentLoader {
     
     return {
       ...item,
-      technologies: item.technologies ?? [],
-      description: item.description,
-      github: item.github,
-      demo: item.demo,
-      website: item.website,
-      featured: item.featured ?? false
+      tags: item.tags as string[] | undefined,
+      description: item.description as string | undefined,
+      github: item.github as string | undefined,
+      demo: item.demo as string | undefined,
+      website: item.website as string | undefined,
+      featured: (item.featured as boolean | undefined) ?? false
     } as Project;
   }
 }

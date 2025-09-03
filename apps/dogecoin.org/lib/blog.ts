@@ -219,11 +219,11 @@ function preprocessMarkdown(content: string, slug: string): string {
       for (; j < lines.length; j += 1) {
         const l = String(lines[j] ?? '');
         if (/^\s*$/.test(l)) break;
-        const mDash = l.match(/^\s*[-*]\s+(.+)$/);
-        const mNum = l.match(/^\s*\d+\.\s+(.+)$/);
-        if (mDash && mDash[1] != null) {
+        const mDash = /^\s*[-*]\s+(.+)$/.exec(l);
+        const mNum = /^\s*\d+\.\s+(.+)$/.exec(l);
+        if (mDash?.[1] != null) {
           items.push(mDash[1]);
-        } else if (mNum && mNum[1] != null) {
+        } else if (mNum?.[1] != null) {
           items.push(mNum[1]);
         } else {
           // Not a list item, stop block

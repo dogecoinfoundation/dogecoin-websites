@@ -4,6 +4,7 @@ import { Comic_Neue, Montserrat, Jura } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/layout/Nav";
 import { getDictionary } from '@repo/internationalization';
+import type { DogecoinDictionary } from '@/types/dictionary';
 
 const comicNeue = Comic_Neue({
   variable: "--font-comic-neue",
@@ -36,10 +37,10 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
-  const dictionary = await getDictionary(locale);
+  const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const navTranslations = dictionary["dogecoin.org"].home.navigation;
   return (
-    <html lang={locale ?? 'en'}>
+    <html lang={locale || 'en'}>
       <head>
         <script
           type="module"

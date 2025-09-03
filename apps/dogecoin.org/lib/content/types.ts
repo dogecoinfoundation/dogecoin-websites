@@ -13,7 +13,7 @@ export interface ContentMeta extends TranslationReviewMeta {
   image: string;
   excerpt?: string;
   draft?: boolean;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export interface ContentItem extends ContentMeta {

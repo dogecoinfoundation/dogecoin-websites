@@ -6,6 +6,7 @@ import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary, allLanguages } from '@repo/internationalization';
+import type { DogecoinDictionary } from '@/types/dictionary';
 import { BlurEffect } from '@/components/common/BlurEffect';
 import { getAssetPath } from '@/lib/assets';
 
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 
 export default async function AboutPage({ params }: PageProps) {
   const { locale } = await params;
-  const dictionary = await getDictionary(locale);
+  const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const t = dictionary['dogecoin.org'].home;
   const ta = t.about;
 
@@ -45,7 +46,7 @@ export default async function AboutPage({ params }: PageProps) {
                   {ta.hero.intro}
                 </p>
                 <ul className="about-hero-bullet-list">
-                  {(ta.hero.bulletPoints || []).map((text: string) => (
+                  {ta.hero.bulletPoints.map((text: string) => (
                     <li key={text} className="activity-key-points-item">
                       <span
                         className="activity-key-points-bullet"
@@ -101,8 +102,8 @@ export default async function AboutPage({ params }: PageProps) {
               height={26}
             />
                 </div>
-                <h4 className="about-manifesto-card-title about-manifesto-card-title-useful">{ta.manifesto.cards?.[0]?.title}</h4>
-                <p className="about-manifesto-card-text">{ta.manifesto.cards?.[0]?.text}</p>
+                <h4 className="about-manifesto-card-title about-manifesto-card-title-useful">{ta.manifesto.cards[0]?.title}</h4>
+                <p className="about-manifesto-card-text">{ta.manifesto.cards[0]?.text}</p>
               </div>
 
               {/* Being personable */}
@@ -115,8 +116,8 @@ export default async function AboutPage({ params }: PageProps) {
               height={26}
             />
                 </div>
-                <h4 className="about-manifesto-card-title about-manifesto-card-title-personable">{ta.manifesto.cards?.[1]?.title}</h4>
-                <p className="about-manifesto-card-text">{ta.manifesto.cards?.[1]?.text}</p>
+                <h4 className="about-manifesto-card-title about-manifesto-card-title-personable">{ta.manifesto.cards[1]?.title}</h4>
+                <p className="about-manifesto-card-text">{ta.manifesto.cards[1]?.text}</p>
               </div>
 
               {/* Being welcoming */}
@@ -129,8 +130,8 @@ export default async function AboutPage({ params }: PageProps) {
               height={26}
             />
                 </div>
-                <h4 className="about-manifesto-card-title about-manifesto-card-title-welcoming">{ta.manifesto.cards?.[2]?.title}</h4>
-                <p className="about-manifesto-card-text">{ta.manifesto.cards?.[2]?.text}</p>
+                <h4 className="about-manifesto-card-title about-manifesto-card-title-welcoming">{ta.manifesto.cards[2]?.title}</h4>
+                <p className="about-manifesto-card-text">{ta.manifesto.cards[2]?.text}</p>
               </div>
 
               {/* Being reliable */}
@@ -143,8 +144,8 @@ export default async function AboutPage({ params }: PageProps) {
               height={26}
             />
                 </div>
-                <h4 className="about-manifesto-card-title about-manifesto-card-title-reliable">{ta.manifesto.cards?.[3]?.title}</h4>
-                <p className="about-manifesto-card-text">{ta.manifesto.cards?.[3]?.text}</p>
+                <h4 className="about-manifesto-card-title about-manifesto-card-title-reliable">{ta.manifesto.cards[3]?.title}</h4>
+                <p className="about-manifesto-card-text">{ta.manifesto.cards[3]?.text}</p>
               </div>
             </div>
 

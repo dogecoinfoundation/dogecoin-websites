@@ -5,6 +5,7 @@
  */
 export function getAssetPath(path: string): string {
   // Use the same logic as next.config.ts
+  // eslint-disable-next-line no-restricted-properties, turbo/no-undeclared-env-vars
   const isStaticExport = process.env.STATIC_EXPORT === 'true';
   const basePath = isStaticExport ? '/dogecoin-websites' : '';
   
@@ -17,7 +18,7 @@ export function getAssetPath(path: string): string {
  * @param locale - The current locale (e.g., 'en', 'es', etc.)
  * @returns The navigation path with locale prefix (Next.js handles base path automatically)
  */
-export function getNavPath(path: string, locale: string = 'en'): string {
+export function getNavPath(path: string, locale = 'en'): string {
   // For home path, just return locale
   if (path === '/') {
     return `/${locale}`;
@@ -33,6 +34,7 @@ export function getNavPath(path: string, locale: string = 'en'): string {
 export function getClientBasePath(): string {
   if (typeof window === 'undefined') {
     // Server side - use env variable
+    // eslint-disable-next-line no-restricted-properties, turbo/no-undeclared-env-vars
     return process.env.STATIC_EXPORT === 'true' ? '/dogecoin-websites' : '';
   }
   
@@ -57,7 +59,7 @@ export function getClientAssetPath(path: string): string {
  * @param locale - The current locale (e.g., 'en', 'es', etc.)
  * @returns The navigation path with locale prefix (Next.js router handles base path automatically)
  */
-export function getClientNavPath(path: string, locale: string = 'en'): string {
+export function getClientNavPath(path: string, locale = 'en'): string {
   // For client-side navigation, don't add base path - Next.js router handles it automatically
   // For home path, just return locale
   if (path === '/') {

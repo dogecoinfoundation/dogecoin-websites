@@ -3,10 +3,10 @@
 import React from 'react';
 import { BlurEffect } from '@/components/common/BlurEffect';
 
-type MissionCard = {
+interface MissionCard {
   title: string;
   description: string;
-};
+}
 
 interface MissionCardsProps {
   cards: MissionCard[];

@@ -5,9 +5,10 @@ import { Logo } from '@/components/common/Logo';
 import Image from 'next/image';
 import Link from 'next/link';
 import { getAssetPath } from '@/lib/assets';
+import type { DogecoinDictionary } from '@/types/dictionary';
 
 interface FooterProps {
-  t: any; // Dictionary object for translations
+  t: DogecoinDictionary["dogecoin.org"]["home"];
 }
 
 export function Footer({ t }: FooterProps) {

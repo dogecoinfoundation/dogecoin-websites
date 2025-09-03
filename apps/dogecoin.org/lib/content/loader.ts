@@ -11,17 +11,18 @@ export class ContentLoader {
     this.config = config;
   }
 
-  private async loadLocalMetadata(itemFolder: string): Promise<Record<string, any>> {
+  private async loadLocalMetadata(itemFolder: string): Promise<Record<string, unknown>> {
     try {
       const metadataPath = path.join(itemFolder, 'metadata.json');
       const raw = await fs.readFile(metadataPath, 'utf8');
-      return JSON.parse(raw);
+      return JSON.parse(raw) as Record<string, unknown>;
     } catch {
       return {};
     }
   }
 
   private isDevelopment(): boolean {
+    // eslint-disable-next-line no-restricted-properties, turbo/no-undeclared-env-vars
     return process.env.NODE_ENV !== 'production' && process.env.STATIC_EXPORT !== 'true';
   }
 
@@ -112,7 +113,7 @@ export class ContentLoader {
 
         items.push({
           ...meta,
-          title: title || meta.title, // fallback to meta title if content title not found
+          title: title ?? meta.title, // fallback to meta title if content title not found
           subtitle,
           description,
           summary
@@ -190,7 +191,7 @@ export class ContentLoader {
 
       return {
         ...meta,
-        title: title || meta.title,
+        title: title ?? meta.title,
         subtitle,
         description,
         summary,
@@ -201,33 +202,36 @@ export class ContentLoader {
     }
   }
 
-  private processMeta(slug: string, data: any, localMetadata: Record<string, any>): ContentMeta | null {
+  private processMeta(slug: string, data: unknown, localMetadata: Record<string, unknown>): ContentMeta | null {
+    const dataObj = data as Record<string, unknown>;
     // Merge local metadata with file metadata, prioritizing local for core fields
     const mergedData = {
       ...localMetadata,  // Local metadata first
-      ...data,           // File metadata second (can override title and content-specific fields)
+      ...dataObj,           // File metadata second (can override title and content-specific fields)
     };
 
     // Use date from local metadata if available, otherwise from file
-    const dateValue = localMetadata.date || data.date;
+    const dateValue = localMetadata.date ?? dataObj.date;
     if (!dateValue) {
       console.warn(`No date found for ${this.config.contentType} item ${slug}`);
       return null;
     }
 
-    const date = new Date(String(dateValue));
+    const date = new Date(dateValue as string | number | Date);
     if (isNaN(date.getTime())) {
-      console.warn(`Invalid date in ${this.config.contentType} item ${slug}: ${dateValue}`);
+      console.warn(`Invalid date in ${this.config.contentType} item ${slug}: ${JSON.stringify(dateValue)}`);
       return null;
     }
 
-    const imageValue = localMetadata.image || data.image || this.config.defaultImage;
+    const title = (dataObj.title ?? localMetadata.title ?? slug) as string;
+    const image = (localMetadata.image ?? dataObj.image ?? this.config.defaultImage) as string;
+    
     const baseM = {
       slug,
-      title: String(data.title || localMetadata.title || slug),  // Allow file to override title, fallback to slug
+      title,  // Allow file to override title, fallback to slug
       date: date.toISOString(),
-      image: this.normalizeImagePath(String(imageValue), slug),
-      excerpt: localMetadata.excerpt || data.excerpt || undefined,
+      image: this.normalizeImagePath(image, slug),
+      excerpt: (localMetadata.excerpt ?? dataObj.excerpt ?? undefined) as string | undefined,
       draft: Boolean(localMetadata.draft),  // Draft flag from local metadata only
     };
 
@@ -293,12 +297,12 @@ export class ContentLoader {
     return result;
   }
 
-  protected parseMetadataSection(content: string): Record<string, any> {
-    const metadataMatch = content.match(/^<!--\s*METADATA\s*\n([\s\S]*?)\n-->/);
-    if (!metadataMatch || !metadataMatch[1]) return {};
+  protected parseMetadataSection(content: string): Record<string, unknown> {
+    const metadataMatch = /^<!--\s*METADATA\s*\n([\s\S]*?)\n-->/.exec(content);
+    if (!metadataMatch?.[1]) return {};
 
     const metadataContent = metadataMatch[1];
-    const metadata: Record<string, any> = {};
+    const metadata: Record<string, unknown> = {};
 
     // Parse simple key-value pairs
     const lines = metadataContent.split('\n');
@@ -367,17 +371,17 @@ export class ContentLoader {
 
   protected extractTitleFromContent(content: string): string | undefined {
     const metadata = this.parseMetadataSection(content);
-    return metadata.title || undefined;
+    return (metadata.title as string) || undefined;
   }
 
   protected extractSubtitleFromContent(content: string): string | undefined {
     const metadata = this.parseMetadataSection(content);
-    return metadata.subtitle || undefined;
+    return (metadata.subtitle as string) || undefined;
   }
 
   protected extractDescriptionFromContent(content: string): string | undefined {
     const metadata = this.parseMetadataSection(content);
-    return metadata.description || undefined;
+    return (metadata.description as string) || undefined;
   }
 
   protected extractSummaryFromContent(content: string): { text: string; keyPoints?: string[] } | undefined {
@@ -385,8 +389,8 @@ export class ContentLoader {
     if (!metadata.summary) return undefined;
 
     return {
-      text: metadata.summary,
-      keyPoints: metadata.keyPoints && metadata.keyPoints.length > 0 ? metadata.keyPoints : undefined
+      text: metadata.summary as string,
+      keyPoints: (metadata.keyPoints as string[] | undefined)?.length ? metadata.keyPoints as string[] : undefined
     };
   }
 }

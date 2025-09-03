@@ -9,7 +9,7 @@ function usePartyMode() {
   const originalSrcsRef = useRef<Map<HTMLImageElement, string>>(new Map());
 
   const switchToPartyImages = () => {
-    const allImages = document.querySelectorAll('img') as NodeListOf<HTMLImageElement>;
+    const allImages = document.querySelectorAll('img');
     let convertedCount = 0;
     
     allImages.forEach((img) => {
@@ -36,7 +36,7 @@ function usePartyMode() {
       
       img.src = convertToPartySrc(img.src);
       if (img.srcset) {
-        img.srcset = img.srcset.replace(/url=([^&]+)/g, (match, url) => {
+        img.srcset = img.srcset.replace(/url=([^&]+)/g, (match, url: string) => {
           const decodedUrl = decodeURIComponent(url);
           const partyUrl = addPartyToFilename(decodedUrl);
           return `url=${encodeURIComponent(partyUrl)}`;
@@ -84,7 +84,7 @@ function usePartyMode() {
   const convertToPartySrc = (src: string) => {
     if (src.includes('/_next/image')) {
       const url = new URL(src);
-      const originalPath = decodeURIComponent(url.searchParams.get('url') || '');
+      const originalPath = decodeURIComponent(url.searchParams.get('url') ?? '');
       url.searchParams.set('url', addPartyToFilename(originalPath));
       url.searchParams.set('v', Date.now().toString());
       return url.toString();
@@ -112,7 +112,7 @@ function usePartyMode() {
     const y = (rect.top + rect.height / 2) / window.innerHeight;
     
     // Main confetti burst
-    confetti({
+    void confetti({
       particleCount: 100,
       spread: 180,
       origin: { x, y },
@@ -121,7 +121,7 @@ function usePartyMode() {
     });
     
     // Add some doge colours
-    confetti({
+    void confetti({
       particleCount: 30,
       spread: 60,
       origin: { x, y },
@@ -158,8 +158,9 @@ function usePartyMode() {
     }
     
     // Fix any flags that were previously converted
-    const flagImages = document.querySelectorAll('img[class*="flag"], img[src*="flags"]') as NodeListOf<HTMLImageElement>;
-    flagImages.forEach(img => {
+    const flagImages = document.querySelectorAll('img[class*="flag"], img[src*="flags"]');
+    flagImages.forEach((img) => {
+      if (!(img instanceof HTMLImageElement)) return;
       const originalSrcset = img.getAttribute('data-original-srcset');
       if (originalSrcset) {
         img.srcset = originalSrcset;
@@ -224,7 +225,7 @@ export function PartyModeButton({ className }: PartyModeButtonProps) {
   return (
     <button 
       onClick={activatePartyMode}
-      className={`party-mode-button ${className || ''}`}
+      className={`party-mode-button ${className ?? ''}`}
     ></button>
   );
 }

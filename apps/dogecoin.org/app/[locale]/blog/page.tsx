@@ -6,6 +6,7 @@ import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary, allLanguages } from '@repo/internationalization';
+import type { DogecoinDictionary } from '@/types/dictionary';
 import { getAllBlogPosts } from '@/lib/content';
 import { getAssetPath, getNavPath } from '@/lib/assets';
 import { shouldShowDraftBadge } from '@/lib/content/utils';
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
 
 export default async function BlogIndexPage({ params }: BlogIndexProps) {
   const { locale } = await params;
-  const dictionary = await getDictionary(locale);
+  const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const t = dictionary["dogecoin.org"].home;
   const posts = await getAllBlogPosts(locale);
 

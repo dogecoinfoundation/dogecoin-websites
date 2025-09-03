@@ -4,6 +4,7 @@ import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary, allLanguages } from '@repo/internationalization';
+import type { DogecoinDictionary } from '@/types/dictionary';
 import Image from 'next/image';
 import { format } from 'date-fns';
 import { getAllBlogSlugs, getBlogPostBySlug } from '@/lib/content';
@@ -40,7 +41,7 @@ export default async function BlogPostPage({ params }: PageProps) {
   if (!post) {
     return null;
   }
-  const dictionary = await getDictionary(locale);
+  const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const t = dictionary["dogecoin.org"].home;
 
   return (

@@ -19,8 +19,6 @@ interface BlurEffectProps {
 
 export function BlurEffect({ 
   className = '', 
-  width = 1462, 
-  height = 1462,
   opacity = 0.2,
   color = 'currentColor',
   offset = { x: 0, y: 0 },
@@ -35,7 +33,7 @@ export function BlurEffect({
   const finalOpacity = opacity * transparency;
   
   const transformStyle = {
-    transform: `translate(${offset.x || 0}px, ${offset.y || 0}px) scale(${scaleX}, ${scaleY})`
+    transform: `translate(${offset.x ?? 0}px, ${offset.y ?? 0}px) scale(${scaleX}, ${scaleY})`
   };
 
   return (

@@ -4,6 +4,7 @@ import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary, allLanguages } from '@repo/internationalization';
+import type { DogecoinDictionary } from '@/types/dictionary';
 import Image from 'next/image';
 import { format } from 'date-fns';
 import { getAllActivitySlugs, getActivityBySlug } from '@/lib/content';
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ActivityPage({ params }: PageProps) {
   const { slug, locale } = await params;
-  const dictionary = await getDictionary(locale);
+  const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const t = dictionary["dogecoin.org"].home;
   const activity = await getActivityBySlug(slug, locale);
 

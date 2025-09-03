@@ -7,9 +7,10 @@ import { BlurEffect } from '@/components/common/BlurEffect';
 import Image from 'next/image';
 import { DonationButton } from '@/components/specific/DonationButton';
 import { getAssetPath } from '@/lib/assets';
+import type { DogecoinDictionary } from '@/types/dictionary';
 
 interface DonationSectionProps {
-  t: any;
+  t: DogecoinDictionary["dogecoin.org"]["home"];
   DOGE_ADDRESS: string;
 }
 

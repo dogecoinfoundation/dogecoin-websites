@@ -20,7 +20,7 @@ import { ContentGrid } from '@/components/content/ContentGrid';
 import { getAssetPath } from '@/lib/assets';
 import { getFeaturedProjects, getFeaturedActivities } from '@/lib/content';
 import { getDictionary, allLanguages } from '@repo/internationalization';
-import type { ProjectMeta, ActivityMeta } from '@/lib/content';
+import type { DogecoinDictionary } from '@/types/dictionary';
 
 interface HomeProps {
   params: Promise<{
@@ -38,7 +38,7 @@ export function generateStaticParams() {
 
 export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
-  const dictionary = await getDictionary(locale);
+  const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const t = dictionary["dogecoin.org"].home;
   
   // Load featured content on server side
@@ -176,14 +176,14 @@ export default async function Home({ params }: HomeProps) {
                 <Activity
                   key={activity.slug}
                   title={activity.title}
-                  subtitle={activity.subtitle || ''}
-                  text={activity.summary?.text || activity.description || ''}
+                  subtitle={activity.subtitle ?? ''}
+                  text={activity.summary?.text ?? activity.description ?? ''}
                   slug={activity.slug}
                   locale={locale}
                   imageSrc={getAssetPath(activity.image)}
                   imageAlt={activity.title}
                   imagePosition={index % 2 === 0 ? 'right' : 'left'}
-                  color={activity.color || '#FF46CE'}
+                  color={activity.color ?? '#FF46CE'}
                   imageBorderRadius={activity.imageBorderRadius}
                   keyPoints={activity.summary?.keyPoints}
                   t={t.activities}

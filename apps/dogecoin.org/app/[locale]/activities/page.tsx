@@ -4,6 +4,7 @@ import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import { getDictionary, allLanguages } from '@repo/internationalization';
+import type { DogecoinDictionary } from '@/types/dictionary';
 import { getAllActivities } from '@/lib/content';
 import { SearchBar } from '@/components/content/SearchBar';
 import { ContentGrid } from '@/components/content/ContentGrid';
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 
 export default async function ActivitiesPage({ params }: ActivitiesPageProps) {
   const { locale } = await params;
-  const dictionary = await getDictionary(locale);
+  const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const t = dictionary["dogecoin.org"].home;
   const activities = await getAllActivities(locale);
 

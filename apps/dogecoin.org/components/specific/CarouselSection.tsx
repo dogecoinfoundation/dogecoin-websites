@@ -40,9 +40,7 @@ export function CarouselSection({ t }: CarouselSectionProps) {
       // Start auto-progression only if user is not interacting
       if (!isUserInteracting) {
         intervalRef.current = setInterval(() => {
-          if (!isUserInteracting) {
-            api.scrollNext();
-          }
+          api.scrollNext();
         }, 15000); // 15 seconds
       }
     };

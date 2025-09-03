@@ -16,16 +16,17 @@ export class ActivitiesLoader extends ContentLoader {
     const items = await this.getAllContentWithExtractedData(locale);
     return items.map(item => ({
       ...item,
-      category: item.category ?? 'community',
-      location: item.location,
-      participants: item.participants,
-      featured: item.featured ?? false,
-      description: item.description,
-      summary: item.summary,
-      color: item.color,
-      subtitle: item.subtitle,
-      imagePosition: item.imagePosition,
-      imageBorderRadius: item.imageBorderRadius
+      category: (item.category as ActivityMeta['category'] | undefined) ?? 'community',
+      location: item.location as string | undefined,
+      participants: item.participants as number | undefined,
+      featured: (item.featured as boolean | undefined) ?? false,
+      tags: item.tags as string[] | undefined,
+      description: item.description as string | undefined,
+      summary: item.summary as { text: string; keyPoints?: string[] } | undefined,
+      color: item.color as string | undefined,
+      subtitle: item.subtitle as string | undefined,
+      imagePosition: item.imagePosition as 'left' | 'right' | undefined,
+      imageBorderRadius: item.imageBorderRadius as number | undefined
     } as ActivityMeta));
   }
 
@@ -40,16 +41,17 @@ export class ActivitiesLoader extends ContentLoader {
     
     return {
       ...item,
-      category: item.category ?? 'community',
-      location: item.location,
-      participants: item.participants,
-      featured: item.featured ?? false,
-      description: item.description,
-      summary: item.summary,
-      color: item.color,
-      subtitle: item.subtitle,
-      imagePosition: item.imagePosition,
-      imageBorderRadius: item.imageBorderRadius
+      category: (item.category as ActivityMeta['category'] | undefined) ?? 'community',
+      location: item.location as string | undefined,
+      participants: item.participants as number | undefined,
+      featured: (item.featured as boolean | undefined) ?? false,
+      tags: item.tags as string[] | undefined,
+      description: item.description as string | undefined,
+      summary: item.summary as { text: string; keyPoints?: string[] } | undefined,
+      color: item.color as string | undefined,
+      subtitle: item.subtitle as string | undefined,
+      imagePosition: item.imagePosition as 'left' | 'right' | undefined,
+      imageBorderRadius: item.imageBorderRadius as number | undefined
     } as Activity;
   }
 }
