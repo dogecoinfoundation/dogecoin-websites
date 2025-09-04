@@ -110,9 +110,9 @@ export function Carousel({ className = '', setApi: setApiProp, onUserInteraction
         onMouseDown={onUserInteraction}
         onTouchStart={onUserInteraction}
       >
-        <CarouselContent className="-ml-2 md:-ml-4">
+        <CarouselContent>
           {cards.map((card) => (
-            <CarouselItem key={card.id} className="carousel-item">
+            <CarouselItem key={card.id} className="carousel-item !pl-0">
               <div className="carousel-card">
                 {/* Image */}
                 <Image 

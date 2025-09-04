@@ -21,9 +21,6 @@ export interface DogecoinDictionary {
           title: string;
           intro: string;
           bulletPoints: string[];
-          subtitleBefore: string;
-          subtitleHighlight: string;
-          subtitleAfter: string;
         };
         manifesto: {
           title: string;

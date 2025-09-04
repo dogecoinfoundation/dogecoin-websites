@@ -17,21 +17,6 @@
         "translatedBy": "AI",
         "translatedAt": "2025-09-01"
       },
-      "dogecoin.org.home.about.hero.subtitleBefore": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleHighlight": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleAfter": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
       "dogecoin.org.home.about.manifesto.title": {
         "humanReviewed": false,
         "translatedBy": "AI",
@@ -529,14 +514,11 @@
             "Поддержка криптовалюты Dogecoin через разработку и продвижение.",
             "Защита товарного знака Dogecoin для предотвращения злоупотреблений и мошенничества.",
             "Дорожная карта будущего Dogecoin."
-          ],
-          "subtitleBefore": "Мы —",
-          "subtitleHighlight": "Dogecoin",
-          "subtitleAfter": "— случайное криптодвижение, дарящее людям улыбки."
+          ]
         },
         "manifesto": {
           "title": "Манифест Dogecoin",
-          "intro": "Мы создаём валюту для людей и стремимся делать только добро каждый день. В ходе этой работы мы пришли к ценностям:",
+          "intro": "Мы — Dogecoin, случайное крипто-движение, которое заставляет людей улыбаться.\n[space]\n[small]Мы создаём валюту для людей,[/small]\n[small]и стремимся делать только добро каждый день.[/small]\n[small]В ходе этой работы мы пришли к ценностям:[/small]\n[space]\n[gray]Быть[/gray] [bold]полезными[/bold][gray], мы ценим[/gray] полезность [gray]выше[/gray] технического блеска.\n[gray]Быть[/gray] [bold]человечными[/bold][gray], мы ценим[/gray] людей и взаимодействия [gray]выше[/gray] экономики, движимой прибылью.\n[gray]Быть[/gray] [bold]гостеприимными[/bold][gray], мы ценим[/gray] сотрудничество и доверие [gray]выше[/gray] конкуренции и эксклюзивности.\n[gray]Быть[/gray] [bold]надёжными[/bold][gray], мы ценим[/gray] рабочие решения [gray]выше[/gray] скорости поставки.\n[space]\n[small]То есть, хотя есть ценность в элементах справа,[/small]\n[small]мы больше ценим элементы слева.[/small]",
           "cards": [
             {
               "title": "Быть полезными",

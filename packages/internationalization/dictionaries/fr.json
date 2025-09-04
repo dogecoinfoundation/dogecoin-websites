@@ -17,21 +17,6 @@
         "translatedBy": "AI",
         "translatedAt": "2025-09-01"
       },
-      "dogecoin.org.home.about.hero.subtitleBefore": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleHighlight": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleAfter": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
       "dogecoin.org.home.about.manifesto.title": {
         "humanReviewed": false,
         "translatedBy": "AI",
@@ -529,14 +514,11 @@
             "Soutien à la cryptomonnaie Dogecoin par le développement et le plaidoyer.",
             "Défense de la marque Dogecoin pour prévenir les abus et la fraude.",
             "Une feuille de route pour l'avenir de Dogecoin."
-          ],
-          "subtitleBefore": "Nous sommes",
-          "subtitleHighlight": "Dogecoin",
-          "subtitleAfter": "- le mouvement crypto accidentel qui fait sourire les gens."
+          ]
         },
         "manifesto": {
           "title": "Le Manifeste Dogecoin",
-          "intro": "Nous développons une monnaie pour le peuple, et nous nous efforçons de ne faire que le bien chaque jour. À travers ce travail, nous en sommes venus à valoriser :",
+          "intro": "Nous sommes Dogecoin, le mouvement crypto accidentel qui fait sourire les gens.\n[space]\n[small]Nous développons une monnaie pour le peuple,[/small]\n[small]et nous nous efforçons de ne faire que le bien chaque jour.[/small]\n[small]À travers ce travail, nous en sommes venus à valoriser :[/small]\n[space]\n[gray]Être[/gray] [bold]utile[/bold][gray], nous valorisons l'[/gray]utilité [gray]plutôt que le[/gray] génie technique.\n[gray]Être[/gray] [bold]convivial[/bold][gray], nous valorisons les[/gray] individus et les interactions [gray]plutôt qu'une[/gray] économie axée sur le profit.\n[gray]Être[/gray] [bold]accueillant[/bold][gray], nous valorisons la[/gray] collaboration et la confiance [gray]plutôt que la[/gray] compétition et l'exclusivité.\n[gray]Être[/gray] [bold]fiable[/bold][gray], nous valorisons les[/gray] solutions fonctionnelles [gray]plutôt que la[/gray] vitesse de livraison.\n[space]\n[small]C'est-à-dire que, bien qu'il y ait de la valeur dans les éléments de droite,[/small]\n[small]nous valorisons davantage les éléments de gauche.[/small]",
           "cards": [
             {
               "title": "Être utile",

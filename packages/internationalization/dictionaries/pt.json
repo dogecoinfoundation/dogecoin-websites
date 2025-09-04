@@ -17,21 +17,6 @@
         "translatedBy": "AI",
         "translatedAt": "2025-09-01"
       },
-      "dogecoin.org.home.about.hero.subtitleBefore": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleHighlight": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleAfter": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
       "dogecoin.org.home.about.manifesto.title": {
         "humanReviewed": false,
         "translatedBy": "AI",
@@ -529,14 +514,11 @@
             "Suporte à criptomoeda Dogecoin por meio de desenvolvimento e advocacy.",
             "Defesa da marca Dogecoin para prevenir abusos e fraudes.",
             "Um roteiro para o futuro do Dogecoin."
-          ],
-          "subtitleBefore": "Nós somos a",
-          "subtitleHighlight": "Dogecoin",
-          "subtitleAfter": "- o movimento cripto acidental que faz as pessoas sorrirem."
+          ]
         },
         "manifesto": {
           "title": "O Manifesto Dogecoin",
-          "intro": "Estamos desenvolvendo uma moeda para as pessoas, e nos esforçamos para fazer apenas o bem todos os dias. Através desse trabalho passamos a valorizar:",
+          "intro": "Nós somos Dogecoin, o movimento crypto acidental que faz as pessoas sorrirem.\n[space]\n[small]Estamos desenvolvendo uma moeda para as pessoas,[/small]\n[small]e nos esforçamos para fazer apenas o bem todos os dias.[/small]\n[small]Através desse trabalho passamos a valorizar:[/small]\n[space]\n[gray]Ser[/gray] [bold]útil[/bold][gray], valorizamos a[/gray] utilidade [gray]acima do[/gray] brilhantismo técnico.\n[gray]Ser[/gray] [bold]acolhedor[/bold][gray], valorizamos[/gray] indivíduos e interações [gray]acima da[/gray] economia movida por lucros.\n[gray]Ser[/gray] [bold]receptivo[/bold][gray], valorizamos[/gray] colaboração e confiança [gray]acima da[/gray] competição e exclusividade.\n[gray]Ser[/gray] [bold]confiável[/bold][gray], valorizamos[/gray] soluções funcionais [gray]acima da[/gray] velocidade de entrega.\n[space]\n[small]Ou seja, embora haja valor nos itens da direita,[/small]\n[small]valorizamos mais os itens da esquerda.[/small]",
           "cards": [
             {
               "title": "Ser útil",

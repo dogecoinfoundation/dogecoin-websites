@@ -49,7 +49,7 @@ export default async function RootLayout({
         </script>
       </head>
       <body
-        className={`bg-[var(--background-primary)] text-[var(--color-primary)] ${comicNeue.variable} ${montserrat.variable} ${jura.variable} antialiased`}
+        className={`bg-[var(--background)] text-[var(--foreground)] ${comicNeue.variable} ${montserrat.variable} ${jura.variable} antialiased dark`}
       >
         <div id="root">
           <Nav t={navTranslations} />

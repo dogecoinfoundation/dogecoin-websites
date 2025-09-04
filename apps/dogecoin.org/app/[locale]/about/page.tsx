@@ -8,6 +8,7 @@ import { Footer } from '@/components/layout/Footer';
 import { getDictionary, allLanguages } from '@repo/internationalization';
 import type { DogecoinDictionary } from '@/types/dictionary';
 import { BlurEffect } from '@/components/common/BlurEffect';
+import { RichText } from '@/components/common/RichText';
 import { getAssetPath } from '@/lib/assets';
 
 interface PageProps {
@@ -57,10 +58,6 @@ export default async function AboutPage({ params }: PageProps) {
                   ))}
                 </ul>
               </div>
-
-              <h3 className="about-hero-subtitle">
-                {ta.hero.subtitleBefore} <span className="about-hero-subtitle-highlight">{ta.hero.subtitleHighlight}</span> {ta.hero.subtitleAfter}
-              </h3>
             </div>
 
             <div className="about-hero-logo-container">
@@ -86,9 +83,57 @@ export default async function AboutPage({ params }: PageProps) {
               {ta.manifesto.title}
             </h2>
 
-            <p className="about-manifesto-intro">
-              {ta.manifesto.intro}
-            </p>
+            <RichText 
+              text={ta.manifesto.intro} 
+              className="about-manifesto-intro"
+            />
+
+
+
+            <div className="about-signatories-section">
+              <h3 className="about-signatories-title">
+                {ta.manifesto.signatoriesTitle}
+              </h3>
+
+              <div className="about-signatories-grid">
+                {/* Column 1 */}
+                <ul className="activity-key-points-list">
+                  {['Billy Markus', 'Gary Lachance'].map((name) => (
+                    <li key={name} className="activity-key-points-item">
+                      <span className="activity-key-points-bullet" style={{ borderColor: 'var(--Base-Brand-color-primary-500, #E3A849)', borderWidth: 2, borderStyle: 'solid' }} />
+                      <span className="activity-key-points-text">{name}</span>
+                    </li>
+                  ))}
+                </ul>
+                {/* Column 2 */}
+                <ul className="activity-key-points-list">
+                  {['Michi Lumin', 'Ross Nicoll'].map((name) => (
+                    <li key={name} className="activity-key-points-item">
+                      <span className="activity-key-points-bullet" style={{ borderColor: 'var(--Base-Brand-color-primary-500, #E3A849)', borderWidth: 2, borderStyle: 'solid' }} />
+                      <span className="activity-key-points-text">{name}</span>
+                    </li>
+                  ))}
+                </ul>
+                {/* Column 3 */}
+                <ul className="activity-key-points-list">
+                  {['Jens Wiechers', 'Max Keller'].map((name) => (
+                    <li key={name} className="activity-key-points-item">
+                      <span className="activity-key-points-bullet" style={{ borderColor: 'var(--Base-Brand-color-primary-500, #E3A849)', borderWidth: 2, borderStyle: 'solid' }} />
+                      <span className="activity-key-points-text">{name}</span>
+                    </li>
+                  ))}
+                </ul>
+                {/* Column 4 */}
+                <ul className="activity-key-points-list">
+                  {['Timothy Stebbing'].map((name) => (
+                    <li key={name} className="activity-key-points-item">
+                      <span className="activity-key-points-bullet" style={{ borderColor: 'var(--Base-Brand-color-primary-500, #E3A849)', borderWidth: 2, borderStyle: 'solid' }} />
+                      <span className="activity-key-points-text">{name}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
 
             {/* Manifesto value cards */}
             <div className="about-manifesto-cards">
@@ -149,84 +194,39 @@ export default async function AboutPage({ params }: PageProps) {
               </div>
             </div>
 
-            <div className="about-signatories-section">
-              <h3 className="about-signatories-title">
-                {ta.manifesto.signatoriesTitle}
-              </h3>
+            <div className="about-sign-section">
+              <div className="about-sign-container">
+                <div className="about-sign-blur-wrapper" aria-hidden="true">
+                  <BlurEffect color="var(--Base-Brand-color-primary-500, #9780FF)" opacity={0.1} scale={{ x: 6, y: 5 }} />
+                </div>
+                <div className="about-sign-content">
+                  <h3 className="about-sign-title">
+                    {ta.manifesto.sign.title}
+                  </h3>
+                  <p className="about-sign-text">
+                    {ta.manifesto.sign.text}
+                  </p>
 
-              <div className="about-signatories-grid">
-                {/* Column 1 */}
-                <ul className="activity-key-points-list">
-                  {['Billy Markus', 'Gary Lachance'].map((name) => (
-                    <li key={name} className="activity-key-points-item">
-                      <span className="activity-key-points-bullet" style={{ borderColor: 'var(--Base-Brand-color-primary-500, #E3A849)', borderWidth: 2, borderStyle: 'solid' }} />
-                      <span className="activity-key-points-text">{name}</span>
-                    </li>
-                  ))}
-                </ul>
-                {/* Column 2 */}
-                <ul className="activity-key-points-list">
-                  {['Michi Lumin', 'Ross Nicoll'].map((name) => (
-                    <li key={name} className="activity-key-points-item">
-                      <span className="activity-key-points-bullet" style={{ borderColor: 'var(--Base-Brand-color-primary-500, #E3A849)', borderWidth: 2, borderStyle: 'solid' }} />
-                      <span className="activity-key-points-text">{name}</span>
-                    </li>
-                  ))}
-                </ul>
-                {/* Column 3 */}
-                <ul className="activity-key-points-list">
-                  {['Jens Wiechers', 'Max Keller'].map((name) => (
-                    <li key={name} className="activity-key-points-item">
-                      <span className="activity-key-points-bullet" style={{ borderColor: 'var(--Base-Brand-color-primary-500, #E3A849)', borderWidth: 2, borderStyle: 'solid' }} />
-                      <span className="activity-key-points-text">{name}</span>
-                    </li>
-                  ))}
-                </ul>
-                {/* Column 4 */}
-                <ul className="activity-key-points-list">
-                  {['Timothy Stebbing'].map((name) => (
-                    <li key={name} className="activity-key-points-item">
-                      <span className="activity-key-points-bullet" style={{ borderColor: 'var(--Base-Brand-color-primary-500, #E3A849)', borderWidth: 2, borderStyle: 'solid' }} />
-                      <span className="activity-key-points-text">{name}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="about-sign-section">
-                <div className="about-sign-container">
-                  <div className="about-sign-blur-wrapper" aria-hidden="true">
-                    <BlurEffect color="var(--Base-Brand-color-primary-500, #9780FF)" opacity={0.1} scale={{ x: 6, y: 5 }} />
-                  </div>
-                  <div className="about-sign-content">
-                    <h3 className="about-sign-title">
-                      {ta.manifesto.sign.title}
-                    </h3>
-                    <p className="about-sign-text">
-                      {ta.manifesto.sign.text}
-                    </p>
-
-                    <div className="about-sign-actions">
-                      <Link href="https://x.com" className="about-post-button">
-                        <span aria-hidden="true" className="about-post-button-icon">
-                        <Image
-                            src={getAssetPath("/assets/svg/icons/x.svg")}
-                            alt="Section heading underline"
-                            width={20}
-                            height={21}
-                        />
-                        </span>
-                        <span>{ta.manifesto.sign.button}</span>
-                      </Link>
-                      <span aria-hidden="true" className="about-sign-arrow">
+                  <div className="about-sign-actions">
+                    <Link href="https://x.com" className="about-post-button">
+                      <span aria-hidden="true" className="about-post-button-icon">
                       <Image
-                            src={getAssetPath("/assets/svg/about/sign-arrow.svg")}
-                            alt="Section heading underline"
-                            width={234}
-                            height={140}
-                        />
+                          src={getAssetPath("/assets/svg/icons/x.svg")}
+                          alt="Section heading underline"
+                          width={20}
+                          height={21}
+                      />
                       </span>
-                    </div>
+                      <span>{ta.manifesto.sign.button}</span>
+                    </Link>
+                    <span aria-hidden="true" className="about-sign-arrow">
+                    <Image
+                          src={getAssetPath("/assets/svg/about/sign-arrow.svg")}
+                          alt="Section heading underline"
+                          width={234}
+                          height={140}
+                      />
+                    </span>
                   </div>
                 </div>
               </div>

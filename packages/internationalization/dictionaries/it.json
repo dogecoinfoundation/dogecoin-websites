@@ -17,21 +17,6 @@
         "translatedBy": "AI",
         "translatedAt": "2025-09-01"
       },
-      "dogecoin.org.home.about.hero.subtitleBefore": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleHighlight": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleAfter": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
       "dogecoin.org.home.about.manifesto.title": {
         "humanReviewed": false,
         "translatedBy": "AI",
@@ -529,14 +514,11 @@
             "Supporto alla criptovaluta Dogecoin attraverso sviluppo e advocacy.",
             "Difesa del marchio Dogecoin per prevenire abusi e frodi.",
             "Una roadmap per il futuro di Dogecoin."
-          ],
-          "subtitleBefore": "Noi siamo",
-          "subtitleHighlight": "Dogecoin",
-          "subtitleAfter": "- il movimento cripto accidentale che fa sorridere le persone."
+          ]
         },
         "manifesto": {
           "title": "Il Manifesto Dogecoin",
-          "intro": "Stiamo sviluppando una valuta per le persone e ci impegniamo a fare solo il bene ogni giorno. Attraverso questo lavoro siamo arrivati a valorizzare:",
+          "intro": "Siamo Dogecoin, il movimento crypto accidentale che fa sorridere le persone.\n[space]\n[small]Stiamo sviluppando una valuta per le persone,[/small]\n[small]e ci impegniamo a fare solo il bene ogni giorno.[/small]\n[small]Attraverso questo lavoro siamo arrivati a valorizzare:[/small]\n[space]\n[gray]Essere[/gray] [bold]utili[/bold][gray], valorizziamo l'[/gray]utilità [gray]rispetto al[/gray] brillante tecnicismo.\n[gray]Essere[/gray] [bold]cordiali[/bold][gray], valorizziamo[/gray] individui e interazioni [gray]rispetto a un'[/gray]economia guidata dal profitto.\n[gray]Essere[/gray] [bold]accoglienti[/bold][gray], valorizziamo[/gray] collaborazione e fiducia [gray]rispetto a[/gray] competizione ed esclusività.\n[gray]Essere[/gray] [bold]affidabili[/bold][gray], valorizziamo[/gray] soluzioni funzionanti [gray]rispetto alla[/gray] velocità di consegna.\n[space]\n[small]Cioè, mentre c'è valore negli elementi a destra,[/small]\n[small]valorizziamo di più gli elementi a sinistra.[/small]",
           "cards": [
             {
               "title": "Essere utili",

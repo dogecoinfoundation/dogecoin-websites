@@ -1,0 +1,2180 @@
+{
+  "version": "1.0.4",
+  "metadata": {},
+  "collections": [
+    {
+      "name": "Base",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "variables": [
+            {
+              "name": "Measurements/spacing/spacing-4xs",
+              "type": "number",
+              "isAlias": false,
+              "value": 2
+            },
+            {
+              "name": "Measurements/spacing/spacing-3xs",
+              "type": "number",
+              "isAlias": false,
+              "value": 4
+            },
+            {
+              "name": "Measurements/spacing/spacing-2xs",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "Measurements/spacing/spacing-xs",
+              "type": "number",
+              "isAlias": false,
+              "value": 12
+            },
+            {
+              "name": "Measurements/spacing/spacing-sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Measurements/spacing/spacing-md",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Measurements/spacing/spacing-lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Measurements/spacing/spacing-xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Measurements/spacing/spacing-2xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Measurements/spacing/spacing-3xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 64
+            },
+            {
+              "name": "Measurements/spacing/spacing-4xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 80
+            },
+            {
+              "name": "Measurements/spacing/spacing-5xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 128
+            },
+            {
+              "name": "Measurements/border-radius/border-radius-sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 4
+            },
+            {
+              "name": "Measurements/border-radius/border-radius-md",
+              "type": "number",
+              "isAlias": false,
+              "value": 8
+            },
+            {
+              "name": "Measurements/border-radius/border-radius-lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 12
+            },
+            {
+              "name": "Measurements/border-radius/border-radius-xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Measurements/border-radius/border-radius-2xl",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Measurements/border-radius/border-radius-full",
+              "type": "number",
+              "isAlias": false,
+              "value": 1000
+            },
+            {
+              "name": "Typography/font-family-heading",
+              "type": "string",
+              "isAlias": false,
+              "value": "Comic Neue"
+            },
+            {
+              "name": "Colour/Brand/Primary/primary-100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FCEED6"
+            },
+            {
+              "name": "Typography/font-weight-heading",
+              "type": "string",
+              "isAlias": false,
+              "value": "Bold"
+            },
+            {
+              "name": "Colour/Brand/Primary/primary-200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FADDAC"
+            },
+            {
+              "name": "Colour/Brand/Primary/primary-300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F7CC83"
+            },
+            {
+              "name": "Colour/Brand/Primary/primary-400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F5BB59"
+            },
+            {
+              "name": "Colour/Brand/Primary/primary-500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#F2AA30"
+            },
+            {
+              "name": "Colour/Brand/Primary/primary-600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#C28826"
+            },
+            {
+              "name": "Colour/Brand/Primary/primary-700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#91661D"
+            },
+            {
+              "name": "Colour/Brand/Primary/primary-800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#614413"
+            },
+            {
+              "name": "Colour/Brand/Primary/primary-900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#30220A"
+            },
+            {
+              "name": "Colour/Brand/Secondary/secondary-100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E8E6FF"
+            },
+            {
+              "name": "Colour/Brand/Secondary/secondary-200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#D8CFFF"
+            },
+            {
+              "name": "Colour/Brand/Secondary/secondary-300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#B8A8FF"
+            },
+            {
+              "name": "Colour/Brand/Secondary/secondary-400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#9780FF"
+            },
+            {
+              "name": "Colour/Brand/Secondary/secondary-500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#6857B9"
+            },
+            {
+              "name": "Colour/Brand/Secondary/secondary-600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#493A90"
+            },
+            {
+              "name": "Colour/Brand/Secondary/secondary-700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#302564"
+            },
+            {
+              "name": "Colour/Brand/Secondary/seconday-800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#241C4E"
+            },
+            {
+              "name": "Colour/Brand/Secondary/seconday-900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#19152D"
+            },
+            {
+              "name": "Colour/White/white",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF"
+            },
+            {
+              "name": "Colour/White/white-a90",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFFE6"
+            },
+            {
+              "name": "Colour/White/white-a80",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFFCC"
+            },
+            {
+              "name": "Colour/White/white-a70",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFFB3"
+            },
+            {
+              "name": "Colour/White/white-a60",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF99"
+            },
+            {
+              "name": "Colour/White/white-a50",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF80"
+            },
+            {
+              "name": "Colour/White/white-a40",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF66"
+            },
+            {
+              "name": "Colour/White/white-a30",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF4D"
+            },
+            {
+              "name": "Colour/White/white-a20",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF33"
+            },
+            {
+              "name": "Colour/White/color-white-a10",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFFFF1A"
+            },
+            {
+              "name": "Colour/Black/black",
+              "type": "color",
+              "isAlias": false,
+              "value": "#030303"
+            },
+            {
+              "name": "Colour/Black/black-a90",
+              "type": "color",
+              "isAlias": false,
+              "value": "#030303E6"
+            },
+            {
+              "name": "Colour/Black/black-a80%",
+              "type": "color",
+              "isAlias": false,
+              "value": "#030303CC"
+            },
+            {
+              "name": "Colour/Black/black-a70",
+              "type": "color",
+              "isAlias": false,
+              "value": "#030303B3"
+            },
+            {
+              "name": "Colour/Black/black-a60",
+              "type": "color",
+              "isAlias": false,
+              "value": "#03030399"
+            },
+            {
+              "name": "Colour/Black/black-a50",
+              "type": "color",
+              "isAlias": false,
+              "value": "#03030380"
+            },
+            {
+              "name": "Colour/Black/black-a40",
+              "type": "color",
+              "isAlias": false,
+              "value": "#03030366"
+            },
+            {
+              "name": "Colour/Black/black-a30",
+              "type": "color",
+              "isAlias": false,
+              "value": "#0303034D"
+            },
+            {
+              "name": "Colour/Black/black-a20",
+              "type": "color",
+              "isAlias": false,
+              "value": "#03030333"
+            },
+            {
+              "name": "Colour/Black/color-black-a10",
+              "type": "color",
+              "isAlias": false,
+              "value": "#0303031A"
+            },
+            {
+              "name": "Colour/Neutral/neutral-900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#151413"
+            },
+            {
+              "name": "Colour/Neutral/neutral-800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#201F1D"
+            },
+            {
+              "name": "Colour/Neutral/neutral-700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#333230"
+            },
+            {
+              "name": "Colour/Neutral/neutral-600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#464543"
+            },
+            {
+              "name": "Colour/Neutral/neutral-500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#5B5A58"
+            },
+            {
+              "name": "Colour/Neutral/neutral-400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#878685"
+            },
+            {
+              "name": "Colour/Neutral/neutral-300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#B5B5B4"
+            },
+            {
+              "name": "Colour/Neutral/neutral-200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#CDCDCC"
+            },
+            {
+              "name": "Colour/Neutral/neutral-100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E6E6E5"
+            },
+            {
+              "name": "Colour/Accent/accent-pink",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FF46CE"
+            },
+            {
+              "name": "Colour/Accent/accent-yellow",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFFC36"
+            },
+            {
+              "name": "Colour/Accent/accent-blue",
+              "type": "color",
+              "isAlias": false,
+              "value": "#2BF9FF"
+            },
+            {
+              "name": "Colour/Accent/accent-green",
+              "type": "color",
+              "isAlias": false,
+              "value": "#62FF46"
+            },
+            {
+              "name": "Colour/Accent/accent-orange",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FF7D47"
+            },
+            {
+              "name": "Colour/Accent/color-accent-purple",
+              "type": "color",
+              "isAlias": false,
+              "value": "#9780FF"
+            },
+            {
+              "name": "Colour/Utility/Success/success-100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#E0FFDA"
+            },
+            {
+              "name": "Colour/Utility/Success/success-200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#C0FFB5"
+            },
+            {
+              "name": "Colour/Utility/Success/success-300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#A1FF90"
+            },
+            {
+              "name": "Colour/Utility/Success/success-400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#81FF6B"
+            },
+            {
+              "name": "Colour/Utility/Success/success-500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#62FF46"
+            },
+            {
+              "name": "Colour/Utility/Success/success-600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#4ECC38"
+            },
+            {
+              "name": "Colour/Utility/Success/success-700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#3B992A"
+            },
+            {
+              "name": "Colour/Utility/Success/success-800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#27661C"
+            },
+            {
+              "name": "Colour/Utility/Success/success-900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#14330E"
+            },
+            {
+              "name": "Colour/Utility/Warning/warning-100",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFD5DE"
+            },
+            {
+              "name": "Colour/Utility/Warning/warning-200",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FFACBE"
+            },
+            {
+              "name": "Colour/Utility/Warning/warning-300",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FF829D"
+            },
+            {
+              "name": "Colour/Utility/Warning/warning-400",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FF597D"
+            },
+            {
+              "name": "Colour/Utility/Warning/warning-500",
+              "type": "color",
+              "isAlias": false,
+              "value": "#FF2F5C"
+            },
+            {
+              "name": "Colour/Utility/Warning/warning-600",
+              "type": "color",
+              "isAlias": false,
+              "value": "#CC264A"
+            },
+            {
+              "name": "Colour/Utility/Warning/warning-700",
+              "type": "color",
+              "isAlias": false,
+              "value": "#991C37"
+            },
+            {
+              "name": "Colour/Utility/Warning/warning-800",
+              "type": "color",
+              "isAlias": false,
+              "value": "#661325"
+            },
+            {
+              "name": "Colour/Utility/Warning/warning-900",
+              "type": "color",
+              "isAlias": false,
+              "value": "#330912"
+            },
+            {
+              "name": "Typography/font-family-paragraph",
+              "type": "string",
+              "isAlias": false,
+              "value": "Comic Neue"
+            },
+            {
+              "name": "Typography/font-weight-paragraph",
+              "type": "string",
+              "isAlias": false,
+              "value": "Regular"
+            },
+            {
+              "name": "Typography/font-family-link",
+              "type": "string",
+              "isAlias": false,
+              "value": "Comic Neue"
+            },
+            {
+              "name": "Typography/font-weight-link",
+              "type": "string",
+              "isAlias": false,
+              "value": "Bold"
+            },
+            {
+              "name": "Typography/font-family-button",
+              "type": "string",
+              "isAlias": false,
+              "value": "Comic Neue"
+            },
+            {
+              "name": "Typography/font-weight-button",
+              "type": "string",
+              "isAlias": false,
+              "value": "Bold"
+            },
+            {
+              "name": "Typography/font-weight-strong",
+              "type": "string",
+              "isAlias": false,
+              "value": "Bold"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Breakpoints",
+      "modes": [
+        {
+          "name": "mobile <360px",
+          "variables": [
+            {
+              "name": "Typography/Heading/H1/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Heading/H1/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "Typography/Heading/H2/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Heading/H2/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Heading/H3/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Typography/Heading/H3/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 28
+            },
+            {
+              "name": "Typography/Heading/H4/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 18
+            },
+            {
+              "name": "Typography/Heading/H4/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Heading/H5/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Typography/Heading/H5/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 22
+            },
+            {
+              "name": "Typography/Paragraph/Body Lead/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Paragraph/Body Lead/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 34
+            },
+            {
+              "name": "Typography/Paragraph/Body/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 18
+            },
+            {
+              "name": "Typography/Paragraph/Body/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 28
+            },
+            {
+              "name": "Typography/Paragraph/Caption/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 14
+            },
+            {
+              "name": "Typography/Paragraph/Caption/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Button/XLarge/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Button/XLarge/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Button/Large/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Typography/Button/Large/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 28
+            },
+            {
+              "name": "Typography/Button/Medium/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Typography/Button/Medium/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Button/Small/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 14
+            },
+            {
+              "name": "Typography/Button/Small/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Section/section-x",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Container/max-width",
+              "type": "number",
+              "isAlias": false,
+              "value": 1440
+            },
+            {
+              "name": "Section/section-y-sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Container/gap",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Spacing/xl (32)"
+              }
+            },
+            {
+              "name": "Section/section-y",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Section/section-y-lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 64
+            }
+          ]
+        },
+        {
+          "name": "smallTablet >768",
+          "variables": [
+            {
+              "name": "Typography/Heading/H1/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "Typography/Heading/H1/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Typography/Heading/H2/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Heading/H2/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "Typography/Heading/H3/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Heading/H3/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Heading/H4/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Typography/Heading/H4/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 28
+            },
+            {
+              "name": "Typography/Heading/H5/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 18
+            },
+            {
+              "name": "Typography/Heading/H5/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Paragraph/Body Lead/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Paragraph/Body Lead/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 34
+            },
+            {
+              "name": "Typography/Paragraph/Body/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 18
+            },
+            {
+              "name": "Typography/Paragraph/Body/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 28
+            },
+            {
+              "name": "Typography/Paragraph/Caption/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 14
+            },
+            {
+              "name": "Typography/Paragraph/Caption/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Button/XLarge/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Button/XLarge/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Button/Large/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Typography/Button/Large/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 28
+            },
+            {
+              "name": "Typography/Button/Medium/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Typography/Button/Medium/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Button/Small/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 14
+            },
+            {
+              "name": "Typography/Button/Small/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Section/section-x",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Container/max-width",
+              "type": "number",
+              "isAlias": false,
+              "value": 1440
+            },
+            {
+              "name": "Section/section-y-sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Container/gap",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Spacing/2xl (48)"
+              }
+            },
+            {
+              "name": "Section/section-y",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Section/section-y-lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 96
+            }
+          ]
+        },
+        {
+          "name": "tablet >1024",
+          "variables": [
+            {
+              "name": "Typography/Heading/H1/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Typography/Heading/H1/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 56
+            },
+            {
+              "name": "Typography/Heading/H2/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "Typography/Heading/H2/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Typography/Heading/H3/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Heading/H3/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "Typography/Heading/H4/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Heading/H4/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Heading/H5/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Typography/Heading/H5/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 28
+            },
+            {
+              "name": "Typography/Paragraph/Body Lead/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Paragraph/Body Lead/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 34
+            },
+            {
+              "name": "Typography/Paragraph/Body/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Typography/Paragraph/Body/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 30
+            },
+            {
+              "name": "Typography/Paragraph/Caption/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Typography/Paragraph/Caption/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 26
+            },
+            {
+              "name": "Typography/Button/XLarge/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Button/XLarge/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Button/Large/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Typography/Button/Large/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 28
+            },
+            {
+              "name": "Typography/Button/Medium/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Typography/Button/Medium/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Button/Small/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 14
+            },
+            {
+              "name": "Typography/Button/Small/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Section/section-x",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Container/max-width",
+              "type": "number",
+              "isAlias": false,
+              "value": 1440
+            },
+            {
+              "name": "Section/section-y-sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Container/gap",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Spacing/3xl (64)"
+              }
+            },
+            {
+              "name": "Section/section-y",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Section/section-y-lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 96
+            }
+          ]
+        },
+        {
+          "name": "desktop >1366",
+          "variables": [
+            {
+              "name": "Typography/Heading/H1/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 64
+            },
+            {
+              "name": "Typography/Heading/H1/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 72
+            },
+            {
+              "name": "Typography/Heading/H2/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Typography/Heading/H2/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 56
+            },
+            {
+              "name": "Typography/Heading/H3/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "Typography/Heading/H3/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Typography/Heading/H4/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Heading/H4/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 40
+            },
+            {
+              "name": "Typography/Heading/H5/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Heading/H5/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Paragraph/Body Lead/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Paragraph/Body Lead/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 34
+            },
+            {
+              "name": "Typography/Paragraph/Body/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Typography/Paragraph/Body/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 30
+            },
+            {
+              "name": "Typography/Paragraph/Caption/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Typography/Paragraph/Caption/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 26
+            },
+            {
+              "name": "Typography/Button/XLarge/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Button/XLarge/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 32
+            },
+            {
+              "name": "Typography/Button/Large/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 20
+            },
+            {
+              "name": "Typography/Button/Large/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 28
+            },
+            {
+              "name": "Typography/Button/Medium/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 16
+            },
+            {
+              "name": "Typography/Button/Medium/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Typography/Button/Small/font-size",
+              "type": "number",
+              "isAlias": false,
+              "value": 14
+            },
+            {
+              "name": "Typography/Button/Small/line-height",
+              "type": "number",
+              "isAlias": false,
+              "value": 24
+            },
+            {
+              "name": "Section/section-x",
+              "type": "number",
+              "isAlias": false,
+              "value": 80
+            },
+            {
+              "name": "Container/max-width",
+              "type": "number",
+              "isAlias": false,
+              "value": 1440
+            },
+            {
+              "name": "Section/section-y-sm",
+              "type": "number",
+              "isAlias": false,
+              "value": 48
+            },
+            {
+              "name": "Container/gap",
+              "type": "number",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Spacing/hg (80)"
+              }
+            },
+            {
+              "name": "Section/section-y",
+              "type": "number",
+              "isAlias": false,
+              "value": 80
+            },
+            {
+              "name": "Section/section-y-lg",
+              "type": "number",
+              "isAlias": false,
+              "value": 160
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Theme",
+      "modes": [
+        {
+          "name": "Mode 1",
+          "variables": [
+            {
+              "name": "Body/background-body",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-900"
+              }
+            },
+            {
+              "name": "Button/Primary/background-button-primary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-500"
+              }
+            },
+            {
+              "name": "Button/Primary/background-button-primary-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-600"
+              }
+            },
+            {
+              "name": "Button/Primary/background-button-primary-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-700"
+              }
+            },
+            {
+              "name": "Button/Primary/color-button-primary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Button/Secondary/color-button-secondary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-500"
+              }
+            },
+            {
+              "name": "Button/Secondary/border-button-secondary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-500"
+              }
+            },
+            {
+              "name": "Button/Secondary/background-button-secondary-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-900"
+              }
+            },
+            {
+              "name": "Button/Secondary/background-button-secondary-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-800"
+              }
+            },
+            {
+              "name": "Button/Tertiary/color-button-tertiary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-500"
+              }
+            },
+            {
+              "name": "Button/Tertiary/background-button-tertiary-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Button/Tertiary/background-button-tertiary-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-700"
+              }
+            },
+            {
+              "name": "Button/Warning/color-button-warning",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Utility/Warning/warning-500"
+              }
+            },
+            {
+              "name": "Button/Warning/border-button-warning",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Utility/Warning/warning-500"
+              }
+            },
+            {
+              "name": "Button/Warning/background-button-warning-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Utility/Warning/warning-900"
+              }
+            },
+            {
+              "name": "Button/Warning/background-button-warning-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Utility/Warning/warning-800"
+              }
+            },
+            {
+              "name": "Card/background-card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Card/border-card",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-700"
+              }
+            },
+            {
+              "name": "Divider/border-primary-dark",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-700"
+              }
+            },
+            {
+              "name": "Divider/border-secondary-dark",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Form/Input/background-input",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Form/Input/background-input-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-700"
+              }
+            },
+            {
+              "name": "Form/Checkbox/background-checkbox",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Form/Radiobutton/background-radiobutton",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Form/Radiobutton/border-radiobutton",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-700"
+              }
+            },
+            {
+              "name": "Form/Radiobutton/background-radiobutton-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-700"
+              }
+            },
+            {
+              "name": "Form/Radiobutton/border-radiobutton-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-600"
+              }
+            },
+            {
+              "name": "Form/Radiobutton/background-radiobutton-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-600"
+              }
+            },
+            {
+              "name": "Form/Radiobutton/border-radiobutton-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Form/Radiobutton/background-radiobutton-active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-500"
+              }
+            },
+            {
+              "name": "Form/Radiobutton/color-radiobutton-active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Form/Checkbox/border-checkbox",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-700"
+              }
+            },
+            {
+              "name": "Form/Checkbox/background-checkbox-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-700"
+              }
+            },
+            {
+              "name": "Form/Checkbox/border-checkbox-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-600"
+              }
+            },
+            {
+              "name": "Form/Checkbox/background-checkbox-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-600"
+              }
+            },
+            {
+              "name": "Form/Checkbox/color-checkbox-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Form/Checkbox/background-checkbox-active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-500"
+              }
+            },
+            {
+              "name": "Form/Checkbox/color-checkbox-active",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Form/Input/border-input",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-700"
+              }
+            },
+            {
+              "name": "Form/Input/border-input-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-600"
+              }
+            },
+            {
+              "name": "Form/Input/color-input-placeholder",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-400"
+              }
+            },
+            {
+              "name": "Tag/color-tag-default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "name": "Text/color-text-secondary"
+              }
+            },
+            {
+              "name": "Tag/color-tag-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "name": "Text/color-text-primary"
+              }
+            },
+            {
+              "name": "Tag/color-tag-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Tag/background-tag-primary-default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Tag/background-tag-primary-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-700"
+              }
+            },
+            {
+              "name": "Tag/background-tag-primary-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-500"
+              }
+            },
+            {
+              "name": "Tag/background-tag-secondary-default",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-700"
+              }
+            },
+            {
+              "name": "Tag/background-tag-secondary-hover",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-600"
+              }
+            },
+            {
+              "name": "Tag/background-tag-secondary-focus",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-500"
+              }
+            },
+            {
+              "name": "Text/color-text-primary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/White/white"
+              }
+            },
+            {
+              "name": "Text/color-text-secondary",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-400"
+              }
+            },
+            {
+              "name": "Text/color-text-link",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-500"
+              }
+            },
+            {
+              "name": "Text/color-text-warning",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Utility/Warning/warning-500"
+              }
+            },
+            {
+              "name": "Text/color-text-primary-light",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-800"
+              }
+            },
+            {
+              "name": "Text/color-text-secondary-light",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Neutral/neutral-600"
+              }
+            },
+            {
+              "name": "Text/color-text-link-light",
+              "type": "color",
+              "isAlias": true,
+              "value": {
+                "collection": "Base",
+                "name": "Colour/Brand/Primary/primary-500"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Typography",
+      "modes": [
+        {
+          "name": "Style",
+          "variables": [
+            {
+              "name": "Heading/Heading 1",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 32,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 40,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Heading/Heading 2",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 24,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 32,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Heading/Heading 3",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 20,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 28,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Heading/Heading 4",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 18,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Heading/Heading 5",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 16,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 22,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Paragraph/Body Lead",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 24,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Regular",
+                "lineHeight": 34,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Paragraph/Body",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 18,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Regular",
+                "lineHeight": 28,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Paragraph/Caption",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Regular",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Paragraph Bold/Body Lead",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 24,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 34,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Paragraph Bold/Body",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 18,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 28,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Paragraph Bold/Caption",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Link/Body Lead Link",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 24,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 34,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "UNDERLINE"
+              }
+            },
+            {
+              "name": "Link/Body Link",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 18,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 28,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "UNDERLINE"
+              }
+            },
+            {
+              "name": "Link/Caption Link",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "UNDERLINE"
+              }
+            },
+            {
+              "name": "Button/XLarge",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 24,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 32,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Button/Large",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 20,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 28,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Button/Medium",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 16,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            },
+            {
+              "name": "Button/Small",
+              "type": "typography",
+              "isAlias": false,
+              "value": {
+                "fontSize": 14,
+                "fontFamily": "Comic Neue",
+                "fontWeight": "Bold",
+                "lineHeight": 24,
+                "lineHeightUnit": "PIXELS",
+                "letterSpacing": 0,
+                "letterSpacingUnit": "PERCENT",
+                "textCase": "ORIGINAL",
+                "textDecoration": "NONE"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

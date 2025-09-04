@@ -9,14 +9,11 @@
             "Support for the Dogecoin crypto-currency through development and advocacy.",
             "Dogecoin trademark defense to prevent abuse and fraud.",
             "A trailmap for the future of Dogecoin."
-          ],
-          "subtitleBefore": "We are",
-          "subtitleHighlight": "Dogecoin",
-          "subtitleAfter": "- the accidental crypto movement that makes people smile."
+          ]
         },
         "manifesto": {
           "title": "The Dogecoin Manifesto",
-          "intro": "We are developing a currency for the people, and we strive to do only good everyday. Through this work we have come to value:",
+          "intro": "We are Dogecoin, the accidental crypto-movement that makes people smile.\n[space]\n[small]We are developing a currency for the people,[/small]\n[small]and we strive to do only good everyday.[/small]\n[small]Through this work we have come to value:[/small]\n[space]\n[gray]Being[/gray] [bold]useful[/bold][gray], we value[/gray] utility [gray]over[/gray] technical brilliance.\n[gray]Being[/gray] [bold]personable[/bold][gray], we value[/gray] individuals and interactions [gray]over[/gray] profit-driven economics.\n[gray]Being[/gray] [bold]welcoming[/bold][gray], we value[/gray] collaboration and trust [gray]over[/gray] competition and exclusivity.\n[gray]Being[/gray] [bold]reliable[/bold][gray], we value[/gray] working solutions [gray]over[/gray] speed of delivery.\n[space]\n[small]That is, while there is value in the items on the right,[/small]\n[small]we value the items on the left more.[/small]",
           "cards": [
             { "title": "Being useful", "text": "We value utility over technical brilliance." },
             { "title": "Being personable", "text": "We value individuals and interactions over profit-driven economics." },

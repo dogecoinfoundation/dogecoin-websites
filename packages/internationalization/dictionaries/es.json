@@ -17,21 +17,6 @@
         "translatedBy": "AI",
         "translatedAt": "2025-09-01"
       },
-      "dogecoin.org.home.about.hero.subtitleBefore": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleHighlight": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleAfter": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
       "dogecoin.org.home.about.manifesto.title": {
         "humanReviewed": false,
         "translatedBy": "AI",
@@ -529,14 +514,11 @@
             "Apoyo a la criptomoneda Dogecoin mediante desarrollo y promoción.",
             "Defensa de la marca Dogecoin para prevenir abusos y fraudes.",
             "Una hoja de ruta para el futuro de Dogecoin."
-          ],
-          "subtitleBefore": "Somos",
-          "subtitleHighlight": "Dogecoin",
-          "subtitleAfter": "- el movimiento cripto accidental que hace sonreír a la gente."
+          ]
         },
         "manifesto": {
           "title": "El Manifiesto Dogecoin",
-          "intro": "Estamos desarrollando una moneda para la gente, y nos esforzamos por hacer solo el bien cada día. A través de este trabajo hemos llegado a valorar:",
+          "intro": "Somos Dogecoin, el movimiento cripto accidental que hace sonreír a la gente.\n[space]\n[small]Estamos desarrollando una moneda para la gente,[/small]\n[small]y nos esforzamos por hacer solo el bien cada día.[/small]\n[small]A través de este trabajo hemos llegado a valorar:[/small]\n[space]\n[gray]Siendo[/gray] [bold]útiles[/bold][gray], valoramos[/gray] la utilidad [gray]por encima del[/gray] brillo técnico.\n[gray]Siendo[/gray] [bold]personales[/bold][gray], valoramos[/gray] a los individuos y las interacciones [gray]por encima de[/gray] la economía impulsada por el lucro.\n[gray]Siendo[/gray] [bold]acogedores[/bold][gray], valoramos[/gray] la colaboración y la confianza [gray]por encima de[/gray] la competencia y la exclusividad.\n[gray]Siendo[/gray] [bold]confiables[/bold][gray], valoramos[/gray] las soluciones funcionales [gray]por encima de[/gray] la velocidad de entrega.\n[space]\n[small]Es decir, aunque hay valor en los elementos de la derecha,[/small]\n[small]valoramos más los elementos de la izquierda.[/small]",
           "cards": [
             {
               "title": "Ser útil",

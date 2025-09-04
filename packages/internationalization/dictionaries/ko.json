@@ -17,21 +17,6 @@
         "translatedBy": "AI",
         "translatedAt": "2025-09-01"
       },
-      "dogecoin.org.home.about.hero.subtitleBefore": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleHighlight": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleAfter": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
       "dogecoin.org.home.about.manifesto.title": {
         "humanReviewed": false,
         "translatedBy": "AI",
@@ -529,14 +514,11 @@
             "개발과 옹호를 통해 도지코인 암호화폐를 지원",
             "남용과 사기를 방지하기 위한 도지코인 상표 보호",
             "도지코인의 미래를 위한 로드맵"
-          ],
-          "subtitleBefore": "우리는",
-          "subtitleHighlight": "Dogecoin",
-          "subtitleAfter": "- 사람들에게 미소를 주는 우연한 크립토 운동입니다."
+          ]
         },
         "manifesto": {
           "title": "도지코인 선언문",
-          "intro": "우리는 사람들을 위한 화폐를 개발하고 있으며, 매일 선한 일만 하려고 노력합니다. 이 일을 통해 우리는 다음을 소중히 여기게 되었습니다:",
+          "intro": "우리는 도지코인입니다. 사람들을 웃게 만드는 우연한 암호화폐 운동입니다.\n[space]\n[small]우리는 사람들을 위한 화폐를 개발하고 있으며,[/small]\n[small]매일 선한 일만 하려고 노력합니다.[/small]\n[small]이 일을 통해 우리는 다음을 소중히 여기게 되었습니다:[/small]\n[space]\n[gray]유용함을[/gray] [bold]추구하며[/bold][gray], 우리는[/gray] 실용성을 [gray]기술적 화려함보다[/gray] 중시합니다.\n[gray]사람 중심을[/gray] [bold]추구하며[/bold][gray], 우리는[/gray] 개인과 상호작용을 [gray]이익 중심 경제보다[/gray] 중시합니다.\n[gray]환영함을[/gray] [bold]추구하며[/bold][gray], 우리는[/gray] 협업과 신뢰를 [gray]경쟁과 배타성보다[/gray] 중시합니다.\n[gray]신뢰성을[/gray] [bold]추구하며[/bold][gray], 우리는[/gray] 작동하는 해결책을 [gray]납품 속도보다[/gray] 중시합니다.\n[space]\n[small]즉, 오른쪽 항목들에도 가치가 있지만,[/small]\n[small]우리는 왼쪽 항목들을 더 소중히 여깁니다.[/small]",
           "cards": [
             {
               "title": "유용함",

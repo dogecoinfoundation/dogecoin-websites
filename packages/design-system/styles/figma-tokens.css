@@ -1,0 +1,267 @@
+/* Generated from Figma variables.json */
+/* Design tokens for Dogecoin.org */
+
+:root {
+  /* Colors - Brand Primary */
+  --colour-brand-primary-primary-100: #FCEED6;
+  --colour-brand-primary-primary-200: #FADDAC;
+  --colour-brand-primary-primary-300: #F7CC83;
+  --colour-brand-primary-primary-400: #F5BB59;
+  --colour-brand-primary-primary-500: #F2AA30;
+  --colour-brand-primary-primary-600: #C28826;
+  --colour-brand-primary-primary-700: #91661D;
+  --colour-brand-primary-primary-800: #614413;
+  --colour-brand-primary-primary-900: #30220A;
+
+  /* Colors - Brand Secondary */
+  --colour-brand-secondary-secondary-100: #E8E6FF;
+  --colour-brand-secondary-secondary-200: #D8CFFF;
+  --colour-brand-secondary-secondary-300: #B8A8FF;
+  --colour-brand-secondary-secondary-400: #9780FF;
+  --colour-brand-secondary-secondary-500: #6857B9;
+  --colour-brand-secondary-secondary-600: #493A90;
+  --colour-brand-secondary-secondary-700: #302564;
+  --colour-brand-secondary-seconday-800: #241C4E;
+  --colour-brand-secondary-seconday-900: #19152D;
+
+  /* Colors - White */
+  --colour-white-white: #FFFFFF;
+  --colour-white-white-a90: #FFFFFFE6;
+  --colour-white-white-a80: #FFFFFFCC;
+  --colour-white-white-a70: #FFFFFFB3;
+  --colour-white-white-a60: #FFFFFF99;
+  --colour-white-white-a50: #FFFFFF80;
+  --colour-white-white-a40: #FFFFFF66;
+  --colour-white-white-a30: #FFFFFF4D;
+  --colour-white-white-a20: #FFFFFF33;
+  --colour-white-color-white-a10: #FFFFFF1A;
+
+  /* Colors - Black */
+  --colour-black-black: #030303;
+  --colour-black-black-a90: #030303E6;
+  --colour-black-black-a80: #030303CC;
+  --colour-black-black-a70: #030303B3;
+  --colour-black-black-a60: #03030399;
+  --colour-black-black-a50: #03030380;
+  --colour-black-black-a40: #03030366;
+  --colour-black-black-a30: #0303034D;
+  --colour-black-black-a20: #03030333;
+  --colour-black-color-black-a10: #0303031A;
+
+  /* Colors - Neutral */
+  --colour-neutral-neutral-900: #151413;
+  --colour-neutral-neutral-800: #201F1D;
+  --colour-neutral-neutral-700: #333230;
+  --colour-neutral-neutral-600: #464543;
+  --colour-neutral-neutral-500: #5B5A58;
+  --colour-neutral-neutral-400: #878685;
+  --colour-neutral-neutral-300: #B5B5B4;
+  --colour-neutral-neutral-200: #CDCDCC;
+  --colour-neutral-neutral-100: #E6E6E5;
+
+  /* Colors - Accent */
+  --colour-accent-accent-pink: #FF46CE;
+  --colour-accent-accent-yellow: #FFFC36;
+  --colour-accent-accent-blue: #2BF9FF;
+  --colour-accent-accent-green: #62FF46;
+  --colour-accent-accent-orange: #FF7D47;
+  --colour-accent-color-accent-purple: #9780FF;
+
+  /* Colors - Utility Success */
+  --colour-utility-success-success-100: #E0FFDA;
+  --colour-utility-success-success-200: #C0FFB5;
+  --colour-utility-success-success-300: #A1FF90;
+  --colour-utility-success-success-400: #81FF6B;
+  --colour-utility-success-success-500: #62FF46;
+  --colour-utility-success-success-600: #4ECC38;
+  --colour-utility-success-success-700: #3B992A;
+  --colour-utility-success-success-800: #27661C;
+  --colour-utility-success-success-900: #14330E;
+
+  /* Colors - Utility Warning */
+  --colour-utility-warning-warning-100: #FFD5DE;
+  --colour-utility-warning-warning-200: #FFACBE;
+  --colour-utility-warning-warning-300: #FF829D;
+  --colour-utility-warning-warning-400: #FF597D;
+  --colour-utility-warning-warning-500: #FF2F5C;
+  --colour-utility-warning-warning-600: #CC264A;
+  --colour-utility-warning-warning-700: #991C37;
+  --colour-utility-warning-warning-800: #661325;
+  --colour-utility-warning-warning-900: #330912;
+
+  /* Spacing */
+  --measurements-spacing-spacing-4xs: 2px;
+  --measurements-spacing-spacing-3xs: 4px;
+  --measurements-spacing-spacing-2xs: 8px;
+  --measurements-spacing-spacing-xs: 12px;
+  --measurements-spacing-spacing-sm: 16px;
+  --measurements-spacing-spacing-md: 20px;
+  --measurements-spacing-spacing-lg: 24px;
+  --measurements-spacing-spacing-xl: 32px;
+  --measurements-spacing-spacing-2xl: 48px;
+  --measurements-spacing-spacing-3xl: 64px;
+  --measurements-spacing-spacing-4xl: 80px;
+  --measurements-spacing-spacing-5xl: 128px;
+
+  /* Border Radius */
+  --measurements-border-radius-border-radius-sm: 4px;
+  --measurements-border-radius-border-radius-md: 8px;
+  --measurements-border-radius-border-radius-lg: 12px;
+  --measurements-border-radius-border-radius-xl: 16px;
+  --measurements-border-radius-border-radius-2xl: 24px;
+  --measurements-border-radius-border-radius-full: 9999px;
+
+  /* Typography Base */
+  --typography-font-family-heading: "Comic Neue";
+  --typography-font-weight-heading: bold;
+  --typography-font-family-paragraph: "Comic Neue";
+  --typography-font-weight-paragraph: normal;
+  --typography-font-family-link: "Comic Neue";
+  --typography-font-weight-link: bold;
+  --typography-font-family-button: "Comic Neue";
+  --typography-font-weight-button: bold;
+  --typography-font-weight-strong: bold;
+
+  /* Theme Colors */
+  --body-background-body: var(--colour-black-black);
+  --button-primary-background-button-primary: var(--colour-brand-primary-primary-500);
+  --button-primary-background-button-primary-hover: var(--colour-brand-primary-primary-600);
+  --button-primary-background-button-primary-focus: var(--colour-brand-primary-primary-700);
+  --button-primary-color-button-primary: var(--colour-neutral-neutral-800);
+  --button-secondary-color-button-secondary: var(--colour-brand-primary-primary-500);
+  --button-secondary-border-button-secondary: var(--colour-brand-primary-primary-500);
+  --button-secondary-background-button-secondary-hover: var(--colour-brand-primary-primary-900);
+  --button-secondary-background-button-secondary-focus: var(--colour-brand-primary-primary-800);
+  --button-tertiary-color-button-tertiary: var(--colour-brand-primary-primary-500);
+  --button-tertiary-background-button-tertiary-hover: var(--colour-neutral-neutral-800);
+  --button-tertiary-background-button-tertiary-focus: var(--colour-neutral-neutral-700);
+  --button-warning-color-button-warning: var(--colour-utility-warning-warning-500);
+  --button-warning-border-button-warning: var(--colour-utility-warning-warning-500);
+  --button-warning-background-button-warning-hover: var(--colour-utility-warning-warning-900);
+  --button-warning-background-button-warning-focus: var(--colour-utility-warning-warning-800);
+  --card-background-card: var(--colour-neutral-neutral-800);
+  --card-border-card: var(--colour-neutral-neutral-700);
+  --divider-border-primary-dark: var(--colour-neutral-neutral-700);
+  --divider-border-secondary-dark: var(--colour-neutral-neutral-800);
+  --form-input-background-input: var(--colour-neutral-neutral-800);
+  --form-input-background-input-focus: var(--colour-neutral-neutral-700);
+  --form-checkbox-background-checkbox: var(--colour-neutral-neutral-800);
+  --form-radiobutton-background-radiobutton: var(--colour-neutral-neutral-800);
+  --form-radiobutton-border-radiobutton: var(--colour-neutral-neutral-700);
+  --form-radiobutton-background-radiobutton-hover: var(--colour-neutral-neutral-700);
+  --form-radiobutton-border-radiobutton-hover: var(--colour-neutral-neutral-600);
+  --form-radiobutton-background-radiobutton-focus: var(--colour-brand-primary-primary-600);
+  --form-radiobutton-border-radiobutton-focus: var(--colour-neutral-neutral-800);
+  --form-radiobutton-background-radiobutton-active: var(--colour-brand-primary-primary-500);
+  --form-radiobutton-color-radiobutton-active: var(--colour-neutral-neutral-800);
+  --form-checkbox-border-checkbox: var(--colour-neutral-neutral-700);
+  --form-checkbox-background-checkbox-hover: var(--colour-neutral-neutral-700);
+  --form-checkbox-border-checkbox-hover: var(--colour-neutral-neutral-600);
+  --form-checkbox-background-checkbox-focus: var(--colour-brand-primary-primary-600);
+  --form-checkbox-color-checkbox-focus: var(--colour-neutral-neutral-800);
+  --form-checkbox-background-checkbox-active: var(--colour-brand-primary-primary-500);
+  --form-checkbox-color-checkbox-active: var(--colour-neutral-neutral-800);
+  --form-input-border-input: var(--colour-neutral-neutral-700);
+  --form-input-border-input-focus: var(--colour-neutral-neutral-600);
+  --form-input-color-input-placeholder: var(--colour-neutral-neutral-400);
+  --text-color-text-primary: var(--colour-white-white);
+  --text-color-text-secondary: var(--colour-neutral-neutral-400);
+  --text-color-text-link: var(--colour-brand-primary-primary-500);
+  --text-color-text-warning: var(--colour-utility-warning-warning-500);
+  --text-color-text-primary-light: var(--colour-neutral-neutral-800);
+  --text-color-text-secondary-light: var(--colour-neutral-neutral-600);
+  --text-color-text-link-light: var(--colour-brand-primary-primary-500);
+}
+
+/* Mobile Typography (default) */
+:root {
+  --typography-heading-h1-font-size: 32px;
+  --typography-heading-h1-line-height: 40px;
+  --typography-heading-h2-font-size: 24px;
+  --typography-heading-h2-line-height: 32px;
+  --typography-heading-h3-font-size: 20px;
+  --typography-heading-h3-line-height: 28px;
+  --typography-heading-h4-font-size: 18px;
+  --typography-heading-h4-line-height: 24px;
+  --typography-heading-h5-font-size: 16px;
+  --typography-heading-h5-line-height: 22px;
+  --typography-paragraph-body-lead-font-size: 24px;
+  --typography-paragraph-body-lead-line-height: 34px;
+  --typography-paragraph-body-font-size: 18px;
+  --typography-paragraph-body-line-height: 28px;
+  --typography-paragraph-caption-font-size: 14px;
+  --typography-paragraph-caption-line-height: 24px;
+  --typography-button-xlarge-font-size: 24px;
+  --typography-button-xlarge-line-height: 32px;
+  --typography-button-large-font-size: 20px;
+  --typography-button-large-line-height: 28px;
+  --typography-button-medium-font-size: 16px;
+  --typography-button-medium-line-height: 24px;
+  --typography-button-small-font-size: 14px;
+  --typography-button-small-line-height: 24px;
+  --section-section-x: 24px;
+  --container-max-width: 1440px;
+  --section-section-y-sm: 20px;
+  --section-section-y: 32px;
+  --section-section-y-lg: 64px;
+}
+
+/* Small Tablet */
+@media (min-width: 768px) {
+  :root {
+    --typography-heading-h1-font-size: 40px;
+    --typography-heading-h1-line-height: 48px;
+    --typography-heading-h2-font-size: 32px;
+    --typography-heading-h2-line-height: 40px;
+    --typography-heading-h3-font-size: 24px;
+    --typography-heading-h3-line-height: 32px;
+    --typography-heading-h4-font-size: 20px;
+    --typography-heading-h4-line-height: 28px;
+    --typography-heading-h5-font-size: 18px;
+    --typography-heading-h5-line-height: 24px;
+    --section-section-x: 48px;
+    --section-section-y-sm: 24px;
+    --section-section-y: 48px;
+    --section-section-y-lg: 96px;
+  }
+}
+
+/* Tablet */
+@media (min-width: 1024px) {
+  :root {
+    --typography-heading-h1-font-size: 48px;
+    --typography-heading-h1-line-height: 56px;
+    --typography-heading-h2-font-size: 40px;
+    --typography-heading-h2-line-height: 48px;
+    --typography-heading-h3-font-size: 32px;
+    --typography-heading-h3-line-height: 40px;
+    --typography-heading-h4-font-size: 24px;
+    --typography-heading-h4-line-height: 32px;
+    --typography-heading-h5-font-size: 20px;
+    --typography-heading-h5-line-height: 28px;
+    --typography-paragraph-body-font-size: 20px;
+    --typography-paragraph-body-line-height: 30px;
+    --typography-paragraph-caption-font-size: 16px;
+    --typography-paragraph-caption-line-height: 26px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1366px) {
+  :root {
+    --typography-heading-h1-font-size: 64px;
+    --typography-heading-h1-line-height: 72px;
+    --typography-heading-h2-font-size: 48px;
+    --typography-heading-h2-line-height: 56px;
+    --typography-heading-h3-font-size: 40px;
+    --typography-heading-h3-line-height: 48px;
+    --typography-heading-h4-font-size: 32px;
+    --typography-heading-h4-line-height: 40px;
+    --typography-heading-h5-font-size: 24px;
+    --typography-heading-h5-line-height: 32px;
+    --section-section-x: 80px;
+    --section-section-y-sm: 48px;
+    --section-section-y: 80px;
+    --section-section-y-lg: 160px;
+  }
+}

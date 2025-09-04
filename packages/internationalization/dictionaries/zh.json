@@ -17,21 +17,6 @@
         "translatedBy": "AI",
         "translatedAt": "2025-09-01"
       },
-      "dogecoin.org.home.about.hero.subtitleBefore": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleHighlight": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
-      "dogecoin.org.home.about.hero.subtitleAfter": {
-        "humanReviewed": false,
-        "translatedBy": "AI",
-        "translatedAt": "2025-09-01"
-      },
       "dogecoin.org.home.about.manifesto.title": {
         "humanReviewed": false,
         "translatedBy": "AI",
@@ -529,14 +514,11 @@
             "通过开发与倡导支持狗狗币加密货币。",
             "维护狗狗币商标，防止滥用与欺诈。",
             "制定狗狗币的未来路线图。"
-          ],
-          "subtitleBefore": "我们是",
-          "subtitleHighlight": "Dogecoin",
-          "subtitleAfter": "——让人们会心一笑的意外加密运动。"
+          ]
         },
         "manifesto": {
           "title": "狗狗币宣言",
-          "intro": "我们正在为人们打造一种货币，并努力每天只做善事。通过这项工作，我们逐渐重视：",
+          "intro": "我们是狗狗币，这个让人们微笑的意外加密运动。\n[space]\n[small]我们正在为人们打造一种货币，[/small]\n[small]并努力每天只做善事。[/small]\n[small]通过这项工作，我们逐渐重视：[/small]\n[space]\n[gray]务实[/gray][bold]有用[/bold][gray]，我们更重视[/gray]实用性[gray]而非[/gray]技术上的炫目。\n[gray]真诚[/gray][bold]亲切[/bold][gray]，我们更重视[/gray]个人与互动[gray]，而非以[/gray]利润驱动的经济。\n[gray]开放[/gray][bold]包容[/bold][gray]，我们更重视[/gray]协作与信任[gray]，而非[/gray]竞争与排他。\n[gray]可靠[/gray][bold]可信[/bold][gray]，我们更重视[/gray]可用的解决方案[gray]，而非[/gray]交付的速度。\n[space]\n[small]也就是说，虽然右边的项目也有价值，[/small]\n[small]但我们更重视左边的项目。[/small]",
           "cards": [
             {
               "title": "务实有用",
