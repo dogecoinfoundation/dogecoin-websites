@@ -10,75 +10,75 @@
 
 :root {
   /* Using Figma design tokens for theming */
-  --background: var(--colour-white-white);
-  --foreground: var(--colour-neutral-neutral-800);
-  --card: var(--card-background-card, var(--colour-white-white));
-  --card-foreground: var(--text-color-text-primary-light);
-  --popover: var(--colour-white-white);
-  --popover-foreground: var(--colour-neutral-neutral-800);
-  --primary: var(--colour-brand-primary-primary-500);
-  --primary-foreground: var(--button-primary-color-button-primary);
-  --secondary: var(--colour-brand-secondary-secondary-100);
-  --secondary-foreground: var(--colour-neutral-neutral-800);
-  --muted: var(--colour-neutral-neutral-100);
-  --muted-foreground: var(--colour-neutral-neutral-500);
-  --accent: var(--colour-accent-accent-yellow);
-  --accent-foreground: var(--colour-neutral-neutral-800);
-  --destructive: var(--colour-utility-warning-warning-500);
-  --destructive-foreground: var(--colour-white-white);
-  --border: var(--colour-neutral-neutral-200);
-  --input: var(--form-input-background-input, var(--colour-neutral-neutral-100));
-  --ring: var(--colour-brand-primary-primary-500);
-  --chart-1: var(--colour-brand-primary-primary-500);
-  --chart-2: var(--colour-brand-secondary-secondary-400);
-  --chart-3: var(--colour-accent-accent-blue);
-  --chart-4: var(--colour-accent-accent-green);
-  --chart-5: var(--colour-accent-accent-pink);
-  --radius: var(--measurements-border-radius-border-radius-md);
-  --sidebar: var(--colour-white-white);
-  --sidebar-foreground: var(--colour-neutral-neutral-800);
-  --sidebar-primary: var(--colour-brand-primary-primary-500);
-  --sidebar-primary-foreground: var(--colour-neutral-neutral-800);
-  --sidebar-accent: var(--colour-neutral-neutral-100);
-  --sidebar-accent-foreground: var(--colour-neutral-neutral-800);
-  --sidebar-border: var(--colour-neutral-neutral-200);
-  --sidebar-ring: var(--colour-brand-primary-primary-500);
+  --background: #FFFFFF;
+  --foreground: var(--neutral-800);
+  --card: var(--card-bg, #FFFFFF);
+  --card-foreground: var(--foreground-inverse);
+  --popover: #FFFFFF;
+  --popover-foreground: var(--neutral-800);
+  --primary: var(--brand-primary-500);
+  --primary-foreground: var(--button-primary-text);
+  --secondary: var(--brand-secondary-100);
+  --secondary-foreground: var(--neutral-800);
+  --muted: var(--neutral-100);
+  --muted-foreground: var(--neutral-500);
+  --accent: var(--accent-yellow);
+  --accent-foreground: var(--neutral-800);
+  --destructive: var(--warning-500);
+  --destructive-foreground: #FFFFFF;
+  --border: var(--neutral-200);
+  --input: var(--input-bg, var(--neutral-100));
+  --ring: var(--brand-primary-500);
+  --chart-1: var(--brand-primary-500);
+  --chart-2: var(--brand-secondary-400);
+  --chart-3: var(--accent-blue);
+  --chart-4: var(--accent-green);
+  --chart-5: var(--accent-pink);
+  --radius: var(--radius-default);
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: var(--neutral-800);
+  --sidebar-primary: var(--brand-primary-500);
+  --sidebar-primary-foreground: var(--neutral-800);
+  --sidebar-accent: var(--neutral-100);
+  --sidebar-accent-foreground: var(--neutral-800);
+  --sidebar-border: var(--neutral-200);
+  --sidebar-ring: var(--brand-primary-500);
 }
 
 .dark {
   /* Using Figma dark theme tokens */
-  --background: var(--body-background-body);
-  --foreground: var(--text-color-text-primary);
-  --card: var(--card-background-card);
-  --card-foreground: var(--text-color-text-primary);
-  --popover: var(--card-background-card);
-  --popover-foreground: var(--text-color-text-primary);
-  --primary: var(--colour-brand-primary-primary-500);
-  --primary-foreground: var(--button-primary-color-button-primary);
-  --secondary: var(--colour-neutral-neutral-800);
-  --secondary-foreground: var(--text-color-text-primary);
-  --muted: var(--colour-neutral-neutral-800);
-  --muted-foreground: var(--text-color-text-secondary);
-  --accent: var(--colour-accent-accent-yellow);
-  --accent-foreground: var(--colour-neutral-neutral-800);
-  --destructive: var(--colour-utility-warning-warning-500);
-  --destructive-foreground: var(--colour-white-white);
-  --border: var(--divider-border-primary-dark);
-  --input: var(--form-input-background-input);
-  --ring: var(--colour-brand-primary-primary-500);
-  --chart-1: var(--colour-brand-primary-primary-500);
-  --chart-2: var(--colour-brand-secondary-secondary-400);
-  --chart-3: var(--colour-accent-accent-blue);
-  --chart-4: var(--colour-accent-accent-green);
-  --chart-5: var(--colour-accent-accent-pink);
-  --sidebar: var(--colour-neutral-neutral-800);
-  --sidebar-foreground: var(--text-color-text-primary);
-  --sidebar-primary: var(--colour-brand-primary-primary-500);
-  --sidebar-primary-foreground: var(--button-primary-color-button-primary);
-  --sidebar-accent: var(--colour-neutral-neutral-700);
-  --sidebar-accent-foreground: var(--text-color-text-primary);
-  --sidebar-border: var(--divider-border-primary-dark);
-  --sidebar-ring: var(--colour-brand-primary-primary-500);
+  --background: var(--background-primary);
+  --foreground: var(--foreground-primary);
+  --card: var(--card-bg);
+  --card-foreground: var(--foreground-primary);
+  --popover: var(--card-bg);
+  --popover-foreground: var(--foreground-primary);
+  --primary: var(--brand-primary-500);
+  --primary-foreground: var(--button-primary-text);
+  --secondary: var(--neutral-800);
+  --secondary-foreground: var(--foreground-primary);
+  --muted: var(--neutral-800);
+  --muted-foreground: var(--foreground-secondary);
+  --accent: var(--accent-yellow);
+  --accent-foreground: var(--neutral-800);
+  --destructive: var(--warning-500);
+  --destructive-foreground: #FFFFFF;
+  --border: var(--border-default);
+  --input: var(--input-bg);
+  --ring: var(--brand-primary-500);
+  --chart-1: var(--brand-primary-500);
+  --chart-2: var(--brand-secondary-400);
+  --chart-3: var(--accent-blue);
+  --chart-4: var(--accent-green);
+  --chart-5: var(--accent-pink);
+  --sidebar: var(--neutral-800);
+  --sidebar-foreground: var(--foreground-primary);
+  --sidebar-primary: var(--brand-primary-500);
+  --sidebar-primary-foreground: var(--button-primary-text);
+  --sidebar-accent: var(--neutral-700);
+  --sidebar-accent-foreground: var(--foreground-primary);
+  --sidebar-border: var(--border-default);
+  --sidebar-ring: var(--brand-primary-500);
 }
 
 @theme inline {
@@ -216,157 +216,176 @@
 @layer utilities {
   /* Typography Utilities */
   .text-h1 {
-    font-size: var(--typography-heading-h1-font-size);
-    line-height: var(--typography-heading-h1-line-height);
-    font-family: var(--typography-font-family-heading);
-    font-weight: var(--typography-font-weight-heading);
+    font-size: var(--heading-1);
+    line-height: var(--leading-tight);
+    font-family: var(--font-sans);
+    font-weight: var(--font-bold);
   }
   
   .text-h2 {
-    font-size: var(--typography-heading-h2-font-size);
-    line-height: var(--typography-heading-h2-line-height);
-    font-family: var(--typography-font-family-heading);
-    font-weight: var(--typography-font-weight-heading);
+    font-size: var(--heading-2);
+    line-height: var(--leading-tight);
+    font-family: var(--font-sans);
+    font-weight: var(--font-bold);
   }
   
   .text-h3 {
-    font-size: var(--typography-heading-h3-font-size);
-    line-height: var(--typography-heading-h3-line-height);
-    font-family: var(--typography-font-family-heading);
-    font-weight: var(--typography-font-weight-heading);
+    font-size: var(--heading-3);
+    line-height: var(--leading-tight);
+    font-family: var(--font-sans);
+    font-weight: var(--font-bold);
   }
   
   .text-h4 {
-    font-size: var(--typography-heading-h4-font-size);
-    line-height: var(--typography-heading-h4-line-height);
-    font-family: var(--typography-font-family-heading);
-    font-weight: var(--typography-font-weight-heading);
+    font-size: var(--heading-4);
+    line-height: var(--leading-snug);
+    font-family: var(--font-sans);
+    font-weight: var(--font-bold);
   }
   
   .text-h5 {
-    font-size: var(--typography-heading-h5-font-size);
-    line-height: var(--typography-heading-h5-line-height);
-    font-family: var(--typography-font-family-heading);
-    font-weight: var(--typography-font-weight-heading);
+    font-size: var(--heading-5);
+    line-height: var(--leading-snug);
+    font-family: var(--font-sans);
+    font-weight: var(--font-bold);
   }
   
   .text-body-lead {
-    font-size: var(--typography-paragraph-body-lead-font-size);
-    line-height: var(--typography-paragraph-body-lead-line-height);
-    font-family: var(--typography-font-family-paragraph);
-    font-weight: var(--typography-font-weight-paragraph);
+    font-size: var(--body-lead);
+    line-height: var(--leading-relaxed);
+    font-family: var(--font-sans);
+    font-weight: var(--font-normal);
   }
   
   .text-body {
-    font-size: var(--typography-paragraph-body-font-size);
-    line-height: var(--typography-paragraph-body-line-height);
-    font-family: var(--typography-font-family-paragraph);
-    font-weight: var(--typography-font-weight-paragraph);
+    font-size: var(--body-default);
+    line-height: var(--leading-normal);
+    font-family: var(--font-sans);
+    font-weight: var(--font-normal);
   }
   
   .text-caption {
-    font-size: var(--typography-paragraph-caption-font-size);
-    line-height: var(--typography-paragraph-caption-line-height);
-    font-family: var(--typography-font-family-paragraph);
-    font-weight: var(--typography-font-weight-paragraph);
+    font-size: var(--body-small);
+    line-height: var(--leading-relaxed);
+    font-family: var(--font-sans);
+    font-weight: var(--font-normal);
   }
 
   /* Button Typography */
   .text-button-xl {
-    font-size: var(--typography-button-xlarge-font-size);
-    line-height: var(--typography-button-xlarge-line-height);
-    font-family: var(--typography-font-family-button);
-    font-weight: var(--typography-font-weight-button);
+    font-size: var(--button-xl);
+    line-height: var(--leading-snug);
+    font-family: var(--font-sans);
+    font-weight: var(--font-bold);
   }
   
   .text-button-lg {
-    font-size: var(--typography-button-large-font-size);
-    line-height: var(--typography-button-large-line-height);
-    font-family: var(--typography-font-family-button);
-    font-weight: var(--typography-font-weight-button);
+    font-size: var(--button-lg);
+    line-height: var(--leading-snug);
+    font-family: var(--font-sans);
+    font-weight: var(--font-bold);
   }
   
   .text-button-md {
-    font-size: var(--typography-button-medium-font-size);
-    line-height: var(--typography-button-medium-line-height);
-    font-family: var(--typography-font-family-button);
-    font-weight: var(--typography-font-weight-button);
+    font-size: var(--button-md);
+    line-height: var(--leading-normal);
+    font-family: var(--font-sans);
+    font-weight: var(--font-bold);
   }
   
   .text-button-sm {
-    font-size: var(--typography-button-small-font-size);
-    line-height: var(--typography-button-small-line-height);
-    font-family: var(--typography-font-family-button);
-    font-weight: var(--typography-font-weight-button);
+    font-size: var(--button-sm);
+    line-height: var(--leading-normal);
+    font-family: var(--font-sans);
+    font-weight: var(--font-bold);
   }
 
   /* Spacing Utilities */
-  .gap-4xs { gap: var(--measurements-spacing-spacing-4xs); }
-  .gap-3xs { gap: var(--measurements-spacing-spacing-3xs); }
-  .gap-2xs { gap: var(--measurements-spacing-spacing-2xs); }
-  .gap-xs { gap: var(--measurements-spacing-spacing-xs); }
-  .gap-sm { gap: var(--measurements-spacing-spacing-sm); }
-  .gap-md { gap: var(--measurements-spacing-spacing-md); }
-  .gap-lg { gap: var(--measurements-spacing-spacing-lg); }
-  .gap-xl { gap: var(--measurements-spacing-spacing-xl); }
-  .gap-2xl { gap: var(--measurements-spacing-spacing-2xl); }
-  .gap-3xl { gap: var(--measurements-spacing-spacing-3xl); }
-  .gap-4xl { gap: var(--measurements-spacing-spacing-4xl); }
-  .gap-5xl { gap: var(--measurements-spacing-spacing-5xl); }
+  .gap-0\.5 { gap: var(--spacing-0\.5); }
+  .gap-1 { gap: var(--spacing-1); }
+  .gap-2 { gap: var(--spacing-2); }
+  .gap-3 { gap: var(--spacing-3); }
+  .gap-4 { gap: var(--spacing-4); }
+  .gap-5 { gap: var(--spacing-5); }
+  .gap-6 { gap: var(--spacing-6); }
+  .gap-8 { gap: var(--spacing-8); }
+  .gap-12 { gap: var(--spacing-12); }
+  .gap-16 { gap: var(--spacing-16); }
+  .gap-20 { gap: var(--spacing-20); }
+  .gap-32 { gap: var(--spacing-32); }
 
-  .space-y-4xs > * + * { margin-top: var(--measurements-spacing-spacing-4xs); }
-  .space-y-3xs > * + * { margin-top: var(--measurements-spacing-spacing-3xs); }
-  .space-y-2xs > * + * { margin-top: var(--measurements-spacing-spacing-2xs); }
-  .space-y-xs > * + * { margin-top: var(--measurements-spacing-spacing-xs); }
-  .space-y-sm > * + * { margin-top: var(--measurements-spacing-spacing-sm); }
-  .space-y-md > * + * { margin-top: var(--measurements-spacing-spacing-md); }
-  .space-y-lg > * + * { margin-top: var(--measurements-spacing-spacing-lg); }
-  .space-y-xl > * + * { margin-top: var(--measurements-spacing-spacing-xl); }
-  .space-y-2xl > * + * { margin-top: var(--measurements-spacing-spacing-2xl); }
-  .space-y-3xl > * + * { margin-top: var(--measurements-spacing-spacing-3xl); }
-  .space-y-4xl > * + * { margin-top: var(--measurements-spacing-spacing-4xl); }
-  .space-y-5xl > * + * { margin-top: var(--measurements-spacing-spacing-5xl); }
+  .space-y-0\.5 > * + * { margin-top: var(--spacing-0\.5); }
+  .space-y-1 > * + * { margin-top: var(--spacing-1); }
+  .space-y-2 > * + * { margin-top: var(--spacing-2); }
+  .space-y-3 > * + * { margin-top: var(--spacing-3); }
+  .space-y-4 > * + * { margin-top: var(--spacing-4); }
+  .space-y-5 > * + * { margin-top: var(--spacing-5); }
+  .space-y-6 > * + * { margin-top: var(--spacing-6); }
+  .space-y-8 > * + * { margin-top: var(--spacing-8); }
+  .space-y-12 > * + * { margin-top: var(--spacing-12); }
+  .space-y-16 > * + * { margin-top: var(--spacing-16); }
+  .space-y-20 > * + * { margin-top: var(--spacing-20); }
+  .space-y-32 > * + * { margin-top: var(--spacing-32); }
 
   /* Padding Utilities */
-  .p-4xs { padding: var(--measurements-spacing-spacing-4xs); }
-  .p-3xs { padding: var(--measurements-spacing-spacing-3xs); }
-  .p-2xs { padding: var(--measurements-spacing-spacing-2xs); }
-  .p-xs { padding: var(--measurements-spacing-spacing-xs); }
-  .p-sm { padding: var(--measurements-spacing-spacing-sm); }
-  .p-md { padding: var(--measurements-spacing-spacing-md); }
-  .p-lg { padding: var(--measurements-spacing-spacing-lg); }
-  .p-xl { padding: var(--measurements-spacing-spacing-xl); }
-  .p-2xl { padding: var(--measurements-spacing-spacing-2xl); }
-  .p-3xl { padding: var(--measurements-spacing-spacing-3xl); }
-  .p-4xl { padding: var(--measurements-spacing-spacing-4xl); }
-  .p-5xl { padding: var(--measurements-spacing-spacing-5xl); }
+  .p-0\.5 { padding: var(--spacing-0\.5); }
+  .p-1 { padding: var(--spacing-1); }
+  .p-2 { padding: var(--spacing-2); }
+  .p-3 { padding: var(--spacing-3); }
+  .p-4 { padding: var(--spacing-4); }
+  .p-5 { padding: var(--spacing-5); }
+  .p-6 { padding: var(--spacing-6); }
+  .p-8 { padding: var(--spacing-8); }
+  .p-12 { padding: var(--spacing-12); }
+  .p-16 { padding: var(--spacing-16); }
+  .p-20 { padding: var(--spacing-20); }
+  .p-32 { padding: var(--spacing-32); }
 
   /* Section Spacing */
-  .section-y { padding-top: var(--section-section-y); padding-bottom: var(--section-section-y); }
-  .section-y-sm { padding-top: var(--section-section-y-sm); padding-bottom: var(--section-section-y-sm); }
-  .section-y-lg { padding-top: var(--section-section-y-lg); padding-bottom: var(--section-section-y-lg); }
-  .section-x { padding-left: var(--section-section-x); padding-right: var(--section-section-x); }
+  .section-y { padding-top: var(--section-padding-y); padding-bottom: var(--section-padding-y); }
+  .section-y-sm { padding-top: var(--spacing-6); padding-bottom: var(--spacing-6); }
+  .section-y-lg { padding-top: var(--spacing-20); padding-bottom: var(--spacing-20); }
+  .section-x { padding-left: var(--section-padding-x); padding-right: var(--section-padding-x); }
 
   /* Border Radius Utilities */
-  .rounded-sm { border-radius: var(--measurements-border-radius-border-radius-sm); }
-  .rounded-md { border-radius: var(--measurements-border-radius-border-radius-md); }
-  .rounded-lg { border-radius: var(--measurements-border-radius-border-radius-lg); }
-  .rounded-xl { border-radius: var(--measurements-border-radius-border-radius-xl); }
-  .rounded-2xl { border-radius: var(--measurements-border-radius-border-radius-2xl); }
-  .rounded-full { border-radius: var(--measurements-border-radius-border-radius-full); }
+  .rounded-sm { border-radius: var(--radius-sm); }
+  .rounded-md { border-radius: var(--radius-default); }
+  .rounded-lg { border-radius: var(--radius-md); }
+  .rounded-xl { border-radius: var(--radius-lg); }
+  .rounded-2xl { border-radius: var(--radius-xl); }
+  .rounded-full { border-radius: var(--radius-full); }
 
   /* Color Utilities */
-  .text-primary { color: var(--text-color-text-primary); }
-  .text-secondary { color: var(--text-color-text-secondary); }
-  .text-link { color: var(--text-color-text-link); }
-  .text-warning { color: var(--text-color-text-warning); }
+  .text-primary { color: var(--foreground-primary); }
+  .text-secondary { color: var(--foreground-secondary); }
+  .text-link { color: var(--interactive-primary); }
+  .text-warning { color: var(--status-warning); }
   
-  .bg-primary { background-color: var(--colour-brand-primary-primary-500); }
-  .bg-secondary { background-color: var(--colour-brand-secondary-secondary-500); }
-  .bg-card { background-color: var(--card-background-card); }
-  .bg-body { background-color: var(--body-background-body); }
+  .bg-primary { background-color: var(--brand-primary-500); }
+  .bg-secondary { background-color: var(--brand-secondary-500); }
+  .bg-card { background-color: var(--card-bg); }
+  .bg-body { background-color: var(--background-primary); }
   
-  .border-primary { border-color: var(--colour-brand-primary-primary-500); }
-  .border-card { border-color: var(--card-border-card); }
-  .border-input { border-color: var(--form-input-border-input); }
+  .border-primary { border-color: var(--brand-primary-500); }
+  .border-card { border-color: var(--card-border); }
+  .border-input { border-color: var(--input-border); }
+
+  /* Missing utilities from compilation errors */
+  .text-gray-muted { color: var(--foreground-secondary); }
+  .text-error-red { color: var(--status-error); }
+  .text-primary-500-alt { color: var(--brand-primary-500); }
+  .text-accent-alt-purple { color: var(--accent-alt-purple); }
+  .text-text-color-text-link { color: var(--text-color-text-link); }
+  
+  .bg-body-background-body { background-color: var(--body-background-body); }
+  .bg-black-50 { background-color: var(--neutral-50); }
+  
+  .font-body { font-family: var(--font-body); }
+  
+  .ml-1\/2 { margin-left: calc(var(--spacing-1) / 2); }
+  
+  .py-section-padding-y-lg { 
+    padding-top: var(--section-padding-y-lg); 
+    padding-bottom: var(--section-padding-y-lg); 
+  }
 }

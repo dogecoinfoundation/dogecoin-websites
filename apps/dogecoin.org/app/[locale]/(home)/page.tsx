@@ -58,7 +58,13 @@ export default async function Home({ params }: HomeProps) {
             <div className="hero-container">
               <div className="hero-content">
                 <div className="hero-text-container relative">
-                  <H1 className="hero-title">{t.hero.title}</H1>
+                  <div className="hero-title">
+                    <img 
+                      src="/assets/svg/logos/dogecoin-foundation-text.svg" 
+                      alt="Dogecoin Foundation" 
+                      className="hero-logo"
+                    />
+                  </div>
                   <div className="hero-subtitle-wrap">
                     <H2 className="hero-subtitle">{t.hero.subtitle}</H2>
                   </div>

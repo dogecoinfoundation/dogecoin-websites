@@ -34,9 +34,9 @@ export const Button = ({
 
   const variantStyles = {
     primary:
-      'text-[var(--color-button-primary)] bg-[var(--background-button-primary)] hover:bg-[var(--background-button-primary-hover)]',
+      'text-[var(--button-primary-text)] bg-[var(--button-primary-bg)] hover:bg-[var(--button-primary-bg-hover)]',
     secondary:
-      'text-[var(--color-button-secondary)] bg-[var(--background-button-secondary)] hover:bg-[var(--background-button-secondary-hover)] border-2 border-[var(--border-button-secondary)]',
+      'text-[var(--button-secondary-text)] bg-[var(--button-secondary-bg)] hover:bg-[var(--button-secondary-bg-hover)] border-2 border-[var(--button-secondary-border)]',
   };
 
   // Sizing for buttons with text or text+icon
