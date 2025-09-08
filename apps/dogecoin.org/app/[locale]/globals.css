@@ -1,6 +1,15 @@
 @import "tailwindcss";
 @import "../../../../packages/design-system/styles/globals.css";
 
+/* Media Query Variables */
+@custom-media --mobile (min-width: 390px);
+@custom-media --small-tablet (min-width: 768px);
+@custom-media --tablet (min-width: 1024px);
+@custom-media --desktop (min-width: 1366px);
+@custom-media --small-tablet-down (max-width: 768px);
+@custom-media --tablet-down (max-width: 1024px);
+@custom-media --desktop-down (max-width: 1366px);
+
 /* Party mode fonts */
 @font-face {
   font-family: 'Flow Rounded';
@@ -56,15 +65,6 @@
 
   /* All styling now uses Figma design tokens directly */
 }
-
-/* Named media queries (centralized) */
-@custom-media --mobile (min-width: 390px);
-@custom-media --small-tablet (min-width: 768px);
-@custom-media --tablet (min-width: 1024px);
-@custom-media --desktop (min-width: 1366px);
-@custom-media --small-tablet-down (max-width: 768px);
-@custom-media --tablet-down (max-width: 1024px);
-@custom-media --desktop-down (max-width: 1366px);
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -2604,7 +2604,7 @@ header {
 .party-mode .nav-item,
 .party-mode .language-selector-button,
 .party-mode .language-code {
-  @apply text-white !important;
+  color: white !important;
 }
 
 /* Ensure text remains readable with rainbow backgrounds */
@@ -2616,7 +2616,7 @@ header {
 .party-mode .activity-subtitle,
 .party-mode .activity-description {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-  @apply text-white !important;
+  color: white !important;
 }
 
 /* Party Mode Button */
