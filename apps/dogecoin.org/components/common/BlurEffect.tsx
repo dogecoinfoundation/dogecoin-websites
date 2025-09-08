@@ -33,7 +33,8 @@ export function BlurEffect({
   const finalOpacity = opacity * transparency;
   
   const transformStyle = {
-    transform: `translate(${offset.x ?? 0}px, ${offset.y ?? 0}px) scale(${scaleX}, ${scaleY})`
+    transform: `translate(${offset.x ?? 0}px, ${offset.y ?? 0}px) scale(${scaleX}, ${scaleY})`,
+    pointerEvents: 'none' as const
   };
 
   return (

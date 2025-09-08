@@ -487,8 +487,9 @@ header {
    ============================================================================= */
 
 .section-heading {
-  @apply inline-block mb-4 text-center text-white;
+  @apply text-[length:var(--heading-1)] inline-block mb-4 text-center text-white;
   font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
 }
 
 .section-heading-underline {
@@ -513,7 +514,7 @@ header {
 }
 
 .section-description {
-  @apply text-center mb-8 text-white;
+  @apply text-[length:var(--body-lead)] text-center mb-8 text-white;
 }
 
 .section-heading-with-icon {
@@ -529,18 +530,9 @@ header {
 }
 
 .view-all-button {
-  @apply inline-flex items-center text-black py-3 px-6 no-underline rounded-full font-semibold text-base transition-all duration-200 ease-in-out border-2 border-primary-500 relative z-[999] pointer-events-auto;
+  @apply inline-flex items-center text-[length:var(--button-xl)] py-3 px-6 no-underline rounded-full font-semibold transition-all duration-200 ease-in-out border-2 border-primary-500 relative z-[999] pointer-events-auto;
+  color: var(--neutral-800);
   background-color: var(--brand-primary-500);
-}
-
-.view-all-button:hover {
-  @apply -translate-y-0.5;
-  background-color: var(--brand-primary-600);
-  border-color: var(--brand-primary-600);
-}
-
-.view-all-button:active {
-  @apply translate-y-0;
 }
 
 /* =============================================================================
@@ -722,8 +714,9 @@ header {
 }
 
 .activity-title {
-  @apply text-white text-xl font-bold mb-0;
+  @apply text-white mb-0 text-[length:var(--heading-2)];
   font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
 }
 
 .activity-subtitle {
@@ -794,8 +787,10 @@ header {
 }
 
 .activity-button-primary {
-  @apply flex justify-center items-center gap-2 rounded-full px-6 text-white whitespace-nowrap text-ellipsis font-bold;
+  @apply flex justify-center items-center gap-2 rounded-full px-6 whitespace-nowrap text-ellipsis font-bold text-[length:var(--button-xl)] relative z-[10];
+  color: var(--neutral-800);
   background-color: var(--button-primary);
+  pointer-events: auto;
 }
 
 @media (--small-tablet-down) {
@@ -811,9 +806,10 @@ header {
 }
 
 .activity-button-secondary {
-  @apply flex justify-center items-center gap-2 rounded-full border-2 bg-transparent px-6 whitespace-nowrap text-ellipsis font-bold;
+  @apply flex justify-center items-center gap-2 rounded-full border-2 bg-transparent px-6 whitespace-nowrap text-ellipsis font-bold text-[length:var(--button-xl)] relative z-[10];
+  color: var(--neutral-800);
   border-color: var(--button-secondary);
-  color: var(--button-secondary);
+  pointer-events: auto;
 }
 
 @media (--small-tablet-down) {
@@ -885,7 +881,7 @@ header {
 }
 
 .mission-card-heading {
-  @apply text-xl font-bold mb-3;
+  @apply text-[length:var(--heading-4)] font-bold mb-3;
   color: var(--foreground-primary);
   font-family: var(--font-heading);
 }
@@ -895,6 +891,7 @@ header {
 }
 
 .mission-card-text {
+  @apply text-[length:var(--body-small)] text-white;
   color: var(--foreground-primary);
 }
 
@@ -966,8 +963,9 @@ header {
 }
 
 .donation-title {
-  @apply text-center m-0;
+  @apply text-[length:var(--heading-2)] text-center m-0;
   color: var(--background-secondary);
+  font-weight: var(--font-weight-heading);
 }
 
 .donation-grid {
@@ -1013,26 +1011,14 @@ header {
 }
 
 .donation-card-title {
-  @apply text-center text-2xl m-0 font-bold;
+  @apply text-[length:var(--heading-4)] text-center m-0 font-bold;
   color: var(--background-secondary);
   font-family: var(--font-heading);
 }
 
 .donation-card-text {
-  @apply m-0 max-w-[300px];
+  @apply text-[length:var(--body-default)] m-0 max-w-[300px];
   color: var(--background-secondary);
-}
-
-@media (--tablet-down) {
-  .donation-card-text {
-    @apply text-lg;
-  }
-}
-
-@media (--tablet) {
-  .donation-card-text {
-    @apply text-xl;
-  }
 }
 
 .donation-decoration {
@@ -1059,12 +1045,12 @@ header {
 }
 
 .donation-section-heading {
-  @apply text-left;
+  @apply text-[length:var(--heading-3)] text-left;
   color: var(--foreground-primary);
 }
 
 .donation-section-text {
-  @apply text-white text-left;
+  @apply text-[length:var(--body-default)] text-white text-left;
 }
 
 .donation-qr-container {
@@ -1120,7 +1106,7 @@ header {
 }
 
 .donation-button-amount {
-  @apply flex-1;
+  @apply text-[length:var(--body-default)] flex-1;
   color: var(--foreground-primary);
 }
 
@@ -1135,7 +1121,7 @@ header {
 }
 
 .donation-button-quote {
-  @apply text-right;
+  @apply text-[length:var(--body-default)] text-right;
   color: var(--accent-green);
 }
 
@@ -1877,12 +1863,12 @@ header {
 }
 
 .profile-name {
-  @apply text-lg font-bold m-0 mb-2 text-neutral-800;
+  @apply text-[length:var(--heading-4)] font-bold m-0 mb-2 text-neutral-800;
   font-family: var(--font-heading);
 }
 
 .profile-description {
-  @apply text-sm font-normal m-0 text-neutral-800;
+  @apply text-[length:var(--body-default)] font-normal m-0 text-neutral-800;
   font-family: var(--font-body);
 }
 
@@ -1987,7 +1973,7 @@ header {
 }
 
 .footer-link {
-  @apply flex justify-start items-center text-base py-[5px] px-0 no-underline transition-opacity duration-200 ease-out gap-1;
+  @apply flex justify-start items-start text-base py-[5px] px-0 no-underline transition-opacity duration-200 ease-out gap-1;
   color: var(--primary-500-alt);
 }
 
@@ -2000,7 +1986,7 @@ header {
 }
 
 .footer-links {
-  @apply flex items-center gap-6;
+  @apply flex items-start gap-6;
 }
 
 .footer-divider {
