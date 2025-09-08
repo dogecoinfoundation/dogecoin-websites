@@ -1,77 +1,81 @@
 @import "tailwindcss";
-@import "./figma-tokens.css";
+
+@source "../**/*.{ts,tsx}";
+
+@plugin 'tailwindcss-animate';
+@plugin '@tailwindcss/typography';
+
+@custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Using Figma design tokens for theming */
-  --background: #FFFFFF;
-  --foreground: var(--neutral-800);
-  --card: var(--card-bg, #FFFFFF);
-  --card-foreground: var(--foreground-inverse);
-  --popover: #FFFFFF;
-  --popover-foreground: var(--neutral-800);
-  --primary: var(--brand-primary-500);
-  --primary-foreground: var(--button-primary-text);
-  --secondary: var(--brand-secondary-100);
-  --secondary-foreground: var(--neutral-800);
-  --muted: var(--neutral-100);
-  --muted-foreground: var(--neutral-500);
-  --accent: var(--accent-yellow);
-  --accent-foreground: var(--neutral-800);
-  --destructive: var(--warning-500);
-  --destructive-foreground: #FFFFFF;
-  --border: var(--neutral-200);
-  --input: var(--input-bg, var(--neutral-100));
-  --ring: var(--brand-primary-500);
-  --chart-1: var(--brand-primary-500);
-  --chart-2: var(--brand-secondary-400);
-  --chart-3: var(--accent-blue);
-  --chart-4: var(--accent-green);
-  --chart-5: var(--accent-pink);
-  --radius: var(--radius-default);
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: var(--neutral-800);
-  --sidebar-primary: var(--brand-primary-500);
-  --sidebar-primary-foreground: var(--neutral-800);
-  --sidebar-accent: var(--neutral-100);
-  --sidebar-accent-foreground: var(--neutral-800);
-  --sidebar-border: var(--neutral-200);
-  --sidebar-ring: var(--brand-primary-500);
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: oklch(0.205 0 0);
+  --primary-foreground: oklch(0.985 0 0);
+  --secondary: oklch(0.97 0 0);
+  --secondary-foreground: oklch(0.205 0 0);
+  --muted: oklch(0.97 0 0);
+  --muted-foreground: oklch(0.556 0 0);
+  --accent: oklch(0.97 0 0);
+  --accent-foreground: oklch(0.205 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: oklch(0.922 0 0);
+  --input: oklch(0.922 0 0);
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
 }
 
 .dark {
-  /* Using Figma dark theme tokens */
-  --background: var(--background-primary);
-  --foreground: var(--foreground-primary);
-  --card: var(--card-bg);
-  --card-foreground: var(--foreground-primary);
-  --popover: var(--card-bg);
-  --popover-foreground: var(--foreground-primary);
-  --primary: var(--brand-primary-500);
-  --primary-foreground: var(--button-primary-text);
-  --secondary: var(--neutral-800);
-  --secondary-foreground: var(--foreground-primary);
-  --muted: var(--neutral-800);
-  --muted-foreground: var(--foreground-secondary);
-  --accent: var(--accent-yellow);
-  --accent-foreground: var(--neutral-800);
-  --destructive: var(--warning-500);
-  --destructive-foreground: #FFFFFF;
-  --border: var(--border-default);
-  --input: var(--input-bg);
-  --ring: var(--brand-primary-500);
-  --chart-1: var(--brand-primary-500);
-  --chart-2: var(--brand-secondary-400);
-  --chart-3: var(--accent-blue);
-  --chart-4: var(--accent-green);
-  --chart-5: var(--accent-pink);
-  --sidebar: var(--neutral-800);
-  --sidebar-foreground: var(--foreground-primary);
-  --sidebar-primary: var(--brand-primary-500);
-  --sidebar-primary-foreground: var(--button-primary-text);
-  --sidebar-accent: var(--neutral-700);
-  --sidebar-accent-foreground: var(--foreground-primary);
-  --sidebar-border: var(--border-default);
-  --sidebar-ring: var(--brand-primary-500);
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
 }
 
 @theme inline {
@@ -203,182 +207,4 @@
   --tw-prose-invert-pre-bg: var(--color-background);
   --tw-prose-invert-th-borders: var(--color-border);
   --tw-prose-invert-td-borders: var(--color-border);
-}
-
-/* Figma Design Token Utilities */
-@layer utilities {
-  /* Typography Utilities */
-  .text-h1 {
-    font-size: var(--heading-1);
-    line-height: var(--leading-tight);
-    font-family: var(--font-sans);
-    font-weight: var(--font-bold);
-  }
-  
-  .text-h2 {
-    font-size: var(--heading-2);
-    line-height: var(--leading-tight);
-    font-family: var(--font-sans);
-    font-weight: var(--font-bold);
-  }
-  
-  .text-h3 {
-    font-size: var(--heading-3);
-    line-height: var(--leading-tight);
-    font-family: var(--font-sans);
-    font-weight: var(--font-bold);
-  }
-  
-  .text-h4 {
-    font-size: var(--heading-4);
-    line-height: var(--leading-snug);
-    font-family: var(--font-sans);
-    font-weight: var(--font-bold);
-  }
-  
-  .text-h5 {
-    font-size: var(--heading-5);
-    line-height: var(--leading-snug);
-    font-family: var(--font-sans);
-    font-weight: var(--font-bold);
-  }
-  
-  .text-body-lead {
-    font-size: var(--body-lead);
-    line-height: var(--leading-relaxed);
-    font-family: var(--font-sans);
-    font-weight: var(--font-normal);
-  }
-  
-  .text-body {
-    font-size: var(--body-default);
-    line-height: var(--leading-normal);
-    font-family: var(--font-sans);
-    font-weight: var(--font-normal);
-  }
-  
-  .text-caption {
-    font-size: var(--body-small);
-    line-height: var(--leading-relaxed);
-    font-family: var(--font-sans);
-    font-weight: var(--font-normal);
-  }
-
-  /* Button Typography */
-  .text-button-xl {
-    font-size: var(--button-xl);
-    line-height: var(--leading-snug);
-    font-family: var(--font-sans);
-    font-weight: var(--font-bold);
-  }
-  
-  .text-button-lg {
-    font-size: var(--button-lg);
-    line-height: var(--leading-snug);
-    font-family: var(--font-sans);
-    font-weight: var(--font-bold);
-  }
-  
-  .text-button-md {
-    font-size: var(--button-md);
-    line-height: var(--leading-normal);
-    font-family: var(--font-sans);
-    font-weight: var(--font-bold);
-  }
-  
-  .text-button-sm {
-    font-size: var(--button-sm);
-    line-height: var(--leading-normal);
-    font-family: var(--font-sans);
-    font-weight: var(--font-bold);
-  }
-
-  /* Custom spacing utilities that use design tokens */
-  .gap-token-0-5 { gap: var(--spacing-0-5, 2px); }
-  .gap-token-1 { gap: var(--spacing-1, 4px); }
-  .gap-token-2 { gap: var(--spacing-2, 8px); }
-  .gap-token-3 { gap: var(--spacing-3, 12px); }
-  .gap-token-4 { gap: var(--spacing-4, 16px); }
-  .gap-token-5 { gap: var(--spacing-5, 20px); }
-  .gap-token-6 { gap: var(--spacing-6, 24px); }
-  .gap-token-8 { gap: var(--spacing-8, 32px); }
-  .gap-token-12 { gap: var(--spacing-12, 48px); }
-  .gap-token-16 { gap: var(--spacing-16, 64px); }
-  .gap-token-20 { gap: var(--spacing-20, 80px); }
-  .gap-token-32 { gap: var(--spacing-32, 128px); }
-
-  .space-y-token-0-5 > * + * { margin-top: var(--spacing-0-5, 2px); }
-  .space-y-token-1 > * + * { margin-top: var(--spacing-1, 4px); }
-  .space-y-token-2 > * + * { margin-top: var(--spacing-2, 8px); }
-  .space-y-token-3 > * + * { margin-top: var(--spacing-3, 12px); }
-  .space-y-token-4 > * + * { margin-top: var(--spacing-4, 16px); }
-  .space-y-token-5 > * + * { margin-top: var(--spacing-5, 20px); }
-  .space-y-token-6 > * + * { margin-top: var(--spacing-6, 24px); }
-  .space-y-token-8 > * + * { margin-top: var(--spacing-8, 32px); }
-  .space-y-token-12 > * + * { margin-top: var(--spacing-12, 48px); }
-  .space-y-token-16 > * + * { margin-top: var(--spacing-16, 64px); }
-  .space-y-token-20 > * + * { margin-top: var(--spacing-20, 80px); }
-  .space-y-token-32 > * + * { margin-top: var(--spacing-32, 128px); }
-
-  /* Padding Utilities */
-  .p-token-0-5 { padding: var(--spacing-0-5, 2px); }
-  .p-token-1 { padding: var(--spacing-1, 4px); }
-  .p-token-2 { padding: var(--spacing-2, 8px); }
-  .p-token-3 { padding: var(--spacing-3, 12px); }
-  .p-token-4 { padding: var(--spacing-4, 16px); }
-  .p-token-5 { padding: var(--spacing-5, 20px); }
-  .p-token-6 { padding: var(--spacing-6, 24px); }
-  .p-token-8 { padding: var(--spacing-8, 32px); }
-  .p-token-12 { padding: var(--spacing-12, 48px); }
-  .p-token-16 { padding: var(--spacing-16, 64px); }
-  .p-token-20 { padding: var(--spacing-20, 80px); }
-  .p-token-32 { padding: var(--spacing-32, 128px); }
-
-  /* Section Spacing */
-  .section-y { padding-top: var(--section-padding-y); padding-bottom: var(--section-padding-y); }
-  .section-y-sm { padding-top: var(--spacing-6); padding-bottom: var(--spacing-6); }
-  .section-y-lg { padding-top: var(--spacing-20); padding-bottom: var(--spacing-20); }
-  .section-x { padding-left: var(--section-padding-x); padding-right: var(--section-padding-x); }
-
-  /* Border Radius Utilities */
-  .rounded-sm { border-radius: var(--radius-sm); }
-  .rounded-md { border-radius: var(--radius-default); }
-  .rounded-lg { border-radius: var(--radius-md); }
-  .rounded-xl { border-radius: var(--radius-lg); }
-  .rounded-2xl { border-radius: var(--radius-xl); }
-  .rounded-full { border-radius: var(--radius-full); }
-
-  /* Color Utilities */
-  .text-primary { color: var(--foreground-primary); }
-  .text-secondary { color: var(--foreground-secondary); }
-  .text-link { color: var(--interactive-primary); }
-  .text-warning { color: var(--status-warning); }
-  
-  .bg-primary { background-color: var(--brand-primary-500); }
-  .bg-secondary { background-color: var(--brand-secondary-500); }
-  .bg-card { background-color: var(--card-bg); }
-  .bg-body { background-color: var(--background-primary); }
-  
-  .border-primary { border-color: var(--brand-primary-500); }
-  .border-card { border-color: var(--card-border); }
-  .border-input { border-color: var(--input-border); }
-
-  /* Additional utility classes */
-  .text-gray-muted { color: var(--foreground-secondary, #666666); }
-  .text-error-red { color: var(--status-error, #ef4444); }
-  .text-primary-alt { color: var(--brand-primary-500, #e3a849); }
-  .text-accent-purple { color: var(--accent-alt-purple, #8b5cf6); }
-  .text-link-color { color: var(--text-color-text-link, #3b82f6); }
-  
-  .bg-body-main { background-color: var(--body-background-body, #0f1419); }
-  .bg-neutral-light { background-color: var(--neutral-50, #f9fafb); }
-  
-  .font-body-text { font-family: var(--font-body, 'Inter', sans-serif); }
-  
-  .ml-half { margin-left: calc(var(--spacing-1, 4px) / 2); }
-  
-  .py-section-lg { 
-    padding-top: var(--section-padding-y-lg, 80px); 
-    padding-bottom: var(--section-padding-y-lg, 80px); 
-  }
 }
