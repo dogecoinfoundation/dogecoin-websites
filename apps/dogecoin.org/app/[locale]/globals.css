@@ -355,8 +355,14 @@ header {
 }
 
 .hero-subtitle {
-  @apply inline-block mb-4;
-  font-family: var(--font-heading);
+  @apply inline-block mb-4 mt-3 font-normal text-5xl;
+  font-family: var(--font-montserrat);
+}
+
+@media (--small-tablet-down) {
+  .hero-subtitle {
+    @apply text-2xl;
+  }
 }
 
 .hero-subtitle-wrap {
@@ -369,7 +375,14 @@ header {
 }
 
 .hero-tagline {
-  @apply text-primary-500 flex items-center gap-2 mt-2 text-2xl leading-relaxed;
+  @apply text-primary-500 flex items-center gap-2 mt-2 leading-relaxed;
+  font-size: 24px;
+}
+
+@media (--small-tablet-down) {
+  .hero-tagline {
+    font-size: 16px;
+  }
 }
 
 .hero-tagline-icon {
@@ -606,18 +619,27 @@ header {
 }
 
 .carousel-card-title {
-  @apply text-lg font-bold text-white mb-2;
+  @apply text-[length:var(--heading-4)] font-bold text-white mb-2;
 }
 
 .carousel-card-text {
-  @apply text-sm text-white leading-relaxed overflow-hidden h-[calc(1.625rem*2)] text-ellipsis;
+  @apply text-[length:var(--body-default)] text-white overflow-hidden text-ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  height: 100px
+}
+
+@media (--desktop) {
+  .carousel-card-text {
+    -webkit-line-clamp: 3;
+    height: 108px;
+  }
 }
 
 .carousel-card-button {
-  @apply flex h-12 px-6 justify-start items-center gap-1 rounded-full bg-primary-500 text-white text-base font-bold border-0 cursor-pointer transition-opacity duration-200 self-start hover:opacity-80;
+  @apply text-[length:var(--button-md)] flex h-12 px-6 justify-start items-center gap-1 rounded-full bg-primary-500 font-bold border-0 cursor-pointer transition-opacity duration-200 self-start hover:opacity-80;
+  color: var(--neutral-800);
 }
 
 .carousel-card-button:hover {
