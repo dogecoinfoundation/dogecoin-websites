@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 import Container from '@/components/layout/Container';
 import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
@@ -9,6 +10,7 @@ import Image from 'next/image';
 import { format } from 'date-fns';
 import { getAllActivitySlugs, getActivityBySlug } from '@/lib/content';
 import { getAssetPath } from '@/lib/assets';
+import { isSoftLaunchMode } from '@/lib/config/softlaunch';
 
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -45,6 +47,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
 export default async function ActivityPage({ params }: PageProps) {
   const { slug, locale } = await params;
+  
+  // Check if we should redirect to projects page based on SOFTLAUNCH flag
+  if (isSoftLaunchMode()) {
+    redirect(`/${locale}/projects`);
+  }
+  
   const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const t = dictionary["dogecoin.org"].home;
   const activity = await getActivityBySlug(slug, locale);

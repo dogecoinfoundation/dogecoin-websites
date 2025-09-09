@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import Container from '@/components/layout/Container';
@@ -10,6 +11,7 @@ import type { DogecoinDictionary } from '@/types/dictionary';
 import { BlurEffect } from '@/components/common/BlurEffect';
 import { RichText } from '@/components/common/RichText';
 import { getAssetPath } from '@/lib/assets';
+import { isSoftLaunchMode } from '@/lib/config/softlaunch';
 
 interface PageProps {
   params: Promise<{ locale: string }>
@@ -28,6 +30,12 @@ export const metadata: Metadata = {
 
 export default async function AboutPage({ params }: PageProps) {
   const { locale } = await params;
+  
+  // Check if we should redirect to projects page based on SOFTLAUNCH flag
+  if (isSoftLaunchMode()) {
+    redirect(`/${locale}/projects`);
+  }
+  
   const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const t = dictionary['dogecoin.org'].home;
   const ta = t.about;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
@@ -21,6 +22,7 @@ import { getAssetPath } from '@/lib/assets';
 import { getFeaturedProjects, getFeaturedActivities } from '@/lib/content';
 import { getDictionary, allLanguages } from '@repo/internationalization';
 import type { DogecoinDictionary } from '@/types/dictionary';
+import { isSoftLaunchMode } from '@/lib/config/softlaunch';
 
 interface HomeProps {
   params: Promise<{
@@ -38,6 +40,12 @@ export function generateStaticParams() {
 
 export default async function Home({ params }: HomeProps) {
   const { locale } = await params;
+  
+  // Check if we should redirect to projects page based on SOFTLAUNCH flag
+  if (isSoftLaunchMode()) {
+    redirect(`/${locale}/projects`);
+  }
+  
   const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const t = dictionary["dogecoin.org"].home;
   

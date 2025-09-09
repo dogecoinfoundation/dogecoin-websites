@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { redirect } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import Container from '@/components/layout/Container';
@@ -11,6 +12,7 @@ import { getAllBlogPosts } from '@/lib/content';
 import { getAssetPath, getNavPath } from '@/lib/assets';
 import { shouldShowDraftBadge } from '@/lib/content/utils';
 import { ContentPageHeader } from '@/components/content/ContentPageHeader';
+import { isSoftLaunchMode } from '@/lib/config/softlaunch';
 
 interface BlogIndexProps {
   params: Promise<{ locale: string }>;
@@ -28,6 +30,12 @@ export const metadata: Metadata = {
 
 export default async function BlogIndexPage({ params }: BlogIndexProps) {
   const { locale } = await params;
+  
+  // Check if we should redirect to projects page based on SOFTLAUNCH flag
+  if (isSoftLaunchMode()) {
+    redirect(`/${locale}/projects`);
+  }
+  
   const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const t = dictionary["dogecoin.org"].home;
   const posts = await getAllBlogPosts(locale);
