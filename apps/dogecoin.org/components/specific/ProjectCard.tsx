@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { getAssetPath, getNavPath } from '@/lib/assets';
 import { shouldShowDraftBadge } from '@/lib/content/utils';
 import { TagsWithOverflow } from '@/components/common/TagsWithOverflow';
+import { ContentLinks, type ContentLink } from '@/components/common/ContentLinks';
 
 interface ProjectCardProps {
   slug: string;
@@ -12,11 +13,7 @@ interface ProjectCardProps {
   description?: string;
   draft?: boolean;
   tags?: string[];
-  links?: {
-    label: string;
-    url: string;
-    icon?: 'github' | 'web' | 'demo' | 'discord';
-  }[];
+  links?: ContentLink[];
   locale: string;
   accentColor?: string;
   t?: {
@@ -84,26 +81,7 @@ export function ProjectCard({
           
           {links && links.length > 0 ? (
             <div className="content-card-links-with-action">
-              <div className="content-card-links">
-                {links.map((link) => (
-                  <a
-                    key={link.url}
-                    href={link.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="content-card-link"
-                  >
-                    {link.icon && (
-                      <Image
-                        src={getAssetPath(`/assets/svg/icons/${link.icon}.svg`)}
-                        alt={link.label}
-                        width={32}
-                        height={32}
-                      />
-                    )}
-                  </a>
-                ))}
-              </div>
+              <ContentLinks links={links} />
               <Link 
                 href={getNavPath(`/projects/${slug}`, locale)}
                 className="content-card-action-pill"

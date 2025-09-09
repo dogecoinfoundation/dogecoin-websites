@@ -42,7 +42,7 @@ export interface ProjectMeta extends ContentMeta {
   tags?: string[];
   description?: string;
   github?: string;
-  demo?: string;
+  discord?: string;
   website?: string;
   featured?: boolean;
 }

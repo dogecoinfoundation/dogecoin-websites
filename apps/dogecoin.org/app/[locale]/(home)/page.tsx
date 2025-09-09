@@ -4,7 +4,7 @@ import { Main } from '@/components/layout/Main';
 import { Section } from '@/components/layout/Section';
 import { Footer } from '@/components/layout/Footer';
 import Container from '@/components/layout/Container';
-import { H1, H2 } from '@/components/typography';
+import { H2 } from '@/components/typography';
 import { BlurEffect } from '@/components/common/BlurEffect';
 import Image from 'next/image';
 import DogePaw from '@/components/icons/DogePaw';
@@ -112,11 +112,11 @@ export default async function Home({ params }: HomeProps) {
                 if (project.github) {
                   links.push({ label: 'GitHub', url: project.github, icon: 'github' as const });
                 }
+                if (project.discord) {
+                  links.push({ label: 'Discord', url: project.discord, icon: 'discord' as const });
+                }
                 if (project.website) {
                   links.push({ label: 'Website', url: project.website, icon: 'web' as const });
-                }
-                if (project.demo) {
-                  links.push({ label: 'Demo', url: project.demo, icon: 'demo' as const });
                 }
 
                 const tags = [...(project.tags ?? [])];

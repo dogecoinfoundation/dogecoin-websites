@@ -13,7 +13,7 @@ interface TagsWithOverflowProps {
 
 export function TagsWithOverflow({
   tags,
-  maxVisibleTags = 3,
+  maxVisibleTags = 5,
   className = 'content-card-tags',
   tagClassName = 'content-card-tag',
   overflowTagClassName = 'content-card-tag'
@@ -50,7 +50,7 @@ export function TagsWithOverflow({
     
     let totalWidth = 0;
     let visibleCount = 0;
-    const gap = 12;
+    const gap = 4;
     const overflowButtonWidth = 50; // Approximate width for "..." button
 
     for (let i = 0; i < Math.min(tags.length, measureTags.length); i++) {

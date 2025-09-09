@@ -20,7 +20,7 @@ interface ActivityCardProps {
   links?: {
     label: string;
     url: string;
-    icon?: 'github' | 'web' | 'demo' | 'discord';
+    icon?: 'github' | 'discord' | 'web' ;
   }[];
   locale: string;
   t?: {

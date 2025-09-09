@@ -190,9 +190,11 @@
         }
       },
       "projects": {
-        "title": "Ausgezeichnete Projekte",
+        "title": "Projekte",
         "viewProject": "Projekt ansehen",
-        "viewAllProjects": "Alle Projekte ansehen"
+        "viewAllProjects": "Alle Projekte ansehen",
+        "noProjectsAvailable": "Noch keine Projekte verfügbar. Schauen Sie bald wieder vorbei!",
+        "noProjectsFound": "Keine Projekte gefunden für \"{query}\""
       },
       "activities": {
         "viewActivity": "Aktivität ansehen",

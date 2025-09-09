@@ -680,9 +680,11 @@
         }
       },
       "projects": {
-        "title": "Рекомендуемые проекты",
+        "title": "Проекты",
         "viewProject": "Посмотреть проект",
-        "viewAllProjects": "Посмотреть все проекты"
+        "viewAllProjects": "Посмотреть все проекты",
+        "noProjectsAvailable": "Пока нет доступных проектов. Заходите позже!",
+        "noProjectsFound": "Не найдено проектов для \"{query}\""
       },
       "activities": {
         "viewActivity": "Посмотреть активность",

@@ -8,6 +8,8 @@ import type { DogecoinDictionary } from '@/types/dictionary';
 import Image from 'next/image';
 import { getAllProjectSlugs, getProjectBySlug } from '@/lib/content';
 import { getAssetPath } from '@/lib/assets';
+import { TagsWithOverflow } from '@/components/common/TagsWithOverflow';
+import { ContentLinks, type ContentLink } from '@/components/common/ContentLinks';
 
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -38,7 +40,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   return {
     title: `${project.title} | Dogecoin Foundation`,
-    description: project.excerpt ?? `Learn about ${project.title}`,
+    description: project.description ?? `Learn about ${project.title}`,
   };
 }
 
@@ -63,94 +65,77 @@ export default async function ProjectPage({ params }: PageProps) {
   }
 
 
+  // Build links array for ContentLinks component
+  const links: ContentLink[] = [];
+  if (project.github) {
+    links.push({
+      label: 'View on GitHub',
+      url: project.github,
+      icon: 'github'
+    });
+  }
+  if (project.discord) {
+    links.push({
+      label: 'Join Discord',
+      url: project.discord,
+      icon: 'discord'
+    });
+  }
+  if (project.website) {
+    links.push({
+      label: 'Visit Website',
+      url: project.website,
+      icon: 'web'
+    });
+  }
+
   return (
     <Main>
-      <Section>
+      <Section className="content-detail-section">
+        {/* Full-width hero image first */}
+        <div className="content-detail-hero">
+          <Image
+            src={getAssetPath(project.image)}
+            alt={project.title}
+            width={1920}
+            height={1080}
+            className="content-detail-hero-image"
+            priority
+          />
+        </div>
+
         <Container>
           <article className="content-article">
             <header className="content-article-header">
-              <div className="content-article-meta">
-              </div>
+              {/* Title with standard h1 styling */}
+              <h1 className="content-title">{project.title}</h1>
               
-              <h1 className="content-article-title">{project.title}</h1>
-              
-              {project.excerpt && (
-                <p className="content-article-excerpt">{project.excerpt}</p>
+              {/* Description/excerpt */}
+              {project.description && (
+                <p className="content-description">{project.description}</p>
               )}
-
+              
+              {/* Tags using the reusable component */}
               {project.tags && project.tags.length > 0 && (
-                <div className="project-technologies">
-                  {project.tags.map((tech) => (
-                    <span key={tech} className="project-tech-tag">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+                <TagsWithOverflow 
+                  tags={project.tags}
+                  className="content-detail-tags"
+                  tagClassName="content-detail-tag"
+                />
               )}
 
-              <div className="project-links">
-                {project.github && (
-                  <a 
-                    href={project.github} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    <Image
-                      src={getAssetPath('/assets/svg/icons/github.svg')}
-                      alt="GitHub"
-                      width={32}
-                      height={32}
-                    />
-                    View on GitHub
-                  </a>
-                )}
-                {project.website && (
-                  <a 
-                    href={project.website} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    <Image
-                      src={getAssetPath('/assets/svg/icons/web.svg')}
-                      alt="Website"
-                      width={32}
-                      height={32}
-                    />
-                    Visit Website
-                  </a>
-                )}
-                {project.demo && (
-                  <a 
-                    href={project.demo} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    <Image
-                      src={getAssetPath('/assets/svg/icons/demo.svg')}
-                      alt="Demo"
-                      width={32}
-                      height={32}
-                    />
-                    Try Demo
-                  </a>
-                )}
-              </div>
-
-              <div className="content-article-hero">
-                <Image
-                  src={getAssetPath(project.image)}
-                  alt={project.title}
-                  width={1200}
-                  height={630}
-                  className="content-article-hero-image"
-                  priority
+              {/* Links using the reusable component */}
+              {links.length > 0 && (
+                <ContentLinks 
+                  links={links}
+                  className="content-detail-links"
+                  linkClassName="content-detail-link"
+                  showLabels={false}
                 />
-              </div>
+              )}
             </header>
 
+            {/* Main content */}
             <div 
               className="post-content"
               dangerouslySetInnerHTML={{ __html: project.html }}

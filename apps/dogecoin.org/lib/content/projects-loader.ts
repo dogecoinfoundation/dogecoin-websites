@@ -19,7 +19,7 @@ export class ProjectsLoader extends ContentLoader {
       tags: item.tags as string[] | undefined,
       description: item.description as string | undefined,
       github: item.github as string | undefined,
-      demo: item.demo as string | undefined,
+      discord: item.discord as string | undefined,
       website: item.website as string | undefined,
       featured: (item.featured as boolean | undefined) ?? false
     } as ProjectMeta));
@@ -39,7 +39,7 @@ export class ProjectsLoader extends ContentLoader {
       tags: item.tags as string[] | undefined,
       description: item.description as string | undefined,
       github: item.github as string | undefined,
-      demo: item.demo as string | undefined,
+      discord: item.discord as string | undefined,
       website: item.website as string | undefined,
       featured: (item.featured as boolean | undefined) ?? false
     } as Project;

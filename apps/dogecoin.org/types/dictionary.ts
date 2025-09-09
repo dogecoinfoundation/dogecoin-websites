@@ -130,6 +130,7 @@ export interface DogecoinDictionary {
         title: string;
         viewProject: string;
         viewAllProjects: string;
+        noProjectsAvailable: string;
       };
       activities: {
         viewActivity: string;

@@ -680,9 +680,11 @@
         }
       },
       "projects": {
-        "title": "Projets Phares",
+        "title": "Projets",
         "viewProject": "Voir le projet",
-        "viewAllProjects": "Voir tous les projets"
+        "viewAllProjects": "Voir tous les projets",
+        "noProjectsAvailable": "Aucun projet disponible pour le moment. Revenez bientôt !",
+        "noProjectsFound": "Aucun projet trouvé pour \"{query}\""
       },
       "activities": {
         "viewActivity": "Voir l'activité",

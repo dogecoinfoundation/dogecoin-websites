@@ -680,9 +680,11 @@
         }
       },
       "projects": {
-        "title": "精选项目",
+        "title": "项目",
         "viewProject": "查看项目",
-        "viewAllProjects": "查看所有项目"
+        "viewAllProjects": "查看所有项目",
+        "noProjectsAvailable": "暂无可用项目。请稍后再来查看！",
+        "noProjectsFound": "未找到与\"{query}\"相关的项目"
       },
       "activities": {
         "viewActivity": "查看活动",

@@ -163,9 +163,11 @@
         }
       },
       "projects": {
-        "title": "Featured Projects",
+        "title": "Projects",
         "viewProject": "View project",
-        "viewAllProjects": "View all projects"
+        "viewAllProjects": "View all projects",
+        "noProjectsAvailable": "No projects available yet. Check back soon!",
+        "noProjectsFound": "No projects found for \"{query}\""
       },
       "activities": {
         "viewActivity": "View activity",
