@@ -9,11 +9,11 @@ title: "Projets Dogecoin amusants 2024"
 description: "Un récap des projets Dogecoin les plus intéressants de 2024."
 ---
 
-# Projets Dogecoin amusants à essayer
+## Projets Dogecoin amusants à essayer
 
 Vous cherchez des façons légères de vous impliquer avec Dogecoin ? Voici quelques projets amusants et accessibles aux débutants que vous pouvez explorer seul ou avec des amis.
 
-## Idées rapides
+### Idées rapides
 
 - Organisez une petite cagnotte communautaire pour une cause qui vous tient à cœur
 - Organisez une soirée jeux où le prix est quelques Ð

@@ -1736,15 +1736,34 @@ header {
 }
 
 .post-content h1 {
-  @apply text-2xl font-bold mt-8 mb-8;
+  font-size: var(--heading-1);
+  @apply font-bold mt-8 mb-8;
   color: var(--foreground-primary);
   font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
 }
 
 .post-content h2 {
-  @apply text-lg font-bold mt-8 mb-8;
+  font-size: var(--heading-2);
+  @apply font-bold mt-8 mb-8;
   color: var(--foreground-primary);
   font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+}
+.post-content h3 {
+  font-size: var(--heading-3);
+  @apply font-bold mt-8 mb-8;
+  color: var(--foreground-primary);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+}
+.post-content h4,
+.post-content .text-content h4 {
+  font-size: var(--heading-4);
+  @apply font-bold mt-6 mb-4;
+  color: var(--foreground-primary);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
 }
 
 @media (--small-tablet-down) {
@@ -1765,15 +1784,15 @@ header {
 
 /* Match site bullet styling inside blog content */
 .post-content ul {
-  @apply list-none pl-0;
+  @apply list-none pl-0 mb-4;
 }
 
 .post-content ul li {
-  @apply flex items-start gap-3 pt-[9px];
+  @apply block pt-[9px] pl-7 relative;
 }
 
 .post-content ul li::before {
-  @apply w-3 h-3 rounded-full border-2 bg-transparent shrink-0 mt-2;
+  @apply w-3 h-3 rounded-full border-2 bg-transparent absolute left-0 top-[17px];
   border-color: var(--brand-primary-500);
   content: '';
 }
@@ -1782,6 +1801,206 @@ header {
 .post-content ul.card-list li::before {
   content: none !important;
   @apply w-0 h-0 border-0;
+}
+
+/* Ensure list item content stays in a single column */
+.post-content ul li strong,
+.post-content ul li b,
+.post-content ul li em,
+.post-content ul li span,
+.post-content ul li a {
+  display: inline !important;
+}
+
+/* Numbered list styling */
+.post-content ol {
+  @apply list-none pl-0 mb-4;
+  counter-reset: list-counter;
+}
+
+.post-content ol li {
+  @apply flex items-start gap-3 pt-[9px];
+  counter-increment: list-counter;
+}
+
+.post-content ol li::before {
+  content: counter(list-counter) ".";
+  @apply shrink-0 font-bold;
+  color: var(--brand-primary-500);
+  line-height: inherit;
+}
+
+/* Ensure proper spacing between lists and paragraphs */
+.post-content ul + p,
+.post-content ol + p {
+  margin-top: 16px;
+}
+
+.post-content p + ul,
+.post-content p + ol {
+  margin-top: 16px;
+}
+
+/* =============================================================================
+   MARKDOWN CONTENT STYLES
+   ============================================================================= */
+
+/* Apply border radius and spacing to all images in markdown content */
+.post-content img,
+.content-article-body img {
+  border-radius: var(--radius-lg);
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+/* Images with captions have different spacing */
+.post-content img:has(+ .image-caption),
+.content-article-body img:has(+ .image-caption),
+.post-content .square-image:has(+ .image-caption),
+.post-content .small-image:has(+ .image-caption) {
+  margin-bottom: 12px;
+}
+
+/* Captions have bottom margin instead of images when present */
+.post-content img + .image-caption,
+.content-article-body img + .image-caption,
+.post-content .square-image + .image-caption,
+.post-content .small-image + .image-caption {
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+/* Custom markdown styles using {{custom-style}} syntax */
+
+/* {{small-image}} - 16:9 ratio, max-width 701px, centered */
+.small-image {
+  @apply w-full max-w-[701px] mx-auto block;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}
+
+/* {{image-caption}} - centered caption below images */
+.image-caption {
+  @apply text-center;
+  font-size: var(--body-small);
+  color: var(--foreground-secondary);
+  margin-top: 0;
+  margin-bottom: 24px;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Image with caption wrapper - keeps image and caption together as a single unit */
+.image-with-caption {
+  @apply flex flex-col;
+}
+
+/* {{image-text-layout}} - image on left, text on right (tablet+), stacked on mobile */
+.image-text-layout,
+.image-text-layout-left {
+  @apply flex flex-col gap-6;
+}
+@media (--small-tablet) {
+  .image-text-layout,
+  .image-text-layout-left {
+    @apply flex-row items-start gap-8;
+  }
+  .image-text-layout .image-with-caption,
+  .image-text-layout .square-image,
+  .image-text-layout-left .image-with-caption,
+  .image-text-layout-left .square-image {
+    @apply flex-shrink-0 w-64;
+  }
+  .image-text-layout .text-content,
+  .image-text-layout-left .text-content {
+    @apply flex-1;
+  }
+}
+@media (--tablet) {
+  .image-text-layout .image-with-caption,
+  .image-text-layout .square-image,
+  .image-text-layout-left .image-with-caption,
+  .image-text-layout-left .square-image {
+    @apply w-80;
+  }
+}
+
+/* {{image-text-layout-right}} - image on right, text on left (tablet+), stacked on mobile */
+.image-text-layout-right {
+  @apply flex flex-col gap-6;
+}
+@media (--small-tablet) {
+  .image-text-layout-right {
+    @apply flex-row-reverse items-start gap-8;
+  }
+  .image-text-layout-right .image-with-caption,
+  .image-text-layout-right .square-image {
+    @apply flex-shrink-0 w-64;
+  }
+  .image-text-layout-right .text-content {
+    @apply flex-1;
+  }
+}
+@media (--tablet) {
+  .image-text-layout-right .image-with-caption,
+  .image-text-layout-right .square-image {
+    @apply w-80;
+  }
+}
+
+/* {{square-image}} - 1:1 ratio image with max height, centered */
+.square-image {
+  @apply w-full mx-auto block;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+  max-height: 320px;
+  max-width: 320px;
+}
+
+/* Standard markdown code blocks */
+.post-content pre {
+  background-color: var(--background-primary);
+  border: 2px solid var(--neutral-700);
+  border-radius: var(--radius-lg);
+  @apply p-4 my-6;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: pre;
+  max-width: 100%;
+}
+
+.post-content pre code {
+  @apply block text-sm;
+  background: transparent;
+  padding: 0;
+  border: none;
+  color: var(--foreground-primary);
+  font-family: monospace;
+  white-space: pre;
+  tab-size: 2;
+}
+
+/* Inline code */
+.post-content code {
+  background-color: var(--background-secondary);
+  @apply px-2 py-1 rounded text-sm;
+  color: var(--foreground-primary);
+  font-family: monospace;
+}
+
+/* {{two-column}} - creates a two-column layout for content */
+.two-column {
+  @apply grid grid-cols-2 gap-6 items-start;
+}
+
+@media (--small-tablet-down) {
+  .two-column {
+    @apply grid-cols-1 gap-4;
+  }
 }
 
 /* =============================================================================
@@ -2554,22 +2773,74 @@ header {
   color: var(--gray-light);
 }
 
-.content-article-body h1,
-.content-article-body h2,
+.content-article-body h1 {
+  font-size: var(--heading-1);
+  @apply font-bold mt-8 mb-4;
+  color: var(--foreground-primary);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+}
+
+.content-article-body h2 {
+  font-size: var(--heading-2);
+  @apply font-bold mt-8 mb-4;
+  color: var(--foreground-primary);
+  font-family: var(--font-heading);
+  font-weight: var(--font-weight-heading);
+}
+
 .content-article-body h3,
 .content-article-body h4,
 .content-article-body h5,
 .content-article-body h6 {
-  @apply text-white mt-8 mb-4;
+  @apply text-white mt-8 mb-4 font-bold;
+  font-family: var(--font-heading);
 }
 
 .content-article-body p {
   @apply mb-4;
 }
 
-.content-article-body ul,
+.content-article-body ul {
+  @apply mb-4 list-none pl-0;
+}
+
+.content-article-body ul li {
+  @apply flex items-start gap-3 pt-[9px];
+}
+
+.content-article-body ul li::before {
+  @apply w-3 h-3 rounded-full border-2 bg-transparent shrink-0 mt-2;
+  border-color: var(--brand-primary-500);
+  content: '';
+}
+
 .content-article-body ol {
-  @apply mb-4 pl-6;
+  @apply mb-4 list-none pl-0;
+  counter-reset: list-counter;
+}
+
+.content-article-body ol li {
+  @apply flex items-start gap-3 pt-[9px];
+  counter-increment: list-counter;
+}
+
+.content-article-body ol li::before {
+  content: counter(list-counter) ".";
+  @apply shrink-0 font-bold;
+  color: var(--brand-primary-500);
+  line-height: inherit;
+}
+
+/* Ensure proper spacing between lists and paragraphs in content articles */
+.content-article-body ul + p,
+.content-article-body ol + p {
+  margin-top: 16px;
+}
+
+.content-article-body p + ul,
+.content-article-body p + ol {
+  margin-top: 16px;
 }
 
 .content-article-body a {
@@ -2805,19 +3076,16 @@ header {
 }
 
 .content-detail-hero-image {
-  @apply w-full h-auto object-cover rounded-xl;
-  max-height: 480px;
+  @apply w-full object-cover rounded-xl;
+  aspect-ratio: 16/4;
+  min-height: 320px;
 }
 
-@media (--small-tablet-down) {
+/* When the calculated height from 16:4 ratio would be less than 320px, switch to 16:9 */
+@media (max-width: 1280px) {
   .content-detail-hero-image {
-    height: 192px;
-  }
-}
-
-@media (--small-tablet) {
-  .content-detail-hero-image {
-    height: 320px;
+    aspect-ratio: 16/9;
+    min-height: auto;
   }
 }
 

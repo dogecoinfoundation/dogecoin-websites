@@ -22,7 +22,7 @@ export function SearchBar({
   const [internalQuery, setInternalQuery] = React.useState('');
   
   // Use controlled value if provided, otherwise use internal state
-  const query = value !== undefined ? value : internalQuery;
+  const query = value ?? internalQuery;
   const setQuery = value !== undefined ? 
     (newValue: string) => onSearch?.(newValue) : 
     setInternalQuery;

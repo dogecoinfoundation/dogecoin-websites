@@ -1,9 +1,9 @@
 
-# Fun Dogecoin Projects to Try
+## Fun Dogecoin Projects to Try
 
 Looking for lighthearted ways to get involved with Dogecoin? Here are a few fun, beginner-friendly projects you can explore solo or with friends.
 
-## Quick ideas
+### Quick ideas
 
 - Organize a tiny community tip jar for a cause you care about
 - Host a game night where the prize is a few Ð

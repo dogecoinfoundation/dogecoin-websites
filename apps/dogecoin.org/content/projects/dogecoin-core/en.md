@@ -3,18 +3,24 @@ title: Dogecoin Core
 description: The reference implementation of the Dogecoin protocol, powering the entire network
 -->
 
-# Dogecoin Core
+## Dogecoin Core
 
-Dogecoin Core is the backbone of the Dogecoin network. It's the reference implementation that defines the protocol and ensures the security and reliability of the entire ecosystem.
+Lorem ipsum dolor sit amet consectetur. Duis dictum velit velit adipiscing in interdum. Dictum sit ultrices imperdiet hendrerit elementum. Nibh velit eget egestas neque tellus facilisis duis nibh et. Id nunc ac ipsum in sodales pharetra. Pellentesque leo gravida imperdiet donec risus egestas.
 
-## Key Features
+![Fractal Doge](fractal-doge.png) {{small-image}}
+
+{{image-caption}}
+The mathematical beauty of Dogecoin's decentralized network
+{{/image-caption}}
+
+### Key Features
 
 - **Full Node Implementation**: Complete validation of all transactions and blocks
 - **Wallet Functionality**: Built-in wallet for managing your Dogecoin
 - **Mining Support**: Full support for mining operations
 - **Network Security**: Helps secure the network through consensus participation
 
-## Technical Overview
+### Technical Overview
 
 Dogecoin Core is based on Bitcoin Core with modifications specific to Dogecoin's unique features:
 
@@ -23,7 +29,7 @@ Dogecoin Core is based on Bitcoin Core with modifications specific to Dogecoin's
 - No hard supply cap
 - Lower transaction fees
 
-## Getting Started
+### Getting Started
 
 To run Dogecoin Core:
 
@@ -32,7 +38,7 @@ To run Dogecoin Core:
 3. Install and sync with the network
 4. Start using your wallet or contributing to network security
 
-## Development
+### Development
 
 The project is actively maintained by a dedicated team of developers. Contributions are welcome through:
 
@@ -41,14 +47,36 @@ The project is actively maintained by a dedicated team of developers. Contributi
 - Testing and documentation improvements
 - Community support and education
 
-## System Requirements
+{{two-column}}
+
+![Coder Doge](coder-doge.png) {{square-image}}
+
+{{image-caption}}
+Unleash the power of the Dogecoin fractal engine! 🚀 Dive into the infinite possibilities of crypto creativity!
+{{/image-caption}}
+
+{{column-divider}}
+
+#### Much Paragraph
+
+Lorem ipsum dolor sit amet consectetur. Duis dictum velit velit adipiscing in interdum. Dictum sit ultrices imperdiet hendrerit elementum. Nibh velit eget egestas neque tellus facilibus duis nibh et. Id nunc ac ipsum in sodales pharetra. Pellentesque leo gravida imperdiet donec risus egestas.
+
+```javascript
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
+
+{{/two-column}}
+
+### System Requirements
 
 - **Operating System**: Windows, macOS, Linux
 - **RAM**: Minimum 1GB, recommended 2GB+
 - **Storage**: 50GB+ for full blockchain
 - **Network**: Broadband internet connection
 
-## Community
+### Community
 
 Join the development discussion:
 - GitHub: Issues and pull requests

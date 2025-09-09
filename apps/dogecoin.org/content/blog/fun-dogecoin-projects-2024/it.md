@@ -9,11 +9,11 @@ title: "Progetti Divertenti di Dogecoin 2024"
 description: "Una raccolta dei progetti Dogecoin più interessanti del 2024."
 ---
 
-# Progetti divertenti di Dogecoin da provare
+## Progetti divertenti di Dogecoin da provare
 
 Cerchi modi leggeri per coinvolgerti con Dogecoin? Ecco alcuni progetti divertenti e adatti ai principianti che puoi esplorare da solo o con amici.
 
-## Idee rapide
+### Idee rapide
 
 - Organizza un piccolo salvadanaio comunitario per una causa che ti sta a cuore
 - Organizza una serata di giochi in cui il premio siano alcuni Ð

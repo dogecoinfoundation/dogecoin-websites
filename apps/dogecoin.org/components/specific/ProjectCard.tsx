@@ -4,7 +4,8 @@ import Link from 'next/link';
 import { getAssetPath, getNavPath } from '@/lib/assets';
 import { shouldShowDraftBadge } from '@/lib/content/utils';
 import { TagsWithOverflow } from '@/components/common/TagsWithOverflow';
-import { ContentLinks, type ContentLink } from '@/components/common/ContentLinks';
+import { ContentLinks } from '@/components/common/ContentLinks';
+import type { ContentLink } from '@/components/common/ContentLinks';
 
 interface ProjectCardProps {
   slug: string;

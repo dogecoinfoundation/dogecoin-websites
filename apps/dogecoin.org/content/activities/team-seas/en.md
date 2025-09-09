@@ -10,12 +10,12 @@ keyPoints:
 - The campaign partnered with Ocean Conservancy and The Ocean Cleanup
 -->
 
-# TeamSeas Campaign
+## TeamSeas Campaign
 
-## Campaign Details
+### Campaign Details
 
 The #TeamSeas campaign was a massive collaborative effort to clean up our oceans and waterways. The Dogecoin community played a significant role in supporting this environmental initiative.
 
-## Community Impact
+### Community Impact
 
 The campaign showcased the power of the Dogecoin community to come together for environmental causes, demonstrating that cryptocurrency can be a force for positive change in the world.

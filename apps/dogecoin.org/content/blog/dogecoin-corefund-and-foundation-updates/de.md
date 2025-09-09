@@ -9,7 +9,7 @@ title: "Dogecoin Core Fund und Foundation Updates"
 description: "Neueste Updates von der Dogecoin Foundation und dem Core-Entwicklungsfonds."
 ---
 
-# Viel Core, viel Entwicklung, Wow.
+## Viel Core, viel Entwicklung, Wow.
 
 Wir freuen uns, die Einrichtung eines {{gold-text}}neuen gemeinschaftlichen Entwicklungsfonds für Dogecoin Core{{/gold-text}} bekannt zu geben, der von aktuellen Core-Entwicklern und Unterzeichnern des Vorstands der Dogecoin Foundation verwaltet wird. Zu allen Ausgaben und Entwicklungen werden Transparenzbeiträge veröffentlicht. Die Dogecoin Foundation hat {{gold-text}}5.000.000 Dogecoin{{/gold-text}} in den Entwicklungsfonds übertragen, mit der Absicht, diese Mittel Dogecoin Core zuzuweisen, dessen Entwicklung entscheidend ist und dem {{gold-text}}Dogecoin-Ökosystem zugutekommt{{/gold-text}}.
 Dies ist eine neue, separate Multi-Signatur-Wallet, die entwickelt wurde, um {{gold-text}}5.000.000 DOGE{{/gold-text}} transparent zu verwalten. Das in dieser Wallet gehaltene DOGE wird Belohnungen an Entwickler von Dogecoin Core für Arbeiten an allen Beiträgen auszahlen, egal wie groß oder klein. Diese neue Multi-Signatur-Wallet wird von Dogecoin-Core-Entwicklern und Mitgliedern der Dogecoin Foundation betrieben. Die Wallet ist mit einem Schwellenwert von drei von fünf Signaturen gesichert, mit den folgenden Verwahrern:
@@ -20,7 +20,7 @@ Dies ist eine neue, separate Multi-Signatur-Wallet, die entwickelt wurde, um {{g
 - Patrick (Dogecoin Core developer)
 - Ross (ehemaliger Dogecoin-Core-Entwickler)
 
-## Die Adresse ist hier zu finden:
+### Die Adresse ist hier zu finden:
 
 [9xEP9voiNLw7Y7DS87M8QRqKM43r6r5KM5](https://foundation.dogecoin.com) {{gold-button}}
 

@@ -3,11 +3,11 @@ title: Libdogecoin
 description: A lightweight C library for building Dogecoin applications
 -->
 
-# Libdogecoin
+## Libdogecoin
 
 Libdogecoin is a lightweight, portable C library that implements Dogecoin protocols. It's designed for developers who want to integrate Dogecoin functionality into their applications without running a full node.
 
-## Why Libdogecoin?
+### Why Libdogecoin?
 
 Traditional integration with Dogecoin requires running a full node, which can be resource-intensive. Libdogecoin provides a lightweight alternative perfect for:
 
@@ -16,27 +16,27 @@ Traditional integration with Dogecoin requires running a full node, which can be
 - **Web Services**: Backend services requiring Dogecoin functionality
 - **Educational Tools**: Learning about blockchain technology
 
-## Core Features
+### Core Features
 
-### Transaction Management
+#### Transaction Management
 - Create and sign transactions
 - Multi-signature support
 - Transaction verification
 - Fee calculation
 
-### Key Management
+#### Key Management
 - HD wallet support (BIP32/BIP44)
 - Key generation and derivation
 - Address generation
 - Private key import/export
 
-### Network Communication
+#### Network Communication
 - SPV (Simplified Payment Verification) support
 - Direct peer communication
 - Block header validation
 - Merkle proof verification
 
-## Platform Support
+### Platform Support
 
 Libdogecoin is designed to be truly cross-platform:
 
@@ -45,7 +45,7 @@ Libdogecoin is designed to be truly cross-platform:
 - **Embedded**: Arduino, Raspberry Pi, ESP32
 - **Web**: WebAssembly support
 
-## Getting Started
+### Getting Started
 
 ```c
 #include <dogecoin/dogecoin.h>
@@ -68,18 +68,18 @@ int main() {
 }
 ```
 
-## Use Cases
+### Use Cases
 
-### Hardware Wallets
+#### Hardware Wallets
 Libdogecoin powers next-generation hardware wallets with its minimal footprint and robust security features.
 
-### Point of Sale Systems
+#### Point of Sale Systems
 Enable merchants to accept Dogecoin payments directly without intermediaries.
 
-### Educational Projects
+#### Educational Projects
 Perfect for teaching blockchain concepts with real-world implementation.
 
-## Contributing
+### Contributing
 
 We welcome contributions from developers of all skill levels:
 
@@ -88,7 +88,7 @@ We welcome contributions from developers of all skill levels:
 - **Testing**: Report bugs and test on different platforms
 - **Examples**: Share your projects built with Libdogecoin
 
-## Roadmap
+### Roadmap
 
 - ✅ Basic transaction support
 - ✅ HD wallet implementation
@@ -97,7 +97,7 @@ We welcome contributions from developers of all skill levels:
 - 📋 Lightning Network support
 - 📋 Advanced scripting capabilities
 
-## Resources
+### Resources
 
 - [API Documentation](https://github.com/dogecoinfoundation/libdogecoin/wiki)
 - [Example Projects](https://github.com/dogecoinfoundation/libdogecoin/tree/main/examples)

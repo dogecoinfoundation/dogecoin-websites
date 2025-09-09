@@ -4,48 +4,48 @@ description: Learn to build applications with libdogecoin
 summary: Join us for an intensive online workshop designed for developers who want to contribute to the Dogecoin ecosystem. Whether you're new to blockchain development or an experienced developer, this workshop has something for you.
 -->
 
-# Dogecoin Developer Workshop: Building the Future
+## Dogecoin Developer Workshop: Building the Future
 
-## Workshop Details
+### Workshop Details
 
 **Date**: February 20, 2025  
 **Time**: 10:00 AM - 6:00 PM EST (Multiple timezone friendly sessions)  
 **Format**: Online via Zoom and Discord  
 **Cost**: FREE (Thanks to community sponsors!)
 
-## Who Should Attend?
+### Who Should Attend?
 
 - Software developers interested in blockchain
 - Current Dogecoin contributors wanting to level up
 - Students learning about cryptocurrency
 - Anyone passionate about building on Dogecoin
 
-## Prerequisites
+### Prerequisites
 
 - Basic programming knowledge (any language)
 - Familiarity with Git and GitHub
 - A computer with development tools installed
 - Enthusiasm to learn!
 
-## Schedule
+### Schedule
 
-### Morning Sessions (10:00 AM - 1:00 PM EST)
+#### Morning Sessions (10:00 AM - 1:00 PM EST)
 
-#### Track 1: Dogecoin Fundamentals
+##### Track 1: Dogecoin Fundamentals
 - Understanding the Dogecoin protocol
 - Setting up a development environment
 - Running a Dogecoin node
 - Exploring the codebase
 
-#### Track 2: Advanced Development
+##### Track 2: Advanced Development
 - Contributing to Dogecoin Core
 - Performance optimization techniques
 - Network protocol deep dive
 - Testing and quality assurance
 
-### Afternoon Sessions (2:00 PM - 6:00 PM EST)
+#### Afternoon Sessions (2:00 PM - 6:00 PM EST)
 
-#### Hands-on Labs
+##### Hands-on Labs
 Choose one of four specialized tracks:
 
 1. **Core Development Lab**
@@ -72,7 +72,7 @@ Choose one of four specialized tracks:
    - API development
    - Docker containerization
 
-## Featured Instructors
+### Featured Instructors
 
 Our workshop is led by experienced Dogecoin developers:
 
@@ -80,27 +80,27 @@ Our workshop is led by experienced Dogecoin developers:
 - **Foundation Engineers**: Technical leads from the Dogecoin Foundation
 - **Community Experts**: Successful project creators and maintainers
 
-## What You'll Learn
+### What You'll Learn
 
-### Technical Skills
+#### Technical Skills
 - Dogecoin protocol internals
 - Blockchain development best practices
 - Security considerations
 - Testing methodologies
 
-### Practical Applications
+#### Practical Applications
 - Building real-world applications
 - Integrating Dogecoin payments
 - Creating developer tools
 - Contributing to open source
 
-### Community Skills
+#### Community Skills
 - Effective collaboration
 - Code review process
 - Documentation writing
 - Community engagement
 
-## Workshop Materials
+### Workshop Materials
 
 All participants receive:
 - Comprehensive workshop guide (PDF)
@@ -110,7 +110,7 @@ All participants receive:
 - Recording of all sessions
 - Certificate of completion
 
-## Development Environment
+### Development Environment
 
 Before the workshop, please install:
 - Git
@@ -120,21 +120,21 @@ Before the workshop, please install:
 
 Detailed setup instructions will be sent upon registration.
 
-## Interactive Elements
+### Interactive Elements
 
-### Live Coding Sessions
+#### Live Coding Sessions
 Follow along as instructors build real applications in real-time.
 
-### Q&A Periods
+#### Q&A Periods
 Direct access to core developers for your questions.
 
-### Pair Programming
+#### Pair Programming
 Work with other participants on exercises.
 
-### Code Reviews
+#### Code Reviews
 Get feedback on your code from experienced developers.
 
-## Projects Showcase
+### Projects Showcase
 
 Previous workshop participants have built:
 - Mobile wallets
@@ -144,7 +144,7 @@ Previous workshop participants have built:
 - Mining pools
 - Trading tools
 
-## Post-Workshop Support
+### Post-Workshop Support
 
 The learning doesn't stop after the workshop:
 - 30-day access to instructors via Discord
@@ -152,7 +152,7 @@ The learning doesn't stop after the workshop:
 - Mentorship program for promising developers
 - Fast-track to becoming a contributor
 
-## Registration
+### Registration
 
 Space is limited to ensure quality interaction.
 
@@ -164,7 +164,7 @@ Upon registration, you'll receive:
 - Pre-workshop preparation guide
 - Calendar invitations
 
-## Sponsorship
+### Sponsorship
 
 This free workshop is made possible by:
 - Dogecoin Foundation
@@ -173,19 +173,19 @@ This free workshop is made possible by:
 
 Want to sponsor? Contact: sponsor@dogecoin.dev
 
-## Requirements
+### Requirements
 
-### Technical Requirements
+#### Technical Requirements
 - Stable internet connection
 - Webcam and microphone (optional but recommended)
 - 10GB free disk space for development environment
 
-### Time Commitment
+#### Time Commitment
 - 8 hours for the workshop
 - 2-4 hours pre-workshop preparation
 - Optional post-workshop projects
 
-## FAQ
+### FAQ
 
 **Q: Is this workshop really free?**  
 A: Yes! Thanks to our sponsors, there's no cost to attend.
@@ -199,7 +199,7 @@ A: Yes, all sessions will be recorded and available to registered participants.
 **Q: Can I get help if I get stuck?**  
 A: Absolutely! We have dedicated support channels and mentors available.
 
-## Join the Dogecoin Development Community
+### Join the Dogecoin Development Community
 
 This workshop is your gateway to becoming an active contributor to the Dogecoin ecosystem. Join hundreds of developers worldwide working to improve and expand Dogecoin.
 

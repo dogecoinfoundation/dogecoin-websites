@@ -6,10 +6,14 @@ import { Footer } from '@/components/layout/Footer';
 import { getDictionary, allLanguages } from '@repo/internationalization';
 import type { DogecoinDictionary } from '@/types/dictionary';
 import Image from 'next/image';
-import { getAllProjectSlugs, getProjectBySlug } from '@/lib/content';
+import { getAllProjectSlugs, getProjectBySlug, getRandomProjects } from '@/lib/content';
 import { getAssetPath } from '@/lib/assets';
 import { TagsWithOverflow } from '@/components/common/TagsWithOverflow';
-import { ContentLinks, type ContentLink } from '@/components/common/ContentLinks';
+import { ContentLinks } from '@/components/common/ContentLinks';
+import type { ContentLink } from '@/components/common/ContentLinks';
+import { ContentGrid } from '@/components/content/ContentGrid';
+import { ProjectCard } from '@/components/specific/ProjectCard';
+import Link from 'next/link';
 
 interface PageProps {
   params: Promise<{ slug: string; locale: string }>;
@@ -48,7 +52,10 @@ export default async function ProjectPage({ params }: PageProps) {
   const { slug, locale } = await params;
   const dictionary = await getDictionary(locale) as DogecoinDictionary;
   const t = dictionary["dogecoin.org"].home;
-  const project = await getProjectBySlug(slug, locale);
+  const [project, randomProjects] = await Promise.all([
+    getProjectBySlug(slug, locale),
+    getRandomProjects(locale, 3, slug)
+  ]);
 
   if (!project) {
     return (
@@ -92,19 +99,18 @@ export default async function ProjectPage({ params }: PageProps) {
   return (
     <Main>
       <Section className="content-detail-section">
-        {/* Full-width hero image first */}
-        <div className="content-detail-hero">
-          <Image
-            src={getAssetPath(project.image)}
-            alt={project.title}
-            width={1920}
-            height={1080}
-            className="content-detail-hero-image"
-            priority
-          />
-        </div>
-
         <Container>
+          {/* Hero image with max width constraint */}
+          <div className="content-detail-hero">
+            <Image
+              src={getAssetPath(project.image)}
+              alt={project.title}
+              width={1920}
+              height={1080}
+              className="content-detail-hero-image"
+              priority
+            />
+          </div>
           <article className="content-article">
             <header className="content-article-header">
               {/* Title with standard h1 styling */}
@@ -143,6 +149,72 @@ export default async function ProjectPage({ params }: PageProps) {
           </article>
         </Container>
       </Section>
+
+      {/* More projects section */}
+      <Section>
+        <Container>
+          <div className="section-heading-container">
+            <h1 className="section-heading">
+              More projects
+            </h1>
+          </div>
+
+          <ContentGrid className="featured-projects-grid">
+            {randomProjects.map((project, index) => {
+              const links = [];
+              if (project.github) {
+                links.push({ label: 'GitHub', url: project.github, icon: 'github' as const });
+              }
+              if (project.discord) {
+                links.push({ label: 'Discord', url: project.discord, icon: 'discord' as const });
+              }
+              if (project.website) {
+                links.push({ label: 'Website', url: project.website, icon: 'web' as const });
+              }
+
+              const tags = [...(project.tags ?? [])];
+
+              // Define a set of vibrant colors for project accent lines
+              const accentColors = [
+                '#FF46CE', // Pink
+                '#2BF9FF', // Cyan
+                '#62FF46', // Green
+                '#FFFC36', // Yellow
+                '#FF7D47', // Orange
+                '#9B59FF', // Purple
+                '#FF5959', // Red
+                '#46C8FF', // Blue
+              ];
+              
+              // Cycle through accent colors
+              const accentColor = accentColors[index % accentColors.length];
+
+              return (
+                <ProjectCard
+                  key={project.slug}
+                  slug={project.slug}
+                  title={project.title}
+                  image={project.image}
+                  description={project.description}
+                  tags={tags}
+                  draft={project.draft}
+                  links={links}
+                  locale={locale}
+                  accentColor={accentColor}
+                  t={t.projects}
+                />
+              );
+            })}
+          </ContentGrid>
+
+          <div className="section-view-all-container">
+            <Link href={`/${locale}/projects`} className="view-all-button">
+              {t.projects.viewAllProjects}
+            </Link>
+          </div>
+        </Container>
+      </Section>
+      
       <Footer t={t} />
     </Main>
   );

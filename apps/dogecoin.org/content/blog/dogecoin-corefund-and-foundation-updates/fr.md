@@ -9,7 +9,7 @@ title: "Mises à jour du Fonds Core et de la Foundation Dogecoin"
 description: "Dernières mises à jour de la Dogecoin Foundation et du fonds de développement Core."
 ---
 
-# Beaucoup de Core, Beaucoup de développement, Waouh.
+## Beaucoup de Core, Beaucoup de développement, Waouh.
 
 Nous sommes heureux d’annoncer la création d’un {{gold-text}}nouveau fonds communautaire pour le développement de Dogecoin Core{{/gold-text}}, géré par des développeurs Core actuels et des signataires du conseil de la Dogecoin Foundation, avec des publications de transparence à venir pour toutes les dépenses et évolutions. La Dogecoin Foundation a pris l’initiative de {{gold-text}}transférer 5 000 000 de Dogecoin{{/gold-text}} vers le fonds de développement, avec l’intention que cela soit alloué à Dogecoin Core, dont le développement est essentiel et au {{gold-text}}bénéfice de l’écosystème Dogecoin{{/gold-text}}.
 Il s’agit d’un nouveau portefeuille multi-signatures, séparé, conçu pour gérer de manière transparente la {{gold-text}}somme de 5 000 000 DOGE{{/gold-text}}. Le DOGE détenu dans ce portefeuille versera des récompenses aux développeurs de Dogecoin Core pour le travail sur toutes les contributions, petites ou grandes. Ce nouveau portefeuille multi-signatures sera opéré par des développeurs de Dogecoin Core et des membres de la Dogecoin Foundation. Le portefeuille est sécurisé avec un seuil de trois signatures sur cinq, avec les dépositaires suivants :
@@ -20,7 +20,7 @@ Il s’agit d’un nouveau portefeuille multi-signatures, séparé, conçu pour 
 - Patrick (Dogecoin Core developer)
 - Ross (ancien développeur de Dogecoin Core)
 
-## L’adresse est disponible ici :
+### L'adresse est disponible ici :
 
 [9xEP9voiNLw7Y7DS87M8QRqKM43r6r5KM5](https://foundation.dogecoin.com) {{gold-button}}
 

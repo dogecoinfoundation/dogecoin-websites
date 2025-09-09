@@ -1,5 +1,5 @@
 
-# Such Core, Much Development, Wow.
+## Such Core, Much Development, Wow.
 
 We are happy to announce the institution of a {{gold-text}}new community Dogecoin Core development fund{{/gold-text}}, managed by existing core developers and Dogecoin Foundation board director signatories, along with transparency blog posts forthcoming for all expenditures and developments. The Dogecoin Foundation has taken the step of {{gold-text}}moving 5,000,000 Dogecoin{{/gold-text}} to the development fund, with the intent that this will be allocated to Dogecoin Core, the development of which is critical and to the {{gold-text}}benefit of the Dogecoin ecosystem{{/gold-text}}.
 This is a new, segregated multi-signature wallet, designed to transparently manage a {{gold-text}}sum of 5,000,000 DOGE{{/gold-text}}. The DOGE held in this wallet will disburse rewards to developers of Dogecoin Core for work on all contributions, no matter how big or small. This new multi-signature wallet will be operated by Dogecoin Core developers and members of the Dogecoin Foundation. The wallet is secured with a three out of five signature threshold, with the following custodians:
@@ -10,7 +10,7 @@ This is a new, segregated multi-signature wallet, designed to transparently mana
 - Patrick (Dogecoin Core developer)
 - Ross (Former Dogecoin Core developer)
 
-## The address can be found here:
+### The address can be found here:
 
 [9xEP9voiNLw7Y7DS87M8QRqKM43r6r5KM5](https://foundation.dogecoin.com) {{gold-button}}
 

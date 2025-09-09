@@ -9,7 +9,7 @@ title: "Dogecoin 核心基金和基金会更新"
 description: "来自 Dogecoin 基金会和核心开发基金的最新更新。"
 ---
 
-# 满满核心，满满开发，哇哦。
+## 满满核心，满满开发，哇哦。
 
 我们很高兴宣布设立一个{{gold-text}}新的社区 Dogecoin Core 开发基金{{/gold-text}}，由现有的核心开发者和 Dogecoin 基金会董事会签署人管理，并将就所有支出和进展发布透明度博客文章。Dogecoin 基金会已{{gold-text}}将 5,000,000 枚 Dogecoin 转入{{/gold-text}}该开发基金，旨在将其用于 Dogecoin Core 的开发，而这对 {{gold-text}}Dogecoin 生态的利益{{/gold-text}}至关重要。
 这是一个全新的、隔离的多重签名钱包，旨在以透明的方式管理{{gold-text}}5,000,000 DOGE{{/gold-text}}。该钱包中的 DOGE 将向 Dogecoin Core 的开发者发放奖励，以表彰他们在各种大小贡献上的工作。这个新的多重签名钱包将由 Dogecoin Core 开发者和 Dogecoin 基金会成员共同运营。该钱包采用五选三的签名阈值进行安全保护，托管人如下：
@@ -20,7 +20,7 @@ description: "来自 Dogecoin 基金会和核心开发基金的最新更新。"
 - Patrick (Dogecoin Core developer)
 - Ross（前 Dogecoin Core 开发者）
 
-## 地址如下：
+### 地址如下：
 
 [9xEP9voiNLw7Y7DS87M8QRqKM43r6r5KM5](https://foundation.dogecoin.com) {{gold-button}}
 

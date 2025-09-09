@@ -44,4 +44,17 @@ export class ProjectsLoader extends ContentLoader {
       featured: (item.featured as boolean | undefined) ?? false
     } as Project;
   }
+
+  async getRandomProjects(locale: string, count = 3, excludeSlug?: string): Promise<ProjectMeta[]> {
+    const allProjects = await this.getAllProjects(locale);
+    
+    // Filter out the current project if excludeSlug is provided
+    const availableProjects = excludeSlug 
+      ? allProjects.filter(project => project.slug !== excludeSlug)
+      : allProjects;
+    
+    // Shuffle array and take the first 'count' items
+    const shuffled = [...availableProjects].sort(() => Math.random() - 0.5);
+    return shuffled.slice(0, count);
+  }
 }

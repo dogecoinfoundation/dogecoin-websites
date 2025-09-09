@@ -9,7 +9,7 @@ title: "Actualizaciones del Fondo Core y Foundation de Dogecoin"
 description: "Últimas actualizaciones de la Dogecoin Foundation y el fondo de desarrollo Core."
 ---
 
-# Mucho Core, Mucho Desarrollo, Wow.
+## Mucho Core, Mucho Desarrollo, Wow.
 
 Nos complace anunciar la creación de un {{gold-text}}nuevo fondo comunitario para el desarrollo de Dogecoin Core{{/gold-text}}, gestionado por desarrolladores actuales del Core y firmantes del consejo de la Dogecoin Foundation, junto con publicaciones de transparencia que se publicarán para todos los gastos y avances. La Dogecoin Foundation ha dado el paso de {{gold-text}}trasladar 5.000.000 de Dogecoin{{/gold-text}} al fondo de desarrollo, con la intención de que se destine a Dogecoin Core, cuyo desarrollo es crítico y en {{gold-text}}beneficio del ecosistema Dogecoin{{/gold-text}}.
 Se trata de una nueva cartera multifirma segregada, diseñada para gestionar de forma transparente la {{gold-text}}suma de 5.000.000 de DOGE{{/gold-text}}. El DOGE mantenido en esta cartera distribuirá recompensas a desarrolladores de Dogecoin Core por el trabajo en todas las contribuciones, grandes o pequeñas. Esta nueva cartera multifirma será operada por desarrolladores de Dogecoin Core y miembros de la Dogecoin Foundation. La cartera está asegurada con un umbral de tres de cinco firmas, con los siguientes custodios:
@@ -20,7 +20,7 @@ Se trata de una nueva cartera multifirma segregada, diseñada para gestionar de 
 - Patrick (Dogecoin Core developer)
 - Ross (exdesarrollador de Dogecoin Core)
 
-## La dirección se puede encontrar aquí:
+### La dirección se puede encontrar aquí:
 
 [9xEP9voiNLw7Y7DS87M8QRqKM43r6r5KM5](https://foundation.dogecoin.com) {{gold-button}}
 

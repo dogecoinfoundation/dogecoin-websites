@@ -4,63 +4,63 @@ description: Join fellow shibes for a fun meetup in Miami!
 summary: Get ready for the most exciting Dogecoin community event of the year! We're bringing together Shibes from around the world for three days of fun, learning, and networking in beautiful Miami.
 -->
 
-# Dogecoin Community Meetup Miami 2025
+## Dogecoin Community Meetup Miami 2025
 
-## Event Overview
+### Event Overview
 
 **When**: March 15-17, 2025  
 **Where**: Miami Convention Center, Miami, FL  
 **Who**: Open to all Dogecoin enthusiasts!
 
-## What to Expect
+### What to Expect
 
-### Day 1: Welcome & Networking
+#### Day 1: Welcome & Networking
 - Registration and welcome breakfast
 - Keynote: "The Future of Dogecoin"
 - Speed networking sessions
 - Welcome party at South Beach
 
-### Day 2: Workshops & Talks
+#### Day 2: Workshops & Talks
 - Technical workshops on Dogecoin development
 - Merchant adoption case studies
 - Panel: "Building on Dogecoin"
 - Community project showcase
 - Hackathon kickoff
 
-### Day 3: Community & Fun
+#### Day 3: Community & Fun
 - Hackathon presentations
 - Community awards ceremony
 - Beach activities and games
 - Closing celebration dinner
 
-## Featured Speakers
+### Featured Speakers
 
 - **Core Developers**: Latest updates on Dogecoin Core
 - **Foundation Members**: Roadmap and initiatives
 - **Community Leaders**: Success stories and insights
 - **Business Adopters**: Real-world use cases
 
-## Workshops
+### Workshops
 
-### For Developers
+#### For Developers
 - Building with Libdogecoin
 - Smart contract integration
 - Payment processing solutions
 - Security best practices
 
-### For Businesses
+#### For Businesses
 - Accepting Dogecoin payments
 - Marketing to the Doge community
 - Tax and compliance considerations
 - Integration strategies
 
-### For Everyone
+#### For Everyone
 - Dogecoin basics and wallet setup
 - Community involvement opportunities
 - Meme creation workshop (yes, really!)
 - The history and culture of Dogecoin
 
-## Activities
+### Activities
 
 Beyond the scheduled programming, enjoy:
 
@@ -69,7 +69,7 @@ Beyond the scheduled programming, enjoy:
 - **Charity Auction**: Supporting local animal shelters
 - **Karaoke Night**: Sing your favorite songs (Doge-themed encouraged!)
 
-## Registration
+### Registration
 
 Early Bird tickets available until February 1st:
 - **Full Pass**: $150 (all three days)
@@ -84,7 +84,7 @@ Tickets include:
 - Exclusive NFT badge
 - Access to networking app
 
-## Accommodation
+### Accommodation
 
 Special rates available at partner hotels:
 - Hilton Miami Downtown: $120/night
@@ -93,13 +93,13 @@ Special rates available at partner hotels:
 
 Use code "DOGE2025" when booking.
 
-## Travel Information
+### Travel Information
 
 **By Air**: Miami International Airport (MIA) - 20 minutes to venue  
 **By Train**: Brightline and Amtrak serve Miami Central Station  
 **Local Transport**: Free shuttle service between official hotels and venue
 
-## Sponsors
+### Sponsors
 
 This event is made possible by:
 - Dogecoin Foundation
@@ -107,7 +107,7 @@ This event is made possible by:
 - Local business partners
 - You! (sponsorship opportunities available)
 
-## Health & Safety
+### Health & Safety
 
 Your safety is our priority:
 - Hand sanitizing stations throughout
@@ -115,18 +115,18 @@ Your safety is our priority:
 - Dietary accommodations available
 - First aid on site
 
-## Code of Conduct
+### Code of Conduct
 
 We're committed to providing a welcoming, inclusive environment for all attendees. Please review our code of conduct before attending.
 
-## Contact
+### Contact
 
 Questions? Reach out to:
 - Email: events@dogecoin.com
 - Twitter: @DogecoinEvents
 - Discord: #miami-meetup-2025
 
-## Join Us!
+### Join Us!
 
 Whether you're a developer, investor, merchant, or just a Doge enthusiast, this is your chance to connect with the amazing Dogecoin community. 
 

@@ -9,7 +9,7 @@ title: "도지코인 코어 펀드 및 재단 업데이트"
 description: "도지코인 재단과 코어 개발 펀드의 최신 업데이트입니다."
 ---
 
-# 많은 코어, 많은 개발, 와우.
+## 많은 코어, 많은 개발, 와우.
 
 {{gold-text}}새로운 커뮤니티 Dogecoin Core 개발 기금{{/gold-text}}의 설립을 발표하게 되어 기쁩니다. 이 기금은 기존 코어 개발자와 Dogecoin 재단 이사회 서명자들이 관리하며, 모든 지출 및 진행 상황에 대한 투명성 블로그 게시물이 이어질 예정입니다. Dogecoin 재단은 {{gold-text}}5,000,000 DOGE를{{/gold-text}} 개발 기금으로 이전했으며, 이는 Dogecoin Core에 배분될 예정입니다. Dogecoin Core의 개발은 매우 중요하며 {{gold-text}}Dogecoin 생태계에 도움이 됩니다{{/gold-text}}.
 이는 {{gold-text}}5,000,000 DOGE{{/gold-text}}를 투명하게 관리하도록 설계된 새로운 분리형 다중 서명 지갑입니다. 이 지갑에 보관된 DOGE는 크고 작은 모든 기여에 대한 작업에 대해 Dogecoin Core 개발자들에게 보상을 분배합니다. 이 새로운 다중 서명 지갑은 Dogecoin Core 개발자와 Dogecoin 재단 구성원이 운영합니다. 지갑은 다섯 개 중 세 개의 서명이 필요한 임계값으로 보호되며, 다음의 관리자가 있습니다:
@@ -20,7 +20,7 @@ description: "도지코인 재단과 코어 개발 펀드의 최신 업데이트
 - Patrick (Dogecoin Core developer)
 - Ross (이전 Dogecoin Core 개발자)
 
-## 주소는 여기에서 확인할 수 있습니다:
+### 주소는 여기에서 확인할 수 있습니다:
 
 [9xEP9voiNLw7Y7DS87M8QRqKM43r6r5KM5](https://foundation.dogecoin.com) {{gold-button}}
 

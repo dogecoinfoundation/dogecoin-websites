@@ -10,12 +10,12 @@ keyPoints:
 - It was funded through community donations
 -->
 
-# Kabosu Statue
+## Kabosu Statue
 
-## About the Project
+### About the Project
 
 The Kabosu statue project represents a heartfelt tribute to the beloved Shiba Inu whose photo became the iconic "doge" meme that inspired Dogecoin.
 
-## Community Impact
+### Community Impact
 
 This project demonstrates the strong bond between the Dogecoin community and its origins, creating a lasting memorial to the beloved dog that started it all.

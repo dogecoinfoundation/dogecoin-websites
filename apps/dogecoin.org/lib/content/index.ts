@@ -34,6 +34,10 @@ export async function getProjectBySlug(slug: string, locale: string) {
   return projectsLoader.getProjectBySlug(slug, locale);
 }
 
+export async function getRandomProjects(locale: string, count = 3, excludeSlug?: string) {
+  return projectsLoader.getRandomProjects(locale, count, excludeSlug);
+}
+
 export async function getAllActivitySlugs(): Promise<string[]> {
   return activitiesLoader.getAllSlugs();
 }

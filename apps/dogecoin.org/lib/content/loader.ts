@@ -139,7 +139,10 @@ export class ContentLoader {
       const { data, content } = matter(raw);
 
       const processedContent = this.preprocessMarkdown(content, slug);
-      const html = await marked.parse(processedContent);
+      let html = await marked.parse(processedContent);
+      
+      // Post-process to handle layout wrappers
+      html = this.postprocessHtml(html);
 
       // Load local metadata
       const localMetadata = await this.loadLocalMetadata(folder);
@@ -172,7 +175,10 @@ export class ContentLoader {
       const { data, content } = matter(raw);
 
       const processedContent = this.preprocessMarkdown(content, slug);
-      const html = await marked.parse(processedContent);
+      let html = await marked.parse(processedContent);
+      
+      // Post-process to handle layout wrappers
+      html = this.postprocessHtml(html);
 
       // Load local metadata
       const localMetadata = await this.loadLocalMetadata(folder);
@@ -287,6 +293,7 @@ export class ContentLoader {
   protected preprocessMarkdown(content: string, slug: string): string {
     let result = content;
     
+    // Handle image path mapping
     result = result.replace(/!\[([^\]]*)\]\((?!https?:\/\/)([^)]+)\)/g, (_m, alt, src) => {
       const cleaned = String(src).trim().replace(/^\.\//, '');
       const mapped = `/assets/${this.config.contentType}/${slug}/${cleaned}`;
@@ -294,6 +301,60 @@ export class ContentLoader {
       return `![${safeAlt}](${mapped})`;
     });
 
+    // Handle custom image styling
+    result = result.replace(/!\[([^\]]*)\]\(([^)]+)\)\s*\{\{(small-image|square-image)\}\}/g, (_m, alt, src, styleClass) => {
+      const safeAlt = String(alt ?? '').replace(/"/g, '&quot;');
+      return `<img src="${src}" alt="${safeAlt}" class="${styleClass}">`;
+    });
+
+    // Handle simple content wrappers
+    result = result.replace(/\{\{(centered-heading|image-caption)\}\}([\s\S]*?)\{\{\/\1\}\}/g, (_m, className, content) => {
+      return `<div class="${className}">${content.trim()}</div>`;
+    });
+
+    // Handle gold buttons
+    result = result.replace(/\[([^\]]+)\]\(([^)]+)\)\s*\{\{gold-button\}\}/g, (_m, text, url) => {
+      return `<a href="${url}" class="gold-button">${text}</a>`;
+    });
+
+    return result;
+  }
+
+  protected postprocessHtml(html: string): string {
+    let result = html;
+    
+    // Process two-column layouts
+    // First, handle the column-divider marker
+    result = result.replace(/<p>\{\{two-column\}\}<\/p>([\s\S]*?)<p>\{\{column-divider\}\}<\/p>([\s\S]*?)<p>\{\{\/two-column\}\}<\/p>/g,
+      (_m, leftContent, rightContent) => {
+        // Group image + caption combinations in the left content
+        const processedLeftContent = this.groupImageCaptions(leftContent.trim());
+        return `<div class="image-text-layout">${processedLeftContent}<div class="text-content">${rightContent.trim()}</div></div>`;
+      }
+    );
+    
+    // Alternative pattern if markers are not wrapped in p tags
+    result = result.replace(/\{\{two-column\}\}([\s\S]*?)\{\{column-divider\}\}([\s\S]*?)\{\{\/two-column\}\}/g,
+      (_m, leftContent, rightContent) => {
+        // Group image + caption combinations in the left content
+        const processedLeftContent = this.groupImageCaptions(leftContent.trim());
+        return `<div class="image-text-layout">${processedLeftContent}<div class="text-content">${rightContent.trim()}</div></div>`;
+      }
+    );
+    
+    return result;
+  }
+
+  private groupImageCaptions(content: string): string {
+    // Group square/small images with their following captions
+    let result = content;
+    
+    // Match image followed by caption and wrap them together
+    result = result.replace(
+      /(<img[^>]*class="[^"]*(?:square-image|small-image)[^"]*"[^>]*>)\s*(<div class="image-caption">[\s\S]*?<\/div>)/g,
+      '<div class="image-with-caption">$1$2</div>'
+    );
+    
     return result;
   }
 
