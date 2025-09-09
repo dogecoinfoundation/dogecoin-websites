@@ -4,6 +4,7 @@
 @import "tailwindcss";
 @import "../../../../packages/design-system/styles/globals.css";
 @import "../../../../packages/design-system/styles/figma-tokens.css";
+@import "../../../../packages/design-system/styles/figma-tokens-generated.css";
 
 /* =============================================================================
    MEDIA QUERY VARIABLES

@@ -88,7 +88,7 @@ Figma uses descriptive names (4xs, 3xs, 2xs, xs, sm, md, lg, xl, 2xl, 3xl, 4xl, 
 We map these to Tailwind's numeric scale for better utility class integration:
 
 ```javascript
-'spacing-4xs' → 'spacing-0.5' // 2px
+'spacing-4xs' → 'spacing-0-5' // 2px
 'spacing-3xs' → 'spacing-1'   // 4px
 'spacing-2xs' → 'spacing-2'   // 8px
 'spacing-xs'  → 'spacing-3'   // 12px

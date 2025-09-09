@@ -38,7 +38,7 @@ const TOKEN_MAPPINGS = {
   'Colour/utility/warning/warning-': 'warning-',
   
   // Measurements
-  'Measurements/spacing/spacing-4xs': 'spacing-0.5',
+  'Measurements/spacing/spacing-4xs': 'spacing-0-5',
   'Measurements/spacing/spacing-3xs': 'spacing-1',
   'Measurements/spacing/spacing-2xs': 'spacing-2',
   'Measurements/spacing/spacing-xs': 'spacing-3',
