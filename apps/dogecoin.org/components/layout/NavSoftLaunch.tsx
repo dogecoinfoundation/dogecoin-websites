@@ -46,7 +46,7 @@ export function NavSoftLaunch({ children, className: _className = '', t }: NavSo
   }, []);
 
   return (
-    <nav className={`nav-main ${hasScrolled ? 'nav-scrolled' : ''}`}>
+    <nav className="nav-main nav-scrolled">
       <Container className="nav-container flex justify-between items-center">
         {/* Back button */}
         <button 
