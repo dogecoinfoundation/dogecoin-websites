@@ -371,7 +371,8 @@ header {
 }
 
 .hero-subtitle-wrap::after {
-  @apply block w-full mt-1 bg-no-repeat aspect-[278/10] bg-[url('/assets/svg/underline.svg')] bg-[length:100%_100%];
+  @apply block w-full mt-1 bg-no-repeat aspect-[278/10] bg-[length:100%_100%];
+  background-image: url(var(--base-path, "")/assets/svg/underline.svg);
   content: "";
 }
 

@@ -8,6 +8,9 @@ const basePath = isStaticExport ? '/dogecoin-websites' : '';
 
 let nextConfig: NextConfig = {
   ...config,
+  env: {
+    STATIC_EXPORT: process.env.STATIC_EXPORT,
+  },
   // Only enable static export when STATIC_EXPORT is true
   ...(isStaticExport && {
     basePath,

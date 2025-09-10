@@ -5,6 +5,7 @@ import "./globals.css";
 import { Nav } from "@/components/layout/Nav";
 import { getDictionary } from '@repo/internationalization';
 import type { DogecoinDictionary } from '@/types/dictionary';
+import { getAssetPath } from '@/lib/assets';
 
 const comicNeue = Comic_Neue({
   variable: "--font-comic-neue",
@@ -42,6 +43,9 @@ export default async function RootLayout({
   return (
     <html lang={locale || 'en'}>
       <head>
+        <style dangerouslySetInnerHTML={{
+          __html: `:root { --base-path: "${getAssetPath('')}"; }`
+        }} />
         <script
           type="module"
           src="https://fetch.dogecoin.org/doge-qr.js"

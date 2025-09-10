@@ -10,11 +10,14 @@ export const env = createEnv({
     email(),
     observability(),
   ],
-  server: {},
+  server: {
+    STATIC_EXPORT: z.string().optional(),
+  },
   client: {
     NEXT_PUBLIC_SOFTLAUNCH: z.string().optional(),
   },
   runtimeEnv: {
+    STATIC_EXPORT: process.env.STATIC_EXPORT,
     NEXT_PUBLIC_SOFTLAUNCH: process.env.NEXT_PUBLIC_SOFTLAUNCH,
   },
 });

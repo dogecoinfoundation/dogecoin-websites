@@ -68,7 +68,7 @@ export default async function Home({ params }: HomeProps) {
                 <div className="hero-text-container relative">
                   <div className="hero-title">
                     <img 
-                      src="/assets/svg/logos/dogecoin-foundation-text.svg" 
+                      src={getAssetPath("/assets/svg/logos/dogecoin-foundation-text.svg")} 
                       alt="Dogecoin Foundation" 
                       className="hero-logo"
                     />
@@ -194,7 +194,7 @@ export default async function Home({ params }: HomeProps) {
                   text={activity.summary?.text ?? activity.description ?? ''}
                   slug={activity.slug}
                   locale={locale}
-                  imageSrc={getAssetPath(activity.image)}
+                  imageSrc={activity.image}
                   imageAlt={activity.title}
                   imagePosition={index % 2 === 0 ? 'right' : 'left'}
                   color={activity.color ?? '#FF46CE'}
