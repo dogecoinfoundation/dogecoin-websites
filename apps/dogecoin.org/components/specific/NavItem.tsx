@@ -1,6 +1,7 @@
 import React from 'react';
 import DogePaw from '../icons/DogePaw';
 import Link from 'next/link';
+import { shouldEnablePrefetch } from '@/lib/assets';
 
 interface NavItemProps {
   href: string;
@@ -14,6 +15,7 @@ export function NavItem({ href, isActive = false, children, onClick }: NavItemPr
     <Link 
       href={href}
       onClick={onClick}
+      prefetch={shouldEnablePrefetch()}
       className={`font-bold text-base flex items-center gap-2 px-4 py-3 transition-all transition-duration(200ms) ${
         isActive ? 'text-[var(--brand-primary-500)]' : 'text-white hover:text-[var(--brand-primary-500)]'
       }`}

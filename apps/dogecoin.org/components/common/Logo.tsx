@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getAssetPath } from '@/lib/assets';
+import { getAssetPath, shouldEnablePrefetch } from '@/lib/assets';
 
 interface LogoProps {
   className?: string;
@@ -24,7 +24,7 @@ export function Logo({ className = '', width = 200, height = 50, href = '/' }: L
 
   if (href) {
     return (
-      <Link href={href}>
+      <Link href={href} prefetch={shouldEnablePrefetch()}>
         {logo}
       </Link>
     );

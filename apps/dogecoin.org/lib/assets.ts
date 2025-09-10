@@ -90,3 +90,14 @@ export function getClientNavPath(path: string, locale = 'en'): string {
   // For other paths, add locale prefix
   return `/${locale}${path}`;
 }
+
+/**
+ * Check if prefetch should be disabled for static export mode
+ * @returns true if prefetch should be enabled, false if disabled
+ */
+export function shouldEnablePrefetch(): boolean {
+  // Disable prefetch for static export mode to prevent RSC prefetch 404 errors
+  // eslint-disable-next-line no-restricted-properties, turbo/no-undeclared-env-vars
+  const isStaticExport = process.env.STATIC_EXPORT === 'true';
+  return !isStaticExport;
+}

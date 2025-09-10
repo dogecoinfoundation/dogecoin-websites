@@ -2,6 +2,7 @@ import path from 'node:path';
 import fs from 'node:fs/promises';
 import matter from 'gray-matter';
 import { marked } from 'marked';
+import { getAssetPath } from '../assets';
 import type { ContentConfig, ContentMeta, ContentItem } from './types';
 
 export class ContentLoader {
@@ -285,9 +286,9 @@ export class ContentLoader {
   }
 
   private normalizeImagePath(imageFromFrontmatter: string, slug: string): string {
-    if (imageFromFrontmatter.startsWith('/')) return imageFromFrontmatter;
+    if (imageFromFrontmatter.startsWith('/')) return getAssetPath(imageFromFrontmatter);
     const normalized = imageFromFrontmatter.replace(/^\.\//, '');
-    return `/assets/${this.config.contentType}/${slug}/${normalized}`;
+    return getAssetPath(`/assets/${this.config.contentType}/${slug}/${normalized}`);
   }
 
   protected preprocessMarkdown(content: string, slug: string): string {
@@ -296,7 +297,7 @@ export class ContentLoader {
     // Handle image path mapping
     result = result.replace(/!\[([^\]]*)\]\((?!https?:\/\/)([^)]+)\)/g, (_m, alt, src) => {
       const cleaned = String(src).trim().replace(/^\.\//, '');
-      const mapped = `/assets/${this.config.contentType}/${slug}/${cleaned}`;
+      const mapped = getAssetPath(`/assets/${this.config.contentType}/${slug}/${cleaned}`);
       const safeAlt = String(alt ?? '').replace(/"/g, '&quot;');
       return `![${safeAlt}](${mapped})`;
     });
@@ -304,7 +305,9 @@ export class ContentLoader {
     // Handle custom image styling
     result = result.replace(/!\[([^\]]*)\]\(([^)]+)\)\s*\{\{(small-image|square-image)\}\}/g, (_m, alt, src, styleClass) => {
       const safeAlt = String(alt ?? '').replace(/"/g, '&quot;');
-      return `<img src="${src}" alt="${safeAlt}" class="${styleClass}">`;
+      // Process src with getAssetPath if it's not already an absolute URL
+      const processedSrc = src.startsWith('http') ? src : getAssetPath(src);
+      return `<img src="${processedSrc}" alt="${safeAlt}" class="${styleClass}">`;
     });
 
     // Handle simple content wrappers

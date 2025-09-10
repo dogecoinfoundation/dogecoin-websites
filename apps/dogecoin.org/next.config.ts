@@ -21,6 +21,10 @@ let nextConfig: NextConfig = {
     images: {
       unoptimized: true
     },
+    experimental: {
+      // Disable server actions for static export to prevent RSC prefetch issues
+      serverActions: false,
+    },
   }),
 };
 

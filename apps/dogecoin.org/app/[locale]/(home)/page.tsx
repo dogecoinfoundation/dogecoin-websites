@@ -67,10 +67,13 @@ export default async function Home({ params }: HomeProps) {
               <div className="hero-content">
                 <div className="hero-text-container relative">
                   <div className="hero-title">
-                    <img 
+                    <Image 
                       src={getAssetPath("/assets/svg/logos/dogecoin-foundation-text.svg")} 
                       alt="Dogecoin Foundation" 
                       className="hero-logo"
+                      width={400}
+                      height={80}
+                      priority
                     />
                   </div>
                   <div className="hero-subtitle-wrap">

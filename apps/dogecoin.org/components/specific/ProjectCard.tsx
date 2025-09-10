@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { getAssetPath, getNavPath } from '@/lib/assets';
+import { getAssetPath, getNavPath, shouldEnablePrefetch } from '@/lib/assets';
 import { shouldShowDraftBadge } from '@/lib/content/utils';
 import { TagsWithOverflow } from '@/components/common/TagsWithOverflow';
 import { ContentLinks } from '@/components/common/ContentLinks';
@@ -43,6 +43,7 @@ export function ProjectCard({
       <Link 
         href={getNavPath(`/projects/${slug}`, locale)} 
         className="content-card-image-link"
+        prefetch={shouldEnablePrefetch()}
       >
         <div className="content-card-image card-image">
           <Image 
@@ -86,6 +87,7 @@ export function ProjectCard({
               <Link 
                 href={getNavPath(`/projects/${slug}`, locale)}
                 className="content-card-action-pill"
+                prefetch={shouldEnablePrefetch()}
               >
                 {t?.viewProject ?? 'View project'}
               </Link>
@@ -95,6 +97,7 @@ export function ProjectCard({
               <Link 
                 href={getNavPath(`/projects/${slug}`, locale)}
                 className="content-card-action-pill"
+                prefetch={shouldEnablePrefetch()}
               >
                 {t?.viewProject ?? 'View project'}
               </Link>
