@@ -294,20 +294,26 @@ export class ContentLoader {
   protected preprocessMarkdown(content: string, slug: string): string {
     let result = content;
     
-    // Handle image path mapping
-    result = result.replace(/!\[([^\]]*)\]\((?!https?:\/\/)([^)]+)\)/g, (_m, alt, src) => {
+    // Handle custom image styling FIRST (to avoid double processing)
+    result = result.replace(/!\[([^\]]*)\]\(([^)]+)\)\s*\{\{(small-image|square-image)\}\}/g, (_m, alt, src, styleClass) => {
+      const safeAlt = String(alt ?? '').replace(/"/g, '&quot;');
+      // Process src with getAssetPath if it's not already an absolute URL
+      let processedSrc;
+      if (src.startsWith('http')) {
+        processedSrc = src;
+      } else {
+        const cleaned = String(src).trim().replace(/^\.\//, '');
+        processedSrc = getAssetPath(`/assets/${this.config.contentType}/${slug}/${cleaned}`);
+      }
+      return `<img src="${processedSrc}" alt="${safeAlt}" class="${styleClass}">`;
+    });
+
+    // Handle regular image path mapping (exclude already processed images with src attributes)
+    result = result.replace(/!\[([^\]]*)\]\((?!https?:\/\/)([^)]+)\)(?!\s*\{\{(small-image|square-image)\}\})/g, (_m, alt, src) => {
       const cleaned = String(src).trim().replace(/^\.\//, '');
       const mapped = getAssetPath(`/assets/${this.config.contentType}/${slug}/${cleaned}`);
       const safeAlt = String(alt ?? '').replace(/"/g, '&quot;');
       return `![${safeAlt}](${mapped})`;
-    });
-
-    // Handle custom image styling
-    result = result.replace(/!\[([^\]]*)\]\(([^)]+)\)\s*\{\{(small-image|square-image)\}\}/g, (_m, alt, src, styleClass) => {
-      const safeAlt = String(alt ?? '').replace(/"/g, '&quot;');
-      // Process src with getAssetPath if it's not already an absolute URL
-      const processedSrc = src.startsWith('http') ? src : getAssetPath(src);
-      return `<img src="${processedSrc}" alt="${safeAlt}" class="${styleClass}">`;
     });
 
     // Handle simple content wrappers
