@@ -4,33 +4,19 @@
  * @returns The asset path with base path if in static export mode
  */
 export function getAssetPath(path: string): string {
-  // For static builds, we need to use a different approach since process.env
-  // might not be available during static generation. We'll check multiple indicators.
-  
-  // Method 1: Check if we're in a static build context by looking for specific env vars
+  // In static export mode, Next.js automatically applies the assetPrefix from next.config.ts
+  // So we should NOT add the base path manually to avoid double prefixing
   // eslint-disable-next-line no-restricted-properties, turbo/no-undeclared-env-vars
-  const buildStaticExport = process.env.STATIC_EXPORT === 'true';
-  // eslint-disable-next-line no-restricted-properties, turbo/no-undeclared-env-vars  
-  const nextjsStaticExport = process.env.__NEXT_EXPORT === '1' || process.env.NODE_ENV === 'production';
+  const isStaticExport = process.env.STATIC_EXPORT === 'true';
   
-  // Method 2: Check if Next.js basePath is configured (when running in static export mode)
-  let nextBasePath = '';
-  try {
-    // Try to get the basePath from Next.js config if available
-    // eslint-disable-next-line no-restricted-properties, turbo/no-undeclared-env-vars
-    nextBasePath = process.env.__NEXT_ROUTER_BASEPATH || '';
-  } catch (e) {
-    // Ignore errors when accessing Next.js internals
+  if (isStaticExport) {
+    // For static export, Next.js handles the base path via assetPrefix
+    // We just return the path as-is
+    return path;
   }
   
-  // Determine if we're in static export mode
-  // Since we can't reliably detect STATIC_EXPORT at runtime, we'll use the production flag
-  // combined with the specific build environment for our static exports
-  const isStaticExport = buildStaticExport || (nextjsStaticExport && !nextBasePath);
-  const basePath = isStaticExport ? '/dogecoin-websites' : '';
-  
-  
-  return `${basePath}${path}`;
+  // For development mode, no base path needed
+  return path;
 }
 
 /**
@@ -54,24 +40,25 @@ export function getNavPath(path: string, locale = 'en'): string {
  */
 export function getClientBasePath(): string {
   if (typeof window === 'undefined') {
-    // Server side - use env variable
+    // Server side - in static export mode, Next.js handles base path via assetPrefix
     // eslint-disable-next-line no-restricted-properties, turbo/no-undeclared-env-vars
-    return process.env.STATIC_EXPORT === 'true' ? '/dogecoin-websites' : '';
+    return process.env.STATIC_EXPORT === 'true' ? '' : '';
   }
   
-  // Client side - detect from current URL
-  const currentPath = window.location.pathname;
-  return currentPath.startsWith('/dogecoin-websites') ? '/dogecoin-websites' : '';
+  // Client side - in static export, Next.js handles the base path automatically
+  // We don't need to manually add it
+  return '';
 }
 
 /**
  * Client-side safe asset path function that works in both SSR and client-side rendering
  * @param path - The asset path starting with /
- * @returns The asset path with base path if in static export mode
+ * @returns The asset path (Next.js handles base path via assetPrefix in static export)
  */
 export function getClientAssetPath(path: string): string {
-  const basePath = getClientBasePath();
-  return `${basePath}${path}`;
+  // In static export mode, Next.js automatically handles the base path via assetPrefix
+  // No need to manually add it
+  return path;
 }
 
 /**
