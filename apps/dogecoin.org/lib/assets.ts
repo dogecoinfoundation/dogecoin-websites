@@ -4,15 +4,16 @@
  * @returns The asset path with base path if in static export mode
  */
 export function getAssetPath(path: string): string {
-  // In static export mode, Next.js automatically applies the assetPrefix from next.config.ts
-  // So we should NOT add the base path manually to avoid double prefixing
   // eslint-disable-next-line no-restricted-properties, turbo/no-undeclared-env-vars
   const isStaticExport = process.env.STATIC_EXPORT === 'true';
   
   if (isStaticExport) {
-    // For static export, Next.js handles the base path via assetPrefix
-    // We just return the path as-is
-    return path;
+    // For static export mode, we need to add the base path manually
+    // But only if it's not already there to prevent double prefixing
+    if (path.startsWith('/dogecoin-websites')) {
+      return path;
+    }
+    return `/dogecoin-websites${path}`;
   }
   
   // For development mode, no base path needed
@@ -53,11 +54,31 @@ export function getClientBasePath(): string {
 /**
  * Client-side safe asset path function that works in both SSR and client-side rendering
  * @param path - The asset path starting with /
- * @returns The asset path (Next.js handles base path via assetPrefix in static export)
+ * @returns The asset path with base path if in static export mode
  */
 export function getClientAssetPath(path: string): string {
-  // In static export mode, Next.js automatically handles the base path via assetPrefix
-  // No need to manually add it
+  if (typeof window === 'undefined') {
+    // Server side - use the same logic as getAssetPath
+    // eslint-disable-next-line no-restricted-properties, turbo/no-undeclared-env-vars
+    const isStaticExport = process.env.STATIC_EXPORT === 'true';
+    if (isStaticExport) {
+      if (path.startsWith('/dogecoin-websites')) {
+        return path;
+      }
+      return `/dogecoin-websites${path}`;
+    }
+    return path;
+  }
+  
+  // Client side - detect from current URL if we're in static export mode
+  const currentPath = window.location.pathname;
+  const isStaticExport = currentPath.startsWith('/dogecoin-websites');
+  if (isStaticExport) {
+    if (path.startsWith('/dogecoin-websites')) {
+      return path;
+    }
+    return `/dogecoin-websites${path}`;
+  }
   return path;
 }
 
