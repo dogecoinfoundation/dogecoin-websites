@@ -44,7 +44,10 @@ export default async function RootLayout({
     <html lang={locale || 'en'}>
       <head>
         <style dangerouslySetInnerHTML={{
-          __html: `:root { --base-path: "${getAssetPath('')}"; }`
+          __html: `:root { 
+            --base-path: "${getAssetPath('')}";
+            --underline-bg: url(${getAssetPath('/assets/svg/underline.svg')});
+          }`
         }} />
         <script
           type="module"
