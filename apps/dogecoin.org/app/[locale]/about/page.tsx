@@ -78,7 +78,7 @@ export default async function AboutPage({ params }: PageProps) {
                   <BlurEffect color="var(--Base-Brand-color-primary-500, #E3A849)" opacity={0.15} scale={{ x: 4, y: 4 }} />
                 </div>
               </div>
-              <Image src={getAssetPath("/assets/images/foundation-logo.png")} alt="Dogecoin Foundation Logo" fill style={{ objectFit: 'contain' }} />
+              <Image src={getAssetPath("/assets/images/foundation-logo.svg")} alt="Dogecoin Foundation Logo" fill style={{ objectFit: 'contain' }} />
             </div>
           </div>
         </Container>
