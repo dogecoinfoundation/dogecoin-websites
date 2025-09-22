@@ -119,6 +119,7 @@ export function Footer({ t }: FooterProps) {
                   alt={t.footer.backToTop}
                   width={242}
                   height={190}
+                  style={{ width: 'auto' }}
                 />
               </button>
             </div>

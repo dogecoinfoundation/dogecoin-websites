@@ -1,9 +1,10 @@
 {
   "date": "2025-01-15",
-  "tags": ["C++", "Bitcoin Core", "P2P Networking", "Blockchain", "Dogecoin"],
+  "tags": ["c++", "protocol", "networking", "blockchain", "payment", "wallet"],
   "github": "https://github.com/dogecoin/dogecoin",
   "website": "https://dogecoin.com",
+  "discord": "https://discord.com/invite/dogecoin",
   "featured": true,
-  "image": "dogecoin-core.png",
+  "image": "dogecoin-core.jpg",
   "draft": false
 }

@@ -65,7 +65,7 @@ export default async function BlogPostPage({ params }: PageProps) {
                 </div>
               </div>
               <div className="post-hero-image">
-                <Image src={getAssetPath(post.image)} alt={post.title} fill className="object-cover" />
+                <Image src={getAssetPath(post.image)} alt={post.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 60vw" />
               </div>
             </div>
 

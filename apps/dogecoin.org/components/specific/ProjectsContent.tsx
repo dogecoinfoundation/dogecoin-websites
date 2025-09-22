@@ -143,6 +143,7 @@ export function ProjectsContent({ projects, locale, t }: ProjectsContentProps) {
               links={links}
               locale={locale}
               accentColor={accentColor}
+              priority={index < 3}
               t={t.projects}
             />
           );

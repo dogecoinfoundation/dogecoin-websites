@@ -1,11 +1,11 @@
 <!-- METADATA
 title: Dogecoin Core
-description: The reference implementation of the Dogecoin protocol, powering the entire network
+description: The Dogecoin Core software allows anyone to operate a node in the Dogecoin blockchain networks
 -->
 
 ## Dogecoin Core
 
-Lorem ipsum dolor sit amet consectetur. Duis dictum velit velit adipiscing in interdum. Dictum sit ultrices imperdiet hendrerit elementum. Nibh velit eget egestas neque tellus facilisis duis nibh et. Id nunc ac ipsum in sodales pharetra. Pellentesque leo gravida imperdiet donec risus egestas.
+The Dogecoin Core software allows anyone to operate a node in the Dogecoin blockchain networks.
 
 ![Fractal Doge](fractal-doge.png) {{small-image}}
 

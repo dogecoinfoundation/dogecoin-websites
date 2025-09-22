@@ -78,7 +78,6 @@ function usePartyMode() {
       img.onerror = null;
     });
     
-    console.log(`Reverted ${originalSrcsRef.current.size} images to original versions`);
   };
 
   const convertToPartySrc = (src: string) => {

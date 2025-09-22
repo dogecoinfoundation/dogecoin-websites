@@ -78,7 +78,7 @@ export default async function AboutPage({ params }: PageProps) {
                   <BlurEffect color="var(--Base-Brand-color-primary-500, #E3A849)" opacity={0.15} scale={{ x: 4, y: 4 }} />
                 </div>
               </div>
-              <Image src={getAssetPath("/assets/images/foundation-logo.svg")} alt="Dogecoin Foundation Logo" fill style={{ objectFit: 'contain' }} />
+              <Image src={getAssetPath("/assets/images/foundation-logo.svg")} alt="Dogecoin Foundation Logo" fill style={{ objectFit: 'contain' }} sizes="(max-width: 768px) 100vw, 50vw" />
             </div>
           </div>
         </Container>
@@ -153,6 +153,7 @@ export default async function AboutPage({ params }: PageProps) {
               alt="Section heading underline"
               width={146}
               height={26}
+              style={{ width: '146px', height: '26px', objectFit: 'contain' }}
             />
                 </div>
                 <h4 className="about-manifesto-card-title about-manifesto-card-title-useful">{ta.manifesto.cards[0]?.title}</h4>
@@ -167,6 +168,7 @@ export default async function AboutPage({ params }: PageProps) {
               alt="Section heading underline"
               width={146}
               height={26}
+              style={{ width: '146px', height: '26px', objectFit: 'contain' }}
             />
                 </div>
                 <h4 className="about-manifesto-card-title about-manifesto-card-title-personable">{ta.manifesto.cards[1]?.title}</h4>
@@ -181,6 +183,7 @@ export default async function AboutPage({ params }: PageProps) {
               alt="Section heading underline"
               width={146}
               height={26}
+              style={{ width: '146px', height: '26px', objectFit: 'contain' }}
             />
                 </div>
                 <h4 className="about-manifesto-card-title about-manifesto-card-title-welcoming">{ta.manifesto.cards[2]?.title}</h4>
@@ -195,6 +198,7 @@ export default async function AboutPage({ params }: PageProps) {
               alt="Section heading underline"
               width={146}
               height={26}
+              style={{ width: '146px', height: '26px', objectFit: 'contain' }}
             />
                 </div>
                 <h4 className="about-manifesto-card-title about-manifesto-card-title-reliable">{ta.manifesto.cards[3]?.title}</h4>
@@ -223,6 +227,7 @@ export default async function AboutPage({ params }: PageProps) {
                           alt="Section heading underline"
                           width={20}
                           height={21}
+                          style={{ width: '20px', height: '21px', objectFit: 'contain' }}
                       />
                       </span>
                       <span>{ta.manifesto.sign.button}</span>
@@ -233,6 +238,7 @@ export default async function AboutPage({ params }: PageProps) {
                           alt="Section heading underline"
                           width={234}
                           height={140}
+                          style={{ width: '234px', height: '140px', objectFit: 'contain' }}
                       />
                     </span>
                   </div>
@@ -256,6 +262,7 @@ export default async function AboutPage({ params }: PageProps) {
                             alt="Section heading underline"
                             width={230}
                             height={11}
+                            style={{ width: '230px', height: '11px', objectFit: 'contain' }}
                         />
               </div>
 
@@ -268,7 +275,7 @@ export default async function AboutPage({ params }: PageProps) {
             </div>
             <div className="about-history-image-container">
               <div className="about-history-image-wrapper">
-                <Image src={getAssetPath("/assets/images/history-doge.png")} alt="Dogecoin history" fill style={{ objectFit: 'contain' }} />
+                <Image src={getAssetPath("/assets/images/history-doge.png")} alt="Dogecoin history" fill style={{ objectFit: 'contain' }} sizes="(max-width: 768px) 100vw, 50vw" />
               </div>
             </div>
           </div>

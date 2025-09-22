@@ -101,7 +101,6 @@ export function Carousel({ className = '', setApi: setApiProp, onUserInteraction
           inViewThreshold: 0.7,
         }}
         setApi={(newApi) => {
-          console.log('Carousel API set:', newApi);
           if (setApi && newApi) {
             setApi(newApi as CarouselApi);
           }
@@ -152,7 +151,6 @@ export function Carousel({ className = '', setApi: setApiProp, onUserInteraction
 }
 
 export function CarouselControls({ api, current, count, onUserInteraction }: { api: CarouselApi | null; current: number; count: number; onUserInteraction?: () => void }) {
-  console.log('CarouselControls render:', { api: !!api, current, count });
   
   return (
     <div className="carousel-controls-container">

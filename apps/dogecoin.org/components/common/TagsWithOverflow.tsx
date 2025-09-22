@@ -170,8 +170,8 @@ export function TagsWithOverflow({
       {(isCalculated || hasLoadedOnce) && (
         <>
           {/* Visible tags */}
-          {visibleTags.map((tag) => (
-            <span key={tag} className={tagClassName}>
+          {visibleTags.map((tag, index) => (
+            <span key={`visible-${index}-${tag}`} className={tagClassName}>
               {tag}
             </span>
           ))}
@@ -186,8 +186,8 @@ export function TagsWithOverflow({
               </PopoverTrigger>
               <PopoverContent className="w-auto p-3 bg-white border border-gray-200 rounded-lg shadow-lg" align="start">
                 <div className="flex flex-wrap" style={{ gap: '12px', maxWidth: '300px' }}>
-                  {hiddenTags.map((tag) => (
-                    <span key={tag} className={tagClassName}>
+                  {hiddenTags.map((tag, index) => (
+                    <span key={`hidden-${index}-${tag}`} className={tagClassName}>
                       {tag}
                     </span>
                   ))}

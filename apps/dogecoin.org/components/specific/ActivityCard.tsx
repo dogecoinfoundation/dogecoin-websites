@@ -65,6 +65,7 @@ export function ActivityCard({
             alt={title} 
             fill 
             className="object-cover" 
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
           {showDraftBadge ? (
             <div className="content-card-draft-overlay">Draft</div>
@@ -113,6 +114,7 @@ export function ActivityCard({
                         alt={link.label}
                         width={32}
                         height={32}
+                        style={{ width: '32px', height: '32px', objectFit: 'contain' }}
                       />
                     )}
                   </a>

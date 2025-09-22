@@ -1,8 +1,10 @@
 {
-  "date": "2024-11-20",
-  "tags": ["C", "Library"],
+  "date": "2025-01-15",
+  "tags": ["c", "library", "protocol", "library"],
   "github": "https://github.com/dogecoinfoundation/libdogecoin",
+  "website": "https://lib.dogecoin.org/getting_started.html",
+  "discord": "https://discord.gg/b7Y8hF85",
   "featured": false,
-  "image": "libdogecoin.png",
-  "draft": true
+  "image": "libdogecoin.jpg",
+  "draft": false
 }

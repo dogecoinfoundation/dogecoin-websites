@@ -18,6 +18,7 @@ export function Logo({ className = '', width = 200, height = 50, href = '/' }: L
       width={width}
       height={height}
       className={className}
+      style={{ width: 'auto' }}
       priority
     />
   );

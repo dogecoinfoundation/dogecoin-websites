@@ -42,6 +42,7 @@ export function ContentLinks({
               width={iconSize}
               height={iconSize}
               title={link.label}
+              style={{ width: `${iconSize}px`, height: `${iconSize}px`, objectFit: 'contain' }}
             />
           )}
           {showLabels && <span>{link.label}</span>}

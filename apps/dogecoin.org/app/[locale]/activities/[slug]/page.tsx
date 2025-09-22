@@ -119,6 +119,7 @@ export default async function ActivityPage({ params }: PageProps) {
                       alt="Location"
                       width={16}
                       height={16}
+                      style={{ width: '16px', height: '16px', objectFit: 'contain' }}
                     />
                     <span>{activity.location}</span>
                   </div>
@@ -130,6 +131,7 @@ export default async function ActivityPage({ params }: PageProps) {
                       alt="Participants"
                       width={16}
                       height={16}
+                      style={{ width: '16px', height: '16px', objectFit: 'contain' }}
                     />
                     <span>{activity.participants} participants</span>
                   </div>

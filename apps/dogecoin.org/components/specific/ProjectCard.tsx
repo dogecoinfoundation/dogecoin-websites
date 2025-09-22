@@ -17,6 +17,7 @@ interface ProjectCardProps {
   links?: ContentLink[];
   locale: string;
   accentColor?: string;
+  priority?: boolean;
   t?: {
     viewProject: string;
   };
@@ -32,6 +33,7 @@ export function ProjectCard({
   links,
   locale,
   accentColor,
+  priority = false,
   t
 }: ProjectCardProps) {
 
@@ -51,6 +53,8 @@ export function ProjectCard({
             alt={title} 
             fill 
             className="object-cover" 
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            priority={priority}
           />
           {showDraftBadge && (
             <div className="content-card-draft-overlay">Draft</div>

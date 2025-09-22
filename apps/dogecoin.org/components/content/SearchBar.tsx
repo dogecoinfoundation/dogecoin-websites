@@ -56,6 +56,7 @@ export function SearchBar({
           width={20}
           height={20}
           className="search-bar-icon"
+          style={{ width: '20px', height: '20px', objectFit: 'contain' }}
         />
         <input
           type="text"
@@ -76,6 +77,7 @@ export function SearchBar({
               width={20}
               height={20}
               className="search-bar-clear-icon"
+              style={{ width: '20px', height: '20px', objectFit: 'contain' }}
             />
           </button>
         )}

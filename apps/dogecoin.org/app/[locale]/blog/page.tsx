@@ -90,7 +90,7 @@ export default async function BlogIndexPage({ params }: BlogIndexProps) {
                   <article key={post.slug} className="blog-card card-hover-effect">
                     <Link href={getNavPath(`/blog/${post.slug}`, locale)} className="blog-card-image-link">
                       <div className="blog-card-image card-image">
-                        <Image src={getAssetPath(post.image)} alt={post.title} fill className="object-cover" />
+                        <Image src={getAssetPath(post.image)} alt={post.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
                         <div className={`blog-card-badge ${badgeClass}`}>{badgeText}</div>
                       </div>
                     </Link>

@@ -1,11 +1,11 @@
 <!-- METADATA
 title: GigaWallet
-description: Dogecoin GigaWallet is a backend service which provides a convenient integration API for platforms such as online shops, exchanges, social media platforms etc, to accept and transact Dogecoin on behalf of their users.
+description: GigaWallet is a backend service which provides a convenient API for platforms such as online shops, exchanges, etc, to accept Dogecoin payments
 -->
 
 ## GigaWallet
 
-Dogecoin GigaWallet is a backend service which provides a convenient integration API for platforms such as online shops, exchanges, social media platforms etc, to accept and transact Dogecoin on behalf of their users.
+GigaWallet is a backend service which provides a convenient API for platforms such as online shops, exchanges, etc, to accept Dogecoin payments.
 
 The purpose of the GigaWallet is to promote the rapid uptake of Dogecoin as a payment option, by taking the complexity and risk out of integrating Dogecoin payments into business.
 

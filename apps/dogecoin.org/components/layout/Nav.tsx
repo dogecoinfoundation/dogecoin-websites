@@ -113,6 +113,7 @@ export function Nav({ children, className: _className = '', t }: NavProps) {
                 alt="Menu" 
                 width={24} 
                 height={24}
+                style={{ width: '24px', height: '24px', objectFit: 'contain' }}
               />
             </button>
 
@@ -158,6 +159,7 @@ export function Nav({ children, className: _className = '', t }: NavProps) {
                   alt="Close" 
                   width={32} 
                   height={32}
+                  style={{ width: '32px', height: '32px', objectFit: 'contain' }}
                 />
               </button>
             </div>

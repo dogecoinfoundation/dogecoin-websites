@@ -31,7 +31,7 @@ export function BlogCard({
     <article className={`blog-card card-hover-effect${showDraftBadge ? ' blog-card-draft' : ''}`}>
       <Link href={getNavPath(`/blog/${slug}`, locale)} className="blog-card-image-link">
         <div className="blog-card-image card-image">
-          <Image src={getAssetPath(image)} alt={title} fill className="object-cover" />
+          <Image src={getAssetPath(image)} alt={title} fill className="object-cover" sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" />
           {showDraftBadge ? (
             <div className="blog-card-draft-overlay">Draft</div>
           ) : (

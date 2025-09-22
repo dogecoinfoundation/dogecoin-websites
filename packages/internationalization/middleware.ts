@@ -12,6 +12,17 @@ const getLocale = (request: NextRequest) => {
 
 export const internationalizationMiddleware = (request: NextRequest) => {
   const { pathname } = request.nextUrl;
+  
+  // Skip static assets and API routes
+  if (
+    pathname.startsWith('/assets/') ||
+    pathname.startsWith('/api/') ||
+    pathname.startsWith('/_next/') ||
+    pathname.includes('.') // Skip files with extensions (favicon.ico, etc.)
+  ) {
+    return;
+  }
+  
   const pathnameHasLocale = allLanguages.some(
     (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
   );
