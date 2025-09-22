@@ -65,6 +65,12 @@ jobs:
           else
             echo "Dogecoin.org .env file already exists"
           fi
+          
+          # Disable soft launch mode for other branches (dev gets full site)
+          if [ "${{ github.ref_name }}" != "dogecoin/projects-content" ]; then
+            echo "Disabling soft launch mode for ${{ github.ref_name }} branch"
+            sed -i 's/NEXT_PUBLIC_SOFTLAUNCH=true/NEXT_PUBLIC_SOFTLAUNCH=false/' .env
+          fi
 
       - name: Build Dogecoin.org static export
         working-directory: ./apps/dogecoin.org
