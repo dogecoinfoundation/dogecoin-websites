@@ -2,7 +2,7 @@ name: Deploy Dogecoin.org Static Preview to GitHub Pages
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ dev, dogecoin/projects-content ]
     paths:
       - 'apps/dogecoin.org/**'
       - '.github/workflows/deploy-dogecoin.yml'
