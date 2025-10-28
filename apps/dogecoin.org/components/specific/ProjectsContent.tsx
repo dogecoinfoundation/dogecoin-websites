@@ -16,6 +16,7 @@ export function ProjectsContent({ projects, locale, t }: ProjectsContentProps) {
   const [filteredProjects, setFilteredProjects] = React.useState(projects);
   const [searchQuery, setSearchQuery] = React.useState('');
   const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
+  const [isFilterOpen, setIsFilterOpen] = React.useState(false);
 
   // Aggregate all tags with their counts
   const tagCounts = React.useMemo(() => {
@@ -84,37 +85,149 @@ export function ProjectsContent({ projects, locale, t }: ProjectsContentProps) {
   }, [selectedTags, searchQuery, applyFilters]);
 
   return (
-    <>
-      <ContentPageHeader 
-        title={t.projects.title} 
-        onSearch={handleSearch}
-        searchQuery={searchQuery}
-      />
+    <div className="projects-page-layout">
+      {/* Desktop Sidebar */}
+      <aside className="projects-sidebar">
+        <div className="sidebar-header">
+          <h3 className="sidebar-title">Filter Projects</h3>
+          <span className="sidebar-count">
+            {filteredProjects.length} of {projects.length} projects
+          </span>
+        </div>
 
-      {/* Tag Filter Section */}
-      <div className="content-tags-filter">
-        <button
-          onClick={() => {
-            setSelectedTags([]);
-            applyFilters(searchQuery, []);
-          }}
-          className={`content-tag-pill ${selectedTags.length === 0 ? 'content-tag-pill-selected' : ''}`}
-        >
-          All projects
-        </button>
-        {tagCounts.map(({ tag, count }) => (
+        <div className="sidebar-content">
+          {/* Clear All Button */}
+          <div className="sidebar-actions">
+            <button
+              onClick={() => {
+                setSelectedTags([]);
+                applyFilters(searchQuery, []);
+              }}
+              className={`sidebar-clear-btn ${selectedTags.length === 0 ? 'sidebar-clear-btn-disabled' : ''}`}
+              disabled={selectedTags.length === 0}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+              Clear all
+            </button>
+          </div>
+
+          {/* All Projects Button */}
+          <div className="sidebar-section">
+            <button
+              onClick={() => {
+                setSelectedTags([]);
+                applyFilters(searchQuery, []);
+              }}
+              className={`sidebar-pill sidebar-pill-all ${selectedTags.length === 0 ? 'sidebar-pill-selected' : ''}`}
+            >
+              <span className="sidebar-pill-text">All Projects</span>
+              <span className="sidebar-pill-count">{projects.length}</span>
+            </button>
+          </div>
+
+          {/* Tag Filters */}
+          <div className="sidebar-section">
+            <h4 className="sidebar-section-title">Categories</h4>
+            <div className="sidebar-tags-list">
+              {tagCounts.map(({ tag, count }) => (
+                <button
+                  key={tag}
+                  onClick={() => handleTagToggle(tag)}
+                  className={`sidebar-pill ${selectedTags.includes(tag) ? 'sidebar-pill-selected' : ''}`}
+                >
+                  <span className="sidebar-pill-text">{tag}</span>
+                  <span className="sidebar-pill-count">{count}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      {/* Main Content Area */}
+      <main className="projects-main-content">
+        <ContentPageHeader 
+          title={t.projects.title} 
+          onSearch={handleSearch}
+          searchQuery={searchQuery}
+        />
+
+        {/* Mobile Filter Toggle */}
+        <div className="mobile-filter-header">
           <button
-            key={tag}
-            onClick={() => handleTagToggle(tag)}
-            className={`content-tag-pill ${selectedTags.includes(tag) ? 'content-tag-pill-selected' : ''}`}
+            className="mobile-filter-toggle"
+            onClick={() => setIsFilterOpen(!isFilterOpen)}
+            aria-expanded={isFilterOpen}
           >
-            {tag} ({count})
+            <svg className="filter-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <polygon points="22,3 2,3 10,12.46 10,19 14,21 14,12.46"></polygon>
+            </svg>
+            <span>Filters</span>
+            {selectedTags.length > 0 && (
+              <span className="filter-badge">{selectedTags.length}</span>
+            )}
           </button>
-        ))}
-      </div>
+        </div>
 
-      <ContentGrid>
-        {filteredProjects.map((project, index) => {
+        {/* Mobile Filter Panel */}
+        <div className={`mobile-filter-panel ${isFilterOpen ? 'mobile-filter-panel-open' : ''}`}>
+          <div className="mobile-filter-content">
+            {/* Clear All Button */}
+            <div className="mobile-filter-actions">
+              <button
+                onClick={() => {
+                  setSelectedTags([]);
+                  applyFilters(searchQuery, []);
+                }}
+                className={`mobile-clear-btn ${selectedTags.length === 0 ? 'mobile-clear-btn-disabled' : ''}`}
+                disabled={selectedTags.length === 0}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+                Clear all
+              </button>
+            </div>
+
+            {/* All Projects Button */}
+            <div className="mobile-filter-section">
+              <button
+                onClick={() => {
+                  setSelectedTags([]);
+                  applyFilters(searchQuery, []);
+                }}
+                className={`mobile-pill mobile-pill-all ${selectedTags.length === 0 ? 'mobile-pill-selected' : ''}`}
+              >
+                <span className="mobile-pill-text">All Projects</span>
+                <span className="mobile-pill-count">{projects.length}</span>
+              </button>
+            </div>
+
+            {/* Tag Filters */}
+            <div className="mobile-filter-section">
+              <h4 className="mobile-section-title">Categories</h4>
+              <div className="mobile-tags-list">
+                {tagCounts.map(({ tag, count }) => (
+                  <button
+                    key={tag}
+                    onClick={() => handleTagToggle(tag)}
+                    className={`mobile-pill ${selectedTags.includes(tag) ? 'mobile-pill-selected' : ''}`}
+                  >
+                    <span className="mobile-pill-text">{tag}</span>
+                    <span className="mobile-pill-count">{count}</span>
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ContentGrid>
+          {filteredProjects.map((project, index) => {
           const links = [];
           if (project.github) {
             links.push({ label: 'GitHub', url: project.github, icon: 'github' as const });
@@ -147,20 +260,21 @@ export function ProjectsContent({ projects, locale, t }: ProjectsContentProps) {
               t={t.projects}
             />
           );
-        })}
-      </ContentGrid>
+          })}
+        </ContentGrid>
 
-      {filteredProjects.length === 0 && searchQuery && (
-        <div className="content-empty-state">
-          <p>{t.projects.noProjectsFound.replace('{query}', searchQuery)}</p>
-        </div>
-      )}
+        {filteredProjects.length === 0 && searchQuery && (
+          <div className="content-empty-state">
+            <p>{t.projects.noProjectsFound.replace('{query}', searchQuery)}</p>
+          </div>
+        )}
 
-      {filteredProjects.length === 0 && !searchQuery && (
-        <div className="content-empty-state">
-          <p>{t.projects.noProjectsAvailable}</p>
-        </div>
-      )}
-    </>
+        {filteredProjects.length === 0 && !searchQuery && (
+          <div className="content-empty-state">
+            <p>{t.projects.noProjectsAvailable}</p>
+          </div>
+        )}
+      </main>
+    </div>
   );
 }
